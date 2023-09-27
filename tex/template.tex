@@ -17,7 +17,7 @@
 %% Template article for Elsevier's document class `elsarticle'
 %% with harvard style bibliographic references
 
-\documentclass[preprint,12pt,authoryear]{elsarticle}
+\documentclass[authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
@@ -45,7 +45,7 @@
 %% for the whole article with \linenumbers.
 %% \usepackage{lineno}
 
-\journal{Nuclear Physics B}
+\journal{New Astronomy Reviews}
 
 \begin{document}
 
@@ -76,7 +76,7 @@
 %%            country={}}
 %% \fntext[label3]{}
 
-\title{}
+\title{Stellar Streams in the Gaia Era}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -94,30 +94,38 @@
 %%             state={},
 %%             country={}}
 
-\author{}
+\author[ociw]{Ana~Bonaca}
+\author[cca]{Adrian~M.~Price-Whelan}
 
-\affiliation{organization={},%Department and Organization
+\affiliation[ociw]{organization={The Observatories of the Carnegie Institution for Science},
+            addressline={813 Santa Barbara Street},
+            city={Pasadena},
+            postcode={91101},
+            state={CA},
+            country={USA}}
+
+\affiliation[cca]{organization={Center for Computational Astrophysics},
             addressline={},
-            city={},
+            city={New York},
             postcode={},
-            state={},
-            country={}}
+            state={NY},
+            country={USA}}
+
 
 \begin{abstract}
-%% Text of abstract
-
+There are lots!
 \end{abstract}
 
-%%Graphical abstract
-\begin{graphicalabstract}
-%\includegraphics{grabs}
-\end{graphicalabstract}
-
-%%Research highlights
-\begin{highlights}
-\item Research highlight 1
-\item Research highlight 2
-\end{highlights}
+% %%Graphical abstract
+% \begin{graphicalabstract}
+% %\includegraphics{grabs}
+% \end{graphicalabstract}
+% 
+% %%Research highlights
+% \begin{highlights}
+% \item Research highlight 1
+% \item Research highlight 2
+% \end{highlights}
 
 \begin{keyword}
 %% keywords here, in the form: keyword \sep keyword
@@ -134,8 +142,61 @@
 %% \linenumbers
 
 %% main text
-\section{}
-\label{}
+\section{Introduction}
+\label{sec:intro}
+- Tidal debris
+-- How they form, What are they? 
+-- Dwarf vs. globular cluster
+-- Shell vs stream, radial vs tangential
+-- Here focus on still coherent debris, not phase-mixed structures
+- First discoveries (Sgr, Pal 5, Helmi - first orbital clustering, the slow trickle of photometric streams, …)
+- Motivation for what they tell us based on theory / early 2000s work
+- Fitting orbits to streams and then stream =/= orbit
+- All the things that streams are sensitive to: subhalos, bar, spiral arms, GMCs, internal DF/dissolution
+
+- Why were we at the standstill on many/all of these before Gaia?
+- major shifts in the field of stellar streams post Gaia:
+-- explosion in the number of streams discovered (\S~\ref{sec:discovery})
+
+\section{Stream discoveries in the Gaia era}
+\label{sec:discovery}
+- Brief history of discovery methods in the pre-Gaia era (maybe move that to intro?)
+- New methods with new data (combining photometry + kinematics, streamfinder)
+- New discoveries and census as of 2023
+- Also: follow-up now more efficient so the chemistries now becoming more readily available
+
+\subsection{Key opportunities}
+- The point that (all - few) streams have MSTO below Gaia faint limit and what that does for density characterization (or in “stream structure” below?)
+- (reorder by complexity, maybe :)): Automated discovery with quantified selection function, discovery in “hard” parts of parameter space (in the disk plane or galactic center, not tangent to sky plane, etc…), comparison to expectations from cosmological simulations and GC formation models
+
+
+\section{Stream orbital histories}
+\label{sec:orbits}
+- Still much unknown about most streams
+- But Gaia gives us access to kinematics -> +MW model = orbits
+- “Direct” and Hierarchical associations of streams (Orphan/Chenab, Atlas-aliqa uma vs. hierarchical groups)
+- Finding GC progenitors
+
+\subsection{Key opportunities}
+- More comprehensive spectroscopic follow-up, potential modeling of a flexible potential, Stellar populations and element abundances, comparison to surviving dwarf galaxies and clusters (internal properties and orbits)
+
+
+\section{Stream structure}
+\label{sec:structure}
+- Gaps and off-track features common at low surface brightness
+- E.g., GD-1, Jhelum, AAU
+- also motivated uncovering low-sb in other data sets (e.g., Pal 5, Jet)
+
+\subsection{Key opportunities}
+- density modeling robust to survey selection functions and dust
+
+
+\section{Outlook}
+\label{sec:outlook}
+- Due to large number of streams: transitioning from stamp-collecting to population studies
+- All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
+- Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available
+
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
