@@ -1,0 +1,74 @@
+% Packages / projects / programming
+\newcommand{\package}[1]{\texttt{#1}}
+\newcommand{\acronym}[1]{{\small{#1}}}
+\newcommand{\github}{\textsl{GitHub}}
+\newcommand{\python}{\textsl{Python}}
+\newcommand{\jax}{\package{JAX}}
+\newcommand{\agama}{\package{Agama}}
+\newcommand{\gala}{\package{gala}}
+
+% Missions
+\newcommand{\gaia}{\textsl{Gaia}}
+\newcommand{\dr}[1]{\acronym{DR}#1}
+\newcommand{\apogee}{\acronym{APOGEE}}
+\newcommand{\sdss}{\acronym{SDSS}}
+\newcommand{\sdssiv}{\acronym{SDSS-IV}}
+
+% Stats / probability
+\newcommand{\given}{\,|\,}
+\newcommand{\norm}{\mathcal{N}}
+\newcommand{\pdf}{\textsl{pdf}}
+
+% Maths
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\deriv}[2]{\frac{\mathrm{d}{#1}}{\mathrm{d}{#2}}}
+\newcommand{\dderiv}[2]{\frac{\mathrm{d^2}{#1}}{\mathrm{d}{#2}^2}}
+\newcommand{\Deriv}[2]{\frac{\mathrm{D}{#1}}{\mathrm{D}{#2}}}
+\newcommand{\pderiv}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\ppderiv}[2]{\frac{\partial^2 {#1}}{\partial {#2}^2}}
+\newcommand{\transpose}[1]{{#1}^{\mathsf{T}}}
+\newcommand{\inverse}[1]{{#1}^{-1}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\mean}[1]{\left< #1 \right>}
+
+% Non-scalar variables
+\renewcommand{\vec}[1]{\ensuremath{\bs{#1}}}
+\newcommand{\mat}[1]{\ensuremath{\mathbf{#1}}}
+
+% Units:
+% Workaround for siunitx + AASTeX
+% https://tex.stackexchange.com/questions/192610/use-emulateapj-aastex-with-siunitx
+\usepackage{savesym}
+\savesymbol{tablenum}
+\usepackage{siunitx}
+\restoresymbol{SIX}{tablenum}
+\DeclareSIUnit\year{yr}
+\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\Msun{M_\odot}
+\DeclareSIUnit\Rsun{R_\odot}
+\newcommand{\mas}{\unit{\milli\arcsecond}}
+\newcommand{\muas}{\unit{\micro\arcsecond}}
+\newcommand{\kms}{\unit{\km\per\s}}
+\newcommand{\kpc}{\unit{\kilo\parsec}}
+\newcommand{\usurfdens}{\unit{\msun.\parsec^{-2}}}
+\newcommand{\uvoldens}{\unit{\msun.\parsec^{-3}}}
+
+% Misc. formatting
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+
+% Astronomy
+\newcommand{\abun}[2]{\ensuremath{{[\mathrm{#1}/\mathrm{#2}]}}}
+\newcommand{\feh}{\abun{Fe}{H}}
+\newcommand{\afe}{\abun{\alpha}{Fe}}
+\newcommand{\mgfe}{\abun{Mg}{Fe}}
+\newcommand{\logg}{\ensuremath{\log g}}
+\newcommand{\Teff}{\ensuremath{T_{\textrm{eff}}}}
+\newcommand{\vsini}{\ensuremath{v\,\sin i}}
+
+% Dynamics
+\newcommand{\df}{\acronym{DF}}
+\newcommand{\zmax}{\ensuremath{z_{\textrm{max}}}}
+
+% TO DO
+\newcommand{\todo}[1]{{\color{red} TODO: #1}}
+\newcommand{\placeholder}[1]{{\color{purple} #1}}

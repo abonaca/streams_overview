@@ -45,6 +45,8 @@
 %% for the whole article with \linenumbers.
 %% \usepackage{lineno}
 
+\input{preamble.tex}
+
 \journal{New Astronomy Reviews}
 
 \begin{document}
@@ -104,12 +106,14 @@
             state={CA},
             country={USA}}
 
-\affiliation[cca]{organization={Center for Computational Astrophysics},
-            addressline={},
-            city={New York},
-            postcode={},
-            state={NY},
-            country={USA}}
+\affiliation[cca]{
+    organization={Center for Computational Astrophysics, Flatiron Institute},
+    addressline={162 Fifth Ave.},
+    city={New York},
+    postcode={10010},
+    state={NY},
+    country={USA}
+}
 
 
 \begin{abstract}
@@ -213,9 +217,59 @@ Implications heralding exciting times ahead!
 % - major shifts in the field of stellar streams post Gaia:
 % -- explosion in the number of streams discovered (\S~\ref{sec:discovery})
 
+% APW Note:
+- Make sure we note that the focus here is on streams accreted, not disk / star cluster streams
+
 \section{Stream discoveries in the Gaia era}
 \label{sec:discovery}
 % APW
+
+\textbf{Summary}: Stellar streams inherently have low stellar densities and their
+constituent stars are typically far from the Sun, making them difficult to observe.
+Finding and characterizing streams is therefore all about enhancing \emph{contrast} over
+the background stars, either by filtering datasets to increase the relative occurrence
+of stream stars, or by restricting the search to rare tracers that are more likely to be
+found in streams than in the background.
+The first streams and substructures around the Milky Way were discovered this way by
+filtering photometric data for stars in the Galactic halo, where the background stellar
+density is lower.
+Subsequent discoveries were made with deeper or wider-area photometry surveys, or by
+combining photometric and spectroscopic information (e.g., radial velocities).
+The largest explosion in the number of known streams has come only over the last few
+years thanks to data from the \gaia\ Mission.
+The astrometric data from \gaia\ has revolutionized our ability to find kinematic
+sub-structures because it is now possible to combine photometric and kinematic data.
+In this section, we summarize the methods used to find streams in the pre-\gaia\ era and
+highlight the new methods that are now possible thanks to the all-sky kinematic data
+available from \gaia.
+However, we also discuss the limitations of the \gaia\ data and the need for future
+astrometric surveys to push our understanding of the Milky Way's stellar halo and its
+dark matter content to fainter magnitudes and larger distances.
+
+
+
+% The first streams were discovered in the Milky Way halo, where the background density of stars is low. The Sagittarius stream was discovered in the 1990s \citep{Ibata1994} and the Palomar 5 stream was discovered in the early 2000s \citep{Odenkirchen2001}. These discoveries were made by identifying over-densities of stars in photometric surveys, and then following up with spectroscopy to confirm the stream membership of stars. The Sloan Digital Sky Survey (SDSS) was a major driver of stream discoveries in the 2000s, with the discovery of the Orphan stream \citep{Belokurov2006} and the GD-1 stream \citep{Grillmair2006}. The SDSS was followed by the Panoramic Survey Telescope and Rapid Response System (Pan-STARRS) and the Dark Energy Survey (DES), which have also been used to discover streams \citep[e.g.,][]{Grillmair2016,Shipp2018}.
+
+Finding and characterizing
+
+- Finding streams is all about contrast / signal to noise over background
+- Filter data, use rare tracers found in low-metallicity populations (K/M giants, RR Lyrae, HB stars)
+
+- Sagittarius - dwarf galaxy stream. Ibata first, but then  M giants (Majewski, but what paper before?). Possible because high density in stream and low background (halo).
+- Photomeric surveys became important here once filtering methods devised (matched filter for metal-poor main sequence)
+
+
+- First leap in discovery rate came from large-area photometric surveys - first SDSS, Pal 5, GD-1, Orphan
+- Filter and squint method for discovery - follow-up with spectroscopy to characterize
+- Spectroscopic
+
+, Pan-STARRS, DES)
+
+- Data from the \gaia\ Mission has revolutionized our ability to find kinematic substructures, led to the explosion in number of streams discovered
+- Enabled by semi-automated methods - past methods stream-by-stream, natural evolution for a field
+- In the future, hope to have fully automated methods to enable assessing selection function, population studies
+- Still, Gaia not end-all, be-all -- faint limit is an issue (many streams found from photometric)
+
 - Brief history of discovery methods in the pre-Gaia era (maybe move that to intro?)
 - New methods with new data (combining photometry + kinematics, streamfinder)
 - New discoveries and census as of 2023
