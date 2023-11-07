@@ -218,9 +218,11 @@ Implications heralding exciting times ahead!
 % -- explosion in the number of streams discovered (\S~\ref{sec:discovery})
 
 % APW Note:
-- Make sure we note that the focus here is on streams accreted, not disk / star cluster streams
+- Make sure we note that the focus here is on streams accreted, not disk / star cluster
+streams. Or kinematic substructures in the local velocity field (e.g., helmi stream,
+moving groups, Hipparcos UV structure, etc.)
 
-\section{Stream discoveries in the Gaia era}
+\section{Stream discoveries in the \gaia\ era}
 \label{sec:discovery}
 % APW
 
@@ -228,23 +230,68 @@ Implications heralding exciting times ahead!
 constituent stars are typically far from the Sun, making them difficult to observe.
 Finding and characterizing streams is therefore all about enhancing \emph{contrast} over
 the background stars, either by filtering datasets to increase the relative occurrence
-of stream stars, or by restricting the search to rare tracers that are more likely to be
-found in streams than in the background.
+of stream stars in the filtered set, or by restricting the search to rare tracers that
+are more likely to be found in streams than in the background (e.g., blue horizontal
+branch stars that are common to old, metal-poor stellar populations).
 The first streams and substructures around the Milky Way were discovered this way by
 filtering photometric data for stars in the Galactic halo, where the background stellar
-density is lower.
+density is also lower.
 Subsequent discoveries were made with deeper or wider-area photometry surveys, or by
 combining photometric and spectroscopic information (e.g., radial velocities).
 The largest explosion in the number of known streams has come only over the last few
 years thanks to data from the \gaia\ Mission.
 The astrometric data from \gaia\ has revolutionized our ability to find kinematic
-sub-structures because it is now possible to combine photometric and kinematic data.
+sub-structures because it is now possible to combine photometric and kinematic data for
+enormous samples of stars.
 In this section, we summarize the methods used to find streams in the pre-\gaia\ era and
-highlight the new methods that are now possible thanks to the all-sky kinematic data
+highlight new methods that are now possible thanks to the all-sky kinematic data
 available from \gaia.
-However, we also discuss the limitations of the \gaia\ data and the need for future
-astrometric surveys to push our understanding of the Milky Way's stellar halo and its
-dark matter content to fainter magnitudes and larger distances.
+We provide a brief census and summary of the streams that have been published up to now,
+but note that this is still an active area for discovery and characterization.
+We also discuss the limitations of the \gaia\ data and the need for future astrometric
+surveys to push our understanding of the Milky Way's stellar halo and its dark matter
+content to fainter magnitudes and larger distances.
+
+% Cite: Many of Carl's papers, Mario Mateo Carbon stars in Sgr, Majewski Sgr, Belokurov, Ibata stuff
+The first stellar streams discovered around the Milky Way --- the Sagittarius stream
+(Sgr) and the Palomar 5 stream (Pal 5) --- were found in the late 1990s and early 2000s
+as over-densities of stars that connect back to their progenitor systems (the
+Sagittarius dwarf galaxy and the Palomar 5 globular cluster).
+These discoveries, and most of the halo stellar streams found through the early 2000's,
+were found using photometry alone.
+The advent of wide-area, deep, multi-band sky surveys (especially the Sloan Digital Sky
+Survey, SDSS, and the Two Micron All Sky Survey, 2MASS) were crucial for this initial
+phase of stream discovery.
+The most effective method for using photometric data to identify streams is to apply a
+``matched filter'' \citep{Rockosi:2002} to the color--magnitude distribution of stars
+to preferentially select or up-weight stars that are likely to be distant and low
+metallicity.\footnote{We remind the reader that the focus here is on stellar streams
+from accreted dwarf galaxy or globular cluster progenitor systems, which are expected to
+be old and metal-poor.}
+These filters can be used as a boolean selection (e.g., select all stars within some
+region of color and magnitude defined by isochrones) or as a weighting function (e.g.,
+weight all stars by the probability that they are near an isochrone for an old and
+metal-poor stellar population).
+To then find the streams, the filtered data was typically then displayed in sky
+coordinates, sometimes by making movies that step the filter in distance modulus, and
+maps of stellar density were smoothed and visually inspected for curving or linear
+over-densities of stars.
+Automated detection methods were explored \todo{Carl played with Hough transform -- does
+he have a paper discussing this?}, but this was the early days for computer vision and
+machine learning, and most stream discoveries (even through the 2010's) was done by
+visual inspection.
+
+The first stream discoveries motivated the development of more sophisticated methods to
+identify lower surface brightness, less spatially coherent, and more distant streams
+using a myriad of techniques.
+(talk about kinematic streams, great circle counts, check galstreams and sort by discovery date, look at papers)
+- Then Pan-STARRS, DES
+- attempts to find tails around globular clusters
+
+- Then Gaia
+- More dimensions = better contrast for finding low density things
+
+
 
 
 
