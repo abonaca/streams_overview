@@ -17,10 +17,11 @@
 %% Template article for Elsevier's document class `elsarticle'
 %% with harvard style bibliographic references
 
+% For submission:
 \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
-%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
 
 %% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
 %% for a journal layout:
@@ -117,7 +118,7 @@
 
 
 \begin{abstract}
-- streams, tidal debris, useful for tracing hierarchical assembly, dark matter 
+- streams, tidal debris, useful for tracing hierarchical assembly, dark matter
 - in the Milky Way, the Gaia mission, providing astrometry and spectrophotometry for billions of stars, fundamentally changed the landscape
 - we discuss three main revolutions:
 -- number of streams increased by an order of magnitude, now have a population of 100 (New streams and methods for discovery thanks to new kinds of data)
@@ -189,14 +190,14 @@ Implications heralding exciting times ahead!
 
 - so by 2014, we had x streams discovered, methods developed, tested, but at a standstill on both the mass and shape of our dark matter halo, as well as the amount of substructure.
 - a prominent astronomer at an IAU Symposium 311 voiced a frustration at the lack of progress by exclaiming ``Where is the beef with streams?!'' \citep{binney:2014}.
-- fortunately, a few months earlier (dec 2013), a new observatory had been launched: Gaia 
+- fortunately, a few months earlier (dec 2013), a new observatory had been launched: Gaia
 - gaia was designed to do this (list capabilities)
 % - needed gaia: designed to do that (find original science case)
 - in the past half-decade, we have been reaping the rewards (cite gaia collaboration papers with science exposes)
 - the resulting data also uncovered phase-mixed + in the disk, no room to give justice to everything
 - but it is the coherent streams in the halo that brought major paradigm shifts, and will be our focus
 
-- for a sneak preview: 
+- for a sneak preview:
 -- outline individual sections
 -- identify key summary figures?
 -- state we identify key opportunities for breakthroughs
@@ -219,23 +220,31 @@ Implications heralding exciting times ahead!
 
 % APW Note:
 - Make sure we note that the focus here is on streams accreted, not disk / star cluster
-streams. Or kinematic substructures in the local velocity field (e.g., helmi stream,
-moving groups, Hipparcos UV structure, etc.)
+streams. Or kinematic substructures in the local velocity field (e.g., moving groups, Hipparcos UV structure, etc.)
 
-\section{Stream discoveries in the \gaia\ era}
+\section{Stream Discovery and Characterization in the \gaia\ Era}
 \label{sec:discovery}
 % APW
+% Questions:
+% - Table of streams? What should it have in it? Name, survey, discovery method,
+%   validated / rediscovered with Gaia?
+% - Photometric? Astrometry? Radial velocity? Distance tracers? Detailed abundances?
+
+% Figure 1: Pedagogical figure showing matched filter on Gaia alone, GD-1 vs. astrometry
+% - reproduction of figure from PW & Bonaca 2018
+% Figure 2: All the streams in sky projection
 
 \textbf{Summary}: Stellar streams inherently have low stellar densities and their
-constituent stars are typically far from the Sun, making them difficult to observe.
-Finding and characterizing streams is therefore all about enhancing \emph{contrast} over
-the background stars, either by filtering datasets to increase the relative occurrence
-of stream stars in the filtered set, or by restricting the search to rare tracers that
-are more likely to be found in streams than in the background (e.g., blue horizontal
-branch stars that are common to old, metal-poor stellar populations).
+constituent stars are typically far from the Sun, making them difficult to observe and
+study.
+Finding and characterizing streams is therefore all about enhancing contrast over the
+background Milky Way stars, either by filtering datasets to increase the relative
+occurrence of stream stars in the filtered set, or by restricting the search to rare
+tracers that are more likely to be found in streams than in the field (e.g., blue
+horizontal branch stars that are common to old, metal-poor stellar populations).
 The first streams and substructures around the Milky Way were discovered this way by
 filtering photometric data for stars in the Galactic halo, where the background stellar
-density is also lower.
+density is also inherently lower than in the disk or central galaxy.
 Subsequent discoveries were made with deeper or wider-area photometry surveys, or by
 combining photometric and spectroscopic information (e.g., radial velocities).
 The largest explosion in the number of known streams has come only over the last few
@@ -252,75 +261,147 @@ We also discuss the limitations of the \gaia\ data and the need for future astro
 surveys to push our understanding of the Milky Way's stellar halo and its dark matter
 content to fainter magnitudes and larger distances.
 
-% Cite: Many of Carl's papers, Mario Mateo Carbon stars in Sgr, Majewski Sgr, Belokurov, Ibata stuff
+% TODO: need to work in distinction between "thin stream" -> globular cluster, and dwarf galaxy streams
+
+\subsection{Before \gaia}
+
+% TODO Cite: Many of Carl's papers, Mario Mateo Carbon stars in Sgr, Majewski Sgr, Belokurov, Ibata stuff
 The first stellar streams discovered around the Milky Way --- the Sagittarius stream
 (Sgr) and the Palomar 5 stream (Pal 5) --- were found in the late 1990s and early 2000s
 as over-densities of stars that connect back to their progenitor systems (the
-Sagittarius dwarf galaxy and the Palomar 5 globular cluster).
+Sagittarius dwarf galaxy and the Palomar 5 globular cluster, respectively).
+Sgr and Pal 5 have since become archetypes of two major observational and interpreted
+types of streams: dwarf galaxy or ``wide'' streams as compared to globular cluster or
+``thin'' streams.
 These discoveries, and most of the halo stellar streams found through the early 2000's,
 were found using photometry alone.
-The advent of wide-area, deep, multi-band sky surveys (especially the Sloan Digital Sky
+The advent of deep, wide-area, multi-band sky surveys (especially the Sloan Digital Sky
 Survey, SDSS, and the Two Micron All Sky Survey, 2MASS) were crucial for this initial
 phase of stream discovery.
+The combination of wide-area coverage, well-calibrated photometry (CITE uber-calibration
+and Hogg paper), and near-uniform depth across the survey footprints enabled
+constructing detailed maps of the stellar density of the Milky Way halo.
+Still, streams are relatively low-density features and are surpassed in number counts by
+the foreground and background stellar populations in the Milky Way in sky density alone.
+Stream search methods must therefore leverage careful selection of stars based on the
+expected stellar populations in accreted systems using multi-band photometry.
+
 The most effective method for using photometric data to identify streams is to apply a
-``matched filter'' \citep{Rockosi:2002} to the color--magnitude distribution of stars
+``matched filter'' \citep{Rockosi:2002:MatchedFilterAnalysisTidal} to the color--magnitude distribution of stars
 to preferentially select or up-weight stars that are likely to be distant and low
 metallicity.\footnote{We remind the reader that the focus here is on stellar streams
 from accreted dwarf galaxy or globular cluster progenitor systems, which are expected to
-be old and metal-poor.}
-These filters can be used as a boolean selection (e.g., select all stars within some
+be old and metal poor.}
+Matched filters can be used as a boolean selection (e.g., select all stars within some
 region of color and magnitude defined by isochrones) or as a weighting function (e.g.,
 weight all stars by the probability that they are near an isochrone for an old and
 metal-poor stellar population).
-To then find the streams, the filtered data was typically then displayed in sky
+To search for streams, the filtered data was typically then displayed in sky
 coordinates, sometimes by making movies that step the filter in distance modulus, and
 maps of stellar density were smoothed and visually inspected for curving or linear
 over-densities of stars.
-Automated detection methods were explored \todo{Carl played with Hough transform -- does
-he have a paper discussing this?}, but this was the early days for computer vision and
-machine learning, and most stream discoveries (even through the 2010's) was done by
-visual inspection.
+Automated detection methods were explored, but this was the early days for computer
+vision and machine learning, and most stream discoveries (even through the 2010's) was
+done by visual inspection.
 
-The first stream discoveries motivated the development of more sophisticated methods to
-identify lower surface brightness, less spatially coherent, and more distant streams
-using a myriad of techniques.
-(talk about kinematic streams, great circle counts, check galstreams and sort by discovery date, look at papers)
-- Then Pan-STARRS, DES
-- attempts to find tails around globular clusters
+% TODO: Yanny? Others for list of SDSS stream papers?
+Even now, many (TODO: how many?) of the known streams were found using a matched filter
+based on photometry, plus visual inspection.
+For example, the GD-1 stream --- the first long, thin stream discovered without a clear
+progenitor --- was initially found by \citet{Grillmair:2006:Detection63Cold} using a matched filter on
+SDSS photometry, and matched filters were critical for many early discoveries of streams
+with the SDSS data \citep[e.g.,][]{Newberg:2002:GhostSagittariusLumps,Yanny:2003:LowLatitudeHaloStream, Belokurov:2006:FieldStreamsSagittarius, Grillmair:2006:Detection45Tidal}.
+But this method has since been applied to many large photometric surveys, such as 2MASS,
+Pan-STARRS (PS1; \citealt{todo}), the Dark Energy Survey (DES; \citealt{todo}), Search
+for the Leading Arm of Magellanic Satellites (SLAMS; \citealt{todo}), the DECam Legacy
+Survey  (DECaLS; \citealt{todo}), and many smaller-area surveys.
+In all cases, this has led to new stream and halo substructure discoveries.
+For example, from 2MASS \citep{Rocha-Pinto, GASS, Anticenter stream}, PS1
+\citep{Bernard, Ophiuchus, others?}, DES \citep{Shipp:2018}, SLAMS \citep{Jethwa:2018},
+and DECaLS \citep{Shipp:2021}. PANDAS
+Table~\ref{todo} has a list of streams discovered ...
 
-- Then Gaia
+Many of the systematic searches for streams described above were done without
+considering specific progenitor systems (i.e. globular clusters or dwarf galaxies).
+The discovered streams were then subsequently either found to be progenitor-less, or
+were associated with known systems based on their location in the sky and/or their
+kinematics \citep{todo}.
+However, some searches were specifically designed to find streams associated with known
+globular clusters or dwarf galaxies \citep{Grillmair:1990, todo} using photometry around
+these systems.
+With the exception of the striking tidal tails around the Pal 5 globular cluster and the
+faint stream associated with NGC 5466 \citep{todo}, most of these searches were
+unsuccessful or only found evidence for very low-density tidal tails based on the
+presence of small number sof extra-tidal stars around the progenitor systems
+\citep{todo}.
+
+The first stream discoveries and early theoretical work motivated the development of
+new methods to identify lower surface brightness and more distant streams using a myriad
+of techniques.
+Still, in most cases, searches for streams have focused on finding linear or curving but
+``thin'' stream features in projected sky coordinates.
+For example, even before the first halo streams were found, it was recognized that tidal
+debris from distant merger events should remain spatially coherent for many dynamical
+times (gigayears, in the Milky Way halo; \citealt{Johnston:199X, Helmi:1999}).
+From early numerical simulations, it was also noted that --- in a spherical or
+nearly-spherical dark matter distribution --- the streams would phase mix almost along
+great circles on the sky \citep{Johnston:1996, others}.
+This motivated the development of methods to search for over-densities of stars along
+great circles in sky positions or photometrically-filtered sky positions of stars (the
+``great circle cell count'', GC3, method; \citealt{Johnston:1996}).
+The GC3 method was used to identify and trace the extent of the Sagittarius stream using
+2MASS data for M giant stars \citep{Majewski:2003} and was later adapted to handle other
+kinematic dimensions (the modified GC3 or ``mGC3'' method, which also uses proper motion
+and radial velocity data; \citealt{Mateu:2011}).
+The mGC3 method has since been used to identify many candidate stellar streams using RR
+Lyrae-type stars \citep{Mateu:2018}.
+
+Even in the pre-\gaia\ era, it was recognized that the kinematics of stars could be used
+to search for streams and kinematic substructures that are not spatially coherent or so
+nearby such that they appear broad in sky projection.
+For example, to identify potential streams or other kinematic features in
+phase-space, \citet{Helmi:1999} used a small sample ($<100$) of metal-poor giant stars
+in the solar neighborhood to search for kinematic over-densities of stars.
+This early search for kinematic substructures in the solar neighborhood used astrometry
+from the \hipparcos\ Mission \citep{TODO} combined with literature measurements of
+radial velocities of these stars to obtain full (6D) phase-space measurements of the
+stars.
+With 6D phase-space measurements, the stellar kinematics can be transformed into
+integrals of motion (e.g., angular momentum) and Galactocentric velocity components,
+where streams and other accreted tidal debris was predicted to remain coherent for
+longer than in position-space alone.
+Until recently, this was only possible with relatively small samples of stars with
+precisely-measured astrometry, because the ability to identify clumps and over-densities
+in dynamical or orbital quantities depends strongly on the precision of observed
+kinematic coordinates and the number of stars.
+
+Prior to the \gaia\ Mission, only a handful of the discovered streams were followed up
+and characterized with subsequent observations or surveys (for example, to obtain radial
+velocities or detailed element abundance measurements for the constituent stars).
+This was largely due to the fact that many of the streams discovered in deep photometric
+surveys were faint and distant, and therefore difficult to observe spectroscopically.
+In all but a few cases, the main sequence turn-offs (MSTO) of the streams are
+sufficiently faint so that only the Red Giant Branch (RGB) or Horizontal Branch (HB)
+stars were practically observable.
+But the RGB and HB stars in many thin streams are sparse and often distributed over
+large areas of the sky, making it difficult to obtain a large sample of stream stars.
+\todo{Plot or some characterization of G or V magnitude of stream MSTO location?}
+The \gaia\ Mission --- especially data from the second data release in 2018 ---
+transformed the discovery, characterization, and follow-up efficiency of stellar streams
+around the Milky Way.
+
+
+\subsection{After \gaia\ Data Release 2}
+
+- Until Gaia, total of XX streams reported.
 - More dimensions = better contrast for finding low density things
 - Greatly improved contrast for nearby streams (GD-1)
 - Enabled more automated searches: streamfinder, Buckley method, ... others??
 
 - Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
 
-
-
-
-
-Finding and characterizing
-
-- Finding streams is all about contrast / signal to noise over background
-- Filter data, use rare tracers found in low-metallicity populations (K/M giants, RR Lyrae, HB stars)
-
-- Sagittarius - dwarf galaxy stream. Ibata first, but then  M giants (Majewski, but what paper before?). Possible because high density in stream and low background (halo).
-- Photomeric surveys became important here once filtering methods devised (matched filter for metal-poor main sequence)
-
-
-- First leap in discovery rate came from large-area photometric surveys - first SDSS, Pal 5, GD-1, Orphan
-- Filter and squint method for discovery - follow-up with spectroscopy to characterize
-- Spectroscopic
-
-, Pan-STARRS, DES)
-
 - Data from the \gaia\ Mission has revolutionized our ability to find kinematic substructures, led to the explosion in number of streams discovered
 - Enabled by semi-automated methods - past methods stream-by-stream, natural evolution for a field
-- In the future, hope to have fully automated methods to enable assessing selection function, population studies
-- Still, Gaia not end-all, be-all -- faint limit is an issue (many streams found from photometric)
-
-- Brief history of discovery methods in the pre-Gaia era (maybe move that to intro?)
-- New methods with new data (combining photometry + kinematics, streamfinder)
 - New discoveries and census as of 2023
 - Also: follow-up now more efficient so the chemistries now becoming more readily available
 
@@ -331,6 +412,16 @@ Finding and characterizing
 \subsection{Key opportunities}
 - The point that (all - few) streams have MSTO below Gaia faint limit and what that does for density characterization (or in “stream structure” below?)
 - (reorder by complexity, maybe :)): Automated discovery with quantified selection function, discovery in “hard” parts of parameter space (in the disk plane or galactic center, not tangent to sky plane, etc…), comparison to expectations from cosmological simulations and GC formation models
+
+
+- Validation
+- Truly automated detection - characterize selection effects
+- Astrometry opportunities below Gaia limit (Rubin, Roman)
+- Deeper photometry - main sequence but more contamination from phot alone
+    - Combine with spectroscopy of full halo?
+
+- In the future, hope to have fully automated methods to enable assessing selection function, population studies
+- Still, Gaia not end-all, be-all -- faint limit is an issue (many streams found from photometric)
 
 
 \section{Stream orbital histories}
@@ -408,8 +499,8 @@ Finding and characterizing
 %% \label{}
 
 
-\bibliographystyle{model2-names-astronomy}
-\bibliography{refs}
+ \bibliographystyle{model2-names-astronomy}
+ \bibliography{refs, apw-refs}
 
 \end{document}
 
