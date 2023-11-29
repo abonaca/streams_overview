@@ -46,6 +46,7 @@
 %% for the whole article with \linenumbers.
 %% \usepackage{lineno}
 
+\graphicspath{{figures/}}
 \input{preamble.tex}
 
 \journal{New Astronomy Reviews}
@@ -232,6 +233,7 @@ All of these types of substructures can be considered streams, but since we coul
 % - Table of streams? What should it have in it? Name, survey, discovery method,
 %   validated / rediscovered with Gaia?
 % - Photometric? Astrometry? Radial velocity? Distance tracers? Detailed abundances?
+%   Stellar population / mass? Progenitor?
 
 % Figure 1: Pedagogical figure showing matched filter on Gaia alone, GD-1 vs. astrometry
 % - reproduction of figure from PW & Bonaca 2018
@@ -311,10 +313,11 @@ done by visual inspection.
 Even now, many (TODO: how many?) of the known streams were found using a matched filter
 based on photometry, plus visual inspection.
 For example, the GD-1 stream --- the first long, thin stream discovered without a clear
-progenitor --- was initially found by \citet{Grillmair:2006:Detection63Cold} using a matched filter on
-SDSS photometry, and matched filters were critical for many early discoveries of streams
-with the SDSS data \citep[e.g.,][]{Newberg:2002:GhostSagittariusLumps,Yanny:2003:LowLatitudeHaloStream, Belokurov:2006:FieldStreamsSagittarius, Grillmair:2006:Detection45Tidal}.
-But this method has since been applied to many large photometric surveys, such as 2MASS,
+progenitor --- was initially found by \citet{Grillmair:2006-gd1} using a matched filter
+on SDSS photometry with visual inspection of the resulting stellar density maps.
+Matched filters were also critical for many early discoveries of streams with the SDSS
+data \citep[e.g.,][]{Newberg:2002,Yanny:2003, Belokurov:2006, Grillmair:2006-orphan}.
+This method has since been applied to many large photometric surveys, such as 2MASS,
 Pan-STARRS (PS1; \citealt{todo}), the Dark Energy Survey (DES; \citealt{todo}), Search
 for the Leading Arm of Magellanic Satellites (SLAMS; \citealt{todo}), the DECam Legacy
 Survey  (DECaLS; \citealt{todo}), and many smaller-area surveys.
@@ -326,29 +329,29 @@ Table~\ref{todo} has a list of streams discovered ...
 
 Many of the systematic searches for streams described above were done without
 considering specific progenitor systems (i.e. globular clusters or dwarf galaxies).
-The discovered streams were then subsequently either found to be progenitor-less, or
-were associated with known systems based on their location in the sky and/or their
-kinematics \citep{todo}.
+The discovered streams were then subsequently either found to be without a clear
+progenitor system, or were associated with known systems based on their location in the
+sky and/or their kinematics \citep{todo}.
 However, some searches were specifically designed to find streams associated with known
 globular clusters or dwarf galaxies \citep{Grillmair:1990, todo} using photometry around
 these systems.
-With the exception of the striking tidal tails around the Pal 5 globular cluster and the
-faint stream associated with NGC 5466 \citep{todo}, most of these searches were
-unsuccessful or only found evidence for very low-density tidal tails based on the
-presence of small number sof extra-tidal stars around the progenitor systems
-\citep{todo}.
+With the exception of the striking tidal tails around the Pal 5 globular cluster
+\citep{Odenkirchen:2002} and the faint stream associated with NGC 5466
+\citep{Grillmair:2006-ngc5466}, most of these searches were unsuccessful or only found
+evidence for very low-density tidal tails based on the presence of small numbers of
+extra-tidal stars around the progenitor systems \citep{Grillmair:TODO}.
 
 The first stream discoveries and early theoretical work motivated the development of
 new methods to identify lower surface brightness and more distant streams using a myriad
 of techniques.
-Still, in most cases, searches for streams have focused on finding linear or curving but
-``thin'' stream features in projected sky coordinates.
+In most cases, however, searches for streams have focused on finding linear or curving
+but ``thin'' stream features in projected sky coordinates.
 For example, even before the first halo streams were found, it was recognized that tidal
 debris from distant merger events should remain spatially coherent for many dynamical
 times (gigayears, in the Milky Way halo; \citealt{Johnston:199X, Helmi:1999}).
 From early numerical simulations, it was also noted that --- in a spherical or
 nearly-spherical dark matter distribution --- the streams would phase mix almost along
-great circles on the sky \citep{Johnston:1996, others}.
+great circles on the sky \citep{Johnston:1996, Ibata:XXXX, others}.
 This motivated the development of methods to search for over-densities of stars along
 great circles in sky positions or photometrically-filtered sky positions of stars (the
 ``great circle cell count'', GC3, method; \citealt{Johnston:1996}).
@@ -360,19 +363,19 @@ The mGC3 method has since been used to identify many candidate stellar streams u
 Lyrae-type stars \citep{Mateu:2018}.
 
 Even in the pre-\gaia\ era, it was recognized that the kinematics of stars could be used
-to search for streams and kinematic substructures that are not spatially coherent or so
-nearby such that they appear broad in sky projection.
-For example, to identify potential streams or other kinematic features in
-phase-space, \citet{Helmi:1999} used a small sample ($<100$) of metal-poor giant stars
-in the solar neighborhood to search for kinematic over-densities of stars.
-This early search for kinematic substructures in the solar neighborhood used astrometry
-from the \hipparcos\ Mission \citep{todo} combined with literature measurements of
-radial velocities of these stars to obtain full (6D) phase-space measurements of the
-stars.
+to search for streams and kinematic substructures in terms of dynamical invariants,
+which would enable finding substructures that are not spatially coherent or so nearby
+that they appear broad in sky projection.
+For example, to identify potential streams or other dynamical structures in phase-space,
+\citet{Helmi:1999} used a small sample ($<100$) of metal-poor giant stars in the solar
+neighborhood to search for kinematic over-densities of stars.
+This early search for substructures in the solar neighborhood used astrometry from the
+\hipparcos\ Mission \citep{todo} combined with literature measurements of radial
+velocities of these stars to obtain full (6D) phase-space measurements of the stars.
 With 6D phase-space measurements, the stellar kinematics can be transformed into
 integrals of motion (e.g., angular momentum) and Galactocentric velocity components,
-where streams and other accreted tidal debris was predicted to remain coherent for
-longer than in position-space alone.
+where streams and other accreted tidal debris features are predicted to remain coherent
+for longer than in position-space alone \citep{Helmi:1999, Sanderson:XXXX}.
 Until recently, this was only possible with relatively small samples of stars with
 precisely-measured astrometry, because the ability to identify clumps and over-densities
 in dynamical or orbital quantities depends strongly on the precision of observed
@@ -396,10 +399,51 @@ around the Milky Way.
 
 \subsection{After \gaia\ Data Release 2}
 
+The \gaia\ Mission released Data Release 2 (DR2) in April 2018 \citep{Gaia:DR2}, which
+included astrometry and mean photometry for nearly 1.7 billion stars based on the first
+22 months of observations \citep{todo}.
+This data set was transformative for the study of Milky Way stellar streams and stellar
+halo stars.
+While parallax measurements for stars in most stellar streams and throughout most of the
+stellar halo were too noisy to be useful, the proper motions provided key new kinematic
+information for many of these stars.
+For example, consider a main sequence turnoff (MSTO) star for an old stellar population
+with absolute magnitude $M_G \sim 4~\unit{\mag}$, at a distance of $d = 10~\kpc$ with
+a transverse velocity typical of the Milky Way halo of $v_{\textrm{tan}} = 100~\kms$.
+This star would have a true parallax of $\varpi = 0.1~\unit{\mas}$, a total proper
+motion $\mu \approx 2.1~\masyr$, and an apparent magnitude of $G = 19~\unit{\mag}$.
+For a star of this apparent magnitude in \gaia\ \dr{2}, a typical parallax uncertainty
+$\sigma_\varpi \sim 0.4~\unit{\mas}$ and a typical proper motion uncertainty $\sigma_\mu
+\sim 0.4~\masyr$.
+This means that the parallax measurement is entirely dominated by the uncertainty, but
+the proper motion still has an appreciable signal-to-noise ratio of $\mu / \sigma_\mu
+\sim 5$.
+The ability to use proper motions to identify members of stellar streams immediately
+enabled the highest contrast view of a stellar stream yet, as demonstrated by
+\citet{Price-Whelan:2018} for the GD-1 stream.
+
+\begin{figure*}[t!]
+\begin{center}
+\includegraphics[width=1\textwidth]{gd1-filter-demo.pdf}
+\end{center}
+\caption{%
+A demonstration ...
+\textbf{Top row:}
+\textbf{Middle row:}
+\textbf{Bottom row:}
+\label{fig:gd1-demo}
+}
+\end{figure*}
+
+Figure~\ref{fig:XX} is a recreation of ... now using data from \gaia\ \dr{3} ... which demonstrates the power of using \gaia\ astrometry to filter for stream members.
+- TODO: make and describe figure
+
+
+
 - Until Gaia, total of XX streams reported.
 - More dimensions = better contrast for finding low density things
 - Greatly improved contrast for nearby streams (GD-1)
-- Enabled more automated searches: streamfinder, Buckley method, ... others??
+- Enabled more automated searches: streamfinder, Via Machinae, ... others??
 
 - Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
 
@@ -411,6 +455,9 @@ around the Milky Way.
 - list:
 -- ED-2
 -- LMS-1 / Wukong
+
+- Clumps in dynamical quantities - student who worked with Robyn...
+
 
 \subsection{Key opportunities}
 - The point that (all - few) streams have MSTO below Gaia faint limit and what that does for density characterization (or in “stream structure” below?)
@@ -463,7 +510,7 @@ around the Milky Way.
 % -- hermus \citep{grillmair:2014}
 % -- hermus, phoenix connection \citep{gc:2016}
 % -- bhb sdss velocities -> different orbit of hermus, not connected w phoenix \citep{martin:2018}
-% 
+%
 % % - Still much unknown about most streams
 % - But Gaia gives us access to kinematics -> +MW model = orbits
 % - orbits good for:
@@ -471,29 +518,29 @@ around the Milky Way.
 % -- origin
 % -- fitting the potential
 % -- satellite encounters
-% 
+%
 % - better membership:
 % -- S5 \citep{li:2022}
 % -- new streamfinder paper
-% 
-% 
+%
+%
 % - progenitors important: can model much better (kupper)
 % - hard to find (balbinot)
 % - before: only 2 gc streams
 % - gjoll--ngc3201 chemistry \citep{hansen:2020}
-% 
+%
 % - gaia: low sb bc selecting on orbits
 % - now a huge population, key opportunity
-% 
+%
 % - orbits also connected separately identified streams
 % - case: oc
 % - case: aau \citep{li:2021}
 % - important for accurate accounting as we're moving to more complete census
-% 
+%
 % - more connections + benefit of orbits: phase-space clustering \citep{bonaca:2021}
 % - found origins (accreted vs in situ) + progenitor galaxies
 % - important for cocoon implications
-% 
+%
 % - orbital plane distribution, not aligned w the vpos \citep{riley:2020}
 
 \subsection{Key opportunities}
