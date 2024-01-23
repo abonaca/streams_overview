@@ -54,6 +54,13 @@
 \usepackage{savesym}
 \savesymbol{tablenum}
 \usepackage{siunitx}
+\ifdefined\unit\else
+  \ifdefined\NewCommandCopy
+    \NewCommandCopy\unit\si
+  \else
+    \NewDocumentCommand\unit{O{}m}{\si[#1]{#2}}
+  \fi
+\fi
 \restoresymbol{SIX}{tablenum}
 \DeclareSIUnit\year{yr}
 \DeclareSIUnit\parsec{pc}
