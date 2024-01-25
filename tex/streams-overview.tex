@@ -162,55 +162,47 @@ Implications heralding exciting times ahead!
 % AB
 % storytelling prose
 
-The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed how we view groups of stars that move on similar orbits---stellar streams.
-% Formed through tidal dissolution of globular cluster and dwarf galaxy satellites.
+The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits---stellar streams.
 Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{}, and the nature of dark matter \citep{}.
 So far, the main limitation for studying stellar streams in the Milky Way has been uncovering member stars of these low-mass and diffuse systems in the ocean of field stars.
 \gaia\ proper motions have largely lifted this limitation, and as a result, maps of stellar streams in the \gaia\ era build a more complete picture of our Galaxy, its constituents and its history.
-% With its measurement of proper motions, \gaia\ lifted the main limitation in studies of stellar streams: uncovering member stars of these low-mass and diffuse systems in the ocean of field Milky Way stars.
-% As a result, maps of stellar streams in the \gaia\ era build a more complete picture of our Galaxy, its constituents and its history.
 
 We center this review on three major breakthroughs that \gaia\ brought to stellar streams.
-The first is the sheer number of stream discoveries, which increased from $\approx10$ to $\approx100$ thanks to \gaia's capability to detect comoving, diffuse groups of stars (\S\ref{sec:discovery}).
-The second are the stream kinematics, which constrained their precise orbits and origins (\S\ref{sec:orbits}).
+The first is the sheer number of stream discoveries, which \gaia\ increased by an order of magnitude from $\approx10$ to $\approx100$ (\S\ref{sec:discovery}).
+The second are the stream kinematics, which constrained their precise orbits, as well as origins (\S\ref{sec:orbits}).
 And finally, the third is the detailed structure of stellar streams, resolved by \gaia\ for the first time to suggest dynamical histories rich in perturbations (\S\ref{sec:structure}).
+In these sections we also discuss the key opportunities and new research directions that these breakthroughs have made possible.
+In the concluding section, we reflect more broadly on what these developments entail for the future of Galactic archaeology (\S\ref{sec:outlook}).
+As for the remainder of this section, the last review dedicated to stellar streams was almost a decade ago and pre-\gaia\ \citep{newberg:2016}, while a more recent, \gaia-based review focused on the Milky Way's halo more broadly \citep{helmi:2020}, so we now proceed to outline the theoretical and historical context for \gaia's stellar stream revolution.
 
-- we expect these to have set in motion future progress as well, and discuss key opportunities for breakthroughs for each of the major topics, and reflect on changes awaiting us in the future due to these discoveries in the concluding section
-As the last review dedicated to stellar streams was almost a decade ago and pre-\gaia\ \citep{newberg:2016}, while a more recent, \gaia-based review focused on the Milky Way's halo more broadly \citep{helmi:2020}, in the remainder of this section we provide the theoretical and historical context for \gaia's stellar stream revolution.
-
-Analytical and numerical considerations show that satellite systems orbiting a more massive host galaxy experience its tidal forces \citep{}.
-When sufficiently strong, these tides pull out stars through two stationary points to form the leading and trailing tidal tails \citep{bt:2008}.
+Physics driving the formation of stellar streams rests with the tidal forces of a host galaxy acting on its satellites.
+% Analytical and numerical considerations show that satellite systems orbiting a more massive host galaxy experience its tidal forces \citep{}.
+When sufficiently strong, these tides pull stars out of the satellite through two stationary points \citep{bt:2008}, thus forming the leading tidal tail (stars with shorter orbital periods speeding ahead of the progenitor) and the trailing tidal tail (stars lagging behind the progenitor due to their longer orbital periods).
 We illustrate the process of tidal dissolution in Figure~\ref{}, with a dwarf galaxy satellite at the top, and a globular cluster on a matching orbit at the bottom.
-The left-most panels show an early stage of dissolution with short tails of gravitationally unbound stars emanating from the progenitor.
+The dwarf galaxy has an initial mass of XX, was represented with YY star particles and was evolved with Gyrfalcon?? tree code.
+The globular cluster has an initial mass of XX, sampled between YY and ZZ, and was modeled with direct N-body code Petar??.
+The left-most panels show an early stage of dissolution, with short tails of gravitationally unbound stars emanating from each progenitor.
 The boundary between the bound and unbound stars is set by the tidal radius.
-Typically, the satellite mass $m$ is much smaller than the enclosed mass of the host galaxy at its location $M(<R_0)$, so the tidal radius is approximately the Jacobi radius from the restricted three-body problem \citep{szebehely:1967, valtonen:2006}:
+Typically, the satellite mass $m$ is much smaller than the enclosed mass of the host galaxy at its location $M(<R_0)$, so the tidal radius is approximately the Jacobi radius from the restricted three-body problem \citep[][]{szebehely:1967, valtonen:2006}:
 \begin{equation}
 r_J = \left(\frac{m}{3M(<R_0)}\right)^{1/3} R_0
 \end{equation}
-Tidal radius is shown with a red dashed line in Figure~\ref{}, and as expected is 10 times smaller for the $10^4\,\unit{\msun}$ globular cluster than the $10^7\,\unit{\msun}$ dwarf galaxy.
+The Jacobi radius, shown with a red dashed line in Figure~\ref{}, matches well the tidal boundary of both the globular cluster and the dwarf galaxy derived through self-consistent numerical simulations.
+This agreement has been used to develop fast methods for generating models of stellar streams by placing tracer particles at the progenitor's Jacobi radius, and then solving the restricted three-body problem \citep[the so-called \emph{particle-spray methods};][]{varghese:2011, lane:2012, kuepper:2012, bonaca:2014, gibson:2014, fardal:2015}.
 
 Governed by the same underlying gravitational potential, tidal tails of a globular cluster and a dwarf galaxy on the same orbit have similar shape and orientation.
-Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter \citep[left and middle panels in Figure~\ref{};][]{eyre,sanders}.
-However, dwarfs galaxies are more diffuse than globular clusters, so their mass-loss rates are significantly higher and produce longer tails in the same amount of time.
-Furthermore, dwarf galaxies predominantly lose mass during pericentric passages \citep{}, which results in tidal tails of a fairly uniform density (Figure~\ref{}, right).
-In contrast, globular clusters \citep{}.
+Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre, sanders}.
+On the other hand, it is obvious from Figure~\ref{} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
+The cause of this discrepancy is not just the difference in their initial masses, but also in their number density of stars.
+In more diffuse dwarf galaxies, a higher fraction of stars find themselves outside of the tidal radius when it shrinks during a pericentric passage (Figure~\ref{}, top center).
+Combined with a higher velocity dispersion due to a higher initial mass \citep{}, the resulting tails are more massive, wider and grow faster.
+In contrast, more compact globular clusters maintain a tidal radius larger than its half-mass radius even at pericenter.
+As a result, their mass loss is dominated by stars ejected through close two-body encounters, i.e., the process of evaporation \citep{baumgardt:2003}.
+The consequence of mass loss being largely an internal process, means that stars escape a globular cluster with a small relative velocity and at an approximately constant rate.
+Stars released uniformly along the orbital phase appear to be on epicycles around the progenitor's orbit.
+Seen in projection, these epicycles form a regular pattern of over- and under-densities along the globular cluster tails \citep[Figure~\ref{}, bottom right;][]{kuepper:2008, kuepper:2010, just:2009}.
+This pattern is absent from dwarf galaxy tails due to its episodic mass loss of kinematically hotter stars, which results in a fairly uniform density (Figure~\ref{} top right).
 
-% It also decreases with the Galactocentric radius, $R_0$, which makes tidal stripping more efficient at pericenter.
-
-
-
-% through the analogs of the L3 and L2 Lagrange points from the restricted three-body problem.
-% - two tails: lagrange points
-% - jacobi radius
-% - orbit misalignment at peri vs apo
-% - stream length
-% - density structure (epicycles)
-
-% - what happens when two galaxies approach (toomre)
-% - what happens to a dwarf galaxy when it approaches a more massive galaxy
-% - theory of tidal stripping
-% -- Shell vs stream, radial vs tangential
-% -- Dwarf vs. globular cluster
 
 The theory behind tidal streams \citep{toomre} was initially developed to explain the origin of numerous bridge and tail features seen in catalogs of interacting galaxies \citep{arp,others}.
 - now we've seen even more extragalactic streams -- interacting galaxies, streams, shells
@@ -591,9 +583,9 @@ TODO: describe figure
 
 \section{Outlook}
 \label{sec:outlook}
+- Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
 - Due to large number of streams: transitioning from stamp-collecting to population studies
 - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
-- Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available
 
 
 %% The Appendices part is started with the command \appendix;
