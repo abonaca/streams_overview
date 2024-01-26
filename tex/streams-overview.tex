@@ -178,7 +178,7 @@ As for the remainder of this section, the last review dedicated to stellar strea
 Physics driving the formation of stellar streams rests with the tidal forces of a host galaxy acting on its satellites.
 % Analytical and numerical considerations show that satellite systems orbiting a more massive host galaxy experience its tidal forces \citep{}.
 When sufficiently strong, these tides pull stars out of the satellite through two stationary points \citep{bt:2008}, thus forming the leading tidal tail (stars with shorter orbital periods speeding ahead of the progenitor) and the trailing tidal tail (stars lagging behind the progenitor due to their longer orbital periods).
-We illustrate the process of tidal dissolution in Figure~\ref{}, with a dwarf galaxy satellite at the top, and a globular cluster on a matching orbit at the bottom.
+We illustrate the process of tidal dissolution in Figure~\ref{fig:stream_formation}, with a dwarf galaxy satellite at the top, and a globular cluster on a matching orbit at the bottom.
 The dwarf galaxy has an initial mass of XX, was represented with YY star particles and was evolved with Gyrfalcon?? tree code.
 The globular cluster has an initial mass of XX, sampled between YY and ZZ, and was modeled with direct N-body code Petar??.
 The left-most panels show an early stage of dissolution, with short tails of gravitationally unbound stars emanating from each progenitor.
@@ -187,29 +187,42 @@ Typically, the satellite mass $m$ is much smaller than the enclosed mass of the 
 \begin{equation}
 r_J = \left(\frac{m}{3M(<R_0)}\right)^{1/3} R_0
 \end{equation}
-The Jacobi radius, shown with a red dashed line in Figure~\ref{}, matches well the tidal boundary of both the globular cluster and the dwarf galaxy derived through self-consistent numerical simulations.
+The Jacobi radius, shown with a red dashed line in Figure~\ref{fig:stream_formation}, matches well the tidal boundary of both the globular cluster and the dwarf galaxy derived through self-consistent numerical simulations.
 This agreement has been used to develop fast methods for generating models of stellar streams by placing tracer particles at the progenitor's Jacobi radius, and then solving the restricted three-body problem \citep[the so-called \emph{particle-spray methods};][]{varghese:2011, lane:2012, kuepper:2012, bonaca:2014, gibson:2014, fardal:2015}.
 
+\begin{figure*}[t!]
+\begin{center}
+\includegraphics[width=1\textwidth]{figures/stream_formation.png}
+\end{center}
+\caption{%
+A comparison of tidal tails with a dwarf galaxy (top) and a globular cluster progenitor (bottom).
+\label{fig:stream_formation}
+}
+\end{figure*}
+
 Governed by the same underlying gravitational potential, tidal tails of a globular cluster and a dwarf galaxy on the same orbit have similar shape and orientation.
-Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre, sanders}.
-On the other hand, it is obvious from Figure~\ref{} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
+Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{fig:stream_formation}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre, sanders}.
+On the other hand, it is obvious from Figure~\ref{fig:stream_formation} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
 The cause of this discrepancy is not just the difference in their initial masses, but also in their number density of stars.
-In more diffuse dwarf galaxies, a higher fraction of stars find themselves outside of the tidal radius when it shrinks during a pericentric passage (Figure~\ref{}, top center).
+In more diffuse dwarf galaxies, a higher fraction of stars find themselves outside of the tidal radius when it shrinks during a pericentric passage (Figure~\ref{fig:stream_formation}, top center).
 Combined with a higher velocity dispersion due to a higher initial mass \citep{}, the resulting tails are more massive, wider and grow faster.
 In contrast, more compact globular clusters maintain a tidal radius larger than its half-mass radius even at pericenter.
 As a result, their mass loss is dominated by stars ejected through close two-body encounters, i.e., the process of evaporation \citep{baumgardt:2003}.
 The consequence of mass loss being largely an internal process, means that stars escape a globular cluster with a small relative velocity and at an approximately constant rate.
 Stars released uniformly along the orbital phase appear to be on epicycles around the progenitor's orbit.
 Seen in projection, these epicycles form a regular pattern of over- and under-densities along the globular cluster tails \citep[Figure~\ref{}, bottom right;][]{kuepper:2008, kuepper:2010, just:2009}.
-This pattern is absent from dwarf galaxy tails due to its episodic mass loss of kinematically hotter stars, which results in a fairly uniform density (Figure~\ref{} top right).
+This pattern is absent from dwarf galaxy tails due to its episodic mass loss of kinematically hotter stars, which results in a fairly uniform density (Figure~\ref{fig:stream_formation} top right).
 
+- early photographic surveys of interacting galaxies cataloged numerous tail and bridge features, however, theory showed that gravity alone can explain their formation
+- powerful tracers of the underlying gravitational field
+- one of the major open questions, identified in snowmass, decadal
+% The theory behind tidal streams \citep{toomre} was initially developed to explain the origin of numerous bridge and tail features seen in catalogs of interacting galaxies \citep{arp,others}.
+In the following decades we became ever more sensitive in detecting low surface brightness, so now there is en entire compendium of stellar streams and shells surrounding galaxies throughout the Local Universe \citep{leduc, delgado, others}.
+- models that reproduce them well also learn about the potential \citep{pearson, amorisco, vandokkum}
+- somewhat limited what can be constrained using projected stream positions \citep{nibauer}, but in mw methods developed for detailed reconstruction of dm on large scales \citep{varghese, bonaca:2014} and on small, subgalactic, scales \citep{johnston, ibata}
+% - but also more direct tracer of dm: distribution on large, galactic \citep{varghese, bonaca:2014}
+% - also constraints on small, subgalactic, scales \citep{johnston, ibata}
 
-The theory behind tidal streams \citep{toomre} was initially developed to explain the origin of numerous bridge and tail features seen in catalogs of interacting galaxies \citep{arp,others}.
-- now we've seen even more extragalactic streams -- interacting galaxies, streams, shells
--> clearly important process for understanding galaxy formation
-% - Mergers common, expected in dm universe
-- tracers in the MW halo, evidence of hierarchical galaxy formation, predicted in the dm paradigm
-- but also more direct tracer of dm: distribution on large, galactic \citep{varghese, bonaca:2014}, and small, subgalactic, scales \citep{johnston, ibata}
 
 It took some time to discover in the mw, looking from the inside
 % - mw halo discoveries in new surveys: hipparcos (phase-mixed)
