@@ -337,11 +337,10 @@ Stream search methods must therefore leverage careful selection of stars based o
 expected stellar populations in accreted systems using multi-band photometry.
 
 The most effective method for using photometric data to identify streams is to apply a
-``matched filter'' \citep{Rockosi:2002:MatchedFilterAnalysisTidal} to the color--magnitude distribution of stars
+``matched filter'' \citep{rockosi:2002} to the color--magnitude distribution of stars
 to preferentially select or up-weight stars that are likely to be distant and low
-metallicity.\footnote{We remind the reader that the focus here is on stellar streams
-from accreted dwarf galaxy or globular cluster progenitor systems, which are expected to
-be old and metal poor.}
+metallicity.\footnote{The focus here is on stellar streams from accreted dwarf galaxy or
+globular cluster progenitor systems, which are expected to be old and metal poor.}
 Matched filters can be used as a boolean selection (e.g., select all stars within some
 region of color and magnitude defined by isochrones) or as a weighting function (e.g.,
 weight all stars by the probability that they are near an isochrone for an old and
@@ -353,6 +352,32 @@ over-densities of stars.
 Automated detection methods were explored, but this was the early days for computer
 vision and machine learning, and most stream discoveries (even through the 2010's) was
 done by visual inspection.
+
+Figure~\ref{fig:gd1-demo} shows an example of how binary matched filtering based on
+photometry can be used to reveal a stream.
+The top row of panels in Figure~\ref{fig:gd1-demo} shows all data in a cross-match
+between \gaia\ and Pan-STARRS (PS1) photometry for stars in the sky region near the GD-1
+stream \citep{Grillmair:2006-gd1}: The top left panel shows the extinction-corrected
+color--magnitude diagram based on PS1 photometry, the top center panel shows the \gaia\
+proper motions transformed into a coordinate system aligned with the stream
+\citep{koposov:2009}, and the top right panel shows a 2D histogram of the sky positions
+of all stars in this cross-match.
+The over-plotted (green) line in the top left panel is an isochrone from the PARSEC
+\citep{parsec} isochrone library for an old and metal-poor stellar population at the
+approximate distance of GD-1.
+The middle row of panels show the same data, but now with a binary matched filter
+applied based on the photometric selection shown in the middle left panel (red outlined
+region).
+This filter was designed by shifting the isochrone shown in the top panel by a small
+amount in color.
+The dashed line in the middle right panel shows the approximate location of the GD-1
+stream in sky positions (middle right panel) as is now understood from selections using
+\gaia\ data.
+Even with only the photometric selection, the matched filter reveals a clear
+over-density of stars near $\phi_2 \sim 0^\circ$ --- this is the GD-1 stream.
+However, notice that photometric selection alone is not sufficient to reveal the full
+extent of the stream --- we will return to this example and discuss the importance of
+kinematic information for stream discovery later in this section.
 
 % TODO: Yanny? Others for list of SDSS stream papers?
 Even now, many (TODO: how many?) of the known streams were found using a matched filter
@@ -542,7 +567,7 @@ TODO: describe figure
 - bulk for many streams \citep{streamfinders}
 - individual follow-up as well \citep{others}
 - galstreams summary: more streams w pm than not
-- 
+-
 % - census of papers w kinematics
 
 \subsection{Orbits}
