@@ -38,6 +38,7 @@
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{amsmath}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -474,20 +475,39 @@ sufficiently faint so that only the Red Giant Branch (RGB) or Horizontal Branch 
 stars were practically observable.
 But the RGB and HB stars in many thin streams are sparse and often distributed over
 large areas of the sky, making it difficult to obtain a large sample of stream stars.
-As a demonstration of this, Figure~\ref{fig:XXX} shows the distribution of $G$-band
-magnitudes for the MSTO and HB of 87 known streams.
-TODO: explain how we get distances... plot phi1 vs. G ?
-\todo{Plot or some characterization of G or V magnitude of stream MSTO location? Histogram of MSTO magnitude and RGB magnitude at logg = 1 for all streams}
-The \gaia\ Mission --- especially data from the second data release in 2018 ---
-transformed the discovery, characterization, and follow-up efficiency of stellar streams
-around the Milky Way.
+As a demonstration of this point, the left panel of Figure~\ref{fig:msto-rc-mag} shows
+the PS1 $r$-band magnitude tracks of the MSTO as a function of stream longitude for 7
+streams discovered before \gaia\ \dr{2} that have since been identified using \gaia\
+astrometry. To obtain precise and high signal-to-noise element abundance measurements
+using existing facilities, stars typically had to be brighter than $r \lesssim
+18~\textrm{mag}$ --- the MSTO for most streams known pre-\gaia\ were fainter than this
+limit.
+The stream tracks in Figure~\ref{fig:msto-rc-mag} were determined by fitting orbits to
+stream stars associated with each stream using data from \citet{ibata:TODO} (this
+procedure is described in detail in \ref{apx:stream-fit}).
+The \gaia\ Mission --- especially data from the second data release in 2018 --- has
+since transformed the discovery, characterization, and follow-up efficiency of stellar
+streams around the Milky Way.
 
 \begin{figure*}[t!]
     \begin{center}
     \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
     \end{center}
     \caption{%
-    TODO
+    Tracks of the apparent $r$-band magnitude of the main sequence turn-off (MSTO) for
+    streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
+    The tracks were determined by fitting orbits to stream stars associated with each of
+    the streams in \citet{ibata:TODO} (this procedure is described in detail in
+    \ref{apx:stream-fit}).
+    The MSTO magnitude is computed assuming all streams have a single stellar population
+    with an age of $12~\unit{\giga\year}$ and a metallicity of $\feh = -2.2$, but this
+    is only meant to qualitatively show the relative brightness of the MSTO for the
+    known streams.
+    High-resolution spectroscopic follow-up of MSTO stars in these streams is difficult
+    or currently infeasible for many of these streams.
+    RGB stars in the streams are typically bright enough for this type of follow-up, but
+    are far less numerous than MSTO stars (globular cluster streams may only have a few
+    to tens of RGB stars).
     \label{fig:msto-rc-mag}
     }
 \end{figure*}
@@ -663,11 +683,73 @@ TODO: describe figure
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
-%% \appendix
+\appendix
 
-%% \section{}
-%% \label{}
+\section{Fitting Orbits to Streams}
+\label{apx:stream-fit}
 
+We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:TODO}
+for demonstrative visualizations shown in this article.
+
+For a given stream, we first determine a heliocentric, spherical coordinate system that
+is approximately aligned with the stream track.
+In this coordinate system, the stream longitude is $\phi_1$ and the stream latitude is
+$\phi_2$.
+We initialize this process by computing the eigenvectors of the covariance matrix of the
+positions of the stream stars projected onto the unit sphere.
+We project the unit vectors of the stream star positions onto the largest eigenvector
+and use the endpoints along this axis to define an initial great circle coordinate
+system.
+We then adjust this great circle coordinate system by allowing small rotations around
+the great circle $x$ and $y$ axes to minimize an objective function $F$ that computes
+the sum of the squared stream latitudes, $\phi_2$: $F(\phi_2) = \sum_i \phi_{2,i}^2$ for
+all stars in a stream, indexed by $i$.
+
+To fit an orbit to each stream, we fix the model for the Milky Way's gravitational
+potential to the \texttt{MilkyWayPotential2022} in \texttt{gala} \citep{gala} and
+optimize over the orbital initial conditions.
+We specify the orbital initial conditions in heliocentric coordinates in the rotated
+stream coordinate system described above.
+In this coordinate system, we define the orbital initial conditions at $\phi_1=0^\circ$,
+so that the free parameters are the stream longitude, $\phi_2$, the distance, $D$, the
+proper motion components, $(\mu_{\phi_1}, \mu_{\phi_2})$, and the line-of-sight
+velocity, $v_r$.
+For a given setting of the parameters $(\phi_2, D, \mu_{\phi_1}, \mu_{\phi_2}, v_r)$, we
+integrate the orbit forward and backward in time, $\tau$, for an amount set by the
+observed angular extent of the stream, $\Delta \phi_1$ divided by the transverse angular
+velocity, $\sqrt{\mu_{\phi_1}^2 + \mu_{\phi_2}^2}$, and multiplied by two.
+If the orbit wraps (over $360^\circ$), we truncate the orbit segment at $\phi_1 \pm
+180^\circ$.
+
+We then compute the log-likelihood of the orbit given the stream stars by assuming each
+coordinate dimension is independent and normally distributed with a variance set by the
+observational uncertainties.
+In detail, we interpolate the orbit to the $\phi_1$ values of the stream stars using
+cubic interpolation and compute the log-likelihood as:
+\begin{equation}
+\begin{split}
+    \ln \mathcal{L} = \sum_i
+    &\mathcal{N}(\tilde{\phi}_2(\phi_{1, i}) \given \phi_{2, i}, \sigma_{\phi_{2}}^2) \\
+    \times \, &\mathcal{N}(\tilde{D}(\phi_{1, i})^{-1} \given \varpi_{i}, \sigma_{\varpi}^2) \\
+    \times \, &\mathcal{N}(\tilde{\mu}_{\phi_1}(\phi_{1, i}) \given \mu_{\phi_1, i}, \sigma_{\mu_{\phi_1}}^2) \\
+    \times \, &\mathcal{N}(\tilde{\mu}_{\phi_2}(\phi_{1, i}) \given \mu_{\phi_2, i}, \sigma_{\mu_{\phi_2}}^2) \\
+    \times \, &\mathcal{N}(\tilde{v}_r(\phi_{1, i}) \given v_{r, i}, \sigma_{v_r}^2)
+\end{split}
+\end{equation}
+where the tilde indicates the model predicted coordinates from the orbit and
+interpolation step, evaluated at each stream star $\phi_{1, i}$, the distance component
+is compared to the observed parallaxes $\varpi$, $\mathcal{N}(x \given \mu, \sigma^2)$
+is the normal distribution with mean $\mu$ and variance $\sigma^2$, and the sum is over
+all observed stars in the stream indexed by $i$.
+
+We optimize the log-likelihood $\ln \mathcal{L}$ using the L-BFGS-B \citep{todo}
+implementation in \texttt{scipy.optimize} \citep{scipy}, with bounds on the parameters
+such that $\phi_2 \in (-5, 5)^\circ$, $D \in (1, 50)~\kpc$, $\mu_{\phi_1} \in (-100,
+100)~\masyr$, $\mu_{\phi_2} \in (-100, 100)~\masyr$, and $v_r \in (-500, 500)~\kms$.
+We start the optimization from six different initial distance values between $1~\kpc$
+and $40~\kpc$ (spaced logarithmically) and take the optimized parameters from the run
+with the highest log-likelihood value.
+This process failed for TODO streams (TODO: stream names).
 
 \bibliographystyle{model2-names-astronomy}
 \bibliography{refs, apw-refs}
