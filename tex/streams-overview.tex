@@ -494,6 +494,7 @@ streams around the Milky Way.
     \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
     \end{center}
     \caption{%
+    % TODO: add DES streams to left panel?
     Tracks of the apparent $r$-band magnitude of the main sequence turn-off (MSTO) for
     streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
     The tracks were determined by fitting orbits to stream stars associated with each of
@@ -515,17 +516,17 @@ streams around the Milky Way.
 
 \subsection{After \gaia\ Data Release 2}
 
-The \gaia\ Mission released Data Release 2 (DR2) in April 2018 \citep{Gaia:DR2}, which
+The \gaia\ Mission released Data Release 2 (DR2) in April 2018 \citep{gaiadr2}, which
 included astrometry and mean photometry for nearly 1.7 billion stars based on the first
-22 months of observations \citep{todo}.
-This data set was transformative for the study of Milky Way stellar streams and stellar
-halo stars.
+22 months of observations.
+This data was transformative for the study of Milky Way stellar streams and stellar halo
+stars.
 While parallax measurements for stars in most stellar streams and throughout most of the
-stellar halo were too noisy to be useful, the proper motions provided key new kinematic
-information for many of these stars.
-For example, consider a main sequence turnoff (MSTO) star for an old stellar population
-with absolute magnitude $M_G \sim 4~\unit{\mag}$, at a distance of $d = 10~\kpc$ with
-a transverse velocity typical of the Milky Way halo of $v_{\textrm{tan}} = 100~\kms$.
+stellar halo were too noisy to be useful, the proper motions provided key kinematic
+information for many of these stars for the first time.
+For example, consider a MSTO star for an old stellar population with absolute magnitude
+$M_G \sim 4~\unit{\mag}$, at a distance of $d = 10~\kpc$ with a transverse velocity
+typical of the Milky Way halo of $v_{\textrm{tan}} = 100~\kms$.
 This star would have a true parallax of $\varpi = 0.1~\unit{\mas}$, a total proper
 motion $\mu \approx 2.1~\masyr$, and an apparent magnitude of $G = 19~\unit{\mag}$.
 For a star of this apparent magnitude in \gaia\ \dr{2}, a typical parallax uncertainty
@@ -535,19 +536,48 @@ This means that the parallax measurement is entirely dominated by the uncertaint
 the proper motion still has an appreciable signal-to-noise ratio of $\mu / \sigma_\mu
 \sim 5$.
 The ability to use proper motions to identify members of stellar streams immediately
-enabled the highest contrast view of a stellar stream yet, as demonstrated by
-\citet{Price-Whelan:2018} for the GD-1 stream.
+enabled detailed looks at previously-known streams and new methods for finding streams
+in the Milky Way.
 
-Figure~\ref{fig:gd1-demo} is a recreation of ... now using data from \gaia\ \dr{3} ...
-which demonstrates the power of using \gaia\ astrometry to filter for stream members.
-TODO: describe figure
+Proper motion data provided by \gaia\ has proven to be invaluable for studying the
+density structure of stellar streams.
+While matched filtering on photometry alone can reveal the presence of a stream, the
+stream stars are often still relatively low signal-to-noise features over the background
+stellar density, meaning that the stream density and any variations in the density is
+typically not well constrained.
+Soon after \gaia\ \dr{2}, \citet{price-whelan:2018} demonstrated the power of combining
+photometric and kinematic data to identify stream members and measure the density of the
+GD-1 stream.
+Figure~\ref{fig:gd1-demo} is a recreation of the selections performed in
+\citet{price-whelan:2018} but now using data from \gaia\ \dr{3} \citep{gaiadr3}.
+As mentioned above, the top row of panels in Figure~\ref{fig:gd1-demo} shows photometry
+from PS1 (top left panel), proper motions from \gaia\ \dr{3} (top center panel), and sky
+positions (top right panel) for stars in the sky region near the GD-1 stream.
+The middle row of panels shows the same data, but now with a matched filter applied to
+the photometry.
+The bottom row of panels shows the same data, but now with a matched filter applied to
+the photometry and a selection on the proper motions (shown as a red box in the bottom
+center panel).
+The bottom right panel now shows the sky positions of individual stars that pass these
+selections, which reveals more of the stream (especially at $\phi_1 \lesssim -55^\circ$)
+and enables quantifying the magnitude of density variations and gaps present along the
+stream track.
+% TODO: also, off-track features
+Many other studies have also used \gaia\ proper motions to study the structure of GD-1
+\citep[e.g.,][]{malhan:2018, li-yanny:2018, huang:2019, deboer:2020, ibata:2020}, the
+Orphan--Chenab stream \citep{koposov:2019}, the Helmi streams \citep{koppelman:2019},
+the Jhelum stream \citep{bonaca:2019}, the Ophiuchus stream \citep{caldwell:2020}, along
+with work that has modeled the density structure of many streams simultaneously
+\citep[e.g.,][]{patrick:2022}.
 
 
-
+- Now pivot to talking about finding new streams
 - Until Gaia, total of XX streams reported.
 - More dimensions = better contrast for finding low density things
 - Greatly improved contrast for nearby streams (GD-1)
 - Enabled more automated searches: streamfinder, Via Machinae, ... others??
+
+
 
 - Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
 
