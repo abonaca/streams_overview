@@ -379,6 +379,19 @@ However, notice that photometric selection alone is not sufficient to reveal the
 extent of the stream --- we will return to this example and discuss the importance of
 kinematic information for stream discovery later in this section.
 
+\begin{figure*}[t!]
+    \begin{center}
+    \includegraphics[width=1\textwidth]{gd1-filter-demo.pdf}
+    \end{center}
+    \caption{%
+    A demonstration ...
+    \textbf{Top row:}
+    \textbf{Middle row:}
+    \textbf{Bottom row:}
+    \label{fig:gd1-demo}
+    }
+\end{figure*}
+
 % TODO: Yanny? Others for list of SDSS stream papers?
 Even now, many (TODO: how many?) of the known streams were found using a matched filter
 based on photometry, plus visual inspection.
@@ -461,10 +474,23 @@ sufficiently faint so that only the Red Giant Branch (RGB) or Horizontal Branch 
 stars were practically observable.
 But the RGB and HB stars in many thin streams are sparse and often distributed over
 large areas of the sky, making it difficult to obtain a large sample of stream stars.
-\todo{Plot or some characterization of G or V magnitude of stream MSTO location?}
+As a demonstration of this, Figure~\ref{fig:XXX} shows the distribution of $G$-band
+magnitudes for the MSTO and HB of 87 known streams.
+TODO: explain how we get distances... plot phi1 vs. G ?
+\todo{Plot or some characterization of G or V magnitude of stream MSTO location? Histogram of MSTO magnitude and RGB magnitude at logg = 1 for all streams}
 The \gaia\ Mission --- especially data from the second data release in 2018 ---
 transformed the discovery, characterization, and follow-up efficiency of stellar streams
 around the Milky Way.
+
+\begin{figure*}[t!]
+    \begin{center}
+    \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
+    \end{center}
+    \caption{%
+    TODO
+    \label{fig:msto-rc-mag}
+    }
+\end{figure*}
 
 
 \subsection{After \gaia\ Data Release 2}
@@ -491,19 +517,6 @@ the proper motion still has an appreciable signal-to-noise ratio of $\mu / \sigm
 The ability to use proper motions to identify members of stellar streams immediately
 enabled the highest contrast view of a stellar stream yet, as demonstrated by
 \citet{Price-Whelan:2018} for the GD-1 stream.
-
-\begin{figure*}[t!]
-\begin{center}
-\includegraphics[width=1\textwidth]{gd1-filter-demo.pdf}
-\end{center}
-\caption{%
-A demonstration ...
-\textbf{Top row:}
-\textbf{Middle row:}
-\textbf{Bottom row:}
-\label{fig:gd1-demo}
-}
-\end{figure*}
 
 Figure~\ref{fig:gd1-demo} is a recreation of ... now using data from \gaia\ \dr{3} ...
 which demonstrates the power of using \gaia\ astrometry to filter for stream members.
