@@ -241,7 +241,7 @@ Indeed, cosmological N-body simulations predict that dark matter halos change sh
 In addition, recent observations suggest that the Large Magellanic Cloud is massive and on first infall \citep[e.g.,][]{kallivayalil:2006, kallivayalil:2013, besla:2007, penarrubia:2016}, in which case the Milky Way halo is in significant disequilibrium \citep[e.g.,][]{bekki:2012, gomez:2015, garavito-camargo:2019}.
 Non-parametric, time-dependent expansions of the gravitational potential can capture these effects, but they require quite a number of terms \citep[e.g.,][]{lowing:2011, lilley:2018, garavito-camargo:2021}.
 Multiple streams are needed to constrain such flexible models, ideally covering a wide range of locations throughout the Galaxy \citep[e.g.,][]{bh:2018}.
-Deeper photometric surveys have always uncovered new stellar streams \citep[e.g.,][]{koposov:2014, martin:2014, shipp:2018, Jethwa:2018}, however none are sufficiently deep to detect streams in the outer galaxy, nor cover the full sky.
+Deeper photometric surveys have always uncovered new stellar streams \citep[e.g.,][]{koposov:2014, martin:2014, shipp:2018, jethwa:2018}, however none are sufficiently deep to detect streams in the outer galaxy, nor cover the full sky.
 \emph{In a modest number of stellar streams known before \gaia, we hit another limit to tracing dark matter in the Milky Way halo on large scales.}
 
 At the same time, progress was being made in constraining dark matter substructure.
@@ -412,27 +412,28 @@ For example, the GD-1 stream --- the first long, thin stream discovered without 
 progenitor --- was initially found by \citet{Grillmair:2006-gd1} using a matched filter
 on SDSS photometry with visual inspection of the resulting stellar density maps.
 Matched filters were also critical for many early discoveries of streams with the SDSS
-data \citep[e.g.,][]{Newberg:2002,Yanny:2003, Belokurov:2006, Grillmair:2006-orphan}.
+data \citep[e.g.,][]{Newberg:2002, Yanny:2003, Belokurov:2006, Grillmair:2006-orphan}.
 This method has since been applied to many large photometric surveys, such as 2MASS,
-Pan-STARRS (PS1; \citealt{todo}), the Dark Energy Survey (DES; \citealt{todo}), Search
-for the Leading Arm of Magellanic Satellites (SLAMS; \citealt{todo}), the DECam Legacy
-Survey  (DECaLS; \citealt{todo}), and many smaller-area surveys.
+Pan-STARRS (PS1; \citealt{chambers:2016}), the Dark Energy Survey (DES;
+\citealt{des:2005, des:2016}), the DECam Legacy Survey  (DECaLS; \citealt{dey:2019}),
+the Pan-Andromeda Archaeological Survey (PAndAS; \citealt{mcconnachie:2009}),
+and many smaller surveys.
 In all cases, this has led to new stream and halo substructure discoveries.
-For example, from 2MASS \citep{Rocha-Pinto, GASS, Anticenterstream}, PS1
-\citep{Bernard, Ophiuchus, others?}, DES \citep{shipp:2018}, SLAMS \citep{Jethwa:2018},
-and DECaLS \citep{Shipp:2021}. PANDAS
-Table~\ref{todo} has a list of streams discovered ...
+For example, from 2MASS \citep{rocha-pinto:2003, rocha-pinto:2004}, PS1
+\citep{bernard:2014, bernard:2016, navarrete:2017}, DES \citep{shipp:2018}, SLAMS
+\citep{jethwa:2018}, PAndAS \citep{martin:2014}, and DECaLS \citep{Shipp:2021}.
+TODO: a table? Table~\ref{todo} has a list of streams discovered ...
 
 Many of the systematic searches for streams described above were done without
 considering specific progenitor systems (i.e. globular clusters or dwarf galaxies).
 The discovered streams were then subsequently either found to be without a clear
 progenitor system, or were associated with known systems based on their location in the
-sky and/or their kinematics \citep{todo}.
+sky and/or their kinematics.
 However, some searches were specifically designed to find streams associated with known
-globular clusters or dwarf galaxies \citep{Grillmair:1990, todo} using photometry around
-these systems.
+globular clusters or dwarf galaxies \citep[e.g.,][]{Grillmair:1990} using photometry
+around these systems.
 With the exception of the striking tidal tails around the Pal 5 globular cluster
-\citep{Odenkirchen:2002} and the faint stream associated with NGC 5466
+\citep{odenkirchen:2001} and the faint stream associated with NGC 5466
 \citep{Grillmair:2006-ngc5466}, most of these searches were unsuccessful or only found
 evidence for very low-density tidal tails based on the presence of small numbers of
 extra-tidal stars around the progenitor systems \citep{Grillmair:TODO}.
@@ -444,13 +445,13 @@ In most cases, however, searches for streams have focused on finding linear or c
 but ``thin'' stream features in projected sky coordinates.
 For example, even before the first halo streams were found, it was recognized that tidal
 debris from distant merger events should remain spatially coherent for many dynamical
-times (gigayears, in the Milky Way halo; \citealt{Johnston:199X, Helmi:1999}).
+times (gigayears, in the Milky Way halo; \citealt{johnston:1998, helmi:1999}).
 From early numerical simulations, it was also noted that --- in a spherical or
 nearly-spherical dark matter distribution --- the streams would phase mix almost along
-great circles on the sky \citep{Johnston:1996, Ibata:XXXX, others}.
+great circles on the sky \citep{johnston:1996, Ibata:XXXX, others}.
 This motivated the development of methods to search for over-densities of stars along
 great circles in sky positions or photometrically-filtered sky positions of stars (the
-``great circle cell count'', GC3, method; \citealt{Johnston:1996}).
+``great circle cell count'', GC3, method; \citealt{johnston:1996}).
 The GC3 method was used to identify and trace the extent of the Sagittarius stream using
 2MASS data for M giant stars \citep{majewski:2003} and was later adapted to handle other
 kinematic dimensions (the modified GC3 or ``mGC3'' method, which also uses proper motion
@@ -463,15 +464,16 @@ to search for streams and kinematic substructures in terms of dynamical invarian
 which would enable finding substructures that are not spatially coherent or so nearby
 that they appear broad in sky projection.
 For example, to identify potential streams or other dynamical structures in phase-space,
-\citet{Helmi:1999} used a small sample ($<100$) of metal-poor giant stars in the solar
+\citet{helmi:1999} used a small sample ($<100$) of metal-poor giant stars in the solar
 neighborhood to search for kinematic over-densities of stars.
 This early search for substructures in the solar neighborhood used astrometry from the
-\hipparcos\ Mission \citep{todo} combined with literature measurements of radial
-velocities of these stars to obtain full (6D) phase-space measurements of the stars.
+\hipparcos\ Mission \citep{perryman:1997} combined with literature measurements of
+radial velocities of these stars to obtain full (6D) phase-space measurements of the
+stars.
 With 6D phase-space measurements, the stellar kinematics can be transformed into
 integrals of motion (e.g., angular momentum) and Galactocentric velocity components,
 where streams and other accreted tidal debris features are predicted to remain coherent
-for longer than in position-space alone \citep{Helmi:1999, Sanderson:XXXX}.
+for longer than in position-space alone \citep{helmi:1999, sanderson:2015}.
 Until recently, this was only possible with relatively small samples of stars with
 precisely-measured astrometry, because the ability to identify clumps and over-densities
 in dynamical or orbital quantities depends strongly on the precision of observed
@@ -753,11 +755,11 @@ Prior to
 
 % for appendix
 % Globular Cluster
-% Code: PeTar 
+% Code: PeTar
 % Initial distribution function: King model, mass = 1e4 Msun, scaleradius = 4pc, w0=5. 50_000 particles.
 % Particle masses: 0.2 Msun per particle
-% PeTar handles collisional dynamics, so there is no softening. PeTar uses "slow-down algorithmic regularization (SDAR)" to calculate forces when particles have close passages. 
-% 
+% PeTar handles collisional dynamics, so there is no softening. PeTar uses "slow-down algorithmic regularization (SDAR)" to calculate forces when particles have close passages.
+%
 % Dwarf Galaxy
 % Code: Gyrfalcon
 % Initial distribution function: King model, mass = 1e8 Msun, scaleradius = 1kpc, w0 = 4. 500_000 particles.
