@@ -581,9 +581,9 @@ The bottom right panel now shows the sky positions of individual stars that pass
 selections, which reveals more of the stream (especially at $\phi_1 \lesssim -55^\circ$)
 and enables quantifying the magnitude of density variations and gaps present along the
 stream track.
-This new view of GD-1 also revealed off-track features that were not visible in previous
-filtered characterizations of the stream \citep{Grillmair:2006-gd1, koposov:2010,
-deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
+This new view of GD-1 also revealed features of the stream that were not visible in
+previous filtered characterizations of the stream \citep{Grillmair:2006-gd1,
+koposov:2010, deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
 Many other studies have also used \gaia\ proper motions to study the structure of GD-1
 \citep[e.g.,][]{malhan:2018, li-yanny:2018, huang:2019, deboer:2020, ibata:2020}, the
 Orphan--Chenab stream \citep{koposov:2019}, the Helmi streams \citep{koppelman:2019},
@@ -591,38 +591,73 @@ the Jhelum stream \citep{bonaca:2019}, the Ophiuchus stream \citep{caldwell:2020
 with work that has modeled the density structure of many streams simultaneously
 \citep[e.g.,][]{patrick:2022}.
 
+Over the years leading up to \gaia\ \dr{2}, searches for new streams pushed deeper using
+well-calibrated photometry from surveys like PS1 and DES, resulting in a steady and
+continuous increase in the number of known streams.
+Figure~\ref{fig:num-streams} shows the cumulative number of Milky Way stellar streams
+reported in the literature as a function of time, as collated in the \texttt{galstreams}
+\citep{mateu:2023} library and combined with the recent atlas of stream data from
+\citet{ibata:2024}.
+However, the kinematic data from \gaia\ has enabled a new and important validation step
+for previously discovered streams.
+While many streams have been re-discovered and studied in detail using \gaia\ data, a
+number of streams that were previously reported in the literature have not been
+re-identified with \gaia\ data.
+\todo{Do we call these out in the table? PS1-A, Hyllus, etc.}
+This is not totally unexpected, as many of the streams discovered in the pre-\gaia\ era
+pushed to fainter magnitudes and larger distances, where the \gaia\ data is noisier
+and/or only RGB stars in the streams may pass the faint limit of \gaia.
+
 \begin{figure*}[t!]
     \begin{center}
     \includegraphics[width=0.6\textwidth]{cumulative-num-streams.pdf}
     \end{center}
     \caption{%
-    TODO
+    TODO: Smoother rise. New data important, but also people refining methods and using smaller surveys along the way.
     \label{fig:num-streams}
     }
 \end{figure*}
 
-- Now pivot to talking about finding new streams
-- Until Gaia, total of XX streams reported.
-- More dimensions = better contrast for finding low density things
-- Greatly improved contrast for nearby streams (GD-1)
-- Enabled more automated searches: streamfinder, Via Machinae, ... others??
 The exquisite astrometry provided by \gaia\ has also enabled a new class of methods for
-finding streams around the Milky Way.
-With uniform kinematic data,
+searching for new streams around the Milky Way \citep[e.g.,][]{malhan:2018a,
+borsato:2020, necib:2020, gatto:2020, shih:2022, shih:2023, pettee:2024}, which has led
+to an enormous increase in the number of known low-density stellar streams.
+These methods all leverage the kinematic data now available from \gaia\ to identify
+over-densities of stars in different projections or transformations of the phase-space
+data.
+For example, \texttt{STREAMFINDER} \citep{malhan:2018a} searches for over-densities of
+stars near orbits computed a model of the Milky Way's mass distribution.
+This works by projecting orbits into the data space, where uncertainties and missing
+data can be naturally handled by the search method.
+Other methods either transform the phase-space data into a Galactocentric coordinate
+system where clustering methods can search directly in the phase-space distribution
+function \citep{necib:2020,gatto:2020}, or apply machine learning and anomaly detection
+methods to the observed (heliocentric) data directly \citep{borsato:2020, shih:2022,
+shih:2023, pettee:2024}.
 
+The ability to use newly-accessible phase-space dimensions to search for streams has led
+to the discovery of many low-density streams that would never have been found using
+photometric selections alone.
+For example, early work using \texttt{STREAMFINDER} identified a total of 13 new streams
+in \gaia\ \dr{2} data \citep{malhan:2018, ibata:2018, ibata:2019}, which were typically
+closer (and therefore appeared wider) and had lower surface densities than previous
+photometrically-discovered streams.
+This data has also enabled the discovery of streams that are not spatially coherent in
+\emph{sky position} but do appear to contain comoving, metal-poor stellar populations
+\citep[e.g.,][]{necib:2020b, balbinot:2023}.
+Efforts have also searched for kinematic substructures that may be phase-mixed or less
+spatially coherent using integrals of motion or other dynamical invariants
+\citep[e.g.,][]{koppelman:2019b, yuan:2020, naidu:2020, ou:2023}.
 
-- Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
-
-- Data from the \gaia\ Mission has revolutionized our ability to find kinematic substructures, led to the explosion in number of streams discovered
-- Enabled by semi-automated methods - past methods stream-by-stream, natural evolution for a field
-- New discoveries and census as of 2023
-- Also: follow-up now more efficient so the chemistries now becoming more readily available
-
-- list:
--- ED-2
--- LMS-1 / Wukong
-
-- Clumps in dynamical quantities - student who worked with Robyn...
+The number of known stellar streams around the Milky Way has exploded in the \gaia\ era:
+over 120 streams have now been reported in the literature, with more discoveries coming
+every year, especially enabled by new data releases from \gaia\ and new methodological
+developments.
+- Some streams better than others, exemplars
+- Each stream is unique in story it can tell
+- Many still need validation -- spectroscopy can be a challenge (see right panel of Fig blah)
+- Immediate interpretation of population of observed streams in context of population of all streams hard because of selection effects.
+- Need to understand selection function and contamination rate of stream finders, which requires observing (hard!) and publishing null results / non-discoveries
 
 
 \subsection{Key opportunities}
