@@ -38,6 +38,7 @@
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{amsmath}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -315,11 +316,12 @@ types of streams: dwarf galaxy or ``wide'' streams as compared to globular clust
 ``thin'' streams.
 These discoveries, and most of the halo stellar streams found through the early 2000's,
 were found using photometry alone.
-The advent of deep, wide-area, multi-band sky surveys (especially the Sloan Digital Sky
-Survey, SDSS, and the Two Micron All Sky Survey, 2MASS) were crucial for this initial
-phase of stream discovery.
-The combination of wide-area coverage, well-calibrated photometry (CITE uber-calibration
-and Hogg paper), and near-uniform depth across the survey footprints enabled
+The advent of deep, wide-area, multi-band sky surveys --- especially the Sloan Digital
+Sky Survey (SDSS; \citealt{york:2000, gunn:1998, fukugita:1996}) and the Two Micron All
+Sky Survey (2MASS; \citealt{skrutskie:2006}) --- were crucial for this initial phase of
+stream discovery.
+The combination of wide-area coverage, well-calibrated photometry
+\citep{padmanabhan:2008}, and near-uniform depth across the survey footprints enabled
 constructing detailed maps of the stellar density of the Milky Way halo.
 Still, streams are relatively low-density features and are surpassed in number counts by
 the foreground and background stellar populations in the Milky Way in sky density alone.
@@ -346,15 +348,15 @@ done by visual inspection.
 Figure~\ref{fig:gd1-demo} shows an example of how binary matched filtering based on
 photometry can be used to reveal a stream.
 The top row of panels in Figure~\ref{fig:gd1-demo} shows all data in a cross-match
-between \gaia\ and Pan-STARRS (PS1) photometry for stars in the sky region near the GD-1
-stream \citep{Grillmair:2006-gd1}: The top left panel shows the extinction-corrected
-color--magnitude diagram based on PS1 photometry, the top center panel shows the \gaia\
-proper motions transformed into a coordinate system aligned with the stream
-\citep{koposov:2009}, and the top right panel shows a 2D histogram of the sky positions
-of all stars in this cross-match.
+between \gaia\ and Pan-STARRS (PS1; \citealt{chambers:2016}) photometry for stars in the
+sky region near the GD-1 stream \citep{Grillmair:2006-gd1}: The top left panel shows the
+extinction-corrected color--magnitude diagram based on PS1 photometry, the top center
+panel shows the \gaia\ proper motions transformed into a coordinate system aligned with
+the stream \citep{koposov:2010}, and the top right panel shows a 2D histogram of the sky
+positions of all stars in this cross-match.
 The over-plotted (green) line in the top left panel is an isochrone from the PARSEC
-\citep{parsec} isochrone library for an old and metal-poor stellar population at the
-approximate distance of GD-1.
+\citep{bressan:2012, chen:2015} isochrone library for an old and metal-poor stellar
+population at the approximate distance of GD-1.
 The middle row of panels show the same data, but now with a binary matched filter
 applied based on the photometric selection shown in the middle left panel (red outlined
 region).
@@ -374,10 +376,31 @@ kinematic information for stream discovery later in this section.
     \includegraphics[width=1\textwidth]{gd1-filter-demo.pdf}
     \end{center}
     \caption{%
-    A demonstration ...
-    \textbf{Top row:}
-    \textbf{Middle row:}
-    \textbf{Bottom row:}
+    TODO: Descriptive suptitle.
+    A demonstration of how matched filtering with photometry and \gaia\ astrometry can
+    be used to reveal a stellar stream, here the GD-1 stream.
+    In all rows, the left panel shows an extinction-corrected color--magnitude diagram
+    using $g, r, i$ photometry from the Pan-STARRS (PS1) survey \citep{chambers:2016},
+    visualized as a row-normalized 2D histogram.
+    The center panel shows the proper motions from \gaia\ \dr{3} \citep{gaiadr3}
+    transformed into a coordinate system aligned with the stream, $(\mu_{\phi_1, *},
+    \mu_{\phi_2})$, where $\phi_1$ is the stream longitude and $\phi_2$ is the stream
+    latitude, and the color scale is a column-normalized 2D histogram.
+    The right panel shows the sky positions of stars as a column-normalized 2D
+    histogram.
+    \textbf{Top row:} No selections have been applied: These panels show all stars in a
+    cross-match between \gaia\ \dr{3} and PS1 for the region of the sky around the GD-1
+    stream.
+    \textbf{Middle row:} A binary matched filter has been applied to the photometry, as
+    shown by the red polygon in the left panel of this row.
+    Note that already the stream is visible as an over-density of stars in
+    proper-motions (center panel) and in the known stream track (dashed line in the
+    right panel).
+    \textbf{Bottom row:} In a given panel, selections are applied based on the red
+    outlines in the other two panels.
+    For example, in the left panel, stars are shown as selected within the proper motion
+    selection box (red outline in the center panel) and the sky track polygon (red
+    outline in the right panel).
     \label{fig:gd1-demo}
     }
 \end{figure*}
@@ -454,6 +477,30 @@ precisely-measured astrometry, because the ability to identify clumps and over-d
 in dynamical or orbital quantities depends strongly on the precision of observed
 kinematic coordinates and the number of stars.
 
+\begin{figure*}[t!]
+    \begin{center}
+    \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
+    \end{center}
+    \caption{%
+    % TODO: add DES streams to left panel?
+    Tracks of the apparent $r$-band magnitude of the main sequence turn-off (MSTO) for
+    streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
+    The tracks were determined by fitting orbits to stream stars associated with each of
+    the streams in \citet{ibata:2024} (this procedure is described in detail in
+    \ref{apx:stream-fit}).
+    The MSTO magnitude is computed assuming all streams have a single stellar population
+    with an age of $12~\unit{\giga\year}$ and a metallicity of $\feh = -2.2$, but this
+    is only meant to qualitatively show the relative brightness of the MSTO for the
+    known streams.
+    High-resolution spectroscopic follow-up of MSTO stars in these streams is difficult
+    or currently infeasible for many of these streams.
+    RGB stars in the streams are typically bright enough for this type of follow-up, but
+    are far less numerous than MSTO stars (globular cluster streams may only have a few
+    to tens of RGB stars).
+    \label{fig:msto-rc-mag}
+    }
+\end{figure*}
+
 Prior to the \gaia\ Mission, only a handful of the discovered streams were followed up
 and characterized with subsequent observations or surveys (for example, to obtain radial
 velocities or detailed element abundance measurements for the constituent stars).
@@ -464,38 +511,38 @@ sufficiently faint so that only the Red Giant Branch (RGB) or Horizontal Branch 
 stars were practically observable.
 But the RGB and HB stars in many thin streams are sparse and often distributed over
 large areas of the sky, making it difficult to obtain a large sample of stream stars.
-As a demonstration of this, Figure~\ref{fig:XXX} shows the distribution of $G$-band
-magnitudes for the MSTO and HB of 87 known streams.
-TODO: explain how we get distances... plot phi1 vs. G ?
-\todo{Plot or some characterization of G or V magnitude of stream MSTO location? Histogram of MSTO magnitude and RGB magnitude at logg = 1 for all streams}
-The \gaia\ Mission --- especially data from the second data release in 2018 ---
-transformed the discovery, characterization, and follow-up efficiency of stellar streams
-around the Milky Way.
+As a demonstration of this point, the left panel of Figure~\ref{fig:msto-rc-mag} shows
+the PS1 $r$-band magnitude tracks of the MSTO as a function of stream longitude for 7
+streams discovered before \gaia\ \dr{2} that have since been identified using \gaia\
+astrometry. To obtain precise and high signal-to-noise element abundance measurements
+using existing facilities, stars typically had to be brighter than $r \lesssim
+18~\textrm{mag}$ --- the MSTO for most streams known pre-\gaia\ were fainter than this
+limit.
+The stream tracks in Figure~\ref{fig:msto-rc-mag} were determined by either fitting
+orbits to stream stars associated with each stream using data from \citet{ibata:2024}
+(this procedure is described in detail in \ref{apx:stream-fit}), or for streams that are
+not in \citet{ibata:2024}, we use the distance modulus tracks reported in
+\citet{li:2022} combined with sky tracks collected from discovery or characterization
+papers \citep{shipp:2018, fu:2018, shipp:2019, ferguson:2022, tavangar:2022}.
 
-\begin{figure*}[t!]
-    \begin{center}
-    \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
-    \end{center}
-    \caption{%
-    TODO
-    \label{fig:msto-rc-mag}
-    }
-\end{figure*}
+The \gaia\ Mission --- especially data from the second data release in 2018 --- has
+since transformed the discovery, characterization, and follow-up efficiency of stellar
+streams around the Milky Way.
 
 
 \subsection{After \gaia\ Data Release 2}
 
-The \gaia\ Mission released Data Release 2 (DR2) in April 2018 \citep{Gaia:DR2}, which
+The \gaia\ Mission released Data Release 2 (DR2) in April 2018 \citep{gaiadr2}, which
 included astrometry and mean photometry for nearly 1.7 billion stars based on the first
-22 months of observations \citep{todo}.
-This data set was transformative for the study of Milky Way stellar streams and stellar
-halo stars.
+22 months of observations.
+This data was transformative for the study of Milky Way stellar streams and stellar halo
+stars.
 While parallax measurements for stars in most stellar streams and throughout most of the
-stellar halo were too noisy to be useful, the proper motions provided key new kinematic
-information for many of these stars.
-For example, consider a main sequence turnoff (MSTO) star for an old stellar population
-with absolute magnitude $M_G \sim 4~\unit{\mag}$, at a distance of $d = 10~\kpc$ with
-a transverse velocity typical of the Milky Way halo of $v_{\textrm{tan}} = 100~\kms$.
+stellar halo were too noisy to be useful, the proper motions provided key kinematic
+information for many of these stars for the first time.
+For example, consider a MSTO star for an old stellar population with absolute magnitude
+$M_G \sim 4~\unit{\mag}$, at a distance of $d = 10~\kpc$ with a transverse velocity
+typical of the Milky Way halo of $v_{\textrm{tan}} = 100~\kms$.
 This star would have a true parallax of $\varpi = 0.1~\unit{\mas}$, a total proper
 motion $\mu \approx 2.1~\masyr$, and an apparent magnitude of $G = 19~\unit{\mag}$.
 For a star of this apparent magnitude in \gaia\ \dr{2}, a typical parallax uncertainty
@@ -505,19 +552,61 @@ This means that the parallax measurement is entirely dominated by the uncertaint
 the proper motion still has an appreciable signal-to-noise ratio of $\mu / \sigma_\mu
 \sim 5$.
 The ability to use proper motions to identify members of stellar streams immediately
-enabled the highest contrast view of a stellar stream yet, as demonstrated by
-\citet{Price-Whelan:2018} for the GD-1 stream.
+enabled detailed looks at previously-known streams and new methods for finding streams
+in the Milky Way.
 
-Figure~\ref{fig:gd1-demo} is a recreation of ... now using data from \gaia\ \dr{3} ...
-which demonstrates the power of using \gaia\ astrometry to filter for stream members.
-TODO: describe figure
+Proper motion data provided by \gaia\ has proven to be invaluable for studying the
+density structure of stellar streams.
+While matched filtering on photometry alone can reveal the presence of a stream, the
+stream stars are often still relatively low signal-to-noise features over the background
+stellar density, meaning that the stream density and any variations in the density is
+typically not well constrained.
+Soon after \gaia\ \dr{2}, \citet{price-whelan:2018} demonstrated the power of combining
+photometric and kinematic data to identify stream members and measure the density of the
+GD-1 stream.
+Figure~\ref{fig:gd1-demo} is a recreation of the selections performed in
+\citet{price-whelan:2018} but now using data from \gaia\ \dr{3} \citep{gaiadr3}.
+As mentioned above, the top row of panels in Figure~\ref{fig:gd1-demo} shows photometry
+from PS1 (top left panel), proper motions from \gaia\ \dr{3} (top center panel), and sky
+positions (top right panel) for stars in the sky region near the GD-1 stream.
+The middle row of panels shows the same data, but now with a matched filter applied to
+the photometry.
+The bottom row of panels shows the same data, but now with a matched filter applied to
+the photometry and a selection on the proper motions (shown as a red box in the bottom
+center panel).
+The bottom right panel now shows the sky positions of individual stars that pass these
+selections, which reveals more of the stream (especially at $\phi_1 \lesssim -55^\circ$)
+and enables quantifying the magnitude of density variations and gaps present along the
+stream track.
+This new view of GD-1 also revealed off-track features that were not visible in previous
+filtered characterizations of the stream \citep{Grillmair:2006-gd1, koposov:2010,
+deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
+Many other studies have also used \gaia\ proper motions to study the structure of GD-1
+\citep[e.g.,][]{malhan:2018, li-yanny:2018, huang:2019, deboer:2020, ibata:2020}, the
+Orphan--Chenab stream \citep{koposov:2019}, the Helmi streams \citep{koppelman:2019},
+the Jhelum stream \citep{bonaca:2019}, the Ophiuchus stream \citep{caldwell:2020}, along
+with work that has modeled the density structure of many streams simultaneously
+\citep[e.g.,][]{patrick:2022}.
 
+\begin{figure*}[t!]
+    \begin{center}
+    \includegraphics[width=0.6\textwidth]{cumulative-num-streams.pdf}
+    \end{center}
+    \caption{%
+    TODO
+    \label{fig:num-streams}
+    }
+\end{figure*}
 
-
+- Now pivot to talking about finding new streams
 - Until Gaia, total of XX streams reported.
 - More dimensions = better contrast for finding low density things
 - Greatly improved contrast for nearby streams (GD-1)
 - Enabled more automated searches: streamfinder, Via Machinae, ... others??
+The exquisite astrometry provided by \gaia\ has also enabled a new class of methods for
+finding streams in the Milky Way.
+Prior to
+
 
 - Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
 
@@ -620,7 +709,11 @@ TODO: describe figure
 
 
 \subsection{Chemistry}
-- orbits good for better membership
+- story of Monoceros, Anticenter Stream
+-> thought accreted, but chemistry showed in-situ, kicked out of the disk
+
+- chemistries even less available than radial velocities, need high-res, high snr spectra
+- w Gaia: orbits good for better target selection, highly efficient targeting
 -- S5 \citep{li:2022}
 -- new streamfinder paper
 
@@ -653,10 +746,10 @@ TODO: describe figure
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
-%% \appendix
+\appendix
 
-%% \section{}
-%% \label{}
+\section{Fitting Orbits to Streams}
+\label{apx:stream-fit}
 
 % for appendix
 % Globular Cluster
@@ -672,6 +765,68 @@ TODO: describe figure
 % Softening epsilon = 0.01 kpc
 % Energy errors are small, order 1e-5
 
+We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:TODO}
+for demonstrative visualizations shown in this article.
+
+For a given stream, we first determine a heliocentric, spherical coordinate system that
+is approximately aligned with the stream track.
+In this coordinate system, the stream longitude is $\phi_1$ and the stream latitude is
+$\phi_2$.
+We initialize this process by computing the eigenvectors of the covariance matrix of the
+positions of the stream stars projected onto the unit sphere.
+We project the unit vectors of the stream star positions onto the largest eigenvector
+and use the endpoints along this axis to define an initial great circle coordinate
+system.
+We then adjust this great circle coordinate system by allowing small rotations around
+the great circle $x$ and $y$ axes to minimize an objective function $F$ that computes
+the sum of the squared stream latitudes, $\phi_2$: $F(\phi_2) = \sum_i \phi_{2,i}^2$ for
+all stars in a stream, indexed by $i$.
+
+To fit an orbit to each stream, we fix the model for the Milky Way's gravitational
+potential to the \texttt{MilkyWayPotential2022} in \texttt{gala} \citep{gala} and
+optimize over the orbital initial conditions.
+We specify the orbital initial conditions in heliocentric coordinates in the rotated
+stream coordinate system described above.
+In this coordinate system, we define the orbital initial conditions at $\phi_1=0^\circ$,
+so that the free parameters are the stream longitude, $\phi_2$, the distance, $D$, the
+proper motion components, $(\mu_{\phi_1}, \mu_{\phi_2})$, and the line-of-sight
+velocity, $v_r$.
+For a given setting of the parameters $(\phi_2, D, \mu_{\phi_1}, \mu_{\phi_2}, v_r)$, we
+integrate the orbit forward and backward in time, $\tau$, for an amount set by the
+observed angular extent of the stream, $\Delta \phi_1$ divided by the transverse angular
+velocity, $\sqrt{\mu_{\phi_1}^2 + \mu_{\phi_2}^2}$, and multiplied by two.
+If the orbit wraps (over $360^\circ$), we truncate the orbit segment at $\phi_1 \pm
+180^\circ$.
+
+We then compute the log-likelihood of the orbit given the stream stars by assuming each
+coordinate dimension is independent and normally distributed with a variance set by the
+observational uncertainties.
+In detail, we interpolate the orbit to the $\phi_1$ values of the stream stars using
+cubic interpolation and compute the log-likelihood as:
+\begin{equation}
+\begin{split}
+    \ln \mathcal{L} = \sum_i
+    &\mathcal{N}(\tilde{\phi}_2(\phi_{1, i}) \given \phi_{2, i}, \sigma_{\phi_{2}}^2) \\
+    \times \, &\mathcal{N}(\tilde{D}(\phi_{1, i})^{-1} \given \varpi_{i}, \sigma_{\varpi}^2) \\
+    \times \, &\mathcal{N}(\tilde{\mu}_{\phi_1}(\phi_{1, i}) \given \mu_{\phi_1, i}, \sigma_{\mu_{\phi_1}}^2) \\
+    \times \, &\mathcal{N}(\tilde{\mu}_{\phi_2}(\phi_{1, i}) \given \mu_{\phi_2, i}, \sigma_{\mu_{\phi_2}}^2) \\
+    \times \, &\mathcal{N}(\tilde{v}_r(\phi_{1, i}) \given v_{r, i}, \sigma_{v_r}^2)
+\end{split}
+\end{equation}
+where the tilde indicates the model predicted coordinates from the orbit and
+interpolation step, evaluated at each stream star $\phi_{1, i}$, the distance component
+is compared to the observed parallaxes $\varpi$, $\mathcal{N}(x \given \mu, \sigma^2)$
+is the normal distribution with mean $\mu$ and variance $\sigma^2$, and the sum is over
+all observed stars in the stream indexed by $i$.
+
+We optimize the log-likelihood $\ln \mathcal{L}$ using the L-BFGS-B \citep{todo}
+implementation in \texttt{scipy.optimize} \citep{scipy}, with bounds on the parameters
+such that $\phi_2 \in (-5, 5)^\circ$, $D \in (1, 50)~\kpc$, $\mu_{\phi_1} \in (-100,
+100)~\masyr$, $\mu_{\phi_2} \in (-100, 100)~\masyr$, and $v_r \in (-500, 500)~\kms$.
+We start the optimization from six different initial distance values between $1~\kpc$
+and $40~\kpc$ (spaced logarithmically) and take the optimized parameters from the run
+with the highest log-likelihood value.
+This process failed for TODO streams (TODO: stream names).
 
 \bibliographystyle{model2-names-astronomy}
 \bibliography{refs, apw-refs}
