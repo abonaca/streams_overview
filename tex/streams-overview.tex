@@ -163,32 +163,17 @@ Implications heralding exciting times ahead!
 % storytelling prose
 
 The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits---stellar streams.
-Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{}, and the nature of dark matter \citep{}.
+Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{smith:2016, ferguson:2016, carlin:2016}, and the nature of dark matter \citep{johnston:2016a, johnston:2016b}.
 So far, the main limitation for studying stellar streams in the Milky Way has been uncovering member stars of these low-mass and diffuse systems in the ocean of field stars.
 \gaia\ proper motions have largely lifted this limitation, and as a result, maps of stellar streams in the \gaia\ era build a more complete picture of our Galaxy, its constituents and its history.
 
 We center this review on three major breakthroughs that \gaia\ brought to stellar streams.
 The first is the sheer number of stream discoveries, which \gaia\ increased by an order of magnitude from $\approx10$ to $\approx100$ (\S\ref{sec:discovery}).
-The second are the stream kinematics, which constrained their precise orbits, as well as origins (\S\ref{sec:orbits}).
-And finally, the third is the detailed structure of stellar streams, resolved by \gaia\ for the first time to suggest dynamical histories rich in perturbations (\S\ref{sec:structure}).
+The second is the detailed structure of stellar streams, resolved by \gaia\ for the first time to suggest dynamical histories rich in perturbations (\S\ref{sec:structure}).
+And finally, the third are the stream kinematics, which constrained their precise orbits, as well as origins (\S\ref{sec:orbits}).
 In these sections we also discuss the key opportunities and new research directions that these breakthroughs have made possible.
 In the concluding section, we reflect more broadly on what these developments entail for the future of Galactic archaeology (\S\ref{sec:outlook}).
 As for the remainder of this section, the last review dedicated to stellar streams was almost a decade ago and pre-\gaia\ \citep{newberg:2016}, while a more recent, \gaia-based review focused on the Milky Way's halo more broadly \citep{helmi:2020}, so we now proceed to outline the theoretical and historical context for \gaia's stellar stream revolution.
-
-Physics driving the formation of stellar streams rests with the tidal forces of a host galaxy acting on its satellites.
-% Analytical and numerical considerations show that satellite systems orbiting a more massive host galaxy experience its tidal forces \citep{}.
-When sufficiently strong, these tides pull stars out of the satellite through two stationary points \citep{bt:2008}, thus forming the leading tidal tail (stars with shorter orbital periods speeding ahead of the progenitor) and the trailing tidal tail (stars lagging behind the progenitor due to their longer orbital periods).
-We illustrate the process of tidal dissolution in Figure~\ref{fig:stream_formation}, with a dwarf galaxy satellite at the top, and a globular cluster on a matching orbit at the bottom.
-The dwarf galaxy has an initial mass of XX, was represented with YY star particles and was evolved with Gyrfalcon?? tree code.
-The globular cluster has an initial mass of XX, sampled between YY and ZZ, and was modeled with direct N-body code Petar??.
-The left-most panels show an early stage of dissolution, with short tails of gravitationally unbound stars emanating from each progenitor.
-The boundary between the bound and unbound stars is set by the tidal radius.
-Typically, the satellite mass $m$ is much smaller than the enclosed mass of the host galaxy at its location $M(<R_0)$, so the tidal radius is approximately the Jacobi radius from the restricted three-body problem \citep[][]{szebehely:1967, valtonen:2006}:
-\begin{equation}
-r_J = \left(\frac{m}{3M(<R_0)}\right)^{1/3} R_0
-\end{equation}
-The Jacobi radius, shown with a red dashed line in Figure~\ref{fig:stream_formation}, matches well the tidal boundary of both the globular cluster and the dwarf galaxy derived through self-consistent numerical simulations.
-This agreement has been used to develop fast methods for generating models of stellar streams by placing tracer particles at the progenitor's Jacobi radius, and then solving the restricted three-body problem \citep[the so-called \emph{particle-spray methods};][]{varghese:2011, lane:2012, kuepper:2012, bonaca:2014, gibson:2014, fardal:2015}.
 
 \begin{figure*}[t!]
 \begin{center}
@@ -200,26 +185,39 @@ A comparison of tidal tails with a dwarf galaxy (top) and a globular cluster pro
 }
 \end{figure*}
 
+Physics driving the formation of stellar streams rests with the tidal forces of a host galaxy acting on its satellites.
+When sufficiently strong, these tides pull stars out of the satellite through two stationary points \citep{bt:2008}, thus forming the leading tidal tail (stars with shorter orbital periods speeding ahead of the progenitor) and the trailing tidal tail (stars lagging behind the progenitor due to their longer orbital periods).
+We illustrate the process of tidal dissolution in Figure~\ref{fig:stream_formation}, with a dwarf galaxy satellite at the top, and a globular cluster on a matching orbit at the bottom.
+The dwarf galaxy of an initial mass of $10^8\,\unit{\msun}$ was represented with 50,000 particles and evolved with the Gyrfalcon tree code \citep{dehnen:2014}.
+The globular cluster of an initial mass of $10^4\,\unit{\msun}$, was represented with 500,000 particles and modeled with direct N-body code PeTar \citep{wang:2020}.
+The left-most panels show an early stage of dissolution, with short tails of gravitationally unbound stars emanating from each progenitor.
+The boundary between the bound and unbound stars is set by the tidal radius.
+Typically, the satellite mass $m$ is much smaller than the enclosed mass of the host galaxy at its location $M(<R_0)$, so the tidal radius is approximately the Jacobi radius from the restricted three-body problem \citep[][]{szebehely:1967, valtonen:2006}:
+\begin{equation}
+r_J = \left(\frac{m}{3M(<R_0)}\right)^{1/3} R_0
+\end{equation}
+The Jacobi radius, shown with a red dashed line in Figure~\ref{fig:stream_formation}, matches well the tidal boundary of both the globular cluster and the dwarf galaxy derived through self-consistent numerical simulations.
+This agreement has been used to develop fast methods for generating models of stellar streams by placing tracer particles at the progenitor's Jacobi radius, and then solving the restricted three-body problem \citep[the so-called \emph{particle-spray methods};][]{varghese:2011, lane:2012, kupper:2012, bonaca:2014, gibbons:2014, fardal:2015}.
+
 Governed by the same underlying gravitational potential, tidal tails of a globular cluster and a dwarf galaxy on the same orbit have similar shape and orientation.
-Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{fig:stream_formation}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre, sanders}.
+Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{fig:stream_formation}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre:2009, eyre:2011, sanders:2013a, sanders:2013b}.
 On the other hand, it is obvious from Figure~\ref{fig:stream_formation} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
 The cause of this discrepancy is not just the difference in their initial masses, but also in their number density of stars.
 In more diffuse dwarf galaxies, a higher fraction of stars find themselves outside of the tidal radius when it shrinks during a pericentric passage (Figure~\ref{fig:stream_formation}, top center).
-Combined with a higher velocity dispersion due to a higher initial mass \citep{}, the resulting tails are more massive, wider and grow faster.
+Combined with a higher velocity dispersion due to a higher initial mass \citep[cf.][]{simon:2007, baumgardt:2019}, the resulting tails are more massive, wider and grow faster.
 In contrast, more compact globular clusters maintain a tidal radius larger than its half-mass radius even at pericenter.
-As a result, their mass loss is dominated by stars ejected through close two-body encounters, i.e., the process of evaporation \citep{baumgardt:2003}.
-The consequence of mass loss being largely an internal process, means that stars escape a globular cluster with a small relative velocity and at an approximately constant rate.
+As a result, their mass loss is dominated by stars escaping through close two-body encounters, i.e., the process of two-body relaxation or evaporation \citep{gnedin:1997,vesperini:1997,baumgardt:2003}.
+Mass loss being driven by an internal process means that stars escape a globular cluster with a small relative velocity and at an approximately constant rate.
 Stars released uniformly along the orbital phase appear to be on epicycles around the progenitor's orbit.
-Seen in projection, these epicycles form a regular pattern of over- and under-densities along the globular cluster tails \citep[Figure~\ref{}, bottom right;][]{kuepper:2008, kuepper:2010, just:2009}.
+Seen in projection, these epicycles form a regular pattern of over- and under-densities along the globular cluster tails \citep[Figure~\ref{fig:stream_formation}, bottom right;][]{kupper:2008, kupper:2010, just:2009}.
 This pattern is absent from dwarf galaxy tails due to its episodic mass loss of kinematically hotter stars, which results in a fairly uniform density (Figure~\ref{fig:stream_formation} top right).
 
-Early theoretical models of interacting galaxies showed that reproducing the various configurations of tail and bridge features seen in catalogs of interacting galaxies \citep{arp, others} is possible through gravity alone \citep{toomre, tt}.
-Their tidal origin makes streams extremely powerful tracers of the underlying gravitation field and dark matter, which dominates the mass budget in most galaxies \citep[e.g.,][]{moster, behroozi}.
-% In the following decades we became ever more sensitive in detecting low surface brightness, so now there is en entire compendium of stellar streams and shells surrounding galaxies throughout the Local Universe \citep{leduc, delgado, others}.
-% - models that reproduce them well also learn about the potential \citep{pearson, amorisco, vandokkum}
-Extragalactic streams provide somewhat limited constraints on the potential because they have only been detected in 2D projected sky coordinates \citep{nibauer:2023}, but for the Milky Way streams, especially in the era of Gaia, we have been able to measure both the 3D positions and 3D velocities.
-Immediately upon the discovery of first Milky Way streams, theoretical studies showed that the phase space of stellar streams can be used to measure the mass and shape of a dark matter halo on large scales \citep{varghese:2011, bonaca:2014}, and to measure the abundance of dark-matter subhalos on small scales \citep{johnston:2002, ibata:2002}.
-With this, stellar streams are poised to answer one of the major open questions in both physics and astrophysics---the nature of dark matter.
+Early theoretical models of interacting galaxies showed that reproducing the various configurations of tail and bridge features seen in catalogs of interacting galaxies \citep{vorontsov-velyaminov:1959, arp:1966} is possible through gravity alone \citep{pfleiderer:1963, toomre:1972}.
+Their tidal origin makes streams extremely powerful tracers of the underlying gravitation field and dark matter, which dominates the mass budget in most galaxies \citep[e.g.,][]{moster:2010, behroozi:2019}.
+Theoretical studies showed that the phase space of stellar streams can be used to measure the mass and shape of a dark matter halo on large scales \citep{springel:1999, dubinski:1999}, and to measure the abundance of dark-matter subhalos on small scales \citep{johnston:2002, ibata:2002, siegal-gaskins:2008}.
+Thanks to facilities optimized for detecting low surface-brightness features, dozens of tidal streams and shells have been detected throughout the Local Universe \citep[e.g.,][]{martinez-delgado:2010, martinez-delgado:2023, bilek:2020} and beyond \citep[e.g.,][]{kado-fong:2018, ren:2020}, and a fraction of them have been modeled to infer the properties of the hosts' dark matter halos \citep{amorisco:2015, vandokkum:2019, pearson:2022}.
+Unfortunately, extragalactic streams provide somewhat limited constraints on the gravitational potential because they have so far been mostly detected in 2D projected sky coordinates \citep{nibauer:2023}, but in the Milky Way we have been able to measure both the 3D positions and 3D velocities \citep{koposov:2010}.
+The Milky Way stellar streams are poised to answer one of the major open questions in both physics and astrophysics---the nature of dark matter.
 
 The first Milky Way stream to be discovered, tidal tails of the Sagittarius dwarf galaxy \citep{ibata:1994}, was also the first one used to constrain the shape of the Milky Way's dark matter halo. 
 - traced to wrap around more than 360deg \citep{majewski, belokurov}, almost great circle -- potential close to spherical
@@ -658,6 +656,20 @@ TODO: describe figure
 
 %% \section{}
 %% \label{}
+
+% for appendix
+% Globular Cluster
+% Code: PeTar 
+% Initial distribution function: King model, mass = 1e4 Msun, scaleradius = 4pc, w0=5. 50_000 particles.
+% Particle masses: 0.2 Msun per particle
+% PeTar handles collisional dynamics, so there is no softening. PeTar uses "slow-down algorithmic regularization (SDAR)" to calculate forces when particles have close passages. 
+% 
+% Dwarf Galaxy
+% Code: Gyrfalcon
+% Initial distribution function: King model, mass = 1e8 Msun, scaleradius = 1kpc, w0 = 4. 500_000 particles.
+% Particle mass: 200 Msun per particle
+% Softening epsilon = 0.01 kpc
+% Energy errors are small, order 1e-5
 
 
 \bibliographystyle{model2-names-astronomy}
