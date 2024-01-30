@@ -726,48 +726,36 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 \section{Stream kinematics}
 \label{sec:orbits}
 % AB
-- regime change: kinematics no longer painstaking follow-up, but part of discovery
-- bulk for many streams \citep{streamfinders}
-- individual follow-up as well \citep{others}
-- galstreams summary: more streams w pm than not
--
-% - census of papers w kinematics
-
-\subsection{Orbits}
-- a lot of what we want to do w streams is reconstructing their history
-- depends on orbit!
-- previously widely unknown (or rather, hard to get, so available for a few streams, but wildly unknown for most -- cite hermus hyllus stuff)
--- hermus \citep{grillmair:2014}
--- hermus, phoenix connection \citep{gc:2016}
--- bhb sdss velocities -> different orbit of hermus, not connected w phoenix \citep{martin:2018}
-
-% - Still much unknown about most streams
-- But Gaia gives us access to kinematics -> +MW model = orbits
-
--- orbital histories
--- satellite encounters
-
--- caveat: MW model
--- standard certainly idealized (LMC deformations)
--- fitting a more complex potential now possible (koposov student papers)
+In the \gaia\ era, stream kinematics are no longer a result of painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
+Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
+Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one member with a radial velocity measurement as well.
 
 
-\subsection{Progenitors}
-- progenitors important: can model much better (kupper)
-- hard to find (balbinot)
-- before: only 2 gc streams
-- gjoll--ngc3201 chemistry \citep{hansen:2020}
-
-- gaia: low sb bc selecting on orbits
-- now a huge population, key opportunity
+\subsection{Orbits and the Milky Way potential}
+- first thing we'd like to know: where has the stream been
+- for dwarfs, can tell how strongly affected by tides \citep{pace:2022}
+- kinematics + potential model = orbit
+- peri, apo distribution, orbital phase
+- prograde vs retrograde (gaia biased retrograde, des prograde)
 
 - orbits also connected separately identified streams
-- case: oc
-- case: aau \citep{li:2021}
-- important for accurate accounting as we're moving to more complete census
+- relying on sky positions alone unreliable: Hermus and Phoenix appear to be on the same great circle, but radial velocities showed they are not on the same orbit
+- however, radial velocity members connected AAU \citep{li:2021} and OC \citep{koposov,aspen}
+- important for accurate accounting as we're moving to more complete census and inferring the total number of accretion events, and comparing to sims \citep{pillepich:2015, shipp:2022, wright:2023, khoperskov:2023} and also models of gc disruption \citep{pearson}
+
+- misidentified as separate due to perturbations
+- OC misaligned pm vector wrt the stream track, due to LMC perturbation \citep{erkal}
+- similar misalignments later identified in most southern streams \citep{shipp:2019}
+- theoretically predicted \citep{garavito-camargo, lilleengen}, used to measure the mass of the LMC \citep{shipp, koposov}
+- orbit integrations to estimate impact of other gc, dwarf galaxies on a stream \citep{bonaca:2019,}
+
+- these orbital calculations only as good as the potential model, model mismatch can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}
+- multiple streams used to update the shape measurement \citep{palau,}
+- work underway to incorporate these effects in the potential model
+- sgr +lmc \citep{tango, correa-magnus:2022}
 
 
-\subsection{Population}
+\subsection{Orbital phase space and hierarchical assembly}
 - orbital ensembles: used e.g., in Schwarzschild modeling of galaxy kinematics w individual stars, or updated inference on the MW mass w dwarf galaxies
 - gaia for the first time allowed this for streams
 - correlations present in MW satellites, e.g., VPOS
@@ -779,19 +767,31 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 - important for cocoon implications
 
 
-\subsection{Chemistry}
-- story of Monoceros, Anticenter Stream
--> thought accreted, but chemistry showed in-situ, kicked out of the disk
+\subsection{Progenitors}
+- progenitors important: can model much better (kupper)
+- hard to find (balbinot)
+- before: only 2 gc streams
+- gjoll--ngc3201 chemistry \citep{hansen:2020}
 
-- chemistries even less available than radial velocities, need high-res, high snr spectra
-- w Gaia: orbits good for better target selection, highly efficient targeting
--- S5 \citep{li:2022}
--- new streamfinder paper
+- gaia: low sb bc selecting on orbits
+- now a huge population, key opportunity
+
+- velocity dispersion
+
+
+\subsection{Chemistry}
+- corollary of widely available spectra of are chemical abundances
+% - side benefit: can use orbits for membership selection
+- powerful in discerning origins, and even finding what is not an accreted stream but in-situ
+- Monoceros and Nyx
+- GC vs DG streams (Ji S5)
+
+- sgr detailed abundances?
+- sgr older wraps (Johnson H3)
+- other dg streams? (e.g., lms, malhan, yuan)
 
 - GC metallicity floor
-
 - contribution of GCs
-
 - origin of multiple populations, GD-1
 
 
@@ -802,6 +802,11 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 
 \section{Outlook}
 \label{sec:outlook}
+
+% from Charlie: be bold!
+% you could even be quite explicit: the most exciting prospect for streams is their use in constraining the nature of dark matter.  here’s what is needed to turn streams into DM detectors.
+% and lay out a roadmap to get there: e.g., what data are needed, what models, and what framework for comparison.
+
 - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
 - still sparse targets, but heavily multiplexed now
 - desi already increasing samples
@@ -809,11 +814,15 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 - plug for cats, as a centralized repository??
 % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
-- Due to large number of streams: transitioning from stamp-collecting to population studies
-% - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
-
 - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
 % - potential modeling of a flexible potential -- also in the outlook
+% -- caveat: MW model
+% -- standard certainly idealized (LMC deformations)
+% -- fitting a more complex potential now possible (koposov student papers)
+
+
+- Due to large number of streams: transitioning from stamp-collecting to population studies
+% - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
