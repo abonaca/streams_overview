@@ -581,9 +581,9 @@ The bottom right panel now shows the sky positions of individual stars that pass
 selections, which reveals more of the stream (especially at $\phi_1 \lesssim -55^\circ$)
 and enables quantifying the magnitude of density variations and gaps present along the
 stream track.
-This new view of GD-1 also revealed off-track features that were not visible in previous
-filtered characterizations of the stream \citep{Grillmair:2006-gd1, koposov:2010,
-deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
+This new view of GD-1 also revealed features of the stream that were not visible in
+previous filtered characterizations of the stream \citep{Grillmair:2006-gd1,
+koposov:2010, deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
 Many other studies have also used \gaia\ proper motions to study the structure of GD-1
 \citep[e.g.,][]{malhan:2018, li-yanny:2018, huang:2019, deboer:2020, ibata:2020}, the
 Orphan--Chenab stream \citep{koposov:2019}, the Helmi streams \citep{koppelman:2019},
@@ -591,53 +591,92 @@ the Jhelum stream \citep{bonaca:2019}, the Ophiuchus stream \citep{caldwell:2020
 with work that has modeled the density structure of many streams simultaneously
 \citep[e.g.,][]{patrick:2022}.
 
+Over the years leading up to \gaia\ \dr{2}, searches for new streams pushed deeper using
+well-calibrated photometry from surveys like PS1 and DES, resulting in a steady and
+continuous increase in the number of known streams.
+Figure~\ref{fig:num-streams} shows the cumulative number of Milky Way stellar streams
+reported in the literature as a function of time, as collated in the \texttt{galstreams}
+\citep{mateu:2023} library and combined with the recent atlas of stream data from
+\citet{ibata:2024}.
+However, the kinematic data from \gaia\ has enabled a new and important validation step
+for previously discovered streams.
+While many streams have been re-discovered and studied in detail using \gaia\ data, a
+number of streams that were previously reported in the literature have not been
+re-identified with \gaia\ data.
+\todo{Do we call these out in the table? PS1-A, Hyllus, etc.}
+This is not totally unexpected, as many of the streams discovered in the pre-\gaia\ era
+pushed to fainter magnitudes and larger distances, where the \gaia\ data is noisier
+and/or only RGB stars in the streams may pass the faint limit of \gaia.
+
 \begin{figure*}[t!]
     \begin{center}
     \includegraphics[width=0.6\textwidth]{cumulative-num-streams.pdf}
     \end{center}
     \caption{%
-    TODO
+    TODO: Smoother rise. New data important, but also people refining methods and using smaller surveys along the way.
     \label{fig:num-streams}
     }
 \end{figure*}
 
-- Now pivot to talking about finding new streams
-- Until Gaia, total of XX streams reported.
-- More dimensions = better contrast for finding low density things
-- Greatly improved contrast for nearby streams (GD-1)
-- Enabled more automated searches: streamfinder, Via Machinae, ... others??
 The exquisite astrometry provided by \gaia\ has also enabled a new class of methods for
-finding streams around the Milky Way.
-With uniform kinematic data,
+searching for new streams around the Milky Way \citep[e.g.,][]{malhan:2018a,
+borsato:2020, necib:2020, gatto:2020, shih:2022, shih:2023, pettee:2024}, which has led
+to an enormous increase in the number of known low-density stellar streams.
+These methods all leverage the kinematic data now available from \gaia\ to identify
+over-densities of stars in different projections or transformations of the phase-space
+data.
+For example, \texttt{STREAMFINDER} \citep{malhan:2018a} searches for over-densities of
+stars near orbits computed a model of the Milky Way's mass distribution.
+This works by projecting orbits into the data space, where uncertainties and missing
+data can be naturally handled by the search method.
+Other methods either transform the phase-space data into a Galactocentric coordinate
+system where clustering methods can search directly in the phase-space distribution
+function \citep{necib:2020,gatto:2020}, or apply machine learning and anomaly detection
+methods to the observed (heliocentric) data directly \citep{borsato:2020, shih:2022,
+shih:2023, pettee:2024}.
 
+The ability to use newly-accessible phase-space dimensions to search for streams has led
+to the discovery of many low-density streams that would never have been found using
+photometric selections alone.
+For example, early work using \texttt{STREAMFINDER} identified a total of 13 new streams
+in \gaia\ \dr{2} data \citep{malhan:2018, ibata:2018, ibata:2019}, which were typically
+closer (and therefore appeared wider) and had lower surface densities than previous
+photometrically-discovered streams.
+This data has also enabled the discovery of streams that are not spatially coherent in
+\emph{sky position} but do appear to contain comoving, metal-poor stellar populations
+\citep[e.g.,][]{necib:2020b, balbinot:2023}.
+Efforts have also searched for kinematic substructures that may be phase-mixed or less
+spatially coherent using integrals of motion or other dynamical invariants
+\citep[e.g.,][]{koppelman:2019b, yuan:2020, naidu:2020, ou:2023}.
 
-- Challenge: Most streams are ~20 kpc, to MSTO out of Gaia magnitude limit
-
-- Data from the \gaia\ Mission has revolutionized our ability to find kinematic substructures, led to the explosion in number of streams discovered
-- Enabled by semi-automated methods - past methods stream-by-stream, natural evolution for a field
-- New discoveries and census as of 2023
-- Also: follow-up now more efficient so the chemistries now becoming more readily available
-
-- list:
--- ED-2
--- LMS-1 / Wukong
-
-- Clumps in dynamical quantities - student who worked with Robyn...
+The number of known stellar streams around the Milky Way has exploded in the \gaia\ era:
+over 120 streams have now been reported in the literature (see
+Figure~\ref{fig:num-streams}), with more discoveries coming every year, especially
+enabled by new data releases from \gaia\ and new methodological developments.
+\todo{Figure showing sky positions of all streams?}
+With so many new streams, significant effort has been put into obtaining follow-up
+spectroscopic observations of stream stars to measure their radial velocities and
+detailed element abundances.
+For example, surveys like the Southern Stellar Stream Spectroscopic Survey (S5;
+\citep{li:2019,li:2022}) and more targeted efforts \citep[e.g.,][]{ibata:2021} are
+steadily improving the validation and characterization of the current population of
+known streams.
+Future data releases from \gaia\ and new spectroscopic surveys and facilities such as
+the Dark Energy Spectroscopic Instrument (DESI; \citealt{desi:2016}), H3
+\citep{conroy:2019}, 4MOST \citep{4most:2012}, and WEAVE \citep{weave:2012} will
+continue to enable new discoveries and detailed follow-up of the known streams.
 
 
 \subsection{Key opportunities}
-- The point that (all - few) streams have MSTO below Gaia faint limit and what that does for density characterization (or in “stream structure” below?)
-- (reorder by complexity, maybe :)): Automated discovery with quantified selection function, discovery in “hard” parts of parameter space (in the disk plane or galactic center, not tangent to sky plane, etc…), comparison to expectations from cosmological simulations and GC formation models
+\begin{description}
+    \item[Validation and spectroscopic characterization] Of all known streams...Many still need validation -- spectroscopy can be a challenge (see right panel of Fig blah)
+    \item[Stream discovery in the disk plane and galactic center] Most streams at high latitude...see Figure~XXX, sky plot.
+    \item[Automated discovery with quantified selection function] interpretation of population of observed streams in context of population of all streams hard because of selection effects. Contamination rate - requires observing (hard!) and publishing null results / non-discoveries.
+    \item[Astrometry below the \gaia\ faint limit] Rubin, Roman
+\end{description}
 
-
-- Validation
-- Truly automated detection - characterize selection effects
-- Astrometry opportunities below Gaia limit (Rubin, Roman)
-- Deeper photometry - main sequence but more contamination from phot alone
-    - Combine with spectroscopy of full halo?
-
-- In the future, hope to have fully automated methods to enable assessing selection function, population studies
-- Still, Gaia not end-all, be-all -- faint limit is an issue (many streams found from photometric)
+% - Deeper photometry - main sequence but more contamination from phot alone
+%     - Combine with spectroscopy of full halo?
 
 
 \section{Stream structure}
@@ -660,46 +699,34 @@ With uniform kinematic data,
 % AB
 In the \gaia\ era, stream kinematics are no longer a result of painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
-Overall, out of XX streams in Table~\ref{}, YY have measured proper motions and ZZ radial velocities.
+Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one member with a radial velocity measurement as well.
 
 
-\subsection{Orbits}
-% - Still much unknown about most streams
-- But Gaia gives us access to kinematics -> +MW model = orbits
-
-- a lot of what we want to do w streams is reconstructing their history
-- depends on orbit!
-- previously widely unknown (or rather, hard to get, so available for a few streams, but wildly unknown for most -- cite hermus hyllus stuff)
--- hermus \citep{grillmair:2014}
--- hermus, phoenix connection \citep{gc:2016}
--- bhb sdss velocities -> different orbit of hermus, not connected w phoenix \citep{martin:2018}
-
-
--- orbital histories
--- satellite encounters
-
--- caveat: MW model
--- standard certainly idealized (LMC deformations)
--- fitting a more complex potential now possible (koposov student papers)
-
-
-\subsection{Progenitors}
-- progenitors important: can model much better (kupper)
-- hard to find (balbinot)
-- before: only 2 gc streams
-- gjoll--ngc3201 chemistry \citep{hansen:2020}
-
-- gaia: low sb bc selecting on orbits
-- now a huge population, key opportunity
+\subsection{Orbits and the Milky Way potential}
+- first thing we'd like to know: where has the stream been
+- for dwarfs, can tell how strongly affected by tides \citep{pace:2022}
+- kinematics + potential model = orbit
+- peri, apo distribution, orbital phase
+- prograde vs retrograde (gaia biased retrograde, des prograde)
 
 - orbits also connected separately identified streams
-- case: oc
-- case: aau \citep{li:2021}
-- important for accurate accounting as we're moving to more complete census
+- relying on sky positions alone unreliable: Hermus and Phoenix appear to be on the same great circle, but radial velocities showed they are not on the same orbit
+- however, radial velocity members connected AAU \citep{li:2021} and OC \citep{koposov,aspen}
+- important for accurate accounting as we're moving to more complete census and inferring the total number of accretion events, and comparing to sims \citep{pillepich:2015, shipp:2022, wright:2023, khoperskov:2023} and also models of gc disruption \citep{pearson}
 
-- velocity dispersion
+- misidentified as separate due to perturbations
+- OC misaligned pm vector wrt the stream track, due to LMC perturbation \citep{erkal}
+- similar misalignments later identified in most southern streams \citep{shipp:2019}
+- theoretically predicted \citep{garavito-camargo, lilleengen}, used to measure the mass of the LMC \citep{shipp, koposov}
+- orbit integrations to estimate impact of other gc, dwarf galaxies on a stream \citep{bonaca:2019,}
 
-\subsection{Population}
+- these orbital calculations only as good as the potential model, model mismatch can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}
+- multiple streams used to update the shape measurement \citep{palau,}
+- work underway to incorporate these effects in the potential model
+- sgr +lmc \citep{tango, correa-magnus:2022}
+
+
+\subsection{Orbital phase space}
 - orbital ensembles: used e.g., in Schwarzschild modeling of galaxy kinematics w individual stars, or updated inference on the MW mass w dwarf galaxies
 - gaia for the first time allowed this for streams
 - correlations present in MW satellites, e.g., VPOS
@@ -711,17 +738,24 @@ Overall, out of XX streams in Table~\ref{}, YY have measured proper motions and 
 - important for cocoon implications
 
 
+\subsection{Progenitors}
+- progenitors important: can model much better (kupper)
+- hard to find (balbinot)
+- before: only 2 gc streams
+- gjoll--ngc3201 chemistry \citep{hansen:2020}
+
+- gaia: low sb bc selecting on orbits
+- now a huge population, key opportunity
+
+- velocity dispersion
+
+
 \subsection{Chemistry}
 - corollary of widely available spectra of are chemical abundances
+% - side benefit: can use orbits for membership selection
 - powerful in discerning origins, and even finding what is not an accreted stream but in-situ
 - Monoceros and Nyx
 - GC vs DG streams (Ji S5)
-
-
-% - chemistries even less available than radial velocities, need high-res, high snr spectra
-% - w Gaia: orbits good for better target selection, highly efficient targeting
-% -- S5 \citep{li:2022}
-% -- new streamfinder paper
 
 - sgr detailed abundances?
 - sgr older wraps (Johnson H3)
@@ -753,6 +787,10 @@ Overall, out of XX streams in Table~\ref{}, YY have measured proper motions and 
 
 - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
 % - potential modeling of a flexible potential -- also in the outlook
+% -- caveat: MW model
+% -- standard certainly idealized (LMC deformations)
+% -- fitting a more complex potential now possible (koposov student papers)
+
 
 - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
