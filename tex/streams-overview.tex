@@ -485,18 +485,21 @@ kinematic coordinates and the number of stars.
     \includegraphics[width=1\textwidth]{msto-rc-mag.pdf}
     \end{center}
     \caption{%
-    % TODO: add DES streams to left panel?
-    Tracks of the apparent $r$-band magnitude of the main sequence turn-off (MSTO) for
-    streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
-    The tracks were determined by fitting orbits to stream stars associated with each of
-    the streams in \citet{ibata:2024} (this procedure is described in detail in
-    \ref{apx:stream-fit}).
+    The length and mean apparent $r$-band magnitude of the main sequence turn-off (MSTO)
+    for streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
+    The distance moduli were determined by fitting orbits to stream stars associated
+    with each of the streams in \citet{ibata:2024} (this procedure is described in
+    detail in \ref{apx:stream-fit}).
     The MSTO magnitude is computed assuming all streams have a single stellar population
     with an age of $12~\unit{\giga\year}$ and a metallicity of $\feh = -2.2$, but this
     is only meant to qualitatively show the relative brightness of the MSTO for the
     known streams.
     High-resolution spectroscopic follow-up of MSTO stars in these streams is difficult
-    or currently infeasible for many of these streams.
+    or currently infeasible for many of these streams: The upper gray line shows the
+    approximate magnitude limit for observing an FGK star with the MIKE spectrograph
+    \citep{todo} to obtain a signal-to-noise ratio of 50 at $5500~\unit{\angstrom}$ with
+    a spectral resolution $R\sim \num{30000}$ with an exposure time $\lesssim
+    1.5~\textrm{hours}$.
     RGB stars in the streams are typically bright enough for this type of follow-up, but
     are far less numerous than MSTO stars (globular cluster streams may only have a few
     to tens of RGB stars).
@@ -515,6 +518,7 @@ stars were practically observable.
 But the RGB and HB stars in many thin streams are sparse and often distributed over
 large areas of the sky, making it difficult to obtain a large sample of stream stars.
 As a demonstration of this point, the left panel of Figure~\ref{fig:msto-rc-mag} shows
+\todo{update track words here - now points}
 the PS1 $r$-band magnitude tracks of the MSTO as a function of stream longitude for 7
 streams discovered before \gaia\ \dr{2} that have since been identified using \gaia\
 astrometry. To obtain precise and high signal-to-noise element abundance measurements
@@ -679,15 +683,40 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 %     - Combine with spectroscopy of full halo?
 
 
-\section{Stream structure}
+\section{Density Structures of Stellar Streams}
 \label{sec:structure}
 % APW
-- Long known sagittarius bifurcation, no clear model to reproduce
-- Now: Gaps and off-track features common at low surface brightness
-- E.g., GD-1, Jhelum, AAU
-- also motivated uncovering low-sb in other data sets (e.g., Pal 5, Jet, Phoenix)
+- Would be nice if streams followed simple, smooth models -- linear density smooth with epicyclic over-densities. But nope!
 
+- Long known sagittarius bifurcation, no clear model to reproduce, but many ideas
+- But focus on thin streams here:
+- GD-1, even then
+- Pal 5
+- Ophiuchus
+
+- Now: Gaps and off-track features common at low surface brightness
+- (move details to subsections) E.g., GD-1, Jhelum, AAU
+- also motivated uncovering low-sb in other data sets (e.g., Pal 5, Jet, Phoenix)
 - track--pm misalignments (shipp, erkal, ...)
+
+\subsection{Expectations from Simulations}
+
+- Epicycles
+- Disruption details
+- Bar
+- Spiral arm heating
+- Interactions with subhalos
+- Interactions with more massive dwarfs (Sag, LMC)
+
+\subsection{Observed Structures and Missing Pieces}
+
+- GD-1, mentioned above
+- Pal 5 (if not fully covered above)
+- Ophiuchus (discuss)
+- Jhelum (don't forget new story)
+- AAU
+- Orphan
+
 
 \subsection{Key opportunities}
 - density modeling robust to survey selection functions and dust
