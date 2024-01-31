@@ -262,6 +262,15 @@ While these substructures all represent different stages in the tidal dissolutio
 We will focus on a subset of long, coherent stellar streams accreted in the Milky Way halo, which in the \gaia\ era became our most sensitive antennae for dark matter.
 Let's see how!
 
+\begin{figure*}[t!]
+\begin{center}
+\includegraphics[width=1\textwidth]{figures/fos_3d.png}
+\end{center}
+\caption{%
+A field of streams in 3D---perhaps a globe of streams??
+\label{fig:fos_3d}
+}
+\end{figure*}
 
 \section{Stream Discovery and Characterization in the \gaia\ Era}
 \label{sec:discovery}
@@ -612,15 +621,15 @@ This is not totally unexpected, as many of the streams discovered in the pre-\ga
 pushed to fainter magnitudes and larger distances, where the \gaia\ data is noisier
 and/or only RGB stars in the streams may pass the faint limit of \gaia.
 
-\begin{figure*}[t!]
+\begin{figure}[t!]
     \begin{center}
-    \includegraphics[width=0.6\textwidth]{cumulative-num-streams.pdf}
+    \includegraphics[width=\columnwidth]{cumulative-num-streams.pdf}
     \end{center}
     \caption{%
     TODO: Smoother rise. New data important, but also people refining methods and using smaller surveys along the way.
     \label{fig:num-streams}
     }
-\end{figure*}
+\end{figure}
 
 The exquisite astrometry provided by \gaia\ has also enabled a new class of methods for
 searching for new streams around the Milky Way \citep[e.g.,][]{malhan:2018a,
@@ -730,18 +739,32 @@ In the \gaia\ era, stream kinematics are no longer a result of painstaking follo
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
 Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one member with a radial velocity measurement as well.
 
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figures/orbital_phase_space.pdf}
+\end{center}
+\caption{%
+Stream orbital phase space.
+\label{fig:phase_space}
+}
+\end{figure*}
 
 \subsection{Orbits and the Milky Way potential}
-- first thing we'd like to know: where has the stream been
-- for dwarfs, can tell how strongly affected by tides \citep{pace:2022}
-- kinematics + potential model = orbit
-- peri, apo distribution, orbital phase
-- prograde vs retrograde (gaia biased retrograde, des prograde)
+The vast amount of stream features uncovered by \gaia\ and discussed in \S\ref{sec:structure} naturally raises the question of their origin.
+Here again \gaia\ provides a path to solution: its proper motions accurately determine the streams' orbits that inform us about the streams' dynamical histories and processes likely to have produced the observed features.
+Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2024} catalog (yellow stars).
+The orbit fitting procedure is described in \ref{apx:stream-fit}.
+The majority of known Milky Way streams have apocenters between 10\,\unit{\kpc} and 50\,\unit{\kpc}, and thus spend most of the time beyond the Milky Way disk.
+However, their wide range of eccentricities (Figure~\ref{fig:phase_space}, left) brings pericenters for half of this sample within the Solar circle where.
+$\approx60\%$ of these streams are on orbits prograde with the Milky Way's disk, which makes them more susceptible to perturbation from the Milky Way bar, spiral arms and molecular clouds \citep[e.g.,][]{pearson:2017, banik:2019}.
+There is a long tail towards retrograde orbits, but this is likely a detection bias due to retrograde streams being more easily detected in proper motions \citep[e.g.,][]{ibata:2021}.
 
-- orbits also connected separately identified streams
-- relying on sky positions alone unreliable: Hermus and Phoenix appear to be on the same great circle, but radial velocities showed they are not on the same orbit
-- however, radial velocity members connected AAU \citep{li:2021} and OC \citep{koposov,aspen}
-- important for accurate accounting as we're moving to more complete census and inferring the total number of accretion events, and comparing to sims \citep{pillepich:2015, shipp:2022, wright:2023, khoperskov:2023} and also models of gc disruption \citep{pearson}
+Quite surprisingly, orbits also revealed that some streams extend longer than previously thought and connect to another stream.
+Analyzing halo RR~Lyrae in \gaia~\dr{2}, \citet{koposov:2019} traced the Orphan stream through the Galactic plane to the southern hemisphere and found it connects to the Chenab stream in sky positions, distance, and proper motions.
+Similarly, \citet{li:2021} found that a single orbit connects the adjacent ATLAS and Aliqa Uma streams in both proper motions and radial velocities.
+In both cases, stream kinematics were key in making these connections.
+In contrast, relying on sky positions alone can be unreliable, e.g., Hermus and Phoenix streams appear to be in the same orbital plane \citep{grillmair:2016b}, but radial velocities show they are not associated \citep{martin:2018}.
+As we are completing the stream census, accurately accounting for the total number of accretion events onto the Milky Way is important for testing galaxy formation models \citep{pillepich:2015, shipp:2023, wright:2023, khoperskov:2023}.
 
 - misidentified as separate due to perturbations
 - OC misaligned pm vector wrt the stream track, due to LMC perturbation \citep{erkal}
@@ -749,42 +772,46 @@ Overall, all reported members of the XX streams in Table~\ref{} have proper moti
 - theoretically predicted \citep{garavito-camargo, lilleengen}, used to measure the mass of the LMC \citep{shipp, koposov}
 - orbit integrations to estimate impact of other gc, dwarf galaxies on a stream \citep{bonaca:2019,}
 
-- these orbital calculations only as good as the potential model, model mismatch can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}
+However, these orbital calculations are only as good as the adopted gravitational potential model.
+While multi-component analytic models of the Milky Way have been tuned to reproduce a range of observables \citep[e.g.,][]{mcmillan,bovy,price-whelan}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}.
 - multiple streams used to update the shape measurement \citep{palau,}
 - work underway to incorporate these effects in the potential model
 - sgr +lmc \citep{tango, correa-magnus:2022}
 
 
 \subsection{Orbital phase space and hierarchical assembly}
-- orbital ensembles: used e.g., in Schwarzschild modeling of galaxy kinematics w individual stars, or updated inference on the MW mass w dwarf galaxies
-- gaia for the first time allowed this for streams
-- correlations present in MW satellites, e.g., VPOS
-- streams orbital plane distribution, not aligned w the vpos \citep{riley:2020}
+- theory of streams: simple in action phase-space, used to simulate
+- greatest hits of action angles?
+- now directly accessible observationally
+
+- not just connecting different orbital segments, but also to other halo denizens
+- figure: , and compares them to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
+- progenitors important: can model much better \citep{kupper:2015}
+- before: only 2 gc streams, hard to find \citep{balbinot}
+% - now a huge population, key opportunity
+% - comparison to other halo denizens
+- orbital poles
+
+
+% - orbital ensembles: used e.g., in Schwarzschild modeling of galaxy kinematics w individual stars, or updated inference on the MW mass w dwarf galaxies
+% - gaia for the first time allowed this for streams
+% - correlations present in MW satellites, e.g., VPOS
+% - streams orbital plane distribution, not aligned w the vpos \citep{riley:2020}
 
 - more connections + benefit of orbits: phase-space clustering \citep{bonaca:2021}
 - found origins (accreted vs in situ) + progenitor galaxies
 
-- important for cocoon implications
+- accretion origin important for cocoon implications
+- velocity dispersion, pm and rv
 
 
-\subsection{Progenitors}
-- progenitors important: can model much better (kupper)
-- hard to find (balbinot)
-- before: only 2 gc streams
-- gjoll--ngc3201 chemistry \citep{hansen:2020}
-
-- gaia: low sb bc selecting on orbits
-- now a huge population, key opportunity
-
-- velocity dispersion
-
-
-\subsection{Chemistry}
+\subsection{Progenitors and early star formation}
 - corollary of widely available spectra of are chemical abundances
 % - side benefit: can use orbits for membership selection
 - powerful in discerning origins, and even finding what is not an accreted stream but in-situ
 - Monoceros and Nyx
 - GC vs DG streams (Ji S5)
+- gjoll--ngc3201 chemistry \citep{hansen:2020}
 
 - sgr detailed abundances?
 - sgr older wraps (Johnson H3)
