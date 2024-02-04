@@ -123,36 +123,16 @@
 \begin{abstract}
 The hierarchical model of galaxy formation predicts that the Milky Way halo is populated by tidal debris of accreted satellites.
 Due to long dynamical times, debris from the lowest mass satellites remain coherent as thin and dynamically cold stellar streams for billions of years.
-% , and therefore sensitive to the underlying gravitational potential.
 The \gaia\ mission, providing astrometry and spectrophotometry for billions of stars, brought three fundamental changes to our view of stellar streams in the Milky Way.
-% First, more than a hundred stellar streams have been discovered and characterized using \gaia\ data between YY\,kpc and XX\,kpc from the Galactic center.
 First, more than a hundred stellar streams have been discovered and characterized using \gaia\ data.
 This is an order of magnitude increase in the number of known streams, due to \gaia's capacity for identifying comoving groups of stars among the field Milky Way population.
 Second, \gaia\ data revealed that density variations both along and across stellar streams are common.
-% Dark-matter subhalos, as well as baryonic structures were theoretically predicted to form such features, but because of their low surface brightness, they haven't been detected until \gaia.
 Dark-matter subhalos, as well as baryonic structures were theoretically predicted to form such features, but they have been observationally disputed before \gaia.
 And third, stream kinematics are now widely available and have constrained the streams' orbits and origins, both in-situ and accreted.
 \gaia\ not only provided proper motions directly, but also enabled efficient spectroscopic follow-up of the proper-motion selected targets.
 These discoveries have established stellar streams as a dense web of sensitive gravitational antennae in the Milky Way halo.
 We expect the coming decade to fully map the Galactic population of stellar streams, as well as develop numerical models that accurately capture their evolution within the Milky Way for a variety of cosmological models.
 Perhaps most excitingly, the comparison between the two will be able to reveal the presence of dark-matter subhalos below the threshold for galaxy formation ($\lesssim10^6\,\unit{\msun}$), and thus validate the LCDM cosmology. 
-% kinematically too to determine the origin of perturbations and confronted w realistic simulations in different cosmologies to ultimately determine the nature of dark matter.
-% These discoveries open opportunities
-% Implications heralding exciting times ahead! -- detecting the presence of dm subhalos below the threshold for galaxy formation ($\lesssim10^6\,\unit{\msun}$), staple of lcdm cosmology
-% -- to do that, precise structure and kinematics for an entire population of stellar streams
-% -- realistic models, take into account various sources of perturbation + different dm models
-% -- population based modeling frameworks
-% 
-% theoretically predicted, dynamical perturbations, proof-of-principle
-% - streams, tidal debris, useful for tracing hierarchical assembly, dark matter
-% - in the Milky Way, the Gaia mission, providing astrometry and spectrophotometry for billions of stars, fundamentally changed the landscape
-% - we discuss three main revolutions:
-% -- number of streams increased by an order of magnitude, now have a population of 100 (New streams and methods for discovery thanks to new kinds of data)
-% -- orbital histories (including hierarchical associations between streams)
-% -- Stream features are abundant (revealed at low surface brightness)
-% -- pragmatic: Due to more secure membership probabilities, follow-up now more efficient so the chemistries now becoming more readily available
-% -- Due to large number of streams, transitioning from stamp-collecting to population studies
-% -- All of this will need improved theoretical modeling of the new Gaia discoveries
 \end{abstract}
 
 % I think you want a mantra that is repeated in the abstract, beginning of Intro and conclusions.  Something to the effect of: streams have the potential to tell us about early star formation, hierarchical assembly, the detailed mass distribution within the Galaxy, and - perhaps - the nature of dark matter.    or whatever you think are the 3-4 key reasons to care about streams.
@@ -830,26 +810,57 @@ While multi-component analytic models of the Milky Way have been tuned to reprod
 \section{Outlook}
 \label{sec:outlook}
 
+The most exciting prospect for streams constraining the nature of dark matter.
+In this section we describe what is needed to turn streams into dark matter detectors.
+
 % from Charlie: be bold!
 % you could even be quite explicit: the most exciting prospect for streams is their use in constraining the nature of dark matter.  here’s what is needed to turn streams into DM detectors.
 % and lay out a roadmap to get there: e.g., what data are needed, what models, and what framework for comparison.
 
-- Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
-- still sparse targets, but heavily multiplexed now
-- desi already increasing samples
-- weave, 4most imminent first light
-- plug for cats, as a centralized repository??
-% - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
+\textbf{Data}
+- structure of all streams: Gaia DR4 and DR5, LSST, Roman
 
-- All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
-% - potential modeling of a flexible potential -- also in the outlook
-% -- caveat: MW model
-% -- standard certainly idealized (LMC deformations)
-% -- fitting a more complex potential now possible (koposov student papers)
+- kinematics: coordinate follow-up across large spectroscopic surveys, e.g., DESI, WEAVE, 4MOST
+- new facility for 100m/s RVs
 
+% - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
+% - still sparse targets, but heavily multiplexed now
+% - desi already increasing samples
+% - weave, 4most imminent first light
+% - plug for cats, as a centralized repository??
+% % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
-- Due to large number of streams: transitioning from stamp-collecting to population studies
+\textbf{Models}
+- progenitors:
+- need simulations of globular clusters dissolving in direct N-body
+- streams born in a dwarf galaxy, later accreted onto the Milky Way
+
+- environment:
+- streams in full hydro
+- streams in different dark matter models
+
+- computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
+- could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
+
+% - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
+% % - potential modeling of a flexible potential -- also in the outlook
+% % -- caveat: MW model
+% % -- standard certainly idealized (LMC deformations)
+% % -- fitting a more complex potential now possible (koposov student papers)
+
+\textbf{Inference}
+- simultaneous modeling of multiple streams to infer population properties of subhalo, e.g., mass function, radial distribution
+% - expect basic data like stream densities to be available for the entire population of streams
+
+- detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
+
+% - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
+
+
+- strongest constraint on the subhalo mass function
+- unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
+- however, if successful, potential to extend beyond and test how universal (pearson; aganze)
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
