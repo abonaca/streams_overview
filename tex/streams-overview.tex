@@ -87,6 +87,7 @@
 %% \fntext[label3]{}
 
 \title{Stellar Streams in the Gaia Era}
+% \title{Stellar Streams as Dark Matter Detectors}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -125,17 +126,21 @@
 
 
 \begin{abstract}
-- streams, tidal debris, useful for tracing hierarchical assembly, dark matter
-- in the Milky Way, the Gaia mission, providing astrometry and spectrophotometry for billions of stars, fundamentally changed the landscape
-- we discuss three main revolutions:
--- number of streams increased by an order of magnitude, now have a population of 100 (New streams and methods for discovery thanks to new kinds of data)
--- orbital histories (including hierarchical associations between streams)
--- Stream features are abundant (revealed at low surface brightness)
-Implications heralding exciting times ahead!
--- pragmatic: Due to more secure membership probabilities, follow-up now more efficient so the chemistries now becoming more readily available
--- Due to large number of streams, transitioning from stamp-collecting to population studies
--- All of this will need improved theoretical modeling of the new Gaia discoveries
+The hierarchical model of galaxy formation predicts that the Milky Way halo is populated by tidal debris of accreted dwarf galaxies and globular clusters.
+Due to long dynamical times, debris from the lowest mass objects remains coherent as thin and dynamically cold stellar streams for billions of years.
+The \gaia\ mission, providing astrometry and spectrophotometry for billions of stars, brought three fundamental changes to our view of stellar streams in the Milky Way.
+First, more than a hundred stellar streams have been discovered and characterized using \gaia\ data.
+This is an order of magnitude increase in the number of known streams, due to \gaia's capacity for identifying comoving groups of stars among the field Milky Way population.
+Second, \gaia\ data revealed that density variations both along and across stellar streams are common.
+Dark-matter subhalos, as well as baryonic structures were theoretically predicted to form such features, but observational evidence for density variations was uncertain before \gaia.
+And third, stream kinematics are now widely available and have constrained the streams' orbits and origins, both in-situ and accreted.
+\gaia\ not only provided proper motions directly, but also enabled efficient spectroscopic follow-up of the proper-motion selected targets.
+These discoveries have established stellar streams as a dense web of sensitive gravitational antennae in the Milky Way halo.
+We expect the coming decade to fully map the Galactic population of stellar streams, as well as develop numerical models that accurately capture their evolution within the Milky Way for a variety of cosmological models.
+Perhaps most excitingly, the comparison between the two will be able to reveal the presence of dark-matter subhalos below the threshold for galaxy formation ($\lesssim10^6\,\unit{\msun}$), and provide the most stringent test of the cold dark matter model on small scales.
 \end{abstract}
+
+% I think you want a mantra that is repeated in the abstract, beginning of Intro and conclusions.  Something to the effect of: streams have the potential to tell us about early star formation, hierarchical assembly, the detailed mass distribution within the Galaxy, and - perhaps - the nature of dark matter.    or whatever you think are the 3-4 key reasons to care about streams.
 
 % %%Graphical abstract
 % \begin{graphicalabstract}
@@ -170,8 +175,10 @@ Implications heralding exciting times ahead!
 
 The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits---stellar streams.
 Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{smith:2016, ferguson:2016, carlin:2016}, and the nature of dark matter \citep{johnston:2016a, johnston:2016b}.
-So far, the main limitation for studying stellar streams in the Milky Way has been uncovering member stars of these low-mass and diffuse systems in the ocean of field stars.
-\gaia\ proper motions have largely lifted this limitation, and as a result, maps of stellar streams in the \gaia\ era build a more complete picture of our Galaxy, its constituents and its history.
+- why unique?
+
+% So far, the main limitation for studying stellar streams in the Milky Way has been uncovering member stars of these low-mass and diffuse systems in the ocean of field stars.
+% \gaia\ proper motions have largely lifted this limitation, and as a result, maps of stellar streams in the \gaia\ era build a more complete picture of our Galaxy, its constituents and its history.
 
 We center this review on three major breakthroughs that \gaia\ brought to stellar streams.
 The first is the sheer number of stream discoveries, which \gaia\ increased by an order of magnitude from $\approx10$ to $\approx100$ (\S\ref{sec:discovery}).
@@ -776,17 +783,20 @@ In both cases, stream kinematics were key in making these connections.
 In contrast, relying on sky positions alone can be unreliable, e.g., Hermus and Phoenix streams appear to be in the same orbital plane \citep{grillmair:2016b}, but radial velocities show they are not associated \citep{martin:2018}.
 As we are completing the stream census, accurately accounting for the total number of accretion events onto the Milky Way is important for testing galaxy formation models \citep{pillepich:2015, shipp:2023, wright:2023, khoperskov:2023}.
 
-- misidentified as separate due to perturbations
-- OC misaligned pm vector wrt the stream track, due to LMC perturbation \citep{erkal}
-- similar misalignments later identified in most southern streams \citep{shipp:2019}
-- theoretically predicted \citep{garavito-camargo, lilleengen}, used to measure the mass of the LMC \citep{shipp, koposov}
-- orbit integrations to estimate impact of other gc, dwarf galaxies on a stream \citep{bonaca:2019,}
+Both the Orphan--Chenab and ATLAS--Aliqa Uma complexes were misidentified as separate structures due to the effects of dynamical perturbations.
+A recent passage of the massive LMC shifted the orbital planes of the Orphan and Chenab streams, and misaligned their proper motion vectors with respect to the stream track \citep{erkal:2019}.
+Similar misalignments were detected in multiple streams of the southern hemisphere \citep{shipp:2019}, and used to measure the mass of the LMC \citep[$\gtrsim10^{11}\,\unit{\msun}$;][]{erkal:2019, shipp:2021, koposov:2023}.
+Lower mass satellites can also impact stellar streams if their orbits intersect.
+For example, both ATLAS--Aliqa Uma and the Jhelum stream may have been perturbed by the Sagittarius dwarf galaxy \citep[respectively]{li:2019,woudenberg:2023}.
+Furthermore, orbital calculations back in time show that several globular clusters with tidal tails may have had a flyby encounter with a dwarf galaxy \citep{el-falou:2022}.
+On the other hand, no known satellite passed close enough to perturb the GD-1 stream \citep{bonaca:2019, doke:2022}.
 
-However, these orbital calculations are only as good as the adopted gravitational potential model.
-While multi-component analytic models of the Milky Way have been tuned to reproduce a range of observables \citep[e.g.,][]{mcmillan,bovy,price-whelan}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}.
+Of course, these orbital calculations are only as good as the adopted gravitational potential model.
+While multi-component analytic models of the Milky Way have been tuned to reproduce a range of observables \citep[e.g.,][]{bovy:2015, mcmillan:2017,price-whelan:2017}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, santistevan:2024}.
 - multiple streams used to update the shape measurement \citep{palau,}
 - work underway to incorporate these effects in the potential model
-- sgr +lmc \citep{tango, correa-magnus:2022}
+- sgr+lmc \citep{tango, correa-magnus:2022}
+- future: flexible potential models w basis function expansions (e.g., garavito-camargo, lilleengen)
 
 
 \subsection{Orbital phase space and hierarchical assembly}
@@ -794,21 +804,8 @@ While multi-component analytic models of the Milky Way have been tuned to reprod
 - greatest hits of action angles?
 - now directly accessible observationally
 
-- not just connecting different orbital segments, but also to other halo denizens
-- figure: , and compares them to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
-- progenitors important: can model much better \citep{kupper:2015}
-- before: only 2 gc streams, hard to find \citep{balbinot}
-% - now a huge population, key opportunity
-% - comparison to other halo denizens
-- orbital poles
-
-
-% - orbital ensembles: used e.g., in Schwarzschild modeling of galaxy kinematics w individual stars, or updated inference on the MW mass w dwarf galaxies
-% - gaia for the first time allowed this for streams
-% - correlations present in MW satellites, e.g., VPOS
-% - streams orbital plane distribution, not aligned w the vpos \citep{riley:2020}
-
-- more connections + benefit of orbits: phase-space clustering \citep{bonaca:2021}
+- first w pms: orbital poles
+- full orbits: phase-space clustering \citep{bonaca:2021}
 - found origins (accreted vs in situ) + progenitor galaxies
 
 - accretion origin important for cocoon implications
@@ -816,8 +813,13 @@ While multi-component analytic models of the Milky Way have been tuned to reprod
 
 
 \subsection{Progenitors and early star formation}
+- not just connecting different orbital segments, but also to other halo denizens
+- figure: , and compares them to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
+- progenitors important: can model much better \citep{kupper:2015}
+- before: only 2 gc streams, hard to find \citep{balbinot}
 - corollary of widely available spectra of are chemical abundances
 % - side benefit: can use orbits for membership selection
+
 - powerful in discerning origins, and even finding what is not an accreted stream but in-situ
 - Monoceros and Nyx
 - GC vs DG streams (Ji S5)
@@ -840,26 +842,60 @@ While multi-component analytic models of the Milky Way have been tuned to reprod
 \section{Outlook}
 \label{sec:outlook}
 
+The most exciting prospect for streams constraining the nature of dark matter.
+The goal for the next decade should be an unambiguous association of a stream perturbation with a dark subhalo.
+Such a detection would confirm the prediction of the LCDM model that halos exist below the mass threshold for galaxy formation, and resolve the long-standing missing satellites problem \citep{klypin:1999}.
+It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
+In this section we describe what is needed to turn streams into dark matter detectors.
+
 % from Charlie: be bold!
 % you could even be quite explicit: the most exciting prospect for streams is their use in constraining the nature of dark matter.  here’s what is needed to turn streams into DM detectors.
 % and lay out a roadmap to get there: e.g., what data are needed, what models, and what framework for comparison.
 
-- Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
-- still sparse targets, but heavily multiplexed now
-- desi already increasing samples
-- weave, 4most imminent first light
-- plug for cats, as a centralized repository??
-% - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
+\textbf{Data}
+- structure of all streams: Gaia DR4 and DR5, LSST, Roman
 
-- All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
-% - potential modeling of a flexible potential -- also in the outlook
-% -- caveat: MW model
-% -- standard certainly idealized (LMC deformations)
-% -- fitting a more complex potential now possible (koposov student papers)
+- kinematics: coordinate follow-up across large spectroscopic surveys, e.g., DESI, WEAVE, 4MOST
+- new facility for 100m/s RVs
 
+% - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
+% - still sparse targets, but heavily multiplexed now
+% - desi already increasing samples
+% - weave, 4most imminent first light
+% - plug for cats, as a centralized repository??
+% % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
-- Due to large number of streams: transitioning from stamp-collecting to population studies
+\textbf{Models}
+- progenitors:
+- need simulations of globular clusters dissolving in direct N-body
+- streams born in a dwarf galaxy, later accreted onto the Milky Way
+
+- environment:
+- streams in full hydro
+- streams in different dark matter models
+
+- computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
+- could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
+
+% - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
+% % - potential modeling of a flexible potential -- also in the outlook
+% % -- caveat: MW model
+% % -- standard certainly idealized (LMC deformations)
+% % -- fitting a more complex potential now possible (koposov student papers)
+
+\textbf{Inference}
+- simultaneous modeling of multiple streams to infer population properties of subhalo, e.g., mass function, radial distribution
+% - expect basic data like stream densities to be available for the entire population of streams
+
+- detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
+
+% - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
+
+
+- strongest constraint on the subhalo mass function
+- unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
+- however, if successful, potential to extend beyond and test how universal (pearson; aganze)
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
