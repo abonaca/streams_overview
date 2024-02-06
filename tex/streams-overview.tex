@@ -767,13 +767,14 @@ Stream orbital phase space.
 \end{figure*}
 
 \subsection{Orbits and the Milky Way potential}
-The vast amount of stream features uncovered by \gaia\ and discussed in \S\ref{sec:structure} naturally raises the question of their origin.
-Here again \gaia\ provides a path to solution: its proper motions accurately determine the streams' orbits that inform us about the streams' dynamical histories and processes likely to have produced the observed features.
+Widely available kinematics allow us to accurately determine the streams' orbits, which inform us about the streams' dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
+% The vast amount of stream features uncovered by \gaia\ and discussed in \S\ref{sec:structure} naturally raises the question of their origin.
+% Here again \gaia\ provides a path to solution: its proper motions accurately determine the streams' orbits that inform us about the streams' dynamical histories and processes likely to have produced the observed features.
 Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2024} catalog (yellow stars).
-The orbit fitting procedure is described in \ref{apx:stream-fit}.
+The assumed underlying gravitational potential is a static and analytic \texttt{MilkyWayPotential2022} model \citep{price-whelan:2017}, and the orbit fitting procedure is described in \ref{apx:stream-fit}.
 The majority of known Milky Way streams have apocenters between 10\,\unit{\kpc} and 50\,\unit{\kpc}, and thus spend most of the time beyond the Milky Way disk.
-However, their wide range of eccentricities (Figure~\ref{fig:phase_space}, left) brings pericenters for half of this sample within the Solar circle where.
-$\approx60\%$ of these streams are on orbits prograde with the Milky Way's disk, which makes them more susceptible to perturbation from the Milky Way bar, spiral arms and molecular clouds \citep[e.g.,][]{pearson:2017, banik:2019}.
+However, their wide range of eccentricities (Figure~\ref{fig:phase_space}, left) brings pericenters for half of this sample within the Solar circle.
+$\approx60\%$ of the sample are on orbits prograde with the Milky Way's disk, which makes them more susceptible to perturbation from the Milky Way bar, spiral arms and molecular clouds \citep[e.g.,][]{pearson:2017, banik:2019}.
 There is a long tail towards retrograde orbits, but this is likely a detection bias due to retrograde streams being more easily detected in proper motions \citep[e.g.,][]{ibata:2021}.
 
 Quite surprisingly, orbits also revealed that some streams extend longer than previously thought and connect to another stream.
@@ -791,7 +792,7 @@ For example, both ATLAS--Aliqa Uma and the Jhelum stream may have been perturbed
 Furthermore, orbital calculations back in time show that some globular clusters may have had a flyby encounter with a dwarf galaxy \citep{garrow:2020, el-falou:2022}.
 On the other hand, no known satellite passed close enough to perturb the GD-1 stream \citep{bonaca:2019, doke:2022}.
 
-Of course, orbital calculations are only as good as the adopted gravitational potential model.
+Of course, these orbital calculations are only as good as the adopted gravitational potential model.
 While multi-component analytic models of the Milky Way have been tuned to reproduce a wide range of observables \citep[e.g.,][]{bovy:2015, mcmillan:2017,price-whelan:2017}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, arora:2022, santistevan:2024}.
 Simultaneous modeling of multiple globular cluster streams in the inner $\lesssim20$\,\unit{\kpc} found an ellipsoidal halo model a reasonably good fit, and thanks to \gaia\ kinematics put strong constraints on the prolate halo shape \citep[$q_z=1.06\pm0.06$;][]{palau:2023}, and the halo virial mass \citep[$M_{200}=1.09^{+0.19}_{-0.14}\times10^{12}\,\unit{\msun}$;][see also \citealt{reino:2021}]{ibata:2024}.
 However, reproducing the positions and kinematics of the more distant Sagittarius stream requires a more complex, time-dependent model with an oblate inner halo, triaxial outer halo, as well as a massive LMC on its first infall \citep{vasiliev:2021}.
@@ -800,10 +801,17 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 
 
 \subsection{Orbital phase space and hierarchical assembly}
-- theory of streams: simple in action phase-space, used to simulate
-- greatest hits of action angles?
-- now directly accessible observationally
+- in static axisymmetric potentials conserved properties, phase space useful framework
+- even though perturbations, some orbital properties approximately conserved
+- exactly so in certain potentials, used theoretically to quickly generate streams
+- now available observationally: findings for individual streams
 
+- orbital frequencies, conserved even in time-evolving potentials
+- regular orbits -- stream map to constrain the potential?
+- resonant orbits -- higher dispersal rate?
+- sgr on 1:2 resonance (koppelman)
+
+- orbital phase space from the stream population
 - first w pms: orbital poles
 - full orbits: phase-space clustering \citep{bonaca:2021}
 - found origins (accreted vs in situ) + progenitor galaxies
@@ -817,21 +825,19 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 
 \subsection{Progenitors and early star formation}
 - not just connecting different orbital segments, but also to other halo denizens
-- figure: , and compares them to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
+- figure: comparison to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
 - progenitors important: can model much better \citep{kupper:2015}
 - before: only 2 gc streams, hard to find \citep{balbinot}
 - corollary of widely available spectra of are chemical abundances
 % - side benefit: can use orbits for membership selection
 
-- powerful in discerning origins, and even finding what is not an accreted stream but in-situ
-- Monoceros and Nyx
+- powerful in discerning origins, and even finding what is not an accreted stream but in-situ (e.g., Monoceros and Nyx)
 - GC vs DG streams (Ji S5)
-- gjoll--ngc3201 chemistry \citep{hansen:2020}
-
 - sgr detailed abundances?
 - sgr older wraps (Johnson H3)
 - other dg streams? (e.g., lms, malhan, yuan)
 
+- gjoll--ngc3201 chemistry \citep{hansen:2020}
 - GC metallicity floor
 - contribution of GCs
 - origin of multiple populations, GD-1
@@ -846,9 +852,9 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 \label{sec:outlook}
 
 The most exciting prospect for streams constraining the nature of dark matter.
+- so far
 The goal for the next decade should be an unambiguous association of a stream perturbation with a dark subhalo.
 Such a detection would confirm the prediction of the LCDM model that halos exist below the mass threshold for galaxy formation, and resolve the long-standing missing satellites problem \citep{klypin:1999}.
-It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
 In this section we describe what is needed to turn streams into dark matter detectors.
 
 % from Charlie: be bold!
@@ -896,9 +902,13 @@ In this section we describe what is needed to turn streams into dark matter dete
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
 
 
-- strongest constraint on the subhalo mass function
-- unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
-- however, if successful, potential to extend beyond and test how universal (pearson; aganze)
+It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
+- new dm physics, e.g., granular fdm (foote)
+
+- potential to test how universal by extend beyond the MW  (pearson; aganze)
+% - strongest constraint on the subhalo mass function
+% - unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
+% - however, if successful, potential to extend beyond and test how universal (pearson; aganze)
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
