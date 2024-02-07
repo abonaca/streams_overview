@@ -279,7 +279,8 @@ Let's see how!
 \includegraphics[width=1\textwidth]{figures/fos_3d.png}
 \end{center}
 \caption{%
-A field of streams in 3D---perhaps a globe of streams??
+An atlas of stellar streams in the Milky Way.
+Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified in \citet{ibata:2024, li:2019, vasiliev:2021}.
 \label{fig:fos_3d}
 }
 \end{figure*}
@@ -801,26 +802,31 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 
 
 \subsection{Orbital phase space and hierarchical assembly}
-- in static axisymmetric potentials conserved properties, phase space useful framework
-- even though perturbations, some orbital properties approximately conserved
-- exactly so in certain potentials, used theoretically to quickly generate streams
-- now available observationally: findings for individual streams
+Despite the ongoing perturbations to the outer Galaxy, it is often helpful to represent the Milky Way with an integrable, static and axisymmetric potential, so that positions in the orbital phase-space spanned by the total energy, $E$, and the $L_z$ component of the angular momentum are conserved \citep{noether:1918}.
+In such a potential, it is possible to simplify the equations of motions using the Hamiltonian canonical variables \citep{goldstein:2002, eyre:2011}:
+\begin{align}
+\pmb{\theta}(t) &= \pmb{\theta}_0 + \pmb{\Omega} t
+\label{eq:angle}
+\\
+\Omega_i(\pmb{J}) &\equiv \dot{\theta}_i = \frac{H}{J_i}
+\label{eq:frequency}
+\end{align}
+where $H$ is the Hamiltonian, $\pmb{\theta}$ are the angle variables (canonical coordinates), $\pmb{J}$ are actions (conjugate momenta and constants of motion), and $\Omega_i$ are the orbital frequencies (also constant).
+The Hamiltonian action-angle formalism has been a popular framework for studying stellar streams because it allows for a quick calculation of orbits and generation of stream models \citep[e.g.,][]{eyre:2011,sanders:2013a,bovy:2014, vasiliev:2019}.
+Orbital frequencies have also provided deeper insights into the evolution of tidal debris: an individual stream has distinct frequencies, whose separation decreases with time, making it possible to estimate the time of accretion \citep{gomez:2010}, progenitors on regular, non-resonant orbits form thin and long-lived streams, while those on nearly-resonant and chaotic orbits quickly disperse \citep{price-whelan:2016a, price-whelan:2016b, yavetz:2023}, so that the overall structure of the halo in the frequency space can be used to constrain the gravitational potential \citep{valluri:2012, yavetz:2021}.
+\gaia\ data has enabled mapping the frequency space of the Milky Way halo for the first time, and curiously revealed that both the Sagittarius and Helmi streams populate the $\Omega_\phi:\Omega_z=1:1$ resonance \citep{koppelman:2021a, dodd:2022}.
 
-- orbital frequencies, conserved even in time-evolving potentials
-- regular orbits -- stream map to constrain the potential?
-- resonant orbits -- higher dispersal rate?
-- sgr on 1:2 resonance (koppelman)
-
-- orbital phase space from the stream population
+- orbital phase space from the stream population, comparison to satellites, diffuse halo stars
 - first w pms: orbital poles
+- why E Lz and not action -- instantaneous properties, can be determined for every potential
 - full orbits: phase-space clustering \citep{bonaca:2021}
 - found origins (accreted vs in situ) + progenitor galaxies
 
-- cetus-palca, for group infall (yuan, chang, thomas)
+- group infall: previous dwarf findings for mw orbital associations, dwarf satellites (deason; patel)
+- cetus-palca (yuan, chang, thomas)
 - may even explain the long-standing puzzle of the sgr bifurcation (penarrubia, recent disk claim) as group infall (davies)
-- group infall: previous dwarf findings for mw orbital associations, dwarf satellites
-- accretion origin important for cocoon implications
-- velocity dispersion, pm and rv
+- accretion origin important for cocoon implications (carlbergs, malhans)
+- velocity dispersion, pm and rv (malhans)
 
 
 \subsection{Progenitors and early star formation}
