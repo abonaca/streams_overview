@@ -280,7 +280,9 @@ Let's see how!
 \end{center}
 \caption{%
 An atlas of stellar streams in the Milky Way.
-Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified in \citet{ibata:2024, li:2019, vasiliev:2021}.
+Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2024, li:2019, vasiliev:2021}.
+Their distances are poorly constrained observationally, so we have instead adopted distance from the best-fitting orbit.
+The color coding is by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
 \label{fig:fos_3d}
 }
 \end{figure*}
@@ -803,7 +805,7 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 
 \subsection{Orbital phase space and hierarchical assembly}
 Despite the ongoing perturbations to the outer Galaxy, it is often helpful to represent the Milky Way with an integrable, static and axisymmetric potential, so that positions in the orbital phase-space spanned by the total energy, $E$, and the $L_z$ component of the angular momentum are conserved \citep{noether:1918}.
-In such a potential, it is possible to simplify the equations of motions using the Hamiltonian canonical variables \citep{goldstein:2002, eyre:2011}:
+In such a potential, it is possible to simplify the equations of motions using the Hamiltonian canonical variables \citep{goldstein:2002, helmi:1999, tremaine:1999, eyre:2011}:
 \begin{align}
 \pmb{\theta}(t) &= \pmb{\theta}_0 + \pmb{\Omega} t
 \label{eq:angle}
@@ -815,18 +817,30 @@ where $H$ is the Hamiltonian, $\pmb{\theta}$ are the angle variables (canonical 
 The Hamiltonian action-angle formalism has been a popular framework for studying stellar streams because it allows for a quick calculation of orbits and generation of stream models \citep[e.g.,][]{eyre:2011,sanders:2013a,bovy:2014, vasiliev:2019}.
 Orbital frequencies have also provided deeper insights into the evolution of tidal debris: an individual stream has distinct frequencies, whose separation decreases with time, making it possible to estimate the time of accretion \citep{gomez:2010}, progenitors on regular, non-resonant orbits form thin and long-lived streams, while those on nearly-resonant and chaotic orbits quickly disperse \citep{price-whelan:2016a, price-whelan:2016b, yavetz:2023}, so that the overall structure of the halo in the frequency space can be used to constrain the gravitational potential \citep{valluri:2012, yavetz:2021}.
 \gaia\ data has enabled mapping the frequency space of the Milky Way halo for the first time, and curiously revealed that both the Sagittarius and Helmi streams populate the $\Omega_\phi:\Omega_z=1:1$ resonance \citep{koppelman:2021a, dodd:2022}.
+However, despite the elegance of the action-angle approach, its application for modeling other halo streams with \gaia\ data has been limited by their complex morphologies that indicate significant perturbation by non-equilibrium processes that are difficult to capture within the framework (e.g., the recent infall of the LMC).
 
-- orbital phase space from the stream population, comparison to satellites, diffuse halo stars
-- first w pms: orbital poles
-- why E Lz and not action -- instantaneous properties, can be determined for every potential
-- full orbits: phase-space clustering \citep{bonaca:2021}
-- found origins (accreted vs in situ) + progenitor galaxies
+On the other hand, when viewed for a population of streams, the orbital phase space has produced valuable insights into the hierarchical assembly of our Galaxy.
+The sky distribution of orbital poles shows that stellar streams, and globular clusters, are distributed isotropically around the Galaxy \citep{riley:2020, vasiliev:2019b}, in contrast to dwarf galaxy satellites which are preferentially distributed in an apparently rotating plane \citep[e.g.,][]{pawlowski:2012, pawlowski:2020, fritz:2018}.
+The planar configuration being limited to dwarf galaxies, rather than universal for all halo objects, suggests that its origin is not due to modified gravity \citep[e.g.,][]{pawlowski:2018}, but likely a transient occurrence \citep{sawala:2023, xu:2023}, possibly due to group infall \citep{patel:2020} or induced by the LMC \citep{garavito-camargo:2021,garavito-camargo:2024}.
+More direct evidence for group infall comes from the stream distribution in the $E-L_z$ space.
+Easily calculated for individual stars and conserved in standard Milky Way potentials, energies and angular momenta were mapped for the Solar neighborhood with \gaia~\dr{2} and revealed clumps that correspond to dwarf galaxies accreted onto the Milky Way billions of years ago \citep[e.g.,][]{helmi:2018,belokurov:2018,myeong:2019}.
+\gaia~\dr{3} improved proper motions and orbital constraints of the halo streams to allow placing them on the $E-Lz$ plane (see Figure~\ref{fig:phase_space}, right).
+Streams are highly clustered in the $E-L_z$ space (also seen as prominent clusters in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
+This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way as a part of a larger galaxy, thus confirming the hierarchical nature of galaxy formation.
 
-- group infall: previous dwarf findings for mw orbital associations, dwarf satellites (deason; patel)
-- cetus-palca (yuan, chang, thomas)
+% The orbital phase space of streams as a population has provided further insights in the hierarchical assembly of our Galaxy.
+% - space of orbital poles -- not clustered in the plane \citep{riley}
+% - unlike dwarf galaxies -- possibly different time (look up pawlowski, garavito-camargo latest)
+% - another informative space: E-Lz instantaneous properties, can be determined for every potential
+% - streams clustered (seen even in Figure~) \citep{bonaca:2021, malhan:2022}
+% - clustering -- associated with accretion origin, way to identify mw progenitors
+% - stream clusters aligned with field halo clusters, possible to map to progenitor dwarf galaxies
+
+% - group infall: previous dwarf findings for mw orbital associations, dwarf satellites (deason; patel)
+- implications for structure of streams: generally expect cocoons (carlbergs, malhans)
+- possible evidence: cetus-palca (yuan, chang, thomas)
 - may even explain the long-standing puzzle of the sgr bifurcation (penarrubia, recent disk claim) as group infall (davies)
-- accretion origin important for cocoon implications (carlbergs, malhans)
-- velocity dispersion, pm and rv (malhans)
+- also affects our interpretation of the measured velocity dispersion, pm and rv and interpretation on cusp vs core (malhans)
 
 
 \subsection{Progenitors and early star formation}
@@ -834,19 +848,17 @@ Orbital frequencies have also provided deeper insights into the evolution of tid
 - figure: comparison to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
 - progenitors important: can model much better \citep{kupper:2015}
 - before: only 2 gc streams, hard to find \citep{balbinot}
-- corollary of widely available spectra of are chemical abundances
-% - side benefit: can use orbits for membership selection
 
+- corollary of widely available spectra of are chemical abundances
 - powerful in discerning origins, and even finding what is not an accreted stream but in-situ (e.g., Monoceros and Nyx)
-- GC vs DG streams (Ji S5)
-- sgr detailed abundances?
-- sgr older wraps (Johnson H3)
+- among accreted: GC vs DG streams from metallicity spread (Ji S5)
+- sgr detailed abundances, older wraps (Johnson H3)
 - other dg streams? (e.g., lms, malhan, yuan)
 
-- gjoll--ngc3201 chemistry \citep{hansen:2020}
-- GC metallicity floor
-- contribution of GCs
-- origin of multiple populations, GD-1
+- detail abundances of GC streams used to firm up the link w the progenitor cluster, e.g., gjoll--ngc3201 chemistry \citep{hansen:2020}
+- used to trace the contribution of GCs to the bulge / halo budget
+- origin of multiple populations, GD-1 (some models expect it to depend on cluster mass)
+- GC metallicity floor (ditto)
 
 
 \subsection{Key opportunity: Precision kinematics to determine the origin of stream perturbations}
