@@ -758,8 +758,7 @@ History was more intertwined, but presented as sim predictions and discoveries.
 % AB
 In the \gaia\ era, stream kinematics are no longer a result of painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
-Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one member with a radial velocity measurement as well.
-- shift: we have gone from interpreting vr gradients to measuring orbits -- provides additional context
+Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one radial velocity measurement per stream.
 
 \begin{figure*}
 \begin{center}
@@ -772,9 +771,8 @@ Stream orbital phase space.
 \end{figure*}
 
 \subsection{Orbits and the Milky Way potential}
-Widely available kinematics allow us to accurately determine the streams' orbits, which inform us about the streams' dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
-% The vast amount of stream features uncovered by \gaia\ and discussed in \S\ref{sec:structure} naturally raises the question of their origin.
-% Here again \gaia\ provides a path to solution: its proper motions accurately determine the streams' orbits that inform us about the streams' dynamical histories and processes likely to have produced the observed features.
+The wide availability of kinematics has shifted how streams are described: instead of reporting the empirical velocity gradients along a stream, they are now used to determine the stream's orbit.
+Streams' orbits have been useful in placing them into a broader context within the Milky Way, informing about their dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
 Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2024} catalog (yellow stars).
 The assumed underlying gravitational potential is a static and analytic \texttt{MilkyWayPotential2022} model \citep{price-whelan:2017}, and the orbit fitting procedure is described in \ref{apx:stream-fit}.
 The majority of known Milky Way streams have apocenters between 10\,\unit{\kpc} and 50\,\unit{\kpc}, and thus spend most of the time beyond the Milky Way disk.
@@ -801,7 +799,7 @@ Of course, these orbital calculations are only as good as the adopted gravitatio
 While multi-component analytic models of the Milky Way have been tuned to reproduce a wide range of observables \citep[e.g.,][]{bovy:2015, mcmillan:2017,price-whelan:2017}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, arora:2022, santistevan:2024}.
 Simultaneous modeling of multiple globular cluster streams in the inner $\lesssim20$\,\unit{\kpc} found an ellipsoidal halo model a reasonably good fit, and thanks to \gaia\ kinematics put strong constraints on the prolate halo shape \citep[$q_z=1.06\pm0.06$;][]{palau:2023}, and the halo virial mass \citep[$M_{200}=1.09^{+0.19}_{-0.14}\times10^{12}\,\unit{\msun}$;][see also \citealt{reino:2021}]{ibata:2024}.
 However, reproducing the positions and kinematics of the more distant Sagittarius stream requires a more complex, time-dependent model with an oblate inner halo, triaxial outer halo, as well as a massive LMC on its first infall \citep{vasiliev:2021}.
-This change in halo shape is likely due to the LMC deforming the Milky Way's outer halo \citep[e.g.,][]{garavito-camargo:2019,shao:2021,vasiliev:2023}.
+This change in the halo shape is likely due to the LMC deforming the Milky Way's outer halo \citep[e.g.,][]{garavito-camargo:2019,shao:2021,vasiliev:2023}.
 Modeling techniques that self-consistently track the evolution of the Milky Way and the LMC are currently being developed using basis function expansions \citep[e.g.,][]{sanders:2020,garavito-camargo:2021,lilleengen:2023}.
 
 
@@ -826,8 +824,8 @@ The sky distribution of orbital poles shows that stellar streams, and globular c
 The planar configuration being limited to dwarf galaxies, rather than universal for all halo objects, suggests that its origin is not due to modified gravity \citep[e.g.,][]{pawlowski:2018}, but likely a transient occurrence \citep{sawala:2023, xu:2023}, possibly due to group infall \citep{patel:2020} or induced by the LMC \citep{garavito-camargo:2021,garavito-camargo:2024}.
 More direct evidence for group infall comes from the stream distribution in the $E-L_z$ space.
 Easily calculated for individual stars and conserved in standard Milky Way potentials, energies and angular momenta were mapped for the Solar neighborhood with \gaia~\dr{2} and revealed clumps that correspond to dwarf galaxies accreted onto the Milky Way billions of years ago \citep[e.g.,][]{helmi:2018,belokurov:2018,myeong:2019}.
-\gaia~\dr{3} improved proper motions and orbital constraints of the halo streams to allow placing them on the $E-Lz$ plane (see Figure~\ref{fig:phase_space}, right).
-Streams are highly clustered in the $E-L_z$ space (also seen as prominent clusters in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
+\gaia~\dr{3} improved proper motions and orbital constraints of the halo streams to allow placing them on the $E-L_z$ plane (Figure~\ref{fig:phase_space}, right).
+Streams are highly clustered in the $E-L_z$ space (also seen as distinct peaks in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
 This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way as a part of a larger galaxy, thus confirming the hierarchical nature of galaxy formation.
 
 Understanding the full dynamical history of a stellar stream back to its progenitor galaxy is crucial for interpreting the observed stream features.
@@ -839,24 +837,12 @@ N-body reconstruction of this system suggests that Cetus-Palca is tidal debris o
 The associated thin streams are likely segments of the extended tidal tails of NGC~5824 or another fully disrupted cluster.
 A similar scenario may even explain the long-standing puzzle of the bifurcation in the Sagittarius stream \citep{Belokurov:2006, koposov:2012}.
 Constrained N-body simulations show that the fainter, more metal-poor wrap of the Sagittarius stream \citep[e.g.,][]{ramos:2022} could have formed during a binary dwarf merger as tidal debris of the lower-mass companion \citep{davies:2024a,davies:2024b}.
-Knowledge of these hierarchical relations between different streams can even directly test dark matter on small scales.
-Numerical simulations show that tidal debris from the dwarf galaxy itself has a lower velocity dispersion if the galaxy is cuspy \citep{errani:2015}, due to its more compact size.
+
+Knowledge of these hierarchical relations between different streams can directly test dark matter on small scales.
+% Numerical simulations predict that cuspy dwarf galaxies are more compact, and host satellite globular clusters on
+Numerical simulations predict that tidal debris from the dwarf galaxy itself has a lower velocity dispersion if the galaxy is cuspy \citep{errani:2015}, due to its more compact size.
 However, a globular cluster accreted in a cuspy galaxy results in a dynamically hotter stream than one from a cored galaxy of the same mass \citep{malhan:2021}, due to enhanced mass loss on a more compact orbit.
-Observational data for individual streams currently lack the precision to put strong constraints \citep{malhan:2022b}, but systems where both the progenitor and the satellite streams are present provide a new opportunity to build self-consistent models that accurately constrain the inner slope of the accreted dark matter halos.
-
-% - reconstruction helpful in estimating what internal, vs external MW perturbation
-% - but ex-situ gc streams also a more direct test of dm on small scales, specifically the inner density slope of their progenitor dwarf galaxy
-% - cuspy -- higher velocity dispersion, lower for a less disruptive cored profile \citep{malhan:}
-% - data not there yet for individual streams, but may be possible to built a self-consistent model for a more complex system where both the dwarf galaxy and the globular cluster stream are present.
-% Building self-consistent models of group infall events will not only produce the full merger tree of the Milky Way, but also has the potential
-
-% N-body simulations of globular clusters evolved in dark matter halos that were subsequently accreted onto a Milky Way-like host halo produce stellar streams surrounded by a range of low density features \citep[e.g., wide envelopes, or cocoons, and sub-streams;][]{carlberg:2018,carlberg:2020,malhan:2019a,qian:2022}.
-% Similar off-stream features can be produced by an impact of a dark-matter subhalo in the Milky Way \citep[e.g.,][]{bonaca:2019}, but for ex-situ globular cluster progenitors they could also originate from stars lost before the accretion onto the Milky Way.
-% , and are likely segments of the extended tidal tails of NGC~5824 or another fully disrupted cluster
-% , and are likely segments of its extended tidal tails 
-% - possible evidence: cetus-palca (yuan, chang, thomas)
-% - may even explain the long-standing puzzle of the sgr bifurcation (penarrubia, recent disk claim) as group infall (davies)
-% - also affects our interpretation of the measured velocity dispersion, pm and rv and interpretation on cusp vs core (malhans)
+Observational data for individual streams is not strongly constraining currently \citep{malhan:2022b}, but systems where both the progenitor and the satellite streams are present provide a new opportunity to build self-consistent models that accurately constrain the inner slope of the accreted dark matter halos.
 
 
 \subsection{Progenitors and early star formation}
