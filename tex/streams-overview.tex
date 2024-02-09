@@ -267,7 +267,8 @@ This underlines the importance of securely identifying stream members from the f
 
 By mid-2010s, we had a dozen streams discovered in the Milky Way, statistical inference methods developed and tested, but were no closer to knowing either the mass and shape of our dark matter halo, or its structure on small scales.
 A prominent astronomer at an IAU Symposium 311 held in July 2014 summed up this lack of progress by asking ``Where is the beef with streams?''.
-As we now know, that moment in time was the very eve of a revolution awaiting the streams community, which started with the launch of the \gaia\ spacecraft in December 2013.
+% As we now know, that moment in time was the very eve of a revolution awaiting the streams community, which started with the launch of the \gaia\ spacecraft in December 2013.
+As we now know, at that moment in time the revolution was already on its way to Earth's Lagrangian L2 point: the European Space Agency's \gaia\ spacecraft launched in December 2013.
 Conceived even before any stream had been discovered in the Milky Way \citep{lindegren:1993, battrick:1994, lindegren:1996}, \gaia\ was designed to deliver \emph{``a census of the accurate positions, distances, space motions (proper motions and radial velocities), and photometry of all approximately one billion objects complete to $V=20$\,mag''} \citep{perryman:2001} --- precisely the measurements needed to break through the limits of stream studies.
 The first three Data Releases from the \gaia\ mission unveiled the structure of our Galaxy in unprecedented detail \citep{babusiaux:2018, helmi:2018, katz:2018, antoja:2021, smart:2021, drimmel:2023, schultheis:2023}, including dwarf galaxies accreted and phase-mixed onto the Milky Way \citep{belokurov:2018, helmi:2018b, myeong:2019, naidu:2020}, as well as moving groups and dissolved star clusters in the Solar neighborhood \citep{antoja:2018, kawata:2018, ramos:2018, meingast:2019, roser:2019}.
 While these substructures all represent different stages in the tidal dissolution of Milky Way satellites and can be considered streams, this review is too short to do them all justice.
@@ -758,6 +759,7 @@ History was more intertwined, but presented as sim predictions and discoveries.
 In the \gaia\ era, stream kinematics are no longer a result of painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
 Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one member with a radial velocity measurement as well.
+- shift: we have gone from interpreting vr gradients to measuring orbits -- provides additional context
 
 \begin{figure*}
 \begin{center}
@@ -810,7 +812,7 @@ In such a potential, it is possible to simplify the equations of motions using t
 \pmb{\theta}(t) &= \pmb{\theta}_0 + \pmb{\Omega} t
 \label{eq:angle}
 \\
-\Omega_i(\pmb{J}) &\equiv \dot{\theta}_i = \frac{H}{J_i}
+\Omega_i(\pmb{J}) &\equiv \dot{\theta}_i = \frac{\partial H}{\partial J_i}
 \label{eq:frequency}
 \end{align}
 where $H$ is the Hamiltonian, $\pmb{\theta}$ are the angle variables (canonical coordinates), $\pmb{J}$ are actions (conjugate momenta and constants of motion), and $\Omega_i$ are the orbital frequencies (also constant).
@@ -828,26 +830,50 @@ Easily calculated for individual stars and conserved in standard Milky Way poten
 Streams are highly clustered in the $E-L_z$ space (also seen as prominent clusters in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
 This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way as a part of a larger galaxy, thus confirming the hierarchical nature of galaxy formation.
 
-% The orbital phase space of streams as a population has provided further insights in the hierarchical assembly of our Galaxy.
-% - space of orbital poles -- not clustered in the plane \citep{riley}
-% - unlike dwarf galaxies -- possibly different time (look up pawlowski, garavito-camargo latest)
-% - another informative space: E-Lz instantaneous properties, can be determined for every potential
-% - streams clustered (seen even in Figure~) \citep{bonaca:2021, malhan:2022}
-% - clustering -- associated with accretion origin, way to identify mw progenitors
-% - stream clusters aligned with field halo clusters, possible to map to progenitor dwarf galaxies
+Understanding the full dynamical history of a stellar stream back to its progenitor galaxy is crucial for interpreting the observed stream features.
+N-body simulations of ex-situ globular clusters---clusters formed in dwarf galaxies that were subsequently accreted onto the Milky Way---produce stellar streams surrounded by a range of low density features \citep[e.g., wide envelopes, or cocoons, and/or sub-streams;][]{carlberg:2018,carlberg:2020,malhan:2019a,qian:2022}.
+These structures originate from stars lost before the accretion onto the Milky Way, rather than a perturbation within the Milky Way.
+An example of such a group accretion event is the wide Cetus-Palca stream and the associated globular cluster NGC~5824 \citep{yuan:2019,thomas:2022}.
+Three thin stellar streams share the same orbit with NGC~5824 and Cetus: Triangulum/Pisces, Willka Yaku, and C-20 \citep{bonaca:2021, yuan:2022}.
+N-body reconstruction of this system suggests that Cetus-Palca is tidal debris of a $M_\star\approx10^6\,\unit{\msun}$ dwarf galaxy that accreted onto the Milky Way $\approx5\,\unit{Gyr}$ ago, at which time it also deposited its satellite globular clusters into the Galactic halo \citep{chang:2020}.
+The associated thin streams are likely segments of the extended tidal tails of NGC~5824 or another fully disrupted cluster.
+A similar scenario may even explain the long-standing puzzle of the bifurcation in the Sagittarius stream \citep{Belokurov:2006, koposov:2012}.
+Constrained N-body simulations show that the fainter, more metal-poor wrap of the Sagittarius stream \citep[e.g.,][]{ramos:2022} could have formed during a binary dwarf merger as tidal debris of the lower-mass companion \citep{davies:2024a,davies:2024b}.
+Knowledge of these hierarchical relations between different streams can even directly test dark matter on small scales.
+Numerical simulations show that tidal debris from the dwarf galaxy itself has a lower velocity dispersion if the galaxy is cuspy \citep{errani:2015}, due to its more compact size.
+However, a globular cluster accreted in a cuspy galaxy results in a dynamically hotter stream than one from a cored galaxy of the same mass \citep{malhan:2021}, due to enhanced mass loss on a more compact orbit.
+Observational data for individual streams currently lack the precision to put strong constraints \citep{malhan:2022b}, but systems where both the progenitor and the satellite streams are present provide a new opportunity to build self-consistent models that accurately constrain the inner slope of the accreted dark matter halos.
 
-% - group infall: previous dwarf findings for mw orbital associations, dwarf satellites (deason; patel)
-- implications for structure of streams: generally expect cocoons (carlbergs, malhans)
-- possible evidence: cetus-palca (yuan, chang, thomas)
-- may even explain the long-standing puzzle of the sgr bifurcation (penarrubia, recent disk claim) as group infall (davies)
-- also affects our interpretation of the measured velocity dispersion, pm and rv and interpretation on cusp vs core (malhans)
+% - reconstruction helpful in estimating what internal, vs external MW perturbation
+% - but ex-situ gc streams also a more direct test of dm on small scales, specifically the inner density slope of their progenitor dwarf galaxy
+% - cuspy -- higher velocity dispersion, lower for a less disruptive cored profile \citep{malhan:}
+% - data not there yet for individual streams, but may be possible to built a self-consistent model for a more complex system where both the dwarf galaxy and the globular cluster stream are present.
+% Building self-consistent models of group infall events will not only produce the full merger tree of the Milky Way, but also has the potential
+
+% N-body simulations of globular clusters evolved in dark matter halos that were subsequently accreted onto a Milky Way-like host halo produce stellar streams surrounded by a range of low density features \citep[e.g., wide envelopes, or cocoons, and sub-streams;][]{carlberg:2018,carlberg:2020,malhan:2019a,qian:2022}.
+% Similar off-stream features can be produced by an impact of a dark-matter subhalo in the Milky Way \citep[e.g.,][]{bonaca:2019}, but for ex-situ globular cluster progenitors they could also originate from stars lost before the accretion onto the Milky Way.
+% , and are likely segments of the extended tidal tails of NGC~5824 or another fully disrupted cluster
+% , and are likely segments of its extended tidal tails 
+% - possible evidence: cetus-palca (yuan, chang, thomas)
+% - may even explain the long-standing puzzle of the sgr bifurcation (penarrubia, recent disk claim) as group infall (davies)
+% - also affects our interpretation of the measured velocity dispersion, pm and rv and interpretation on cusp vs core (malhans)
 
 
 \subsection{Progenitors and early star formation}
-- not just connecting different orbital segments, but also to other halo denizens
-- figure: comparison to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
-- progenitors important: can model much better \citep{kupper:2015}
-- before: only 2 gc streams, hard to find \citep{balbinot}
+In a few cases, the orbital phase space discovered the direct progenitor of a stellar stream previously thought completely dissolved.
+Figure~\ref{fig:phase_space} also shows Milky Way globular clusters (light blue circles) and dwarf galaxies (dark blue circles), and some of them coincide with stellar streams in the $E-L_z$ plane--their progenitors.
+- marked in the table, big increase w \gaia, otherwise have been hard to find \citep{balbinot}
+In some cases, like between Gj\" ol and NGC~3201, the connection goes through the disk, so likely observational bias that not connected.
+In other cases it is unclear if it's observational or a true gap that spans up to tens of degrees, which might indicate massive perturbation affected, or potentially episodic mass loss. 
+Furthermore, many of these systems only have one tidal arm discovered, also an open question.
+Despite these peculiarities, this subset of stellar streams with known globular cluster progenitors form a valuable sample for gravitational potential inference.
+Controlling for the progenitor improves modeling \citep{kupper:2015}, otherwise a free parameter + can also fit the overdensities
+Forecast epicycles can be taken into account when interpreting density variations as well \citep{ibata,}
+
+% - not just connecting different orbital segments, but also to other halo denizens
+% - figure: comparison to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
+% - progenitors important: can model much better 
+% - before: only 2 gc streams, hard to find \citep{balbinot}
 
 - corollary of widely available spectra of are chemical abundances
 - powerful in discerning origins, and even finding what is not an accreted stream but in-situ (e.g., Monoceros and Nyx)
