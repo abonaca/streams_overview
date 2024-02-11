@@ -753,6 +753,8 @@ History was more intertwined, but presented as sim predictions and discoveries.
 
 \ab{Papers that I came across, but thought would be a better match here were on RRL in streams (I think Zdenek had one, and perhaps more?), and also Sgr maps (I think Antoja; Ibata wrote those).}
 
+\ab{Another possible aspect to comment on: comparison in the extent to which the stream has been detected in Gaia vs photometry alone, e.g., Triangulum, possibly also Bovy on Pal5, claim it extends much further south in Gaia, but w DECam it fans out}
+
 \subsection{Key opportunities}
 - density modeling robust to survey selection functions and dust
 
@@ -851,26 +853,29 @@ Observational data for individual streams is not strongly constraining currently
 
 
 \subsection{Progenitors and early star formation}
-In a few cases, the orbital phase space discovered the direct progenitor of a stellar stream previously thought completely dissolved.
-Figure~\ref{fig:phase_space} reveals these connections: some of the streams coincide with the Milky Way globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the $E-L_z$ plane--their progenitors.
-- marked in the table, big increase w \gaia, otherwise have been hard to find \citep{balbinot}
-In some cases, like between Gj\" ol and NGC~3201, the connection goes through the disk, so likely observational bias that not connected.
-In other cases it is unclear if it's observational or a true gap that spans up to tens of degrees, which might indicate massive perturbation affected, or potentially episodic mass loss. 
-Furthermore, many of these systems only have one tidal arm discovered, also an open question.
-Despite these peculiarities, this now sizeable subset of stellar streams with known globular cluster progenitors forms a valuable sample for gravitational potential inference.
-Controlling for the progenitor improves modeling , otherwise the progenitor a free parameter \citep{palau:2023}
-can also fit the overdensities \citep{kupper:2015}
-Forecast epicycles can be taken into account when interpreting density variations as well \citep{ibata,}
+The orbital phase space also discovered the direct progenitor of several stellar streams previously thought to be completely dissolved \citep{palau:2019,riley:2020,ibata:2019b,ibata:2021,bonaca:2021}.
+These streams have originally not been connected back to the progenitor in sky coordinates, but instead coincide with an orbit of a Milky Way globular cluster or a dwarf galaxy (light and dark blue circles in Figure~\ref{fig:phase_space}, respectively).
+In some cases, like between the Gj\" ol stream and NGC~3201 globular cluster, the connection is obscured because it passes through the Milky Way disk \citep{riley:2020}.
+In other cases there are no obvious observational challenges to explain gaps spanning up to tens of degrees between the stream and the progenitor, nor the detection of a single tidal tail rather than a symmetric pair \citep[e.g,][]{bonaca:2021, yang:2022b}.
+- perhaps just not deep enough? balbinot, or perhaps mond? \citep{thomas:2018}
+These peculiarities may indicate a non-uniform mass-loss history \citep[e.g., similar to early cluster evolution?][]{kruijssen}, or a massive external perturbation \citep[e.g., from the Galactic bar,][]{pearson:2017}.
+Regardless, the now increased subset of stellar streams with known progenitors (see Table~\ref{table:} for a complete list) are extremely valuable for gravitational potential inference.
+First, a known progenitor places strong constraints on the stream's orbit \citep{bh:2018}, which reduces the number of free parameters and improves potential reconstruction \citep{palau:2023}.
+Second, globular cluster progenitors produce epicyclic overdensities, which place additional constraints on the global potential when matched to the observed stream density structure \citep{kupper:2015}.
+And finally, a known globular cluster progenitor predicts the exact locations of epicyclic underdensities to conclusively determine whether the observed stream gaps are due to internal evolution or external perturbation \citep[cf.][]{ibata:2020}.
 
-% - not just connecting different orbital segments, but also to other halo denizens
-% - figure: comparison to globular clusters (light blue circles) and dwarf galaxies (dark blue circles) in the Milky Way
-% - progenitors important: can model much better 
-% - before: only 2 gc streams, hard to find \citep{balbinot}
+Understanding whether a stream's progenitor was a dwarf galaxy and a globular cluster is important both for dynamical modeling and tracing the Milky Way's formation history.
+Before \gaia, the stream width was a reliable indicator of its origin, with more massive dwarf galaxies producing wider streams \citep[e.g.,][]{Belokurov:2006, bonaca:2012}.
+However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{table:}).
+Alternatively, high-resolution spectroscopy can be used to measure whether stream members have a spread in metallicity \citep[e.g.,][]{ji:2020}, which has been established as a criterion for identifying dwarf galaxies from globular clusters \citep{willman:2012}.
+Detailed characterization of stellar populations and chemical abundances of streams also revealed that some reported stream candidates are actually not tidal debris of accreted satellites: the Eastern Banded Structure, the Anticenter Stream, and the Monoceros Ring appear to be disk perturbations excited during different Sagittarius passages \citep[cf.][]{deason:2018, laporte:2020}, and part of a more extended population of disk stars at high latitudes \citep{price-whelan:2015,bergemann:2018,laporte:2018}, while the Nyx stream is consistent with a dynamical substructure within the thick disk \citep[cf.][]{zucker:2021,wang:2023}.
 
-- corollary of widely available spectra of are chemical abundances
-- powerful in discerning origins, and even finding what is not an accreted stream but in-situ (e.g., Monoceros and Nyx)
-- among accreted: GC vs DG streams from metallicity spread (Ji S5)
-- sgr detailed abundances, older wraps (Johnson H3)
+
+
+% - corollary of widely available spectra of are chemical abundances
+% - powerful in discerning origins, and even finding what is not an accreted stream but in-situ (e.g., Monoceros and Nyx)
+% - among accreted: GC vs DG streams from metallicity spread (Ji S5)
+- sgr detailed abundances, older wraps (Johnson H3), radial gradient (Cunningham)
 - other dg streams? (e.g., lms, malhan, yuan)
 
 - detail abundances of GC streams used to firm up the link w the progenitor cluster, e.g., gjoll--ngc3201 chemistry \citep{hansen:2020}
@@ -930,9 +935,11 @@ In this section we describe what is needed to turn streams into dark matter dete
 % % -- fitting a more complex potential now possible (koposov student papers)
 
 \textbf{Inference}
+- single impact = proof of concept, but if single could be anything, can ensure it's dm from statistics, radial distribution, mass function
 - simultaneous modeling of multiple streams to infer population properties of subhalo, e.g., mass function, radial distribution
 % - expect basic data like stream densities to be available for the entire population of streams
 
+- single approach still provides a unique opportunity to study an individual subhalo
 - detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
 
 % - Due to large number of streams: transitioning from stamp-collecting to population studies
