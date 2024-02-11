@@ -432,3 +432,19 @@ def get_full_galstreams_poly(poly_sc):
         frame=poly_sc.frame.replicate_without_data(),
     )
     return poly_sc
+
+
+def get_default_track_for_stream(stream_name):
+    if getattr(get_default_track_for_stream, "mwstreams", None) is None:
+        import galstreams
+
+        get_default_track_for_stream.mwstreams = galstreams.MWStreams()
+
+    mwstreams = get_default_track_for_stream.mwstreams
+    galstreams_default_tracks = np.array(list(mwstreams.keys()))
+    track_names = np.array(mwstreams.get_track_names_for_stream(stream_name))
+    try:
+        track_name = track_names[np.in1d(track_names, galstreams_default_tracks)][0]
+        return track_name, mwstreams[track_name]
+    except IndexError:
+        return None, None
