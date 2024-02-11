@@ -874,11 +874,12 @@ Alternatively, high-resolution spectroscopy can be used to measure whether strea
 Multi-element abundances have been used to validate the stream's progenitor \citep[e.g., NGC~3201 as the progenitor of the Gj\" ol stream,][]{hansen:2020}
 Detailed characterization of stellar populations and chemical abundances of streams also revealed that some reported stream candidates are actually not tidal debris of accreted satellites: the Eastern Banded Structure, the Anticenter Stream, and the Monoceros Ring appear to be disk perturbations excited during different Sagittarius passages \citep[cf.][]{deason:2018, laporte:2020}, and part of a more extended population of disk stars kicked out to high latitudes \citep{price-whelan:2015,bergemann:2018,laporte:2018}, while the Nyx stream is consistent with a dynamical substructure within the thick disk \citep[cf.][]{zucker:2021,wang:2023}.
 
-
-- sgr detailed abundances, older wraps (Johnson H3), radial gradient (Cunningham)
+- such studies w so many spectra only possible thanks to \gaia\ confidently identifying members
 - other dg streams? (e.g., lms, malhan, yuan)
+- sgr detailed abundances, older wraps (Johnson H3), radial gradient (Cunningham)
 - origin of multiple populations, GD-1 (some models expect it to depend on cluster mass)
 - GC metallicity floor (ditto)
+- disrupted and surviving not the same, need all for full picture
 
 
 \subsection{Key opportunity: Precision kinematics to determine the origin of stream perturbations}
@@ -900,11 +901,17 @@ In this section we describe what is needed to turn streams into dark matter dete
 % and lay out a roadmap to get there: e.g., what data are needed, what models, and what framework for comparison.
 
 \textbf{Data}
-- structure of all streams, especially in the outer halo: Gaia DR4 and DR5, LSST, Roman
-- kinematics: coordinate follow-up across large spectroscopic surveys, e.g., DESI, WEAVE, 4MOST
-- new facility for 100m/s RVs
+- priority: streams in the outer halo (discovery + structure)
+- expected total number, beyond 15kpc
+- expected improvements: pm (estimate what a typical pm in the halo is)
+- also photometry
+% - structure of all streams, especially in the outer halo: Gaia DR4 and DR5, LSST, Roman
+
+- kinematics: coordinate follow-up across large spectroscopic surveys, e.g., DESI, WEAVE, 4MOST (specifically mention all sky for LMC perturbations, global potential recovery, full stream coverage for cocoons -- perfect for DESI, few targets, complementary to other programs)
+- new facility for 100m/s RVs for lowest-mass
 
 - CATS as a standard for discovery and open repository
+- low barrier to entry for scientists and the public alike
 
 % - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
 % - still sparse targets, but heavily multiplexed now
@@ -914,13 +921,14 @@ In this section we describe what is needed to turn streams into dark matter dete
 % % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
 \textbf{Models}
-- progenitors:
-- need simulations of globular clusters dissolving in direct N-body
-- streams born in a dwarf galaxy, later accreted onto the Milky Way
+- tailored simulations key:
+-- progenitor, e.g., globular clusters dissolving in direct N-body
+-- MW accretion history, e.g., streams born in a dwarf galaxy, later accreted onto the Milky Way; but also evolution of the MW tidal field
 
-- environment:
-- streams in full hydro, tailored mw
-- streams in different dark matter models
+- need more DM models
+-- wimp searches stalled, considering broader set of models
+-- some indications SIDM helpful (lensing), would predict different density profiles, not possible to scale simply
+-- same initial conditions, multiple realizations of a MW-like environment, down to $10^6\unit{\msun}$ crucial (mention symphony)
 
 - computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
 - could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
