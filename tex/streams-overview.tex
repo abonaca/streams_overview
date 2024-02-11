@@ -44,6 +44,9 @@
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{pdflscape}
+
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -281,7 +284,7 @@ Let's see how!
 \end{center}
 \caption{%
 An atlas of stellar streams in the Milky Way.
-Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2024, li:2019, vasiliev:2021}.
+Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023, li:2019, vasiliev:2021}.
 Their distances are poorly constrained observationally, so we have instead adopted distance from the best-fitting orbit.
 The color coding is by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
 \label{fig:fos_3d}
@@ -513,7 +516,7 @@ kinematic coordinates and the number of stars.
     The length and mean apparent $r$-band magnitude of the main sequence turn-off (MSTO)
     for streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
     The distance moduli were determined by fitting orbits to stream stars associated
-    with each of the streams in \citet{ibata:2024} (this procedure is described in
+    with each of the streams in \citet{ibata:2023} (this procedure is described in
     detail in \ref{apx:stream-fit}).
     The MSTO magnitude is computed assuming all streams have a single stellar population
     with an age of $12~\unit{\giga\year}$ and a metallicity of $\feh = -2.2$, but this
@@ -551,9 +554,9 @@ using existing facilities, stars typically had to be brighter than $r \lesssim
 18~\textrm{mag}$ --- the MSTO for most streams known pre-\gaia\ were fainter than this
 limit.
 The stream tracks in Figure~\ref{fig:msto-rc-mag} were determined by either fitting
-orbits to stream stars associated with each stream using data from \citet{ibata:2024}
+orbits to stream stars associated with each stream using data from \citet{ibata:2023}
 (this procedure is described in detail in \ref{apx:stream-fit}), or for streams that are
-not in \citet{ibata:2024}, we use the distance modulus tracks reported in
+not in \citet{ibata:2023}, we use the distance modulus tracks reported in
 \citet{li:2022} combined with sky tracks collected from discovery or characterization
 papers \citep{shipp:2018, fu:2018, shipp:2019, ferguson:2022, tavangar:2022}.
 
@@ -626,7 +629,7 @@ continuous increase in the number of known streams.
 Figure~\ref{fig:num-streams} shows the cumulative number of Milky Way stellar streams
 reported in the literature as a function of time, as collated in the \texttt{galstreams}
 \citep{mateu:2023} library and combined with the recent atlas of stream data from
-\citet{ibata:2024}.
+\citet{ibata:2023}.
 However, the kinematic data from \gaia\ has enabled a new and important validation step
 for previously discovered streams.
 While many streams have been re-discovered and studied in detail using \gaia\ data, a
@@ -762,7 +765,7 @@ History was more intertwined, but presented as sim predictions and discoveries.
 \label{sec:orbits}
 % AB
 In the \gaia\ era, stream kinematics are no longer a result of painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
-Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2024} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
+Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2023} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
 Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one radial velocity measurement per stream.
 
 \begin{figure*}
@@ -778,7 +781,7 @@ Stream orbital phase space.
 \subsection{Orbits and the Milky Way potential}
 The wide availability of kinematics has shifted how streams are described: instead of reporting the empirical velocity gradients along a stream, they are now used to determine the stream's orbit.
 Streams' orbits have been useful in placing them into a broader context within the Milky Way, informing about their dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
-Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2024} catalog (yellow stars).
+Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2023} catalog (yellow stars).
 The assumed underlying gravitational potential is a static and analytic \texttt{MilkyWayPotential2022} model \citep{price-whelan:2017}, and the orbit fitting procedure is described in \ref{apx:stream-fit}.
 The majority of known Milky Way streams have apocenters between 10\,\unit{\kpc} and 50\,\unit{\kpc}, and thus spend most of the time beyond the Milky Way disk.
 However, their wide range of eccentricities (Figure~\ref{fig:phase_space}, left) brings pericenters for half of this sample within the Solar circle.
@@ -802,7 +805,7 @@ On the other hand, no known satellite passed close enough to perturb the GD-1 st
 
 Of course, these orbital calculations are only as good as the adopted gravitational potential model.
 While multi-component analytic models of the Milky Way have been tuned to reproduce a wide range of observables \citep[e.g.,][]{bovy:2015, mcmillan:2017,price-whelan:2017}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, arora:2022, santistevan:2024}.
-Simultaneous modeling of multiple globular cluster streams in the inner $\lesssim20$\,\unit{\kpc} found an ellipsoidal halo model a reasonably good fit, and thanks to \gaia\ kinematics put strong constraints on the prolate halo shape \citep[$q_z=1.06\pm0.06$;][]{palau:2023}, and the halo virial mass \citep[$M_{200}=1.09^{+0.19}_{-0.14}\times10^{12}\,\unit{\msun}$;][see also \citealt{reino:2021}]{ibata:2024}.
+Simultaneous modeling of multiple globular cluster streams in the inner $\lesssim20$\,\unit{\kpc} found an ellipsoidal halo model a reasonably good fit, and thanks to \gaia\ kinematics put strong constraints on the prolate halo shape \citep[$q_z=1.06\pm0.06$;][]{palau:2023}, and the halo virial mass \citep[$M_{200}=1.09^{+0.19}_{-0.14}\times10^{12}\,\unit{\msun}$;][see also \citealt{reino:2021}]{ibata:2023}.
 However, reproducing the positions and kinematics of the more distant Sagittarius stream requires a more complex, time-dependent model with an oblate inner halo, triaxial outer halo, as well as a massive LMC on its first infall \citep{vasiliev:2021}.
 This change in the halo shape is likely due to the LMC deforming the Milky Way's outer halo \citep[e.g.,][]{garavito-camargo:2019,shao:2021,vasiliev:2023}.
 Modeling techniques that self-consistently track the evolution of the Milky Way and the LMC are currently being developed using basis function expansions \citep[e.g.,][]{sanders:2020,garavito-camargo:2021,lilleengen:2023}.
@@ -952,7 +955,33 @@ It would also open up a new research program for studying the nature of dark mat
 \section{Stream Summary Data}
 \label{apx:stream-summary}
 
-\input{figures/stream-summary-table.tex}
+\todo{describe how the data were compiled}
+
+\clearpage
+\begin{landscape}
+\input{figures/stream-summary-table-1.tex}
+\end{landscape}
+\restoregeometry
+
+\clearpage
+\begin{landscape}
+\input{figures/stream-summary-table-2.tex}
+\end{landscape}
+\restoregeometry
+
+\clearpage
+\begin{landscape}
+\input{figures/stream-summary-table-3.tex}
+\end{landscape}
+\restoregeometry
+
+\clearpage
+\begin{landscape}
+\input{figures/stream-summary-table-4.tex}
+\end{landscape}
+\restoregeometry
+
+\clearpage
 
 \section{Fitting Orbits to Streams}
 \label{apx:stream-fit}
