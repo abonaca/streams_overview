@@ -808,7 +808,7 @@ On the other hand, no known satellite passed close enough to perturb the GD-1 st
 Of course, these orbital calculations are only as good as the adopted gravitational potential model.
 While multi-component analytic models of the Milky Way have been tuned to reproduce a wide range of observables \citep[e.g.,][]{bovy:2015, mcmillan:2017,price-whelan:2017}, not accounting for the realistic mass accretion history in halo models can introduce biases on the order of tens of percent \citep[e.g.,][]{bonaca:2014, dsouza:2022, arora:2022, santistevan:2024}.
 Simultaneous modeling of multiple globular cluster streams in the inner $\lesssim20$\,\unit{\kpc} found an ellipsoidal halo model a reasonably good fit, and thanks to \gaia\ kinematics put strong constraints on the prolate halo shape \citep[$q_z=1.06\pm0.06$;][]{palau:2023}, and the halo virial mass \citep[$M_{200}=1.09^{+0.19}_{-0.14}\times10^{12}\,\unit{\msun}$;][see also \citealt{reino:2021}]{ibata:2023}.
-However, reproducing the positions and kinematics of the more distant Sagittarius stream requires a more complex, time-dependent model with an oblate inner halo, triaxial outer halo, as well as a massive LMC on its first infall \citep{vasiliev:2021}.
+However, reproducing the positions and kinematics of the more distant Sagittarius stream requires a more complex, time-dependent model with an oblate inner halo, triaxial outer halo, as well as a massive LMC on its first infall \citep{vasiliev:2021,kang:2023}.
 This change in the halo shape is likely due to the LMC deforming the Milky Way's outer halo \citep[e.g.,][]{garavito-camargo:2019,shao:2021,vasiliev:2023}.
 Modeling techniques that self-consistently track the evolution of the Milky Way and the LMC are currently being developed using basis function expansions \citep[e.g.,][]{sanders:2020,garavito-camargo:2021,lilleengen:2023}.
 
@@ -870,16 +870,38 @@ And finally, a known globular cluster progenitor predicts the exact locations of
 Understanding whether a stream's progenitor was a dwarf galaxy and a globular cluster is important both for dynamical modeling and tracing the Milky Way's formation history.
 Before \gaia, the stream width was a reliable indicator of its origin, with more massive dwarf galaxies producing wider streams \citep[e.g.,][]{Belokurov:2006, bonaca:2012}.
 However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{table:}).
-Alternatively, high-resolution spectroscopy can be used to measure whether stream members have a spread in metallicity \citep[e.g.,][]{ji:2020}, which has been established as a criterion for identifying dwarf galaxies from globular clusters \citep{willman:2012}.
+Alternatively, high-resolution spectroscopy can be used to measure whether stream members have a spread in metallicity \citep[e.g.,][]{ji:2020,chandra:2022}, which has been established as a criterion for identifying dwarf galaxies from globular clusters \citep{willman:2012}.
 Multi-element abundances have been used to validate the stream's progenitor \citep[e.g., NGC~3201 as the progenitor of the Gj\" ol stream,][]{hansen:2020}
 Detailed characterization of stellar populations and chemical abundances of streams also revealed that some reported stream candidates are actually not tidal debris of accreted satellites: the Eastern Banded Structure, the Anticenter Stream, and the Monoceros Ring appear to be disk perturbations excited during different Sagittarius passages \citep[cf.][]{deason:2018, laporte:2020}, and part of a more extended population of disk stars kicked out to high latitudes \citep{price-whelan:2015,bergemann:2018,laporte:2018}, while the Nyx stream is consistent with a dynamical substructure within the thick disk \citep[cf.][]{zucker:2021,wang:2023}.
 
-- such studies w so many spectra only possible thanks to \gaia\ confidently identifying members
-- other dg streams? (e.g., lms, malhan, yuan)
-- sgr detailed abundances, older wraps (Johnson H3), radial gradient (Cunningham)
-- origin of multiple populations, GD-1 (some models expect it to depend on cluster mass)
-- GC metallicity floor (ditto)
-- disrupted and surviving not the same, need all for full picture
+Widely available stream spectroscopy and chemistry have also constrained the mass and structure of their dwarf galaxy progenitors.
+Median metallicities of dwarf galaxy streams are typically lower than those of the bound dwarf galaxies in the Milky Way \citep{li:2022}, and their multi-element abundance patterns are consistent with low-mass satellites \citep[$\approx10^6\,\unit{\msun}$,][]{ji:2020,hawkins:2023}.
+In the most massive stellar stream, Sagittarius, extensive spectroscopic coverage even mapped the internal structure of the progenitor.
+First, metallicity gradients were detected along both of its tidal tails in APOGEE \citep{hayes:2020} and LAMOST \citep{zhao:2020}.
+% Using an even larger sample of \gaia\ metallicities \citep{andrae:2023}, across the tails \citep{cunningham:2024}, consistent with a radial metallicity gradient within the progenitor.
+More recently, \citet{cunningham:2024} used an even larger sample of \gaia\ metallicities \citep{andrae:2023} to detect a metallicity gradient both along and across the Sagittarius tails, and map it to the radial metallicity gradient in the progenitor.
+\citet{johnson:2020} additionally found a very metal poor population ($\feh<-2$) that is kinematically hotter than the more metal-rich stars, and consistent with having been stripped early from the progenitor's outskirts, possibly from a separate halo component \citep[see also][]{limberg:2023}.
+A couple of streams even show complex chemistry suggesting mixed tidal debris of a dwarf galaxy and a globular cluster \citep{hansen:2021,limberg:2024}.
+
+% More recently, \citet{cunningham:2024} used an even larger sample of \gaia\ metallicities \citep{andrae:2023} to detect a metallicity gradient both along and across the Sagittarius tails, and map it to the radial metallicity gradient in the progenitor.
+% - dwarf galaxy streams similar metallicity compared to low-mass bound dwarfs
+% - also similar gradients -- sgr, johnson, cunningham
+% - mainly served to confirm the origin
+% - however, detailed abundances: 
+
+% - such studies w so many spectra only possible thanks to \gaia\ confidently identifying members
+% - other dg streams? (e.g., lms, malhan, yuan)
+% - sgr detailed abundances, older wraps (Johnson H3), radial gradient (Cunningham)
+% - origin of multiple populations, GD-1 (some models expect it to depend on cluster mass)
+% - GC metallicity floor (ditto)
+% - disrupted and surviving not the same, need all for full picture
+
+
+- gc streams total metallicities -> extending below the metallicity floor
+- confirms Kruijssen picture
+- new regime for testing mp origin
+- detected in two streams, indication of another one (c-19)
+- slow-rotating star for s-process, errani -- physical processes
 
 
 \subsection{Key opportunity: Precision kinematics to determine the origin of stream perturbations}
@@ -891,7 +913,7 @@ Detailed characterization of stellar populations and chemical abundances of stre
 \label{sec:outlook}
 
 The most exciting prospect for streams constraining the nature of dark matter.
-- so far
+% - so far
 The goal for the next decade should be an unambiguous association of a stream perturbation with a dark subhalo.
 Such a detection would confirm the prediction of the LCDM model that halos exist below the mass threshold for galaxy formation, and resolve the long-standing missing satellites problem \citep{klypin:1999}.
 In this section we describe what is needed to turn streams into dark matter detectors.
@@ -953,8 +975,7 @@ In this section we describe what is needed to turn streams into dark matter dete
 
 It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
 - new dm physics, e.g., granular fdm (foote)
-
-- potential to test how universal by extend beyond the MW  (pearson; aganze)
+- extendable beyond the MW to test how universal (pearson; aganze)
 % - strongest constraint on the subhalo mass function
 % - unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
 % - however, if successful, potential to extend beyond and test how universal (pearson; aganze)
