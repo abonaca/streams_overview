@@ -448,3 +448,51 @@ def get_default_track_for_stream(stream_name):
         return track_name, mwstreams[track_name]
     except IndexError:
         return None, None
+
+
+def custom_healpy_pcolormesh(hpx_map):
+    xsize = 1000
+    ysize = xsize // 2
+    theta = np.linspace(np.pi, 0, ysize)
+    phi = np.linspace(-np.pi, np.pi, xsize)
+
+    longitude = np.radians(np.linspace(-180, 180, xsize))
+    latitude = np.radians(np.linspace(-90, 90, ysize))
+    # project the map to a rectangular matrix xsize x ysize
+    PHI, THETA = np.meshgrid(phi, theta)
+    # coord or rotation
+    if coord or rot:
+        r = Rotator(coord=coord, rot=rot, inv=invRot)
+        THETA, PHI = r(THETA.flatten(), PHI.flatten())
+        THETA = THETA.reshape(ysize, xsize)
+        PHI = PHI.reshape(ysize, xsize)
+    nside = npix2nside(len(m))
+    if m is not None:
+        w = ~(np.isnan(m) | np.isinf(m))
+        if m is not None:
+            # auto min and max
+            if min is None:
+                min = m[w].min()
+            if max is None:
+                max = m[w].max()
+
+        cm, nn = get_color_table(
+            min, max, m[w], cmap=cmap, norm=norm, **norm_dict_defaults
+        )
+        grid_pix = ang2pix(nside, THETA, PHI, nest=nest)
+        grid_map = m[grid_pix]
+
+        # plot
+        if return_only_data:  # exit here when dumping the data
+            return [longitude, latitude, grid_map]
+        if projection_type != "3d":  # test for 3d plot
+            ret = plt.pcolormesh(
+                longitude,
+                latitude,
+                grid_map,
+                norm=nn,
+                rasterized=True,
+                cmap=cm,
+                shading="auto",
+                **kwargs,
+            )
