@@ -304,9 +304,8 @@ The color coding is by the fraction of the angular momentum vector residing in t
 % - reproduction of figure from PW & Bonaca 2018
 % Figure 2: All the streams in sky projection
 
-\textbf{Summary}: Stellar streams inherently have low stellar densities and their
-constituent stars are typically far from the Sun, making them difficult to observe and
-study.
+Stellar streams inherently have low stellar densities and their constituent stars are
+typically far from the Sun, making them difficult to observe and study.
 Finding and characterizing streams is therefore all about enhancing contrast over the
 background Milky Way stars, either by filtering datasets to increase the relative
 occurrence of stream stars in the filtered set, or by restricting the search to rare
@@ -737,7 +736,7 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 
 Soon after the discovery of the Sagittarius stream, it was realized that streams around
 the Milky Way would be powerful tools for studying the Galactic mass distribution
-\citep{Johnston, Murali}.
+\citep{johnston, murali}.
 Streams are some of the few structures that provide nearly direct information about
 the shapes of orbits around the Galaxy.
 In a conceptual sense, streams form linear structures as the constituent stars ``sort''
@@ -777,47 +776,127 @@ the galactic bar or spiral arms, the resonant structure of orbits in the galaxy,
 excitingly, interactions with dark matter subhalos can all create density structures in
 the tails of streams.
 
-Below, we review intricacies of a few of the known streams around the Milky Way as case
-studies, and then discuss theoretical models and simulations that have been developed to
-understand the diversity of density structures observed in streams.
+Below, we review dynamical processes that can impact streams and simulations that have
+been developed to understand the diversity of density structures observed in streams.
+We then review the observed kinematic structure of a few of the known streams around the
+Milky Way as case studies.
+The sections below are presented sequentially, but really the dynamical models and
+simulations were developed contemporaneously with the discovery and study of the
+structure of streams around the Milky Way.
 
 
-\subsection{Observed Structures and Missing Pieces}
+\subsection{Expectations from Theory and Simulations}
 
-- GD-1, mentioned above
-- Pal 5 (if not fully covered above)
-- Ophiuchus (discuss)
-- Jhelum (don't forget new story)
-- AAU
-- Orphan
+% A nice formalism for understanding the formation of streams is in the context of
+% action--angle coordinates \citep{eyre, sandersXX}, where the actions are integrals of
+% motion and the angles are the position coordinates that are conjugate to the actions
+% (i.e. the momentum coordinates).
+% In action--angle coordinates, a star indexed by $i$ that is stripped from a progenitor
+% system at some time $t$ (set to 0 with no loss of generality) will have a small initial
+% offset in the actions $\Delta \vec{J}_i(t=0) = \vec{J}_i - \vec{J}_0$ relative to the
+% progenitor system actions $\vec{J}_0$.
+% This star will also have a small initial offset in the angles $\Delta
+% \vec{\theta}_i(t=0) = \vec{\theta}_i - \vec{\theta}_0$ relative to the progenitor system
+% angles $\vec{\theta}_0$ at that time.
+% The evolution of the stripped star relative to the progenitor is straightforward in
+% action--angle coordinates: the actions are conserved quantities, so the initial action
+% offset $\Delta \vec{J}_i$ will remain constant in time, and the angles increase linearly
+% with time,
+% \begin{equation}
+%     \Delta\vec{\theta}_i(t) = \Delta\vec{\theta}_i(0) + \Delta\vec{\Omega}_i \, t
+%     \quad .
+% \end{equation}
+
+As discussed above (Section~\ref{sec:intro}), stellar streams form from the tidal
+disruption of a progenitor system, which can be a globular cluster, dwarf galaxy, or
+other bound stellar system.
+As with above, we focus here on streams that form from globular cluster or low-mass
+dwarf galaxy progenitors, as these are the most numerous and well-studied streams around
+the Milky Way.
+
+The phase-space structure of a stream is set by a number of internal and external
+processes that are, in detail, coupled and interrelated.
+However, it is conceptually useful to distinguish the dominant processes that can impact
+stream formation and structure:
+(1) the internal dynamics of the progenitor system, which determines the rate of stellar
+ejection from the progenitor and the phase-space distribution function of the stripped
+stars,
+(2) the external gravitational field of the Milky Way, which determines the rate of
+phase mixing, the orbit of the progenitor system, and the overall shape of the stream,
+and
+(3) the impact of time-dependent dynamical processes in the Milky Way, such as the bar,
+spiral arms, and dark matter subhalos, which can create density variations and other
+features in the stream.
+We reiterate that these processes are not independent, but
+
+\subsubsection{Disruption and Orbit of the Progenitor}
+
+% Stream on near-circular orbit vs. very eccentric
+- Shocks vs. slow two-body relaxation
+- Black holes (Gieles)
+- Stream vs. shell
+- Hendel paper on debris morphology
+
+\subsubsection{Epicyclic Over-densities}
+
+- Kuepper
+
+\subsubsection{Orbital Resonances and Structure}
+
+- Sarah
+- APW
+- Tomer
+
+\subsubsection{Interactions with the Bar and Spiral Arms}
+
+- APW (Ophiuchus)
+- Kohei Hattori
+- Spiral arms??
+
+\subsubsection{Interactions with Darm Matter Subhalos}
+
+- KVJ, Ibata, Hoon, Ana Via Lactea work
+
+\subsubsection{Interactions with Massive Dwarf Galaxies}
+
+- Sag (dillamore)
+- LMC (many recent papers)
 
 
-- Long known sagittarius bifurcation, no clear model to reproduce, but many ideas
-- But focus on thin streams here:
-- GD-1, even then
-- Pal 5
-- Ophiuchus
-- AAU
-- Cocoon
+\subsection{Observed Structures: A Few Case Studies}
 
-- Now: Gaps and off-track features common at low surface brightness
-- (move details to subsections) E.g., GD-1, Jhelum, AAU
-- also motivated uncovering low-sb in other data sets (e.g., Pal 5, Jet, Phoenix)
-- track--pm misalignments (shipp, erkal, ...)
+All of the ($\lesssim$10 \todo{made up this number}) streams that have been studied in
+detail show evidence for a complex dynamical history in the form of density features
+along and around the main stream tracks.
+We mainly focus here on the low-mass (likely globular-cluster origin) streams, but even
+the Sagittarius stream shows a clear bifurcation in the density of stars along the
+extent of the stream (see, e.g., Figure~XX in \citealt{todo}).
+The streams below are some of the most well-studied streams around the Milky Way, but as
+we discuss in the next section, theoretical models still struggle to quantitatively
+explain the observed complexity of these streams.
 
-\subsection{Expectations from Simulations}
+\subsubsection{Pal 5}
 
-- Epicycles
-- Disruption details
-- Bar
-- Spiral arm heating
-- Interactions with subhalos
-- Interactions with more massive dwarfs (Sag, LMC)
+\subsubsection{Ophiuchus}
+
+\subsubsection{Jhelum}
+
+TODO: make sure new story from Pristine group is in the theoretical section below
+
+\subsubsection{GD-1}
+
+TODO: mention cocoon at end.
+
+\subsubsection{Atlas--Aliqa Uma (AAU)}
+
+\subsubsection{Orphan--Chenab (OC)}
+
+TODO: Track--pm misalignments (shipp, erkal, ...)
 
 
 \subsection{Key opportunities}
 - density modeling robust to survey selection functions and dust
-
+- theoretical models still struggle to quantitatively explain the observed complexity of these streams
 
 \ab{Papers that I came across, but thought would be a better match here were on RRL in streams (I think Zdenek had one, and perhaps more?), and also Sgr maps (I think Antoja; Ibata wrote those).}
 
