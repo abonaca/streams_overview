@@ -816,7 +816,7 @@ the Milky Way.
 
 The phase-space structure of a stream is set by a number of internal and external
 processes that are, in detail, coupled and interrelated.
-However, it is conceptually useful to distinguish the dominant processes that can impact
+However, it is conceptually useful to distinguish the dominant factors that can impact
 stream formation and structure:
 (1) the internal dynamics of the progenitor system, which determines the rate of stellar
 ejection from the progenitor and the phase-space distribution function of the stripped
@@ -827,41 +827,122 @@ and
 (3) the impact of time-dependent dynamical processes in the Milky Way, such as the bar,
 spiral arms, and dark matter subhalos, which can create density variations and other
 features in the stream.
-We reiterate that these processes are not independent, but
 
-\subsubsection{Disruption and Orbit of the Progenitor}
 
-% Stream on near-circular orbit vs. very eccentric
-- Shocks vs. slow two-body relaxation
-- Black holes (Gieles)
-- Stream vs. shell
-- Hendel paper on debris morphology
+\subsubsection{The Orbit and Tidal Disruption of the Progenitor}
 
-\subsubsection{Epicyclic Over-densities}
+The orbit of the progenitor system around the Milky Way sets the overall morphology of a
+stream and the mechanism by which stars are stripped from the progenitor.
+A progenitor on a near-circular orbit will feel only weak variations of the tidal field
+of the Galaxy, and will therefore be stripped of stars slowly and steadily through
+internal two-body relaxation \citep[e.g.,][]{todo}.
+The morphology of a stream on such an orbit will generally be more elongated along the
+orbit of the progenitor, and the phase mixing of the stream will be dominated by the
+internal dispersion of relative energy of the stars in the stream
+\citep[e.g.,][]{hendel:2015}.
+If the progenitor orbit has small but finite eccentricity, the stripped stars will not
+phase mix uniformly into the stream, but will instead form over- and under-densities
+along the stream track known as epicyclic density variations \citep{kuepper:xxx}.
 
-- Kuepper
+A progenitor stellar system on a very eccentric orbit ($e \gtrsim 0.5$) will instead
+experience strong variations of the Galactic tidal field, and the stripping of stars can
+therefore be more episodic as the jacobi radius shrinks significantly during orbital
+pericenter.
+This repeated tidal shocking can add heat to the internal dynamics of the progenitor
+system and lead to more rapid mass loss \citep[e.g.,][]{todo}.
+The morphology of a stream on such an orbit will generally be more broad and diffuse, as
+the stream stars primarily phase mix due to the internal spread of angular momentum of
+the stripped stars.
+This leads to the formation of more ``shell-like'' structures in the stream
+\citep[e.g.,][]{hendel:2015}.
+When the eccentricity approaches unity (i.e. a radial orbit), the tidal debris will form
+a shell structure instead of a stream \citep[e.g.,][]{todo}.
 
-\subsubsection{Orbital Resonances and Structure}
+\todo{Include in summary simulation figure a stream on a near-circular vs. very eccentric orbit?}
 
-- Sarah
-- APW
-- Tomer
 
-\subsubsection{Interactions with the Bar and Spiral Arms}
+\subsubsection{The Orbital Structure of the Milky Way}
 
-- APW (Ophiuchus)
-- Kohei Hattori
-- Spiral arms??
+A disrupting progenitor system on a near-circular orbit in a spherical gravitational
+potential will form a fairly uniform, thin stream that is primarily elongated close to
+the orbit of the progenitor.
+In more complex potentials --- even static axisymmetric, triaxial, or otherwise
+asymmetric --- the orbital structure of the system can lead to more complex stream
+morphologies and evolution \citep[e.g.,][]{amorisco:2015b}.
+The first effect of a non-spherical potential is the broadening of the stream due to the
+differential precession of the orbital planes of the stream stars \citep{erkal:2016b}.
+More generically, this effect can also be understood in terms of the Hessian of the
+potential in action--angle coordinates, and how this projects into position and velocity
+coordinates \citep{sanders:2013a}: If the Hessian is dominated by a single eigenvalue,
+the stream will phase mix more rapidly in the direction of the corresponding eigenvector
+and thus form a nearly one-dimensional structure.
+However, if the Hessian has two or three eigenvalues with comparable magnitudes, the
+stream will form a more two- or three-dimensional structure as it forms.
 
-\subsubsection{Interactions with Darm Matter Subhalos}
+More complex gravitational potentials (axisymmetric and beyond, but still
+time-independent) also contain a richer structure of resonances and, generically,
+regions of chaotic orbits that can impact the formation and evolution of streams.
+This was noticed in the context of simulations of the Pal 5 stream: When a Pal 5 stream
+simulation was run in a triaxial potential fitted to the kinematics of the Sagittarius
+stream \citep{law:2010}, the stream did not maintain a thin structure, but instead
+formed broad ``fans'' of tidal debris at the edges \citep{pearson:2015}.
+Since streams are dynamically cold structures, the density evolution of a stream is very
+sensitive to the local orbital structure.
+In regions of strong dynamical chaos, streams will generally diffuse more rapidly
+\citep{price-whelan:2016a}.
+When streams form on orbits near strong resonance overlap, the separations between
+orbital families can lead to even more complex evolution of the debris
+\citep{yavetz:2021,yavetz:2023}.
 
+
+\subsubsection{Interactions with Time-Dependent Structures}
+
+Time-dependent structures in the Milky Way, such as the bar and spiral arms, dwarf
+galaxies, and low-mass dark matter subhalos, can also impact the density structure of
+streams on different time and spatial scales.
+
+The central Milky Way contains a bar structure that is thought to be a major driver of
+the dynamics of the inner Galaxy \citep[e.g.,][]{blitz, wegg, gerhard}.
+While constraining the pattern speed, size, and mass of the bar are all still active
+areas of work, the bar is thought to have a total mass around $10^{10}~\unit{\msun}$, a
+major-axis length of $\sim 3~\kpc$ \citep{wegg, portail}, and a pattern speed between
+$20$--$40~\unit{\kms\per\kpc}$ \citep{todo}.
+It is thought that even at the solar radius, the impact of resonances with the Galactic
+bar has a significant and observable impact on the kinematics of stars
+\citep[e.g.,][]{dehnen, etc}.
+Stellar streams that pass through the disk plane with pericentric radii $R \lesssim
+10~\kpc$ therefore can be significantly impacted by the bar.
+The time-varying $m=2$ asymmetry of the bar can enhance the chaotic diffusion of orbits
+in the central Galaxy and therefore cause rapid diffusion of stream debris
+\citep{price-whelan:2016b}, can lead to resonant confinement of a stream and cause
+truncation of a streams length \citep{hattori:2016}, and can lead to the formation of
+broad fans of tidal debris at the edges of a stream \citep{pearson:2017}.
+Spiral arms in the Galactic disk can similarly impact streams that pass through the disk
+midplane, as they can impose time-varying $m=2$ or $m=4$ components to the gravitational
+potential.
+Both of these effects generally lead to perturbations to stream structure on spatial
+scales comparable to the length of a stream (i.e. these effects can cause global changes
+to the overall structure of a stream, or create large-scale density variations along the
+stream track).
+
+Interactions between streams and massive dwarf galaxies around the Milky Way can also
+have significant effects on the global structure of streams.
+For example, strong gravitational encounters between a stream and a dwarf galaxy can
+cause a stream to ``fold'' or develop strong asymmetries between the two tidal tails, as
+has been shown in the context of a GD-1-like stream interacting with a massive
+Sagittarius-like dwarf galaxy halo \citep{dillamore:2022}.
+Large-scale interactions between the LMC and streams can cause subtler morphological
+changes to streams that are only observable in the context of the kinematics of stars
+along a stream.
+For example, prior to \gaia\ \dr{2}, it was hypothesized that the misalignment between
+the elongation of the Tuc 3 stream and its orbital path was due to an interaction with
+the LMC \citep{erkal:2018}, which made a clear prediction that the proper motions of the
+stream stars should also be misaligned with the stream track.
+This effect was later observed in the proper motion track of the Orphan--Chenab stream
+\citep{koposov:2019, erkal:2019}.
+
+Interactions with Dark Matter Subhalos
 - KVJ, Ibata, Hoon, Ana Via Lactea work
-
-\subsubsection{Interactions with Massive Dwarf Galaxies}
-
-- Sag (dillamore)
-- LMC (many recent papers)
-
 
 \subsection{Observed Structures: A Few Case Studies}
 
@@ -878,6 +959,14 @@ explain the observed complexity of these streams.
 \subsubsection{Pal 5}
 
 \subsubsection{Ophiuchus}
+\label{sec:ophiuchus}
+
+The first stream to be studied in detail in the context of the Galactic bar was the
+Ophiuchus stream \citep{bernard:2014, sesar:2015, sesar:2016}.
+The Ophiuchus stream is a low-mass stream that orbits in the inner galaxy ($4~\kpc
+\lesssim r \lesssim 14~\kpc$), and is notable because it is unexpectedly short (length
+$\sim 3~\kpc$) given the expected age of the stream, and therefore the time over which
+it could have phase mixed \citep{caldwell:2020}.
 
 \subsubsection{Jhelum}
 
