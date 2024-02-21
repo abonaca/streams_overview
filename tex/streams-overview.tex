@@ -377,7 +377,7 @@ Figure~\ref{fig:gd1-demo} shows an example of how binary matched filtering based
 photometry can be used to reveal a stream.
 The top row of panels in Figure~\ref{fig:gd1-demo} shows all data in a cross-match
 between \gaia\ and Pan-STARRS (PS1; \citealt{chambers:2016}) photometry for stars in the
-sky region near the GD-1 stream \citep{Grillmair:2006-gd1}: The top left panel shows the
+sky region near the GD-1 stream \citep{grillmair:2006-gd1}: The top left panel shows the
 extinction-corrected color--magnitude diagram based on PS1 photometry, the top center
 panel shows the \gaia\ proper motions transformed into a coordinate system aligned with
 the stream \citep{koposov:2010}, and the top right panel shows a 2D histogram of the sky
@@ -437,10 +437,10 @@ kinematic information for stream discovery later in this section.
 Even now, many ($\sim$50) of the currently known streams were found using a matched
 filter based on photometry, plus visual inspection.
 For example, the GD-1 stream --- the first long, thin stream discovered without a clear
-progenitor --- was initially found by \citet{Grillmair:2006-gd1} using a matched filter
+progenitor --- was initially found by \citet{grillmair:2006-gd1} using a matched filter
 on SDSS photometry with visual inspection of the resulting stellar density maps.
 Matched filters were also critical for many early discoveries of streams with the SDSS
-data \citep[e.g.,][]{Newberg:2002, Yanny:2003, Belokurov:2006, Grillmair:2006-orphan}.
+data \citep[e.g.,][]{Newberg:2002, Yanny:2003, Belokurov:2006, grillmair:2006-orphan}.
 This method has since been applied to many large photometric surveys, such as 2MASS,
 Pan-STARRS (PS1; \citealt{chambers:2016}), the Dark Energy Survey (DES;
 \citealt{des:2005, des:2016}), the DECam Legacy Survey  (DECaLS; \citealt{dey:2019}),
@@ -463,7 +463,7 @@ globular clusters or dwarf galaxies \citep[e.g.,][]{grillmair:1995, kuhn:1996,
 leon:2000} using photometry around these systems.
 With the later exceptions of the striking tidal tails around the Pal 5 globular cluster
 \citep{odenkirchen:2001} and the faint stream associated with NGC 5466
-\citep{Grillmair:2006-ngc5466}, most of these searches were unsuccessful or only found
+\citep{grillmair:2006-ngc5466}, most of these searches were unsuccessful or only found
 evidence for very low-density tidal tails based on the presence of small numbers of
 extra-tidal stars around the progenitor systems \citep{grillmair:1995, leon:2000}.
 
@@ -629,7 +629,7 @@ selections, which reveals more of the stream (especially at $\phi_1 \lesssim -55
 and enables quantifying the magnitude of density variations and gaps present along the
 stream track.
 This new view of GD-1 also revealed features of the stream that were not visible in
-previous filtered characterizations of the stream \citep{Grillmair:2006-gd1,
+previous filtered characterizations of the stream \citep{grillmair:2006-gd1,
 koposov:2010, deboer:2018}, which we discuss more below in Section~\ref{sec:structure}.
 Many other studies have also used \gaia\ proper motions to study the structure of GD-1
 \citep[e.g.,][]{malhan:2018, li-yanny:2018, huang:2019, deboer:2020, ibata:2020}, the
@@ -786,6 +786,7 @@ structure of streams around the Milky Way.
 
 
 \subsection{Expectations from Theory and Simulations}
+\label{sec:structure-theory}
 
 % A nice formalism for understanding the formation of streams is in the context of
 % action--angle coordinates \citep{eyre, sandersXX}, where the actions are integrals of
@@ -889,7 +890,7 @@ formed broad ``fans'' of tidal debris at the edges \citep{pearson:2015}.
 Since streams are dynamically cold structures, the density evolution of a stream is very
 sensitive to the local orbital structure.
 In regions of strong dynamical chaos, streams will generally diffuse more rapidly
-\citep{price-whelan:2016a}.
+\citep{price-whelan:2016a, mestre:2020}.
 When streams form on orbits near strong resonance overlap, the separations between
 orbital families can lead to even more complex evolution of the debris
 \citep{yavetz:2021,yavetz:2023}.
@@ -971,46 +972,125 @@ therefore detectable with stellar streams.
 
 
 \subsection{Observed Structures: A Few Case Studies}
+\label{sec:structure-obs}
 
 All of the streams that have been studied in detail show evidence for a complex
-dynamical history in the form of density features along and around the main stream
-tracks.
-We mainly focus here on the low-mass (likely globular-cluster origin) streams, but even
-the Sagittarius stream shows a clear bifurcation in the density of stars along the
-extent of the stream (see, e.g., Figure~XX in \citealt{todo}).
-The streams below are some of the most well-studied streams around the Milky Way, but as
-we discuss in the next section, theoretical models still struggle to quantitatively
-explain the observed complexity of these streams.
+dynamical history in the form of density features along and around these streams.
+As with above, we mainly focus here on the low-mass (likely globular-cluster origin)
+streams, but even the Sagittarius stream shows a clear bifurcation in the density of
+stars along the extent of the stream (see, e.g., Figure~XX in \citealt{todo}) with many
+possible physical explanations \citep[e.g.,][]{todo}.
+The streams below are some of the best studied streams around the Milky Way, but
+theoretical models built on the mechanisms discussed in
+Section~\ref{sec:structure-theory} still struggle to quantitatively explain the observed
+complexity of these streams.
 
-\subsubsection{Pal 5}
+
+\subsubsection{GD-1}
+\label{sec:gd1}
+
+As discussed above (Section~\ref{sec:discovery}), the GD-1 stream was discovered in 2006
+using photometry from the SDSS \citep{grillmair:2006-gd1}.
+GD-1 is a long, thin stream (see Figure~\ref{fig:gd1-demo}) that is thought to be the
+result of the complete tidal disruption of a globular cluster \citep{koposov:2010}.
+Already in the discovery paper it was noted that the stream displays significant density
+variations along the stream track \citep{grillmair:2006-gd1}.
+The stream was later studied in detail using deeper photometry from a survey using the
+Canada--France--Hawaii Telescope/Megacam, which revealed a number of over- and
+under-densities along the stream, as well as deviations to the stream track
+on the sky \citep{deboer:2018}.
+
+Data from \gaia\ \dr{2} has enabled a much more detailed look at the density structure
+of the GD-1 stream.
+For example, Figure~\ref{fig:gd1-demo} (bottom right panel) shows the sky positions of
+stars selected from \gaia\ \dr{3} using a recreation of the proper motion and
+photometry-based selections used in \citep{price-whelan:2018} to select likely members
+of the GD-1 stream.
+The stream is clearly visible in the sky positions of individual stars, which revealed
+the depth of the density variations and, for the first time, the presence of a ``spur''
+of stars that extends from the main stream track at $\phi_1 \sim -50^\circ$
+(\citealt{price-whelan:2018}; see also Figure~1 of \citealt{bonaca:2019b}).
+Spectroscopic follow-up of stars in the spur revealed that it is co-moving with the main
+stream body \citep{bonaca:2020b}.
+
+Models of the GD-1 stream have shown that the spur is consistent with a perturbation
+from a low-mass dark matter subhalo \citep{bonaca:2019, bonaca:2020b}.
+However, further observations and modeling of the stream are needed to fully confirm
+this interpretation.
+For one, GD-1 is also thought to be surrounded by a ``cocoon'' of stars
+\citep{malhan:2019a}, which could point to a more complex formation history of the
+stream.
+If the spur formed from a perturbation, it could have been from an interaction with a
+more massive object (e.g., Sagittarius; \citealt{dillamore:2022}) or from a known object
+(e.g., another globular cluster).
+At the present quality of the data, these scenarios are already unlikely, but more
+precise proper motions of individual stars in the spur and stream combined with more
+extensive spectroscopic follow-up would help to confirm the origin of the spur and the
+cocoon.
+
 
 \subsubsection{Ophiuchus}
 \label{sec:ophiuchus}
 
-The first stream to be studied in detail in the context of the Galactic bar was the
-Ophiuchus stream \citep{bernard:2014, sesar:2015, sesar:2016}.
 The Ophiuchus stream is a low-mass stream that orbits in the inner galaxy ($4~\kpc
 \lesssim r \lesssim 14~\kpc$), and is notable because it is unexpectedly short (length
-$\sim 3~\kpc$) given the expected age of the stream, and therefore the time over which
-it could have phase mixed \citep{caldwell:2020}.
+$\sim 3~\kpc$) given the expected age of the stream and its orbit \citep{bernard:2014,
+sesar:2015}.
+The stream is thought to be extended almost in the line-of-sight direction
+\citep{sesar:2016}, and may be associated with lower surface-density ``fans'' of tidal
+debris.
+Given its proximity to the inner galaxy and the time-dependent impact of the Galactic
+bar, it is thought that the peculiar structure of the Ophiuchus stream may be due to
+interactions with the bar or strong chaos induced by the bar \citep{sesar:2016,
+price-whelan:2016b}.
+
+Using data from \gaia\ \dr{2} combined with spectroscopic follow-up,
+\citet{caldwell:2020} showed that the Ophiuchus stream extends further on the sky than
+previously thought.
+But new constraints on the orbit of Ophiuchus from this work supports the idea that the
+Galactic bar has significantly impacted the structure of the stream.
+An alternate interpretation of the history of the Ophiuchus stream is that it formed
+recently, and was only recently kicked onto its present-day orbit after a strong
+encounter with the Sagittarius dwarf galaxy \citep{lane:2020}.
+
+
+
+\subsubsection{Palomar 5 (Pal 5)}
+\label{sec:pal5}
+
+The Palomar 5 stream (Pal 5) was the first globular-cluster mass stream discovered
+around the Milky Way \citep{odenkirchen:2001,rockosi:2002}.
+Pal 5 serves as an archetype for globular cluster streams, as it is long ($\sim
+7~\kpc$), thin (width standard deviation $\sigma \sim 4~\unit{\parsec}$), relatively
+high surface brightness, still connects to its progenitor system, and has been studied
+in detail since its discovery \citep[e.g.,][]{price-whelan:2019}.
+
+- density variations
+- asymmetry
+- fan
+- possible extension (Starkman)
+
 
 \subsubsection{Jhelum}
+\label{sec:jhelum}
 
 TODO: make sure new story from Pristine group is in the theoretical section below
 
-\subsubsection{GD-1}
-
-TODO: mention cocoon at end.
 
 \subsubsection{Atlas--Aliqa Uma (AAU)}
+\label{sec:aau}
+
 
 \subsubsection{Orphan--Chenab (OC)}
+\label{sec:oc}
 
 TODO: Track--pm misalignments (shipp, erkal, ...)
 
+\citep{belokurov:2006-orphan, grillmair:2006-orphan, belokurov:2007}
+
 
 \subsection{Key opportunities}
-- density modeling robust to survey selection functions and dust
+- density modeling robust to survey selection functions and dust \citep{patrick:2022}
 - interplay between different effects
 - theoretical models still struggle to quantitatively explain the observed complexity of these streams
 
@@ -1345,7 +1425,7 @@ with the highest log-likelihood value.
 This process failed for TODO streams (TODO: stream names).
 
 \bibliographystyle{model2-names-astronomy}
-\bibliography{refs, apw-refs}
+\bibliography{refs}
 
 \end{document}
 
