@@ -282,7 +282,7 @@ While these substructures all represent different stages in the tidal dissolutio
 We will focus on a subset of long, coherent stellar streams accreted in the Milky Way halo, which in the \gaia\ era became our most sensitive antennae for dark matter.
 Let's see how!
 
-\begin{figure}[t!]
+\begin{figure*}[t!]
 \begin{center}
 \includegraphics[width=1\textwidth]{figures/fos_3d.png}
 \end{center}
@@ -293,7 +293,7 @@ Their distances are poorly constrained observationally, so we have instead adopt
 The color coding is by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
 \label{fig:fos_3d}
 }
-\end{figure}
+\end{figure*}
 
 \section{Stream Discovery and Characterization in the \gaia\ Era}
 \label{sec:discovery}
@@ -1463,6 +1463,9 @@ In this section we describe what is needed to turn streams into dark matter dete
 
 - computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
 - could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
+- novel ways of multi-scale gravitational dynamics
+- or BFE: low-res for big scale, add low-mass (BFE collaboration)
+- also look up Carl Rodriguez work on FIRE
 
 % - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
 % % - potential modeling of a flexible potential -- also in the outlook
@@ -1477,6 +1480,9 @@ In this section we describe what is needed to turn streams into dark matter dete
 
 - single approach still provides a unique opportunity to study an individual subhalo
 - detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
+
+- in the past: data not good enough, models could be simple
+- now data so much more complex than models, so inference can become meaningless
 
 % - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
