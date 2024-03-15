@@ -1,6 +1,10 @@
 % TODO:
 % - Acknowledge: Rodrigo, Jake N, Charlie
 % - Cite cartopy, and software packages.
+% - Reorder sections 3 and 4
+% - Table 1: First category should be "Gaia + spectroscopy (not just S5)", then "Gaia",
+%   then "needs follow-up"
+% -
 
 
 %%
@@ -1125,9 +1129,8 @@ itself, whereas all but two of the RR$ab$-type oscillators are found in the stre
 \subsubsection{Jhelum}
 \label{sec:jhelum}
 
-The Jhelum stream \citep{shipp:2018} was discovered using photometry from the Dark
-Energy Survey (DES) and later confirmed using proper motion measurements from \gaia\
-\dr{2} \citep{shipp:2019}.
+The Jhelum stream \citep{shipp:2018} was discovered using photometry from the DES and
+later confirmed using proper motion measurements from \gaia\ \dr{2} \citep{shipp:2019}.
 It was recognized early on that the morphology of the stream is unusual, in that there
 seems to be a denser, thinner portion of the stream overlapping with a wider, more
 spatially uniform, and lower-density stream \citep{bonaca:2019}.
@@ -1156,18 +1159,64 @@ wide components of the stream have different velocity dispersions and element ab
 spreads \citep{awad:2024}, which is consistent with this scenario.
 
 
-\subsubsection{Atlas--Aliqa Uma (AAU)}
-\label{sec:aau}
-
-
+% \subsubsection{Atlas--Aliqa Uma (AAU)}
+% \label{sec:aau}
 
 
 \subsubsection{Orphan--Chenab (OC)}
 \label{sec:oc}
 
-TODO: Track--pm misalignments (shipp, erkal, ...)
+The Orphan stream was discovered using photometry from the SDSS in the northern sky as a
+long ($50^\circ$), bright stream with no obvious remnant progenitor system
+\citep{belokurov:2006, grillmair:2006-orphan, belokurov:2007}.
+To this date, no definitive association has been made between the stream and any bound
+dwarf galaxies or stellar systems around the Galaxy \citep{fellhauer:2007, newberg:2010,
+casey:2013, casey:2014, grillmair:2015}, suggesting that it is a fully-disrupted
+remnant.
+The stream remains bright as it approaches the southernmost extent of the SDSS survey
+footprint, and early $N$-body simulations of the stream suggested that the stream should
+extend into the southern sky \citep[e.g.,][]{sales:2008}.
+First evidence for this component of the stream --- which lies on the other side of the
+Galactic plane from the originally detected footprint of the Orphan stream --- was
+reported using a dedicated survey of the extrapolated stream footprint with the Dark
+Energy Camera \citep{grillmair:2015}.
+The distance track along the northern extent of the stream was measured using RR
+Lyrae-type stars, which found a steep distance gradient: the nearest part of the
+detected northern Orphan stream is $\sim$22~\kpc and the farthest is $\sim$50~\kpc
+\citep{sesar:2013, hendel:2018}.
 
-\citep{belokurov:2006, grillmair:2006-orphan, belokurov:2007}
+The Chenab stream was discovered in the DES footprint as a short (in angular size),
+distant stream with a large physical width ($\sigma \sim 500~\unit{\parsec}$)
+\citep{shipp:2018}. Based on its width, it was expected that this stream was formed from
+a dwarf galaxy. The mean distance of the stream was estimated to be $\sim$40~\kpc.
+
+Using RR Lyrae-type stars released as a part of \gaia\ \dr{2}, \citet{koposov:2019}
+showed that the Orphan and Chenab streams were actually physically and kinematically
+connected; the stream has thus become known as the Orphan--Chenab or OC stream
+\citep[see also][]{fardal:2019}.
+For example, the 3D positions of RR Lyrae-type stars kinematically selected to be near
+the Orphan stream show a continuous over-density from the northern Galactic sky to the
+southern (see Figure~1 in \citealt{koposov:2019}).
+
+Unified, the OC stream is the second longest and second most massive stream around the
+Milky Way (second to the Sagittarius stream), spanning over 100~\kpc in length.
+Recent work using spectroscopic data from the S5 and APOGEE surveys have shown that the
+progenitor of the OC stream was likely a low-mass dwarf galaxy, with a stellar mass
+between $10^5$--$10^6~\unit{\msun}$ \citep{koposov:2023, hawkins:2023}, in line with
+estimates from reconstructing the stellar population structure of the progenitor from
+the stream \citep{mendelsohn:2022} and from its horizontal branch population \citep{prudil:2021}.
+
+Combining precise distance estimates to RR Lyrae stars in the OC stream (exploiting the
+fact that RR Lyrae are standard candles) with precise proper motions from \gaia,
+\citet{koposov:2019} also showed that the orbital poles of stars in the stream drifts
+continuously from the northern portion of the stream (Orphan) to the southern portion
+(Chenab).
+In follow-up work, this kinematic misalignment was later shown to plausibly come from a
+direct encounter between the stream and the Large Magellanic Cloud \citep{erkal:2019}.
+\todo{reference figure, if we remake the proper motion arrow plot?}
+The OC stream is thought to also be sensitive to details of the ongoing merger
+between the LMC and the Milky Way, and therefore is a powerful object for constraining
+the large-scale behavior of dark matter in the Milky Way \citep{lilleengen:2023}.
 
 
 \subsection{Key opportunities}
