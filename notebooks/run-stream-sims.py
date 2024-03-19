@@ -161,6 +161,11 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
     return save_stream(stream, final_prog, paths, name)
 
 
+def worker(task):
+    func, args, kw = task
+    return func(*args, **kw)
+
+
 def main(pool, paths):
     sim_T = 6 * u.Gyr
     prog_w_final = gd.PhaseSpacePosition(
@@ -192,6 +197,7 @@ def main(pool, paths):
         # "n_particles": 1,
     }
 
+    tasks = []
     for func, kw in zip(
         [run_epicycles, run_bar, run_subhalo, run_subhalo],
         [
@@ -204,7 +210,12 @@ def main(pool, paths):
         print(f"running case: {func.__name__}")
         rng = np.random.default_rng(seed=42)
         df = gd.FardalStreamDF(gala_modified=False, random_state=rng)
-        filename = func(paths, df, mw_pot, prog_w_final, sim_T, ms_kwargs, **kw)
+
+        args = (paths, df, mw_pot, prog_w_final, sim_T, ms_kwargs)
+        tasks.append((func, args, kw))
+
+    for res in pool.map(worker, tasks):
+        print(res)
 
 
 if __name__ == "__main__":
