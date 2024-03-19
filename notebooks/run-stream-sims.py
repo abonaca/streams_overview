@@ -4,7 +4,7 @@ import astropy.units as u
 import gala.dynamics as gd
 import gala.integrate as gi
 import gala.potential as gp
-import matplotlib.pyplot as plt
+import h5py
 import numpy as np
 import streamsubhalosim as sss
 from astropy.cosmology import Planck18
@@ -12,19 +12,34 @@ from gala.units import galactic
 from scipy.spatial.transform import Rotation
 
 
-def run_epicycles(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
+def save_stream(stream, prog, paths, name):
+    filename = paths["data_path"] / f"stream-{name}.h5"
+
+    # save stream particle data:
+    with h5py.File(filename, "w") as f:
+        g = f.create_group("stream")
+        gd.PhaseSpacePosition(pos=stream.pos, vel=stream.vel).to_hdf5(g)
+
+        g = f.create_group("prog")
+        prog.to_hdf5(g)
+
+    return filename
+
+
+def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "epicycles"
+
+    prog_orbit = pot.integrate_orbit(
+        prog_wf, dt=-0.2, t1=0, t2=-sim_time, Integrator=gi.DOPRI853Integrator
+    )
+    prog_w0 = prog_orbit[-1]
 
     gen = gd.MockStreamGenerator(df, pot)
     stream, prog = gen.run(prog_w0, t1=0, t2=sim_time, **mockstream_kwargs)
-    # TODO: save stream particle data to paths["data"]
-
-    fig = stream.plot()
-    prog.plot(axes=fig.axes, color="tab:red")
-    fig.savefig(paths["plot_path"] / f"stream-xyz-{name}.png", dpi=250)
+    return save_stream(stream, prog, paths, name)
 
 
-def run_bar(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
+def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
     Omega = 41 * u.km / u.s / u.kpc
@@ -50,18 +65,19 @@ def run_bar(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
     )
 
     H = gp.Hamiltonian(mw_barred, bar_frame)
+
+    # Integrate the final prog position back in the barred potential:
+    prog_orbit = H.integrate_orbit(
+        prog_wf, dt=-0.2, t1=0, t2=-sim_time, Integrator=gi.DOPRI853Integrator
+    )
+    prog_w0 = prog_orbit[-1]
+
     gen = gd.MockStreamGenerator(df, H)
     stream, prog = gen.run(prog_w0, t1=0, t2=sim_time, **mockstream_kwargs)
-    # TODO: save stream particle data to paths["data"]
-
-    fig = stream.plot()
-    prog.plot(axes=fig.axes, color="tab:red")
-    fig.savefig(paths["plot_path"] / f"stream-xyz-{name}.png", dpi=250)
+    return save_stream(stream, prog, paths, name)
 
 
-def run_subhalo(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
-    name = "subhalo"
-
+def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200):
     # Using the Moliné et al. 2017 fitting formula for the concentration-mass relation
     def c200(M200, xsub):
         c0 = 19.9
@@ -83,31 +99,27 @@ def run_subhalo(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
         )
 
     # TODO: multiple subhalos?
-    M200 = 5e6 * u.Msun
     subhalo_pot = gp.NFWPotential.from_M200_c(
-        M200, c=c200(M200, xsub=15.0 / 250), units=galactic
+        M200, c=2 * c200(M200, xsub=15.0 / 250), units=galactic
     )
 
     t_post_impact = 0.4 * u.Gyr
     sim = sss.StreamSubhaloSimulation(
         pot,
-        prog_w0,
+        prog_wf,
         M_stream=mockstream_kwargs["prog_mass"],
         t_pre_impact=sim_time - t_post_impact,
         t_post_impact=t_post_impact,
+        df=df,
+        dt=mockstream_kwargs["dt"],
+        release_every=mockstream_kwargs["release_every"],
+        n_particles=mockstream_kwargs["n_particles"],
     )
 
     (init_stream, init_prog), _ = sim.run_init_stream()
 
     # Find an impact site at the final stream time:
     impact_site = sim.get_impact_site(init_stream, init_prog, prog_dist=5 * u.kpc)
-
-    stream_style = dict(
-        marker="o", ms=1.0, ls="none", alpha=0.2, plot_function=plt.plot
-    )
-    fig = init_stream.plot(**stream_style)
-    impact_site.plot(color="r", axes=fig.axes, autolim=False, zorder=100)
-    fig.savefig(paths["plot_path"] / f"stream-xyz-{name}-init.png", dpi=250)
 
     # Rewind the impact site to the impact time:
     impact_site_at_impact = sim.H.integrate_orbit(
@@ -118,10 +130,10 @@ def run_subhalo(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
         Integrator=gi.DOPRI853Integrator,
     )[-1]
 
-    # TODO: direct impact, arbitrary angles
+    # almost direct impact, arbitrary angles
     subhalo_w0 = sss.get_subhalo_w0(
         impact_site_at_impact,
-        b=0.0 * u.pc,
+        b=subhalo_pot.parameters["r_s"],
         phi=0.0 * u.deg,
         vphi=50 * u.km / u.s,
         vz=50 * u.km / u.s,
@@ -146,10 +158,7 @@ def run_subhalo(paths, df, pot, prog_w0, sim_time, mockstream_kwargs, R):
     stream, _, final_prog, final_t = sim.run_perturbed_stream(
         subhalo_w0, subhalo_pot, t_buffer_impact, impact_dt
     )
-
-    fig = stream.plot()
-    final_prog.plot(axes=fig.axes, color="tab:red")
-    fig.savefig(paths["plot_path"] / f"stream-xyz-{name}.png", dpi=250)
+    return save_stream(stream, final_prog, paths, name)
 
 
 def main(pool, paths):
@@ -158,16 +167,16 @@ def main(pool, paths):
         [6.0, 0, 12] * u.kpc, [0, -140, -12] * u.km / u.s
     )
     mw_pot = gp.MilkyWayPotential2022()
+
+    # Compute and plot the progenitor orbit in the MW model:
     prog_orbit = mw_pot.integrate_orbit(
         prog_w_final, dt=-0.2, t1=0, t2=-sim_T, Integrator=gi.DOPRI853Integrator
     )
-    prog_w_init = prog_orbit[-1]
-
     fig = prog_orbit.plot()
     fig.savefig(plot_path / "prog-orbit.png", dpi=250)
 
     # Rotation matrix so progenitor is along x axis at final time:
-    ang = np.arctan2(prog_w_final.z, prog_w_final.x)[0]
+    ang = np.arctan2(prog_w_final.z, prog_w_final.x)
     R = Rotation.from_euler("y", ang.to_value(u.deg), degrees=True).as_matrix()
 
     # Mock stream DF:
@@ -178,15 +187,24 @@ def main(pool, paths):
         # "release_every": 1,
         # "n_particles": 4,
         # TODO: for testing
-        "dt": -2 * u.Myr,
-        "release_every": 2,
+        "dt": 2 * u.Myr,
+        "release_every": 20,
         "n_particles": 1,
     }
 
-    for func in [run_epicycles, run_bar, run_subhalo]:
+    for func, kw in zip(
+        [run_epicycles, run_bar, run_subhalo, run_subhalo],
+        [
+            {},
+            {},
+            {"name": "subhalo", "M200": 1e7 * u.Msun},
+            {"name": "sgr", "M200": 5e10 * u.Msun},
+        ],
+    ):
+        print(f"running case: {func.__name__}")
         rng = np.random.default_rng(seed=42)
         df = gd.FardalStreamDF(gala_modified=False, random_state=rng)
-        func(paths, df, mw_pot, prog_w_init, sim_T, ms_kwargs, R)
+        filename = func(paths, df, mw_pot, prog_w_final, sim_T, ms_kwargs, **kw)
 
 
 if __name__ == "__main__":
