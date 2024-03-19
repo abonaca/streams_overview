@@ -182,14 +182,14 @@ def main(pool, paths):
     # Mock stream DF:
     ms_kwargs = {
         "prog_mass": 5e4 * u.Msun,
-        # TODO: high resolution case
-        # "dt": -0.1 * u.Myr,
-        # "release_every": 1,
-        # "n_particles": 4,
-        # TODO: for testing
-        "dt": 2 * u.Myr,
-        "release_every": 20,
-        "n_particles": 1,
+        # high resolution case
+        "dt": 0.1 * u.Myr,
+        "release_every": 1,
+        "n_particles": 4,
+        # for testing
+        # "dt": 2 * u.Myr,
+        # "release_every": 20,
+        # "n_particles": 1,
     }
 
     for func, kw in zip(
