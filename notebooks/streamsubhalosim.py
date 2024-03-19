@@ -29,7 +29,7 @@ class StreamSubhaloSimulation:
         progenitor_potential=None,
         release_every=1,
         n_particles=1,
-        seed=None,
+        df=None,
     ) -> None:
         self.mw_potential = mw_potential
         self.final_prog_w = final_prog_w
@@ -49,7 +49,9 @@ class StreamSubhaloSimulation:
 
         self.H = gp.Hamiltonian(mw_potential)
 
-        self._seed = seed
+        if df is None:
+            df = ms.FardalStreamDF()
+        self._df = df
         self._prog_pot = progenitor_potential
 
         self._prog_w0 = self.H.integrate_orbit(
@@ -62,10 +64,9 @@ class StreamSubhaloSimulation:
         )[0]
 
     def _make_ms_gen(self):
-        rng = np.random.default_rng(seed=self._seed)
-        _df = ms.FardalStreamDF(random_state=rng)
+        # TODO: add option to reset rng to initial state
         return ms.MockStreamGenerator(
-            df=_df, hamiltonian=self.H, progenitor_potential=self._prog_pot
+            df=self._df, hamiltonian=self.H, progenitor_potential=self._prog_pot
         )
 
     def run_init_stream(self):
@@ -194,9 +195,7 @@ class StreamSubhaloSimulation:
             dt=impact_dt,
             t1=self.t_pre_impact - t_buffer_impact,
             t2=buffer_t2,
-        )[
-            1:
-        ]  # remove subhalo particle
+        )[1:]  # remove subhalo particle
         if buffer_t2 != final_time:
             stream_after_impact = self.H.integrate_orbit(
                 stream_impact,
