@@ -1,5 +1,6 @@
 import pathlib
 
+import astropy.coordinates as coord
 import astropy.units as u
 import gala.dynamics as gd
 import gala.integrate as gi
@@ -19,7 +20,8 @@ def save_stream(stream, prog, paths, name):
     with h5py.File(filename, "w") as f:
         g = f.create_group("stream")
         gd.PhaseSpacePosition(pos=stream.pos, vel=stream.vel).to_hdf5(g)
-        g["release_time"] = stream.release_time.to_value(u.Myr)
+        if hasattr(stream, "release_time"):
+            g["release_time"] = stream.release_time.to_value(u.Myr)
 
         g = f.create_group("prog")
         prog.to_hdf5(g)
@@ -43,7 +45,7 @@ def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
 def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
-    Omega = 41 * u.km / u.s / u.kpc
+    Omega = 40 * u.km / u.s / u.kpc
     sign = -1.0
     bar_frame = gp.ConstantRotatingFrame(Omega * [0, 0, sign], units=galactic)
 
@@ -117,7 +119,7 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
         n_particles=mockstream_kwargs["n_particles"],
     )
 
-    (init_stream, init_prog), _ = sim.run_init_stream()
+    _, (init_stream, init_prog) = sim.run_init_stream()
 
     # Find an impact site at the final stream time:
     impact_site = sim.get_impact_site(init_stream, init_prog, prog_dist=5 * u.kpc)
@@ -156,8 +158,11 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
     impact_dt = np.round((t_buffer_impact / 256).to(u.Myr), decimals=1)
     impact_dt = np.max(u.Quantity([impact_dt, 0.05 * u.Myr]))
 
-    stream, _, final_prog, final_t = sim.run_perturbed_stream(
+    stream, stream2, final_prog, _ = sim.run_perturbed_stream(
         subhalo_w0, subhalo_pot, t_buffer_impact, impact_dt
+    )
+    stream = gd.PhaseSpacePosition(
+        coord.concatenate_representations((stream.data, stream2.data))
     )
     return save_stream(stream, final_prog, paths, name)
 
