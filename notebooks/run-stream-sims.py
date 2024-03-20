@@ -45,7 +45,7 @@ def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
 def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
-    Omega = 40 * u.km / u.s / u.kpc
+    Omega = 40.4 * u.km / u.s / u.kpc
     sign = -1.0
     bar_frame = gp.ConstantRotatingFrame(Omega * [0, 0, sign], units=galactic)
 
@@ -80,7 +80,7 @@ def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     return save_stream(stream, prog, paths, name)
 
 
-def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200):
+def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200, vphi):
     # Using the Moliné et al. 2017 fitting formula for the concentration-mass relation
     def c200(M200, xsub):
         c0 = 19.9
@@ -138,7 +138,7 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
         impact_site_at_impact,
         b=subhalo_pot.parameters["r_s"],
         phi=0.0 * u.deg,
-        vphi=50 * u.km / u.s,
+        vphi=vphi * u.km / u.s,
         vz=50 * u.km / u.s,
     )
 
@@ -209,8 +209,8 @@ def main(pool, paths):
         [
             {},
             {},
-            {"name": "subhalo", "M200": 1e7 * u.Msun},
-            {"name": "sgr", "M200": 5e10 * u.Msun},
+            {"name": "subhalo", "M200": 1e7 * u.Msun, "vphi": 50},
+            {"name": "sgr", "M200": 5e9 * u.Msun, "vphi": 150},
         ],
     ):
         print(f"running case: {func.__name__}")
