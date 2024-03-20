@@ -19,6 +19,7 @@ def save_stream(stream, prog, paths, name):
     with h5py.File(filename, "w") as f:
         g = f.create_group("stream")
         gd.PhaseSpacePosition(pos=stream.pos, vel=stream.vel).to_hdf5(g)
+        g["release_time"] = stream.release_time.to_value(u.Myr)
 
         g = f.create_group("prog")
         prog.to_hdf5(g)
