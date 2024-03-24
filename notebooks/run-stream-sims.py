@@ -45,7 +45,7 @@ def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
 def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
-    Omega = 40 * u.km / u.s / u.kpc
+    Omega = 40.4 * u.km / u.s / u.kpc
     sign = -1.0
     bar_frame = gp.ConstantRotatingFrame(Omega * [0, 0, sign], units=galactic)
 
@@ -80,7 +80,9 @@ def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     return save_stream(stream, prog, paths, name)
 
 
-def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200):
+def run_subhalo(
+    paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200, vphi, b
+):
     # Using the Moliné et al. 2017 fitting formula for the concentration-mass relation
     def c200(M200, xsub):
         c0 = 19.9
@@ -106,7 +108,7 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
         M200, c=2 * c200(M200, xsub=15.0 / 250), units=galactic
     )
 
-    t_post_impact = 0.4 * u.Gyr
+    t_post_impact = 0.3 * u.Gyr
     sim = sss.StreamSubhaloSimulation(
         pot,
         prog_wf,
@@ -122,7 +124,7 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
     _, (init_stream, init_prog) = sim.run_init_stream()
 
     # Find an impact site at the final stream time:
-    impact_site = sim.get_impact_site(init_stream, init_prog, prog_dist=5 * u.kpc)
+    impact_site = sim.get_impact_site(init_stream, init_prog, prog_dist=4 * u.kpc)
 
     # Rewind the impact site to the impact time:
     impact_site_at_impact = sim.H.integrate_orbit(
@@ -136,9 +138,10 @@ def run_subhalo(paths, df, pot, prog_wf, sim_time, mockstream_kwargs, name, M200
     # almost direct impact, arbitrary angles
     subhalo_w0 = sss.get_subhalo_w0(
         impact_site_at_impact,
-        b=subhalo_pot.parameters["r_s"],
+        # b=subhalo_pot.parameters["r_s"],
+        b=b,
         phi=0.0 * u.deg,
-        vphi=50 * u.km / u.s,
+        vphi=vphi * u.km / u.s,
         vz=50 * u.km / u.s,
     )
 
@@ -209,8 +212,8 @@ def main(pool, paths):
         [
             {},
             {},
-            {"name": "subhalo", "M200": 1e7 * u.Msun},
-            {"name": "sgr", "M200": 5e10 * u.Msun},
+            {"name": "subhalo", "M200": 1e7 * u.Msun, "vphi": 50, "b": 0 * u.kpc},
+            {"name": "sgr", "M200": 5e9 * u.Msun, "vphi": 150, "b": 2.0 * u.kpc},
         ],
     ):
         print(f"running case: {func.__name__}")
