@@ -218,11 +218,10 @@ class StreamSubhaloSimulation:
         # Needed to make sure the later part of the stream is also affected by the
         # subhalo
         nbody = gd.DirectNBody(
-            w0=nbody_w0,
-            particle_potentials=[subhalo_potential] + [null_potential] * tmp.shape[0],
+            w0=nbody_w0[0],
+            particle_potentials=[subhalo_potential],
             external_potential=self.H.potential,
             frame=self.H.frame,
-            save_all=False,
         )
         unpert_stream_post, final_prog = mockstream_gen.run(
             prog_w_buffer_pre[0],
