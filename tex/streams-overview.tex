@@ -747,6 +747,7 @@ Stream orbital phase space.
 \end{figure*}
 
 \subsection{Orbits and the Milky Way potential}
+\label{sec:mwpotential}
 The wide availability of kinematics has shifted how streams are described: instead of reporting the empirical velocity gradients along a stream, they are now used to determine the stream's orbit.
 Streams' orbits have been useful in placing them into a broader context within the Milky Way, learning their dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
 Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2023} catalog (yellow stars).
@@ -780,6 +781,7 @@ Modeling techniques that self-consistently track the evolution of the Milky Way 
 
 
 \subsection{Orbital phase space and hierarchical assembly}
+\label{sec:phasespace}
 Despite the ongoing perturbations to the outer Galaxy, it is often helpful to represent the Milky Way with an integrable, static and axisymmetric potential, so that positions in the orbital phase-space spanned by the total energy, $E$, and the $L_z$ component of the angular momentum are conserved \citep{noether:1918}.
 In such a potential, it is possible to simplify the equations of motions using the Hamiltonian canonical variables \citep{goldstein:2002, helmi:1999, tremaine:1999, eyre:2011}:
 \begin{align}
@@ -824,6 +826,7 @@ Systems where streams of both the progenitor and the satellite have been detecte
 
 
 \subsection{Progenitors and early star formation}
+\label{sec:progenitors}
 The orbital phase space also discovered the direct progenitors of several stellar streams previously thought to be completely dissolved \citep{palau:2019,riley:2020,ibata:2019b,ibata:2021,bonaca:2021}.
 These streams have originally not been connected back to the progenitor in sky coordinates, but instead coincide with an orbit of a Milky Way globular cluster or a dwarf galaxy (light and dark blue circles in Figure~\ref{fig:phase_space}, respectively).
 In some cases, like between the Gj\" ol stream and NGC~3201 globular cluster, the connection is obscured because it passes through the Milky Way disk \citep{riley:2020}.
@@ -1363,6 +1366,7 @@ Signatures of a dark-matter subhalo impact in radial velocities.
 \end{figure}
 
 \subsection{Key opportunity: Precision kinematics to determine the origin of stream perturbations}
+\label{sec:xkinematics}
 Different sources of stream perturbations often produce similar morphological features.
 As a result, none of the numerous features detected in the Milky Way streams have been unambiguously associated with a perturbation mechanism.
 Here we discuss precision kinematics as a way forward, and illustrate how they could distinguish between two scenarios for an origin of a stream gap: a dissolved progenitor and a dark-matter subhalo impact.
@@ -1411,23 +1415,27 @@ Space-based wide-field telescopes Euclid \citep[launched in 2023]{laureijs:2011}
 
 \textbf{Spectroscopic follow-up on the industrial scale.}
 The wide and uniform availability of \gaia\ proper motions has transformed the field of streams: discovered new streams, their orbits, and complex structure.
-However, additional spectroscopy is needed to measure radial velocities and determine which dynamical processes were at play in shaping individual streams, from uncovering the origin of stream gaps (\S\ref{sec:}) to revealing the wide envelopes of earlier dissolution episodes (\S\ref{sec:}).
-A number of spectroscopic surveys have been conducted in the past couple of decades, but they obtained a fairly small number of stream members because they are either too bright (e.g., Gaia \citealt{gaia}, APOGEE \citealt{majewski:}), and/or employ a sparse targeting strategy that misses the narrow streams' profile (e.g., SEGUE \citealt{segue}, H3 \citealt{conroy:2019}).
-On the other hand, stream members can be efficiently targeted with a dedicated program using large-field, heavily multiplexed spectrographs \citep[e.g.,][]{li:2021}.
-Excitingly, several such upcoming facilities have a dedicated stream component, e.g., WEAVE \citep{}, 4MOST \citep{}, PFS \citep{}, and others may have the sufficient survey speed to target all \gaia\ stars \citep[e.g., DESI,][]{desi}.
-These surveys will complete the membership and constrain large-scale processes (e.g., halo shape, LMC perturbations), but lack resolution 
-- high-res components are planned for, but inefficient for large
+However, additional spectroscopy is needed to measure radial velocities and determine which dynamical processes were at play in shaping individual streams, from revealing the wide envelopes of earlier dissolution episodes (\S\ref{sec:phasespace}) to uncovering the origin of stream gaps (\S\ref{sec:xkinematics}).
+Many spectroscopic surveys of the Milky Way have been conducted in the past couple of decades, but they obtained a fairly small number of stream members because they were either limited to bright targets (e.g., APOGEE, \citealt{majewski:2017}; RAVE, \citealt{steinmetz:2020}; GALAH, \citealt{buder:2021}; Gaia, \citealt{katz:2023}), and/or employed a sparse targeting strategy that missed the narrow streams' profiles (e.g., SEGUE, \citealt{yanny:2009}; H3, \citealt{conroy:2019}).
+On the other hand, dedicated programs using wide-field, heavily multiplexed spectrographs can efficiently target stream members \citep[e.g.,][]{li:2021}.
+Excitingly, several such current and soon-operational facilities have a dedicated streams program, including DESI \citep[Dark Energy Spectroscopic Instrument,][]{cooper:2023}, WEAVE \citep[William Herschel Telescope Enhanced Area Velocity Explorer,][]{jin:2023}, 4MOST \citep[4-metre Multi-Object Spectroscopic Telescope,][]{dejong:2019}, and PFS \citep[Prime Focus Spectrograph,][]{takada:2014}.
+In addition, a couple of dedicated high-resolution facilities are currently planning to map halo streams: the Via Project\footnote{https://via-project.org/} (dual-hemisphere, 6.5\,\unit{m} MMT and Magellan telescopes) and the Mauna Kea Spectroscopic Explorer \citep[MSE,][proposed new 11.25\,\unit{m} facility on Mauna Kea]{mse:2019}.
+The expected combined outcome of these projects is a complete (magnitude limited) census of the Milky Way stream member stars with precise 6D kinematics and multi-element chemical abundances.
 
-% - kinematics: coordinate follow-up across large spectroscopic surveys, e.g., DESI, WEAVE, 4MOST (specifically mention all sky for LMC perturbations, global potential recovery, full stream coverage for cocoons -- perfect for DESI, few targets, complementary to other programs)
-% - new facility for 100m/s RVs for lowest-mass
 
-\textbf{Open repository for stream data.}
-- streams being recognized as one in both physics and astro planning processes
-- standard for discovery and open repository
-- low barrier to entry for scientists and the public alike
-- working for exoplanets, transients, solar system objects
-- CATS proposal
-- coordination (dual hemispheres), population studies
+\textbf{Community repository for stream data.}
+- population studies the key, will require homogeneous membership
+- so far reflective of different discovery methods, action underway to homogenize reporting w cats
+- goal: open repository (similar to nasa exoplanet database?)
+- not only allow population studies, but also coordinate follow-up, lower the barrier to entry for scientists in other fields, as well as the public
+
+
+% - streams being recognized as one in both physics and astro planning processes
+% - standard for discovery and open repository
+% - low barrier to entry for scientists and the public alike
+% - working for exoplanets, transients, solar system objects
+% - CATS proposal
+% - coordination (dual hemispheres), population studies
 
 % - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
 % - still sparse targets, but heavily multiplexed now
@@ -1437,20 +1445,21 @@ These surveys will complete the membership and constrain large-scale processes (
 % % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
 \subsection{Models}
+\textbf{Stream evolution in different dark matter models.}
+- cdm tested broadly, but quantitative predictions still lacking for 1e6Msun scale
+- wimp searches stalled, considering broader set of models
+- some indications SIDM helpful (lensing), would predict different density profiles, not possible to scale simply
+- needed: same initial conditions, multiple realizations of a MW-like environment, down to $10^6\unit{\msun}$ crucial (mention symphony)
+
 - tailored simulations key:
 -- progenitor, e.g., globular clusters dissolving in direct N-body
 -- MW accretion history, e.g., streams born in a dwarf galaxy, later accreted onto the Milky Way; but also evolution of the MW tidal field
 
-- need more DM models
--- wimp searches stalled, considering broader set of models
--- some indications SIDM helpful (lensing), would predict different density profiles, not possible to scale simply
--- same initial conditions, multiple realizations of a MW-like environment, down to $10^6\unit{\msun}$ crucial (mention symphony)
-
 - computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
-- could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
 - novel ways of multi-scale gravitational dynamics
 - or BFE: low-res for big scale, add low-mass (BFE collaboration)
 - also look up Carl Rodriguez work on FIRE
+- could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
 
 % - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
 % % - potential modeling of a flexible potential -- also in the outlook
