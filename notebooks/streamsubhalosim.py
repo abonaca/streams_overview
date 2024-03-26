@@ -208,16 +208,41 @@ class StreamSubhaloSimulation:
         else:
             stream_after_impact = stream_impact
 
+        stream_after_impact = gd.mockstream.MockStream(
+            pos=stream_after_impact.pos,
+            vel=stream_after_impact.vel,
+            frame=stream_after_impact.frame,
+            release_time=stream_buffer_pre.release_time,
+        )
+
+        # Needed to make sure the later part of the stream is also affected by the
+        # subhalo
+        nbody = gd.DirectNBody(
+            w0=nbody_w0[0],
+            particle_potentials=[subhalo_potential],
+            external_potential=self.H.potential,
+            frame=self.H.frame,
+        )
         unpert_stream_post, final_prog = mockstream_gen.run(
             prog_w_buffer_pre[0],
             self.M_stream,
             dt=self.dt,
             t1=self.t_pre_impact - t_buffer_impact,
             t2=final_time,
+            nbody=nbody,
             **self._mockstream_kw,
         )
 
-        return stream_after_impact, unpert_stream_post, final_prog[0], final_time
+        # merge the two sections of the simulated stream:
+        merged_stream = gd.mockstream.MockStream(
+            pos=np.hstack((stream_after_impact.xyz, unpert_stream_post.xyz)),
+            vel=np.hstack((stream_after_impact.v_xyz, unpert_stream_post.v_xyz)),
+            release_time=np.concatenate(
+                (stream_after_impact.release_time, unpert_stream_post.release_time)
+            ),
+        )
+
+        return merged_stream, final_prog[0], final_time
 
 
 def get_new_basis(impact_xyz, new_zhat_xyz):
