@@ -1,6 +1,5 @@
 import pathlib
 
-import astropy.coordinates as coord
 import astropy.units as u
 import gala.dynamics as gd
 import gala.integrate as gi
@@ -45,7 +44,7 @@ def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
 def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
-    Omega = 40.4 * u.km / u.s / u.kpc
+    Omega = 40.0 * u.km / u.s / u.kpc
     sign = -1.0
     bar_frame = gp.ConstantRotatingFrame(Omega * [0, 0, sign], units=galactic)
 
@@ -161,11 +160,8 @@ def run_subhalo(
     impact_dt = np.round((t_buffer_impact / 256).to(u.Myr), decimals=1)
     impact_dt = np.max(u.Quantity([impact_dt, 0.05 * u.Myr]))
 
-    stream, stream2, final_prog, _ = sim.run_perturbed_stream(
+    stream, final_prog, _ = sim.run_perturbed_stream(
         subhalo_w0, subhalo_pot, t_buffer_impact, impact_dt
-    )
-    stream = gd.PhaseSpacePosition(
-        coord.concatenate_representations((stream.data, stream2.data))
     )
     return save_stream(stream, final_prog, paths, name)
 
@@ -178,7 +174,7 @@ def worker(task):
 def main(pool, paths):
     sim_T = 6 * u.Gyr
     prog_w_final = gd.PhaseSpacePosition(
-        [6.0, 0, 12] * u.kpc, [0, -140, -12] * u.km / u.s
+        [6.0, 0, 12] * u.kpc, [0, -130, -10] * u.km / u.s
     )
     mw_pot = gp.MilkyWayPotential2022()
 

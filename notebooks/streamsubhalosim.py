@@ -232,6 +232,9 @@ class StreamSubhaloSimulation:
             nbody=nbody,
             **self._mockstream_kw,
         )
+        # TODO: there are edge cases where this will cause the progenitor to end up in
+        # the wrong location, because it will continue to feel the perturber even after
+        # the "buffer" window.
 
         # merge the two sections of the simulated stream:
         merged_stream = gd.mockstream.MockStream(
