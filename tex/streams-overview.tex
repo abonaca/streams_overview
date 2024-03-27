@@ -1416,50 +1416,42 @@ Space-based wide-field telescopes Euclid \citep[launched in 2023]{laureijs:2011}
 \textbf{Spectroscopic follow-up on the industrial scale.}
 The wide and uniform availability of \gaia\ proper motions has transformed the field of streams: discovered new streams, their orbits, and complex structure.
 However, additional spectroscopy is needed to measure radial velocities and determine which dynamical processes were at play in shaping individual streams, from revealing the wide envelopes of earlier dissolution episodes (\S\ref{sec:phasespace}) to uncovering the origin of stream gaps (\S\ref{sec:xkinematics}).
-Many spectroscopic surveys of the Milky Way have been conducted in the past couple of decades, but they obtained a fairly small number of stream members because they were either limited to bright targets (e.g., APOGEE, \citealt{majewski:2017}; RAVE, \citealt{steinmetz:2020}; GALAH, \citealt{buder:2021}; Gaia, \citealt{katz:2023}), and/or employed a sparse targeting strategy that missed the narrow streams' profiles (e.g., SEGUE, \citealt{yanny:2009}; H3, \citealt{conroy:2019}).
+Many spectroscopic surveys of the Milky Way have been conducted in the past couple of decades, but they obtained a fairly small number of stream members because they were either limited to bright targets (e.g., APOGEE, \citealt{majewski:2017}; RAVE, \citealt{steinmetz:2020}; GALAH, \citealt{buder:2021}; \gaia, \citealt{katz:2023}), and/or employed a sparse targeting strategy that often missed the narrow streams' profiles (e.g., SEGUE, \citealt{yanny:2009}; H3, \citealt{conroy:2019}).
 On the other hand, dedicated programs using wide-field, heavily multiplexed spectrographs can efficiently target stream members \citep[e.g.,][]{li:2021}.
 Excitingly, several such current and soon-operational facilities have a dedicated streams program, including DESI \citep[Dark Energy Spectroscopic Instrument,][]{cooper:2023}, WEAVE \citep[William Herschel Telescope Enhanced Area Velocity Explorer,][]{jin:2023}, 4MOST \citep[4-metre Multi-Object Spectroscopic Telescope,][]{dejong:2019}, and PFS \citep[Prime Focus Spectrograph,][]{takada:2014}.
 In addition, a couple of dedicated high-resolution facilities are currently planning to map halo streams: the Via Project\footnote{https://via-project.org/} (dual-hemisphere, 6.5\,\unit{m} MMT and Magellan telescopes) and the Mauna Kea Spectroscopic Explorer \citep[MSE,][proposed new 11.25\,\unit{m} facility on Mauna Kea]{mse:2019}.
-The expected combined outcome of these projects is a complete (magnitude limited) census of the Milky Way stream member stars with precise 6D kinematics and multi-element chemical abundances.
+The ideal outcome of these projects would be a complete (magnitude limited) census of member stars with precise 6D kinematics and multi-element chemical abundances for all of the Milky Way streams.
 
 
 \textbf{Community repository for stream data.}
-- population studies the key, will require homogeneous membership
-- so far reflective of different discovery methods, action underway to homogenize reporting w cats
-- goal: open repository (similar to nasa exoplanet database?)
-- not only allow population studies, but also coordinate follow-up, lower the barrier to entry for scientists in other fields, as well as the public
+The wide variety of dynamical processes affect streams on different orbits to a different extent (\S\ref{sec:structure-theory}), so the key to disentangling signatures of dark-matter subhalos will be simultaneous modeling of the entire population of streams.
+So far, such studies were limited by the non-uniformity of stream observations, largely stemming from a range of selection criteria employed to identify stream members in a range of data sets.
+The uniform, all-sky coverage of the \gaia\ data has for the first time allowed uniform studies across dozens of streams \citep[e.g.,][]{bonaca:2021,malhan:2022,ibata:2023}, as well as launched a community-based effort to develop procedures for uniformly identifying member stars of all known streams and produce the Community Atlas of Tidal Streams (CATS\footnote{https://github.com/stellarstreams/cats}).
+Astronomy as a field has a long tradition of open catalogs (e.g., published through VizieR, \citealt{ochsenbein:2000}), and large national facilities increasingly provide support for curating community data products (e.g., through NOIRLab Data Lab, \citealt{nikutta:2020}; STScI MAST\footnote{https://archive.stsci.edu/new-mission-partnerships-with-mast}).
+Specialized central repositories for both the raw observational data and derived parameters have already been developed in several research areas (e.g., the NASA Exoplanet Archive, \citealt{akeson:2013}; the Weizmann Interactive Supernova Data Repository, \citealt{yaron:2012}).
+An open repository with homogeneous stream membership, phase-space information, as well as the measured width, density, and velocity profiles of streams will be a quintessential resource for constraining the small-scale structure of the Milky Way dark matter halo.
+Such a repository would also facilitate coordination in follow-up of individual streams across different projects, allow the broader scientific community to engage with the stream data without the need to repeat lower-level reduction and analysis of observational data sets, and finally, bring high-fidelity stream data to the public for use in both education and outreach.
 
-
-% - streams being recognized as one in both physics and astro planning processes
-% - standard for discovery and open repository
-% - low barrier to entry for scientists and the public alike
-% - working for exoplanets, transients, solar system objects
-% - CATS proposal
-% - coordination (dual hemispheres), population studies
-
-% - Due to more secure membership probabilities: follow-up now more efficient so the chemistries now becoming more readily available (ie stamp collecting more efficient)
-% - still sparse targets, but heavily multiplexed now
-% - desi already increasing samples
-% - weave, 4most imminent first light
-% - plug for cats, as a centralized repository??
-% % - More comprehensive spectroscopic follow-up, Stellar populations and element abundances -- save for the outlook
 
 \subsection{Models}
 \textbf{Stream evolution in different dark matter models.}
-- cdm tested broadly, but quantitative predictions still lacking for 1e6Msun scale
-- wimp searches stalled, considering broader set of models
+A series of numerical simulations have shown that the cold dark matter model produces substructure across 20 orders of magnitude, down to XX
+Streams are in principle sensitive to even $10^5$, but simulations resolving subhalos in a Milky Way-like halo are currently missing \citep[][]{}.
+- and should be a priority
+In addition, extensive direct detection search for WIMPs have so far and as they- wimp searches stalled, considering broader set of models
 - some indications SIDM helpful (lensing), would predict different density profiles, not possible to scale simply
 - needed: same initial conditions, multiple realizations of a MW-like environment, down to $10^6\unit{\msun}$ crucial (mention symphony)
 
+\textbf{Tailored simulations of the Milky Way with streams.}
 - tailored simulations key:
 -- progenitor, e.g., globular clusters dissolving in direct N-body
 -- MW accretion history, e.g., streams born in a dwarf galaxy, later accreted onto the Milky Way; but also evolution of the MW tidal field
-
 - computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
 - novel ways of multi-scale gravitational dynamics
 - or BFE: low-res for big scale, add low-mass (BFE collaboration)
 - also look up Carl Rodriguez work on FIRE
 - could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
+
 
 % - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
 % % - potential modeling of a flexible potential -- also in the outlook
@@ -1468,10 +1460,12 @@ The expected combined outcome of these projects is a complete (magnitude limited
 % % -- fitting a more complex potential now possible (koposov student papers)
 
 \subsection{Inference}
+\textbf{Modeling multiple streams.}
 - single impact = proof of concept, but if single could be anything, can ensure it's dm from statistics, radial distribution, mass function
 - simultaneous modeling of multiple streams to infer population properties of subhalo, e.g., mass function, radial distribution
 % - expect basic data like stream densities to be available for the entire population of streams
 
+\textbf{Modeling individual subhalo fly-bys.}
 - single approach still provides a unique opportunity to study an individual subhalo
 - detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
 
@@ -1485,9 +1479,10 @@ The expected combined outcome of these projects is a complete (magnitude limited
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
 
 
-It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
-- new dm physics, e.g., granular fdm (foote)
-- extendable beyond the MW to test how universal (pearson; aganze)
+% It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
+% - new dm physics, e.g., granular fdm (foote)
+% - extendable beyond the MW to test how universal (pearson; aganze)
+
 % - strongest constraint on the subhalo mass function
 % - unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
 % - however, if successful, potential to extend beyond and test how universal (pearson; aganze)
