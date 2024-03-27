@@ -1,6 +1,5 @@
 import pathlib
 
-import astropy.coordinates as coord
 import astropy.units as u
 import gala.dynamics as gd
 import gala.integrate as gi
@@ -161,11 +160,8 @@ def run_subhalo(
     impact_dt = np.round((t_buffer_impact / 256).to(u.Myr), decimals=1)
     impact_dt = np.max(u.Quantity([impact_dt, 0.05 * u.Myr]))
 
-    stream, stream2, final_prog, _ = sim.run_perturbed_stream(
+    stream, final_prog, _ = sim.run_perturbed_stream(
         subhalo_w0, subhalo_pot, t_buffer_impact, impact_dt
-    )
-    stream = gd.PhaseSpacePosition(
-        coord.concatenate_representations((stream.data, stream2.data))
     )
     return save_stream(stream, final_prog, paths, name)
 
