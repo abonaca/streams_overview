@@ -44,7 +44,7 @@ def run_epicycles(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
 def run_bar(paths, df, pot, prog_wf, sim_time, mockstream_kwargs):
     name = "bar"
 
-    Omega = 40.4 * u.km / u.s / u.kpc
+    Omega = 40.0 * u.km / u.s / u.kpc
     sign = -1.0
     bar_frame = gp.ConstantRotatingFrame(Omega * [0, 0, sign], units=galactic)
 
@@ -174,7 +174,7 @@ def worker(task):
 def main(pool, paths):
     sim_T = 6 * u.Gyr
     prog_w_final = gd.PhaseSpacePosition(
-        [6.0, 0, 12] * u.kpc, [0, -140, -12] * u.km / u.s
+        [6.0, 0, 12] * u.kpc, [0, -130, -10] * u.km / u.s
     )
     mw_pot = gp.MilkyWayPotential2022()
 
