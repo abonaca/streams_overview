@@ -1510,8 +1510,39 @@ In addition, extensive direct detection search for WIMPs have so far and as they
 \section{Stream Summary Data}
 \label{apx:stream-summary}
 
-\todo{describe how the data were compiled}
-\todo{Add stream width}
+We compile stream data from the literature and summarize the key properties of each
+stream in Table~\ref{tbl:stream-summary}.
+The table includes the stream name, the sky coordinates of the origin of a stream
+coordinate frame aligned with the stream, the mean heliocentric distance to the stream
+$D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, the angular length
+and width of the stream in the sky, the width of the stream in length units, a rough
+estimate of the stellar mass of the stream, and a list of references for the compiled
+stream properties.
+The table is split into three sections.
+The first section contains streams with reported detections in \gaia\ and with
+spectroscopic follow-up data.
+The next section contains streams that have been detected in \gaia\ but without
+spectroscopic follow-up data.
+The final section contains streams without reported detections in \gaia\ that require
+follow-up investigation.
+
+The stream coordinate origins are defined as the sky coordinates of the $\phi_1, \phi_2
+= (0, 0)^\circ$ point in the stream coordinate system.
+For each stream, the stream coordinate system is either taken from the
+\texttt{galstreams} package \citep{mateu:2023}, or is defined in this work by fitting a
+great circle to stream member star sky positions (this was only used for the few newer
+streams in \citet{ibata:2023} that are missing from \texttt{galstreams}).
+The stream distance was again either taken from the \texttt{galstreams} package, the
+discovery paper, or was estimated by fitting an orbit to the stream member stars and
+taking the mean distance of the fitted orbit over the observed segment of the stream.
+
+The stellar masses are either taken from source papers (see the reference list), or was
+estimated here (for streams with member data from \citet{ibata:2023}).
+We estimate the stellar mass of a stream from \citet{ibata:2023} by comparing the
+observed number of stars down to the brightness limit of \gaia\ to the predicted number
+from a single stellar population with a metallicity $\feh = -2$, $\textrm{age} =
+12~\unit{\giga\year}$, and a Kroupa initial mass function \citep{Kroupa:2001} (we use
+the CMD interface to the PARSEC isochrones; \citealt{bressan:2012, chen:2015}).
 
 \clearpage
 \begin{landscape}
@@ -1556,7 +1587,7 @@ In addition, extensive direct detection search for WIMPs have so far and as they
 % Softening epsilon = 0.01 kpc
 % Energy errors are small, order 1e-5
 
-We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:TODO}
+We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:2023}
 for demonstrative visualizations shown in this article.
 
 For a given stream, we first determine a heliocentric, spherical coordinate system that
@@ -1574,8 +1605,8 @@ the sum of the squared stream latitudes, $\phi_2$: $F(\phi_2) = \sum_i \phi_{2,i
 all stars in a stream, indexed by $i$.
 
 To fit an orbit to each stream, we fix the model for the Milky Way's gravitational
-potential to the \texttt{MilkyWayPotential2022} in \texttt{gala} \citep{gala} and
-optimize over the orbital initial conditions.
+potential to the \texttt{MilkyWayPotential2022} in \texttt{gala}
+\citep{price-whelan:2017} and optimize over the orbital initial conditions.
 We specify the orbital initial conditions in heliocentric coordinates in the rotated
 stream coordinate system described above.
 In this coordinate system, we define the orbital initial conditions at $\phi_1=0^\circ$,
