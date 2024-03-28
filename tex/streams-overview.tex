@@ -1,8 +1,5 @@
 % TODO:
-% - Acknowledge: Rodrigo, Jake N, Charlie, Sergey, Eduardo, Petra Awad
 % - Cite cartopy, and software packages.
-% - Table 1: First category should be "Gaia + spectroscopy (not just S5)", then "Gaia",
-%   then "needs follow-up"
 
 
 %%
@@ -406,7 +403,6 @@ kinematic information for stream discovery later in this section.
     \includegraphics[width=1\textwidth]{gd1-filter-demo.pdf}
     \end{center}
     \caption{%
-    TODO: Descriptive suptitle.
     A demonstration of how matched filtering with photometry and \gaia\ astrometry can
     be used to reveal a stellar stream, here the GD-1 stream.
     In all rows, the left panel shows an extinction-corrected color--magnitude diagram
@@ -562,20 +558,15 @@ sufficiently faint so that only the Red Giant Branch (RGB) or Horizontal Branch 
 stars were practically observable.
 But the RGB and HB stars in many thin streams are sparse and often distributed over
 large areas of the sky, making it difficult to obtain a large sample of stream stars.
-As a demonstration of this point, the left panel of Figure~\ref{fig:msto-rc-mag} shows
-\todo{update track words here - now points}
-the PS1 $r$-band magnitude tracks of the MSTO as a function of stream longitude for 7
-streams discovered before \gaia\ \dr{2} that have since been identified using \gaia\
-astrometry. To obtain precise and high signal-to-noise element abundance measurements
-using existing facilities, stars typically had to be brighter than $r \lesssim
-18~\textrm{mag}$ --- the MSTO for most streams known pre-\gaia\ were fainter than this
-limit.
-The stream tracks in Figure~\ref{fig:msto-rc-mag} were determined by either fitting
-orbits to stream stars associated with each stream using data from \citet{ibata:2023}
-(this procedure is described in detail in \ref{apx:stream-fit}), or for streams that are
-not in \citet{ibata:2023}, we use the distance modulus tracks reported in
-\citet{li:2022} combined with sky tracks collected from discovery or characterization
-papers \citep{shipp:2018, fu:2018, shipp:2019, ferguson:2022, tavangar:2022}.
+As a demonstration of this point, Figure~\ref{fig:msto-rc-mag} shows the PS1 $r$-band
+magnitude of the MSTO for the mean stream distance for streams discovered before \gaia\
+\dr{2} (blue square markers) compared to those found after \gaia\ \dr{2} (orange circle
+markers).
+Streams discovered before \gaia\ were typically fainter and more difficult to obtain
+spectroscopic follow up for than those discovered after \gaia.
+To obtain precise and high signal-to-noise element abundance measurements using existing
+facilities, stars typically had to be brighter than $r \lesssim 18~\textrm{mag}$ --- the
+MSTO for most streams known pre-\gaia\ were fainter than this limit.
 
 The \gaia\ Mission --- especially data from the second data release in 2018 --- has
 since transformed the discovery, characterization, and follow-up efficiency of stellar
@@ -969,6 +960,14 @@ and
 spiral arms, and dark matter subhalos, which can create density variations and other
 features in the stream.
 
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/sim-stream-structure.pdf}
+    \caption{
+        TODO
+        \label{fig:sim-streams}
+    }
+\end{figure}
 
 \subsubsection{The Orbit and Tidal Disruption of the Progenitor}
 
@@ -1046,14 +1045,14 @@ galaxies, and low-mass dark matter subhalos, can also impact the density structu
 streams on different time and spatial scales.
 
 The central Milky Way contains a bar structure that is thought to be a major driver of
-the dynamics of the inner Galaxy \citep[e.g.,][]{blitz, wegg, gerhard}.
+the dynamics of the inner Galaxy \citep[e.g.,][]{blitz:1991}.
 While constraining the pattern speed, size, and mass of the bar are all still active
 areas of work, the bar is thought to have a total mass around $10^{10}~\unit{\msun}$, a
-major-axis length of $\sim 3~\kpc$ \citep{wegg, portail}, and a pattern speed between
-$20$--$40~\unit{\kms\per\kpc}$ \citep{todo}.
+major-axis length of $\sim 3~\kpc$ \citep[e.g.,][]{wegg:2015}, and a pattern speed
+around $40~\unit{\kms\per\kpc}$ \citep[e.g.,][]{portail:2017, sanders:2019}.
 It is thought that even at the solar radius, the impact of resonances with the Galactic
 bar has a significant and observable impact on the kinematics of stars
-\citep[e.g.,][]{dehnen, etc}.
+\citep[e.g.,][]{dehnen:1999, kawata:2021}.
 Stellar streams that pass through the disk plane with pericentric radii $R \lesssim
 10~\kpc$ therefore can be significantly impacted by the bar.
 The time-varying $m=2$ asymmetry of the bar can enhance the chaotic diffusion of orbits
@@ -1061,6 +1060,8 @@ in the central Galaxy and therefore cause rapid diffusion of stream debris
 \citep{price-whelan:2016b}, can lead to resonant confinement of a stream and cause
 truncation of a streams length \citep{hattori:2016}, and can lead to the formation of
 broad fans of tidal debris at the edges of a stream \citep{pearson:2017}.
+This effect is even more pronounced for streams within the Galactic disk
+\citep{thomas:2023}.
 Spiral arms in the Galactic disk can similarly impact streams that pass through the disk
 midplane, as they can impose time-varying $m=2$ or $m=4$ components to the gravitational
 potential.
@@ -1121,8 +1122,9 @@ All of the streams that have been studied in detail show evidence for a complex
 dynamical history in the form of density features along and around these streams.
 As with above, we mainly focus here on the low-mass (likely globular-cluster origin)
 streams, but even the Sagittarius stream shows a clear bifurcation in the density of
-stars along the extent of the stream (see, e.g., Figure~XX in \citealt{todo}) with many
-possible physical explanations \citep[e.g.,][]{todo}.
+stars along the extent of the stream (see, e.g., Figure~1 in \citealt{belokurov:2006})
+with several possible physical explanations \citep[e.g.,][]{penarrubia:2010,
+vasiliev:2020, vasiliev:2021}.
 The streams below are some of the best studied streams around the Milky Way, but
 theoretical models built on the mechanisms discussed in
 Section~\ref{sec:structure-theory} still struggle to quantitatively explain the observed
@@ -1236,9 +1238,9 @@ Even if small-scale features of Pal 5 require further study to confirm, the more
 properties of the stream have been well characterized and are peculiar.
 For example, the two tails of the Pal 5 stream are not symmetric in the sky (the leading
 tail is significantly shorter than the trailing tail).
-Recent deep photometry of the stream from the Dark Energy Camera (DECam; \citealt{todo})
-has provided a more detailed look at the global density structure of the Pal 5 stream
-\citep{bonaca:2020}.
+Recent deep photometry of the stream from the Dark Energy Camera (DECam;
+\citealt{flaugher:2015}) has provided a more detailed look at the global density
+structure of the Pal 5 stream \citep{bonaca:2020}.
 This has shown that the stream is asymmetric for the fainter parts of the stream (even
 taking into account the possible extension of the stream reported in
 \citealt{starkman:2020}), but is also asymmetric in the densest part of the stream near
@@ -1502,6 +1504,16 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 % - unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
 % - however, if successful, potential to extend beyond and test how universal (pearson; aganze)
 
+\section*{Acknowledgements}
+
+We thank Rodrigo Ibata for sharing the stream member data for stars in
+\citet{ibata:2023} ahead of its publication.
+We also thank Petra Awad, Eduardo Balbinot, Sergey Koposov, and Kiyan Tavangar for
+sharing data used to recreate figures from their work.
+We additionally thank Jake Nibauer, Charlie Conroy, Cecilia Mateu, and \todo{who else?}
+for useful discussions and comments on this article.
+
+
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
 \appendix
@@ -1509,31 +1521,63 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 \section{Stream Summary Data}
 \label{apx:stream-summary}
 
-\todo{describe how the data were compiled}
-\todo{Add stream width}
+We compile stream data from the literature and summarize the key properties of each
+stream in Table~\ref{tbl:stream-summary}.
+The table includes the stream name, the sky coordinates of the origin of a stream
+coordinate frame aligned with the stream, the mean heliocentric distance to the stream
+$D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, the angular length
+and width of the stream in the sky, the width of the stream in length units, a rough
+estimate of the stellar mass of the stream, and a list of references for the compiled
+stream properties.
+The table is split into three sections.
+The first section contains streams with reported detections in \gaia\ and with
+spectroscopic follow-up data.
+The next section contains streams that have been detected in \gaia\ but without
+spectroscopic follow-up data.
+The final section contains streams without reported detections in \gaia\ that require
+follow-up investigation.
+
+The stream coordinate origins are defined as the sky coordinates of the $\phi_1, \phi_2
+= (0, 0)^\circ$ point in the stream coordinate system.
+For each stream, the stream coordinate system is either taken from the
+\texttt{galstreams} package \citep{mateu:2023}, or is defined in this work by fitting a
+great circle to stream member star sky positions (this was only used for the few newer
+streams in \citet{ibata:2023} that are missing from \texttt{galstreams}).
+The stream distance was again either taken from the \texttt{galstreams} package, the
+discovery paper, or was estimated by fitting an orbit to the stream member stars and
+taking the mean distance of the fitted orbit over the observed segment of the stream
+(see Appendix~\ref{apx:stream-fit}).
+
+The stellar masses are either taken from source papers (see the reference list), or was
+estimated here (for streams with member data from \citet{ibata:2023}).
+We estimate the stellar mass of a stream from \citet{ibata:2023} by comparing the
+observed number of stars down to the brightness limit of \gaia\ to the predicted number
+from a single stellar population with a metallicity $\feh = -2$, $\textrm{age} =
+12~\unit{\giga\year}$, and a Kroupa initial mass function \citep{Kroupa:2001} (we use
+the CMD interface to the PARSEC isochrones; \citealt{bressan:2012, chen:2015}).
 
 \clearpage
-% \begin{landscape}
+\begin{landscape}
 \input{figures/stream-summary-table-1.tex}
-% \end{landscape}
+\end{landscape}
 \restoregeometry
 
 \clearpage
-% \begin{landscape}
+\begin{landscape}
 \input{figures/stream-summary-table-2.tex}
-% \end{landscape}
+\end{landscape}
 \restoregeometry
 
 \clearpage
-% \begin{landscape}
+\begin{landscape}
 \input{figures/stream-summary-table-3.tex}
-% \end{landscape}
+\end{landscape}
 \restoregeometry
 
 \clearpage
-% \begin{landscape}
+\begin{landscape}
 \input{figures/stream-summary-table-4.tex}
-% \end{landscape}
+\end{landscape}
 \restoregeometry
 
 \clearpage
@@ -1555,7 +1599,7 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 % Softening epsilon = 0.01 kpc
 % Energy errors are small, order 1e-5
 
-We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:TODO}
+We fit orbits to the 87 streams in the catalog of stream stars from \citet{ibata:2023}
 for demonstrative visualizations shown in this article.
 
 For a given stream, we first determine a heliocentric, spherical coordinate system that
@@ -1573,8 +1617,8 @@ the sum of the squared stream latitudes, $\phi_2$: $F(\phi_2) = \sum_i \phi_{2,i
 all stars in a stream, indexed by $i$.
 
 To fit an orbit to each stream, we fix the model for the Milky Way's gravitational
-potential to the \texttt{MilkyWayPotential2022} in \texttt{gala} \citep{gala} and
-optimize over the orbital initial conditions.
+potential to the \texttt{MilkyWayPotential2022} in \texttt{gala}
+\citep{price-whelan:2017} and optimize over the orbital initial conditions.
 We specify the orbital initial conditions in heliocentric coordinates in the rotated
 stream coordinate system described above.
 In this coordinate system, we define the orbital initial conditions at $\phi_1=0^\circ$,
@@ -1609,10 +1653,10 @@ is compared to the observed parallaxes $\varpi$, $\mathcal{N}(x \given \mu, \sig
 is the normal distribution with mean $\mu$ and variance $\sigma^2$, and the sum is over
 all observed stars in the stream indexed by $i$.
 
-We optimize the log-likelihood $\ln \mathcal{L}$ using the L-BFGS-B \citep{todo}
-implementation in \texttt{scipy.optimize} \citep{scipy}, with bounds on the parameters
-such that $\phi_2 \in (-5, 5)^\circ$, $D \in (1, 50)~\kpc$, $\mu_{\phi_1} \in (-100,
-100)~\masyr$, $\mu_{\phi_2} \in (-100, 100)~\masyr$, and $v_r \in (-500, 500)~\kms$.
+We optimize the log-likelihood $\ln \mathcal{L}$ using the L-BFGS-B implementation in
+\texttt{scipy.optimize} \citep{scipy}, with bounds on the parameters such that $\phi_2
+\in (-5, 5)^\circ$, $D \in (1, 50)~\kpc$, $\mu_{\phi_1} \in (-100, 100)~\masyr$,
+$\mu_{\phi_2} \in (-100, 100)~\masyr$, and $v_r \in (-500, 500)~\kms$.
 We start the optimization from six different initial distance values between $1~\kpc$
 and $40~\kpc$ (spaced logarithmically) and take the optimized parameters from the run
 with the highest log-likelihood value.

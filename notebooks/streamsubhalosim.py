@@ -54,6 +54,7 @@ class StreamSubhaloSimulation:
         self._df = df
         self._prog_pot = progenitor_potential
 
+        # TODO: should be an nbody integration...
         self._prog_w0 = self.H.integrate_orbit(
             self.final_prog_w,
             dt=-dt,
