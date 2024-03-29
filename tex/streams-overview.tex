@@ -132,14 +132,16 @@ The hierarchical model of galaxy formation predicts that the Milky Way halo is p
 Due to long dynamical times, debris from the lowest mass objects remains coherent as thin and dynamically cold stellar streams for billions of years.
 The \gaia\ mission, providing astrometry and spectrophotometry for billions of stars, brought three fundamental changes to our view of stellar streams in the Milky Way.
 First, more than a hundred stellar streams have been discovered and characterized using \gaia\ data.
-This is an order of magnitude increase in the number of known streams, due to \gaia's capacity for identifying comoving groups of stars among the field Milky Way population.
+This is an order of magnitude increase in the number of known streams, thanks to \gaia's
+capacity for identifying comoving groups of stars among the field Milky Way population.
 Second, \gaia\ data revealed that density variations both along and across stellar streams are common.
 Dark-matter subhalos, as well as baryonic structures were theoretically predicted to form such features, but observational evidence for density variations was uncertain before \gaia.
-And third, stream kinematics are now widely available and have constrained the streams' orbits and origins, both in-situ and accreted.
+Third, stream kinematics are now widely available and have constrained the streams'
+orbits and origins, both in-situ and accreted.
 \gaia\ not only provided proper motions directly, but also enabled efficient spectroscopic follow-up of the proper-motion selected targets.
 These discoveries have established stellar streams as a dense web of sensitive gravitational antennae in the Milky Way halo.
 We expect the coming decade to fully map the Galactic population of stellar streams, as well as develop numerical models that accurately capture their evolution within the Milky Way for a variety of cosmological models.
-Perhaps most excitingly, the comparison between the two will be able to reveal the presence of dark-matter subhalos below the threshold for galaxy formation ($\lesssim10^6\,\unit{\msun}$), and provide the most stringent test of the cold dark matter model on small scales.
+Perhaps most excitingly, the comparison between the two will be able to reveal the presence of dark-matter subhalos below the threshold for galaxy formation ($\lesssim10^6\,\unit{\msun}$), and provide the most stringent test of the cold dark matter paradigm on small scales.
 \end{abstract}
 
 % I think you want a mantra that is repeated in the abstract, beginning of Intro and conclusions.  Something to the effect of: streams have the potential to tell us about early star formation, hierarchical assembly, the detailed mass distribution within the Galaxy, and - perhaps - the nature of dark matter.    or whatever you think are the 3-4 key reasons to care about streams.
@@ -175,7 +177,7 @@ Perhaps most excitingly, the comparison between the two will be able to reveal t
 % AB
 % storytelling prose
 
-The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits---stellar streams.
+The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits: stellar streams.
 Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{smith:2016, ferguson:2016, carlin:2016}, and the nature of dark matter \citep{johnston:2016a, johnston:2016b}.
 % - why unique?
 
@@ -184,8 +186,10 @@ Heralding from the lowest-mass stellar systems, and orbiting in the most dark-ma
 
 We center this review on three major breakthroughs that \gaia\ brought to stellar streams.
 The first is the sheer number of stream discoveries, which \gaia\ increased by an order of magnitude from $\approx10$ to $\approx100$ (\S\ref{sec:discovery}).
-The second is the detailed structure of stellar streams, resolved by \gaia\ for the first time to suggest dynamical histories rich in perturbations (\S\ref{sec:structure}).
-And finally, the third are the stream kinematics, which constrained their precise orbits, as well as origins (\S\ref{sec:orbits}).
+The second are the stream kinematics, which constrain their precise orbits, as well as
+origins (\S\ref{sec:orbits}).
+And finally, the detailed structure of stellar streams, resolved by \gaia\ for the first
+time to suggest dynamical histories rich in perturbations (\S\ref{sec:structure}).
 In these sections we also discuss the key opportunities and new research directions that these breakthroughs have made possible.
 In the concluding section, we reflect more broadly on what these developments entail for the future of Galactic archaeology (\S\ref{sec:outlook}).
 As for the remainder of this section, the last review dedicated to stellar streams was almost a decade ago and pre-\gaia\ \citep{newberg:2016}, while a more recent, \gaia-based review focused on the Milky Way's halo more broadly \citep{helmi:2020}, so we now proceed to outline the theoretical and historical context for \gaia's stellar stream revolution.
@@ -206,7 +210,8 @@ We illustrate the process of tidal dissolution in Figure~\ref{fig:stream_formati
 The dwarf galaxy of an initial mass of $10^8\,\unit{\msun}$ was represented with 50,000 particles and evolved with the Gyrfalcon tree code \citep{dehnen:2014}.
 The globular cluster of an initial mass of $10^4\,\unit{\msun}$, was represented with 500,000 particles and modeled with direct N-body code PeTar \citep{wang:2020}.
 The left-most panels show an early stage of dissolution, with short tails of gravitationally unbound stars emanating from each progenitor.
-The boundary between the bound and unbound stars is set by the tidal radius.
+The boundary between the bound and unbound stars is (conceptually) set by the tidal
+radius.
 Typically, the satellite mass $m$ is much smaller than the enclosed mass of the host galaxy at its location $M(<R_0)$, so the tidal radius is approximately the Jacobi radius from the restricted three-body problem \citep[][]{szebehely:1967, valtonen:2006}:
 \begin{equation}
 r_J = \left(\frac{m}{3M(<R_0)}\right)^{1/3} R_0
@@ -217,7 +222,7 @@ This agreement has been used to develop fast methods for generating models of st
 
 Governed by the same underlying gravitational potential, tidal tails of a globular cluster and a dwarf galaxy on the same orbit have similar shape and orientation.
 Notably, both streams delineate the progenitor's orbit at pericenter, but are misaligned at apocenter (left and middle panels in Figure~\ref{fig:stream_formation}), which means that representing a stream as an orbit is not always appropriate, no matter how tempting the computational speed-ups are \citep{eyre:2009, eyre:2011, sanders:2013a, sanders:2013b}.
-On the other hand, it is obvious from Figure~\ref{fig:stream_formation} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
+On the other hand, it is clear from Figure~\ref{fig:stream_formation} that a globular cluster and a dwarf galaxy produce markedly different streams: dwarf galaxy streams are longer, wider, and smoother than globular cluster streams.
 The cause of this discrepancy is not just the difference in their initial masses, but also in their number density of stars.
 In more diffuse dwarf galaxies, a higher fraction of stars find themselves outside of the tidal radius when it shrinks during a pericentric passage (Figure~\ref{fig:stream_formation}, top center).
 Combined with a higher velocity dispersion due to a higher initial mass \citep[cf.][]{simon:2007, baumgardt:2019}, the resulting tails are more massive, wider and grow faster.
@@ -329,11 +334,9 @@ We also discuss the limitations of the \gaia\ data and the need for future astro
 surveys to push our understanding of the Milky Way's stellar halo and its dark matter
 content to fainter magnitudes and larger distances.
 
-% TODO: need to work in distinction between "thin stream" -> globular cluster, and dwarf galaxy streams
 
 \subsection{Before \gaia}
 
-% TODO Cite: Many of Carl's papers, Mario Mateo Carbon stars in Sgr, Majewski Sgr, Belokurov, Ibata stuff
 The first stellar streams discovered around the Milky Way --- the Sagittarius stream
 (Sgr) and the Palomar 5 stream (Pal 5) --- were found in the late 1990s and early 2000s
 as over-densities of stars that connect back to their progenitor systems (the
@@ -342,7 +345,7 @@ Sgr and Pal 5 have since become archetypes of two major observational and interp
 types of streams: dwarf galaxy or ``wide'' streams as compared to globular cluster or
 ``thin'' streams.
 These discoveries, and most of the halo stellar streams found through the early 2000's,
-were found using photometry alone.
+were found using photometry.
 The advent of deep, wide-area, multi-band sky surveys --- especially the Sloan Digital
 Sky Survey (SDSS; \citealt{york:2000, gunn:1998, fukugita:1996}) and the Two Micron All
 Sky Survey (2MASS; \citealt{skrutskie:2006}) --- were crucial for this initial phase of
@@ -465,21 +468,6 @@ With the later exceptions of the striking tidal tails around the Pal 5 globular 
 evidence for very low-density tidal tails based on the presence of small numbers of
 extra-tidal stars around the progenitor systems \citep{grillmair:1995, leon:2000}.
 
-\begin{figure*}[t!]
-\begin{center}
-\includegraphics[width=1\textwidth]{stream-sky-map.pdf}
-\end{center}
-\caption{%
-A representation of the on-sky footprints of all known stellar streams in the Milky Way,
-shown in Galactic coordinates.
-The footprints are shown as white polygons that approximate the currently-known lengths
-and mean widths of the streams (the streams are also listed in
-Table~\ref{tbl:stream-summary}).
-The background image is a map of the log-number counts of stars in \gaia\ \dr{3}.
-\label{fig:sky-map}
-}
-\end{figure*}
-
 The first stream discoveries and early theoretical work motivated the development of
 new methods to identify lower surface brightness and more distant streams using a myriad
 of techniques.
@@ -490,14 +478,14 @@ debris from distant merger events should remain spatially coherent for many dyna
 times (gigayears, in the Milky Way halo; \citealt{johnston:1998, helmi:1999}).
 From early numerical simulations, it was also noted that --- in a spherical or
 nearly-spherical dark matter distribution --- the streams would phase mix almost along
-great circles on the sky \citep{johnston:1996, Ibata:XXXX, others}.
+great circles on the sky \citep{johnston:1996,ibata:2001b}.
 This motivated the development of methods to search for over-densities of stars along
 great circles in sky positions or photometrically-filtered sky positions of stars (the
 ``great circle cell count'', GC3, method; \citealt{johnston:1996}).
 The GC3 method was used to identify and trace the extent of the Sagittarius stream using
 2MASS data for M giant stars \citep{majewski:2003} and was later adapted to handle other
 kinematic dimensions (the modified GC3 or ``mGC3'' method, which also uses proper motion
-and radial velocity data; \citealt{Mateu:2011}).
+and radial velocity data; \citealt{mateu:2011}).
 The mGC3 method has since been used to identify many candidate stellar streams using RR
 Lyrae-type stars \citep{mateu:2018}.
 
@@ -686,8 +674,7 @@ closer (and therefore appeared wider) and had lower surface densities than previ
 photometrically-discovered streams.
 This data has also enabled the discovery of streams that are not spatially coherent in
 \emph{sky position} but do appear to contain comoving, metal-poor stellar populations
-\citep[e.g.,][but see Section~\ref{sec:orbits} for more discussion of the origin of
-the Nyx stream]{necib:2020b, balbinot:2023}.
+\citep[e.g.,]{necib:2020b, balbinot:2023}.
 Efforts have also searched for kinematic substructures that may be phase-mixed or less
 spatially coherent using integrals of motion or other dynamical invariants
 \citep[e.g.,][]{koppelman:2019b, yuan:2020, naidu:2020, ou:2023}.
@@ -696,7 +683,8 @@ The number of known stellar streams around the Milky Way has exploded in the \ga
 over 120 streams have now been reported in the literature (see
 Figure~\ref{fig:num-streams}), with more discoveries coming every year, especially
 enabled by new data releases from \gaia\ and new methodological developments.
-\todo{Figure showing sky positions of all streams?}
+Figure~\ref{fig:sky-map} shows the on-sky footprints of all currently known stellar
+streams in the Milky Way, as listed in Table~\ref{tbl:stream-summary}.
 With so many new streams, significant effort has been put into obtaining follow-up
 spectroscopic observations of stream stars to measure their radial velocities and
 detailed element abundances.
@@ -709,14 +697,39 @@ the Dark Energy Spectroscopic Instrument (DESI; \citealt{desi:2016}), H3
 \citep{conroy:2019}, 4MOST \citep{4most:2012}, and WEAVE \citep{weave:2012} will
 continue to enable new discoveries and detailed follow-up of the known streams.
 
-\ab{Just putting here what we discussed at some point: we should state how our sample is defined. This got me thinking more broadly: Should we perhaps posit what constitutes a discovery? I feel like we may have the opportunity here to influence future reporting of discoveries, so we may as well say what we think should be the bar. You touched upon this earlier in the section, but I think it might be worth being explicit about this.}
-
 
 \subsection{Key opportunity: Completing the census of stellar streams}
 \begin{description}
-    \item[Stream discovery in the disk plane and galactic center] Most streams at high latitude...see Figure~XXX, sky plot.
-    \item[Automated discovery with quantified selection function] interpretation of population of observed streams in context of population of all streams hard because of selection effects. Contamination rate - requires observing (hard!) and publishing null results / non-discoveries.
+    \item[Stream discovery in the disk plane and galactic center] As is apparent in
+    Figure~\ref{fig:sky-map}, most of the halo stellar streams discovered to date have
+    been found at high Galactic latitudes. This is a reflection of the fact that it is
+    easier identify stream stars in regions of lower background stellar density. We
+    expect the distribution of halo streams to be closer to uniform suggesting that many
+    stellar streams await discovery at low Galactic latitude, and toward the Galactic
+    center region.
+    \item[Automated discovery with quantified selection function] Recent efforts to
+    discover new streams with automated methods have been successful, but the selection
+    function of these methods is not well understood. Quantifying this is a critical
+    step in understanding the completeness of the current stream census, and in
+    interpreting the population of observed streams in relation to the initial
+    population of stream progenitors.
 \end{description}
+
+
+\begin{figure*}[t!]
+\begin{center}
+\includegraphics[width=1\textwidth]{stream-sky-map.pdf}
+\end{center}
+\caption{%
+A representation of the on-sky footprints of all known stellar streams in the Milky Way,
+shown in Galactic coordinates.
+The footprints are shown as white polygons that approximate the currently-known lengths
+and mean widths of the streams (the streams are also listed in
+Table~\ref{tbl:stream-summary}).
+The background image is a map of the log-number counts of stars in \gaia\ \dr{3}.
+\label{fig:sky-map}
+}
+\end{figure*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -725,7 +738,8 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 % AB
 In the \gaia\ era, stream kinematics are no longer from a painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2023} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
-Overall, all reported members of the XX streams in Table~\ref{} have proper motions and at least one radial velocity measurement per stream.
+\todo{Fill in numbers here.}
+Overall, all reported members of the XX streams in Table~\ref{tbl:stream-summary} have proper motions and at least one radial velocity measurement per stream.
 
 \begin{figure*}
 \begin{center}
@@ -759,7 +773,7 @@ Both the Orphan--Chenab and ATLAS--Aliqa Uma complexes were misidentified as sep
 A recent passage of the massive LMC shifted the orbital planes of the Orphan and Chenab streams, and misaligned their proper motion vectors with respect to the stream track \citep{erkal:2019}.
 Similar misalignments were detected in multiple streams of the southern hemisphere \citep{shipp:2019}, and used to measure the mass of the LMC \citep[$\gtrsim10^{11}\,\unit{\msun}$;][]{erkal:2019, shipp:2021, koposov:2023}.
 Lower mass satellites can also impact stellar streams if their orbits intersect \citep[e.g.,][]{dillamore:2022}.
-For example, both ATLAS--Aliqa Uma and the Jhelum stream may have been perturbed by the Sagittarius dwarf galaxy \citep[respectively]{li:2019,woudenberg:2023}.
+For example, both ATLAS--Aliqa Uma and the Jhelum stream may have been perturbed by the Sagittarius dwarf galaxy \citep[respectively; see also Section~\ref{sec:structure}]{li:2019,woudenberg:2023}.
 Furthermore, orbital calculations back in time show that some globular clusters may have had a flyby encounter with a dwarf galaxy \citep{garrow:2020, el-falou:2022}.
 On the other hand, no known satellite passed close enough to perturb the GD-1 stream, leaving a dark-matter subhalo impact as a viable option \citep{bonaca:2019, doke:2022}.
 
@@ -798,6 +812,7 @@ Easily calculated for individual stars and conserved in standard Milky Way poten
 Streams are highly clustered in the $E-L_z$ space (also seen as distinct peaks in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
 This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way as a part of a larger galaxy, thus providing additional evidence for the hierarchical nature of galaxy formation.
 
+\todo{Move much of this text to the section on stream density structure?}
 Understanding the full dynamical history of a stellar stream back to its progenitor galaxy is crucial for interpreting the observed stream features.
 N-body simulations of ex-situ globular clusters---clusters formed in dwarf galaxies that were subsequently accreted onto the Milky Way---produce stellar streams surrounded by a range of low density features \citep[e.g., wide envelopes, or cocoons, and/or sub-streams;][]{carlberg:2018,carlberg:2020,malhan:2019a,qian:2022}.
 These structures originate from stars lost before the accretion onto the Milky Way, rather than a perturbation within the Milky Way.
@@ -866,8 +881,7 @@ The interplay of these processes may depend on both the age and the mass of the 
 \label{sec:structure}
 
 Soon after the discovery of the Sagittarius stream, it was realized that streams around
-the Milky Way would be powerful tools for studying the Galactic mass distribution
-\citep{johnston, murali}.
+the Milky Way would be powerful tools for studying the Galactic mass distribution.
 Streams are some of the few structures that provide nearly direct information about
 the shapes of orbits around the Galaxy.
 In a conceptual sense, streams form linear structures as the constituent stars ``sort''
@@ -875,10 +889,10 @@ themselves by orbital energy relative to their progenitor system.
 The curvature of a stream through phase-space therefore enables a more direct inference
 of the mass or acceleration field relative to traditional dynamical inference methods
 that require phase-mixed populations to trace the underlying distribution function
-\citep{todo} (and see Section~\ref{todo}).
+\citep{bonaca:2018}.
 It was then also realized that these long, dynamically cold structures should be very
 sensitive to passing mass, providing one of the only ways to infer the presence of
-otherwise star-free dark matter subhalos \citep{johnston, ibata, hoon}.
+otherwise star-free dark matter subhalos \citep{johnston:2002, ibata:2002, yoon:2011}.
 Clearly streams should therefore encode detailed information about both the global and
 small-scale properties of dark matter throughout the Galaxy.
 
@@ -886,7 +900,8 @@ The streams around the Milky Way, however, tell a more intricate story.
 Every stream that has been studied in detail shows evidence for other dynamical
 processes that have impacted the density structure of the stream.
 For example, the Sagittarius stream is known to be ``bifurcated,'' with two intertwined
-components of the stream separated by a small angle on the sky \citep[e.g.,][]{todo}.
+components of the stream separated by a small angle on the sky
+\citep[e.g.,][]{belokurov:2006}.
 But even low-mass streams like GD-1, Pal 5, Ophiuchus, Jhelum, Atlas--Aliqa Uma (AAU),
 and more show evidence for density variations along the streams, extended envelopes of
 stars around the streams, breaks, gaps, and other features that protrude from the main
@@ -901,7 +916,7 @@ internal relaxation will eject stars into the tails with a very small velocity
 dispersion.
 If the cluster is on an eccentric orbit, the ejected stars will slowly phase mix away
 from the orbit of the cluster, but can create over- and under-densities along the tidal
-tails known as ``epicyclic over-densities'' \citep{todo}.
+tails known as ``epicyclic over-densities'' \citep{kupper:2010}.
 Other phenomena, such as interactions with time-dependent features in the Milky Way like
 the galactic bar or spiral arms, the resonant structure of orbits in the galaxy, and,
 excitingly, interactions with dark matter subhalos can all create density structures in
@@ -975,33 +990,31 @@ The orbit of the progenitor system around the Milky Way sets the overall morphol
 stream and the mechanism by which stars are stripped from the progenitor.
 A progenitor on a near-circular orbit will feel only weak variations of the tidal field
 of the Galaxy, and will therefore be stripped of stars slowly and steadily through
-internal two-body relaxation \citep[e.g.,][]{todo}.
+internal two-body relaxation \citep[e.g.,][]{kupper:2010}.
 The morphology of a stream on such an orbit will generally be more elongated along the
 orbit of the progenitor, and the phase mixing of the stream will be dominated by the
 internal dispersion of relative energy of the stars in the stream
 \citep[e.g.,][]{hendel:2015}.
 If the progenitor orbit has small but finite eccentricity, the stripped stars will not
 phase mix uniformly into the stream, but will instead form over- and under-densities
-along the stream track known as epicyclic density variations \citep{kuepper:xxx}.
+along the stream track known as epicyclic density variations \citep{kupper:2010}.
 
 A progenitor stellar system on a very eccentric orbit ($e \gtrsim 0.5$) will instead
 experience strong variations of the Galactic tidal field, and the stripping of stars can
 therefore be more episodic as the jacobi radius shrinks significantly during orbital
 pericenter.
 This repeated tidal shocking can add heat to the internal dynamics of the progenitor
-system and lead to more rapid mass loss \citep[e.g.,][]{todo}.
+system and lead to more rapid mass loss \citep[e.g.,][]{gnedin:1999}.
 The morphology of a stream on such an orbit will generally be more broad and diffuse, as
 the stream stars primarily phase mix due to the internal spread of angular momentum of
 the stripped stars.
 This leads to the formation of more ``shell-like'' structures in the stream
 \citep[e.g.,][]{hendel:2015}.
 When the eccentricity approaches unity (i.e. a radial orbit), the tidal debris will form
-a shell structure instead of a stream \citep[e.g.,][]{todo}.
+a shell structure instead of a stream \citep[e.g.,][]{hernquist:1987, sanderson:2013}.
 
 \todo{discuss mass-loss variations, e.g., Balbinot}
 % https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.2479B/abstract
-
-\todo{Include in summary simulation figure a stream on a near-circular vs. very eccentric orbit?}
 
 
 \subsubsection{The Orbital Structure of the Milky Way}
@@ -1134,7 +1147,29 @@ complexity of these streams.
     \centering
     \includegraphics[width=\textwidth]{figures/stream-density-structure.pdf}
     \caption{
-        TODO
+        Four observed streams around the Milky Way with complex density structures,
+        shown in sky coordinates aligned with each stream, where $\phi_1$ is a
+        stream-aligned longitude and $\phi_2$ a stream-aligned latitude coordinate.
+        \textbf{Top panel:} The GD-1 stream, which shows a clear spur of stars that
+        extends from the main stream body between $\phi_1 \sim -40^\circ$--$-25^\circ$.
+        The stream stars shown are taken from high-probability members determined using
+        a flexible membership model that uses astrometry from \gaia\ \dr{3} and
+        photometry from PS1 (reproduced from \citealt{tavangar:2024}).
+        \textbf{Middle top panel:} The Palomar 5 (Pal 5) stream, shown in stellar
+        density of stars selected from DECam photometry of the stream (reproduced from
+        \citealt{bonaca:2019}).
+        Blue circle markers show the locations of RR Lyrae-type stars from \gaia\ \dr{2}
+        that have been associated with the stream \citep{price-whelan:2019}.
+        \textbf{Middle bottom panel:} High-probability members of the Jhelum stream,
+        separated into members of the ``narrow'' and ``wide'' components of the stream
+        (reproduced from \citealt{awad:2024}).
+        \textbf{Bottom panel:} The Orphan--Chenab (OC) stream, shown in stellar density
+        (under-plotted grayscale image) of member stars selected from \gaia\ \dr{3}
+        (reproduced from \citealt{koposov:2023}).
+        The over-plotted purple arrows show the direction of the solar reflex-corrected
+        proper motion vectors in bins of stars along the stream.
+        The proper motion vectors are expected to point along the stream track, but
+        clearly deviate from the track for $\phi_1 \lesssim 10^\circ$.
         \label{fig:four-obs-streams}
     }
 \end{figure*}
@@ -1180,7 +1215,11 @@ At the present quality of the data, these scenarios are already unlikely, but mo
 precise proper motions of individual stars in the spur and stream combined with more
 extensive spectroscopic follow-up would help to confirm the origin of the spur and the
 cocoon.
-
+Figure~\ref{fig:four-obs-streams} (top panel) shows a more robust look at the GD-1
+stream, highlighting the existence of the ``spur'' between $-40^\circ \lesssim \phi_1
+\lesssim -25^\circ$: The stars shown are high-probability members of the GD-1 stream
+selected using a flexible membership model that uses astrometry from \gaia\ \dr{3} and
+photometry from PS1 \citep{tavangar:2024}.
 
 \subsubsection{Ophiuchus}
 \label{sec:ophiuchus}
@@ -1270,7 +1309,10 @@ The RR Lyrae population also revealed an unexpected partitioning of RR Lyrae osc
 type between the cluster and the tails:
 Most (about two-thirds) of the RR$c$-type oscillators are found in the cluster remnant
 itself, whereas all but two of the RR$ab$-type oscillators are found in the stream.
-
+Figure~\ref{fig:four-obs-streams}, middle top panel, shows the density of stars selected
+to be associated with the Pal 5 stream (based on photometry) as the grayscale image, and
+the locations of RR Lyrae-type stars from \gaia\ \dr{2} as blue circle markers
+\citep{price-whelan:2019}.
 
 \subsubsection{Jhelum}
 \label{sec:jhelum}
@@ -1303,6 +1345,8 @@ stream formed from the joint disruption of a globular cluster and a dwarf galaxy
 A recent characterization of the two components of the stream shows that the thin and
 wide components of the stream have different velocity dispersions and element abundance
 spreads \citep{awad:2024}, which is consistent with this scenario.
+Figure~\ref{fig:four-obs-streams}, middle bottom panel, shows the high-probability
+members of the narrow and wide components of the Jhelum stream.
 
 
 % \subsubsection{Atlas--Aliqa Uma (AAU)}
@@ -1357,9 +1401,11 @@ fact that RR Lyrae are standard candles) with precise proper motions from \gaia,
 \citet{koposov:2019} also showed that the orbital poles of stars in the stream drifts
 continuously from the northern portion of the stream (Orphan) to the southern portion
 (Chenab).
+See, for example, the bottom panel of Figure~\ref{fig:four-obs-streams} for another
+demonstration of this: The solar reflex-corrected proper motion vectors of stars in the
+stream deviate from the stream track for $\phi_1 \lesssim 10^\circ$.
 In follow-up work, this kinematic misalignment was later shown to plausibly come from a
 direct encounter between the stream and the Large Magellanic Cloud \citep{erkal:2019}.
-\todo{reference figure, if we remake the proper motion arrow plot?}
 The OC stream is thought to also be sensitive to details of the ongoing merger
 between the LMC and the Milky Way, and therefore is a powerful object for constraining
 the large-scale behavior of dark matter in the Milky Way \citep{lilleengen:2023}.
