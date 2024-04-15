@@ -1493,24 +1493,35 @@ Such a repository would also facilitate coordination in follow-up of individual 
 \textbf{High-resolution simulations in different dark matter cosmologies.}
 A series of N-body zoom-in simulations have shown that cold dark matter forms halos across 20 orders of magnitude, down to $10^{-6}\,\unit{\msun}$ \citep[approximately Earth mass,][]{diemand:2005, springel:2008, wangj:2020}.
 Streams are sensitive to subhalos as low in mass as $10^5\,\unit{\msun}$ \citep[Figure~\ref{}, see also][]{drlica-wagner:2019}, however simulations of Milky Way-mass halos confidently resolve subhalos only down to $\gtrsim10^7\,\unit{\msun}$ \citep[cf.][]{wetzel:2016, richings:2020, nadler:2023, mansfield:2023}.
-Semi-analytic approaches can easily reach $10^5\,\unit{\msun}$ limit \citep[][]{benson,}, but they lack phase information for the subhalo orbits, and are therefore best suited for forecasting subhalos in relaxed halos.
-The Milky Way is currently in significant disequilibrium due to an undergoing a merger with the LMC, which is expected to result in large variations of subhalo impacts on streams with different orbits \citep{barry:2023,arora:2023}.
+Semi-analytic approaches can easily reach $10^5\,\unit{\msun}$ limit \citep[][]{press:1974,sheth:2002,benson:2012}, but they lack phase information for the subhalo orbits, and are therefore best suited for forecasting average properties or subhalos in relaxed halos.
+The Milky Way is currently in significant disequilibrium due to an undergoing a merger with the LMC \citep[e.g.,][]{besla:2007,kallivayalil:2013,vasiliev:2024}, which is expected to result in large variations of subhalo impacts on streams with different orbits \citep{barry:2023,arora:2023}.
 Therefore, producing high-resolution cosmological simulations of Milky Way-like halos that resolve $10^5\,\unit{\msun}$ dark-matter subhalos is the top priority for an accurate interpretation of stream gaps.
-Ideally, this effort would produce a suite of models with multiple realizations of a Milky Way-like galaxy to control for uncertainties in the Milky Way's accretion history, and for a given set of initial conditions, span a range of dark matter models beyond CDM (e.g., WDM, SIDM, FDM).
+Ideally, this effort would produce a suite of models with multiple realizations of a Milky Way-like galaxy to control for uncertainties in the Milky Way's accretion history, and for a given set of initial conditions, span a range of dark matter models beyond CDM (e.g., warm dark matter, WDM, \citealt{bode:2001}; self-interacting dark matter, SIDM, \citealt{spergel:2000}, or fuzzy dark matter, FDM, \citealt{hu:2000}).
 
 
+\textbf{Stream evolution in tailored simulations of the Milky Way.}
+Cosmological simulations of Milky Way-like galaxies show that the detailed structure of its stellar and dark matter halos depends sensitively on the mass accretion history \citep[e.g.,][]{bullock:2005,springel:2008,cooper:2010,hopkins:2018,bose:2020,pillepich:2023}.
+There is growing observational evidence for perturbations of the Milky Way streams by the two most massive recent accretion events: the Sagittarius dwarf galaxy \citep[e.g.,][]{bonaca:2020,li:2021,woudenberg:2023} and the Large Magellanic Cloud \citep[e.g.,][]{erkal:2019, shipp:2019, lilleengen:2023, koposov:2023}.
+Simulations predict that such massive mergers also increase the abundance of low-mass dark-matter subhalos, which affects their impact rates on streams \citep[e.g.,][]{barry:2023, arora:2023}.
+In order to accurately infer the nature of dark matter from subhalo impacts on streams, we need to account for the Milky Way's accretion history.
+Thanks to \gaia, the major accretion events onto the Milky Way have been identified \citep[e.g.,][and references therein]{kruijssen:2020}.
+Most of these events have been reconstructed through idealized N-body models (e.g., GSE, \citealt{naidu:2021}; Sagittarius, \citealt{vasiliev:2021}; Cetus \citealt{chang:2020}; Helmi Streams, \citealt{koppelman:2019}; Wukong, \citealt{malhan:2021b}; Kraken, Sequoia, Thamnos, and I'itoi, \citealt{sharpe:2024}), while cosmological N-body simulations of Milky Way-like halos are now increasingly constrained to match the mass and time of the most significant mergers \citep[e.g.,][]{nadler:2020,buch:2024}.
+In the coming years, we will need to combine these efforts to forecast subhalo encounter rates tailored to individual streams in the Milky Way.
 
-% In addition, extensive direct detection search for WIMPs have so far and as they
-% - wimp searches stalled, considering broader set of models
-% - some indications SIDM helpful (lensing), would predict different density profiles, not possible to scale simply
-% - needed: same initial conditions, multiple realizations of a MW-like environment, down to $10^6\unit{\msun}$ crucial (mention symphony)
+% what the subhalo impact rates on streams imply for the overall abundance of the dark matter substructure and the nature of dark matter, we need to account for the Milky Way's accretion history.
+% , emphasizing the importance of tailored forecasts for the subhalo encounter rates that match the Milky Way's accretion history.
+% To interpret properties of any given stream in the context of dark matter substructure, we need to account for the global structure of the host dark matter halo, as well as the orbit and origins of the stream itself.
 
-\textbf{Tailored simulations of the Milky Way with streams.}
+- stream orbit: from origin to baryonic perturbers
+- putting everything together will require novel ways of solving multi-scale gravitational dynamics.
+- possibly using genetic modification algorithms or semi-analytic approaches
+
+
 - tailored simulations key:
 -- progenitor, e.g., globular clusters dissolving in direct N-body
 -- MW accretion history, e.g., streams born in a dwarf galaxy, later accreted onto the Milky Way; but also evolution of the MW tidal field
 - computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
-- novel ways of multi-scale gravitational dynamics
+% - novel ways of multi-scale gravitational dynamics
 - or BFE: low-res for big scale, add low-mass (BFE collaboration)
 - also look up Carl Rodriguez work on FIRE
 - could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
@@ -1530,6 +1541,7 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 
 \textbf{Modeling individual subhalo fly-bys.}
 - single approach still provides a unique opportunity to study an individual subhalo
+- need good potential
 - detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
 
 - density modeling robust to survey selection functions and dust \citep{patrick:2022}
@@ -1538,13 +1550,14 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 - in the past: data not good enough, models could be simple
 - now data so much more complex than models, so inference can become meaningless
 
+\vspace{0.5cm}
+
+It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
+% - new dm physics, e.g., granular fdm (foote)
+- extendable beyond the MW to test how universal (pearson; aganze)
+
 % - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
-
-
-% It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
-% - new dm physics, e.g., granular fdm (foote)
-% - extendable beyond the MW to test how universal (pearson; aganze)
 
 % - strongest constraint on the subhalo mass function
 % - unlike lensing (vegetti; hezaveh; nierenberg), this constraint would be limited to the Milky Way
@@ -1554,9 +1567,9 @@ Ideally, this effort would produce a suite of models with multiple realizations 
 
 We thank Rodrigo Ibata for sharing the stream member data for stars in
 \citet{ibata:2023} ahead of its publication.
-We also thank Petra Awad, Eduardo Balbinot, Sergey Koposov, and Kiyan Tavangar for
+We also thank Petra Awad, Eduardo Balbinot, Sergey Koposov, Jake Nibauer, and Kiyan Tavangar for
 sharing data used to recreate figures from their work.
-We additionally thank Jake Nibauer, Charlie Conroy, Cecilia Mateu, and \todo{who else?}
+We additionally thank Charlie Conroy, Cecilia Mateu, Francois Schweizer, and \todo{who else?}
 for useful discussions and comments on this article.
 
 
