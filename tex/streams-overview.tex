@@ -1508,53 +1508,33 @@ Thanks to \gaia, the major accretion events onto the Milky Way have been identif
 Most of these events have been reconstructed through idealized N-body models (e.g., GSE, \citealt{naidu:2021}; Sagittarius, \citealt{vasiliev:2021}; Cetus \citealt{chang:2020}; Helmi Streams, \citealt{koppelman:2019}; Wukong, \citealt{malhan:2021b}; Kraken, Sequoia, Thamnos, and I'itoi, \citealt{sharpe:2024}), while cosmological N-body simulations of Milky Way-like halos are now increasingly constrained to match the mass and time of the most significant mergers \citep[e.g.,][]{nadler:2020,buch:2024}.
 In the coming years, we will need to combine these efforts to forecast subhalo encounter rates tailored to individual streams in the Milky Way.
 
-% what the subhalo impact rates on streams imply for the overall abundance of the dark matter substructure and the nature of dark matter, we need to account for the Milky Way's accretion history.
-% , emphasizing the importance of tailored forecasts for the subhalo encounter rates that match the Milky Way's accretion history.
-% To interpret properties of any given stream in the context of dark matter substructure, we need to account for the global structure of the host dark matter halo, as well as the orbit and origins of the stream itself.
+Developing tailored simulations is important not only for accurately estimating the amount of subhalo perturbation each stream experiences, but also to identify effects that may confound signatures of dark matter.
+These include matching the stream progenitor mass and orbital phase (to capture epicyclic overdensities), its host galaxy (to capture the possible presence of low-density cocoons), and its orbit in a time-evolving potential (to estimate the likelihood of baryonic perturbations from molecular clouds, spiral arms, Galactic bar and luminous satellites)
+A self-consistent model of a stellar stream that takes into account all of these processes will require novel ways of solving multi-scale gravitational dynamics.
+Promising progress has recently been made using basis function expansions to capture the structure and evolution of the gravitational potential on large scales \citep{garavito-camargo:2021,petersen:2022}, to speed up N-body computations using machine learning techniques \citep{breen:2020,villaescusa-navarro:2021}, and to approximate direct N-body dynamical models of globular clusters to high accuracy with Monte Carlo codes \citep{rodriguez:2015,kremer:2020}.
 
-- stream orbit: from origin to baryonic perturbers
-- putting everything together will require novel ways of solving multi-scale gravitational dynamics.
-- possibly using genetic modification algorithms or semi-analytic approaches
-
-
-- tailored simulations key:
--- progenitor, e.g., globular clusters dissolving in direct N-body
--- MW accretion history, e.g., streams born in a dwarf galaxy, later accreted onto the Milky Way; but also evolution of the MW tidal field
-- computationally prohibitive to do all of this in a single simulation, and we'd want at least several to assess stochasticity
-% - novel ways of multi-scale gravitational dynamics
-- or BFE: low-res for big scale, add low-mass (BFE collaboration)
-- also look up Carl Rodriguez work on FIRE
-- could potentially be solved by implementing ML-trained models to speed-up the most time-intensive aspects?
-
-
-% - All of this will need improved theoretical modeling of the new Gaia discoveries (+ outlook for the future)
-% % - potential modeling of a flexible potential -- also in the outlook
-% % -- caveat: MW model
-% % -- standard certainly idealized (LMC deformations)
-% % -- fitting a more complex potential now possible (koposov student papers)
 
 \subsection{Inference}
+\textbf{Modeling individual subhalo fly-bys.}
+Stellar streams in the Milky Way halo provide a unique opportunity to study individual dark-matter subhalos in exquisite detail.
+Reconstruction of a subhalo impact site can constrain the subhalo mass and density profile \citep{erkal:2015b, bonaca:2019, hilmi:2024}.
+With precise kinematics, it may even be possible to constrain the subhalo's orbit and current 3D position, which would allow targeted multi-messenger studies of the dark sector \citep{bonaca:2020, mirabal:2021}.
+However, theoretical models currently struggle to quantitatively explain the observed complexity of stellar streams.
+On the positive side, the wealth and precision of observational data promises to disentangle numerous processes that affected stellar streams.
+But to deliver on this promise, theoretical models need to include all of the relevant effects; otherwise the inference becomes ineffectual \citep[e.g., the power-spectrum of the GD-1 density can be separately reproduced both by internal epicyclic overdensities and external impacts of dark-matter subhalos, molecular clouds and spiral arms, cf.][]{ibata:2020, banik:2021}.
+As discussed throughout this review, stellar streams are affected by gravitational dynamics over a wide range of temporal and spatial scales, so the challenge for the next decade will be devising fast theoretical models and inference techniques that can efficiently explore this vast parameter space.
+
+
 \textbf{Modeling multiple streams.}
 - single impact = proof of concept, but if single could be anything, can ensure it's dm from statistics, radial distribution, mass function
 - simultaneous modeling of multiple streams to infer population properties of subhalo, e.g., mass function, radial distribution
-% - expect basic data like stream densities to be available for the entire population of streams
+- expect basic data like stream densities to be available for the entire population of streams
 
-\textbf{Modeling individual subhalo fly-bys.}
-- single approach still provides a unique opportunity to study an individual subhalo
-- need good potential
-- detailed reconstruction of individual impact sites to infer properties of an individual subhalo, e.g., its mass, density profile, potentially current 3D position for multimessenger studies
-
-- density modeling robust to survey selection functions and dust \citep{patrick:2022}
-- interplay between different effects
-- theoretical models still struggle to quantitatively explain the observed complexity of these streams
-- in the past: data not good enough, models could be simple
-- now data so much more complex than models, so inference can become meaningless
-
-\vspace{0.5cm}
-
-It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
-% - new dm physics, e.g., granular fdm (foote)
-- extendable beyond the MW to test how universal (pearson; aganze)
+% \vspace{0.5cm}
+% 
+% It would also open up a new research program for studying the nature of dark matter on otherwise unobservable scales.
+% % - new dm physics, e.g., granular fdm (foote)
+% - extendable beyond the MW to test how universal (pearson; aganze)
 
 % - Due to large number of streams: transitioning from stamp-collecting to population studies
 % - comparison to surviving dwarf galaxies and clusters (internal properties and orbits) -- also mention in the outlook, as a part of building a complete picture
