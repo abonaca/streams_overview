@@ -145,16 +145,6 @@ Perhaps most excitingly, the comparison between the two will be able to reveal t
 
 % I think you want a mantra that is repeated in the abstract, beginning of Intro and conclusions.  Something to the effect of: streams have the potential to tell us about early star formation, hierarchical assembly, the detailed mass distribution within the Galaxy, and - perhaps - the nature of dark matter.    or whatever you think are the 3-4 key reasons to care about streams.
 
-% %%Graphical abstract
-% \begin{graphicalabstract}
-% %\includegraphics{grabs}
-% \end{graphicalabstract}
-%
-% %%Research highlights
-% \begin{highlights}
-% \item Research highlight 1
-% \item Research highlight 2
-% \end{highlights}
 
 \begin{keyword}
 %% keywords here, in the form: keyword \sep keyword
@@ -173,11 +163,18 @@ Perhaps most excitingly, the comparison between the two will be able to reveal t
 %% main text
 \section{Introduction}
 \label{sec:intro}
-% AB
-% storytelling prose
 
-The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits: stellar streams.
-Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{smith:2016, ferguson:2016, carlin:2016}, and the nature of dark matter \citep{johnston:2016a, johnston:2016b}.
+The observed distribution of galaxies on large scales gave rise to the current cosmological paradigm: a Universe dominated by dark matter in which galaxies form through hierarchical accretion of lower-mass galaxies \citep{press:1974,white:1978}.
+However, it was much closer to home, in our own Milky Way galaxy that tracers of these ``proto-galactic fragments'' were first identified.
+In a landmark study of halo globular clusters, \citet{searle:1978} boldly proposed they originate from lower-mass galaxies that merged with the Milky Way.
+At the time, star clusters dissolving in the Milky Way disk have already been identified as comoving groups in catalogs of stars with measured 3D velocities \citep[e.g.,][and references therein]{eggen:1965}.
+Similarly, tidal debris of dwarf galaxies and globular clusters in the Galactic halo form stellar streams \citep[e.g.,][]{lynden-bell:1995}.
+As such, streams serve as direct evidence of hierarchical structure formation, fossil records of star and galaxy formation in the early universe, and luminous tracers in the most dark-matter-dominated region of the Galaxy.
+Obtaining kinematic data needed to fully deliver on these unique insights from halo streams has been challenging historically \citep[e.g.,][]{morrison:2000}.
+The \gaia\ mission has recently measured positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3} to fundamentally change our view of stellar streams.
+
+% The \gaia\ mission has mapped the positions and motions of almost two billion stars in the Milky Way \citep{gaiamission:2016, gaiadr1, gaiadr2, gaiaedr3, gaiadr3}, so it comes as no surprise that it has fundamentally changed our view of stars that move on similar orbits: stellar streams.
+% Heralding from the lowest-mass stellar systems, and orbiting in the most dark-matter dominated regions of a galaxy, streams provide unique insights into physics of star and galaxy formation \citep{smith:2016, ferguson:2016, carlin:2016}, and the nature of dark matter \citep{johnston:2016a, johnston:2016b}.
 % - why unique?
 
 % So far, the main limitation for studying stellar streams in the Milky Way has been uncovering member stars of these low-mass and diffuse systems in the ocean of field stars.
@@ -239,7 +236,7 @@ Thanks to facilities optimized for detecting low surface-brightness features, do
 Unfortunately, extragalactic streams provide somewhat limited constraints on the gravitational potential because they have so far been mostly detected in 2D projected sky coordinates \citep{nibauer:2023}, but in the Milky Way we have been able to measure both the 3D positions and 3D velocities \citep{koposov:2010}.
 The Milky Way stellar streams are poised to answer one of the major open questions in both physics and astrophysics---the nature of dark matter.
 
-The first stream discovered in the Milky Way---tidal tails of the Sagittarius dwarf galaxy \citep{ibata:2001a, Newberg:2002, majewski:2003, belokurov:2006}---was also the first one to constrain the shape of the Milky Way's dark matter halo.
+The first stream discovered in the Milky Way---tidal tails of the Sagittarius dwarf galaxy \citep{ibata:1995, ibata:2001a, Newberg:2002, majewski:2003, belokurov:2006}---was also the first one to constrain the shape of the Milky Way's dark matter halo.
 \citet{ibata:2001b} immediately observed that Sagittarius stream traces close to a great circle, and concluded that since its orbital plane hasn't been significantly torqued, the Milky Way halo must be nearly spherical.
 However, radial velocities measured along the stream were consistent with models of the Sagittarius stream in a prolate halo, and ruled out oblate and spherical halo shapes \citep{helmi:2004}.
 Yet still, when \citet{johnston:2005} used more numerous M giant stars to measure a small amount of the Sagittarius' orbital precession, they found it strongly disfavors prolate halo shapes and prefers a mildly oblate halo.
@@ -1493,7 +1490,8 @@ However, additional spectroscopy is needed to measure radial velocities and dete
 Many spectroscopic surveys of the Milky Way have been conducted in the past couple of decades, but they obtained a fairly small number of stream members because they were either limited to bright targets (e.g., APOGEE, \citealt{majewski:2017}; RAVE, \citealt{steinmetz:2020}; GALAH, \citealt{buder:2021}; \gaia, \citealt{katz:2023}), and/or employed a sparse targeting strategy that often missed the narrow streams' profiles (e.g., SEGUE, \citealt{yanny:2009}; H3, \citealt{conroy:2019}).
 On the other hand, dedicated programs using wide-field, heavily multiplexed spectrographs can efficiently target stream members \citep[e.g.,][]{li:2021}.
 Excitingly, several such current and soon-operational facilities have a dedicated streams program, including DESI \citep[Dark Energy Spectroscopic Instrument,][]{cooper:2023}, WEAVE \citep[William Herschel Telescope Enhanced Area Velocity Explorer,][]{jin:2023}, 4MOST \citep[4-metre Multi-Object Spectroscopic Telescope,][]{dejong:2019}, and PFS \citep[Prime Focus Spectrograph,][]{takada:2014}.
-In addition, a couple of dedicated high-resolution facilities are currently planning to map halo streams: the Via Project\footnote{https://via-project.org/} (dual-hemisphere, 6.5\,\unit{m} MMT and Magellan telescopes) and the Mauna Kea Spectroscopic Explorer \citep[MSE,][proposed new 11.25\,\unit{m} facility on Mauna Kea]{mse:2019}.
+% In addition, a dedicated high-resolution facility is currently 
+\todo{fix} In addition, dedicated high-resolution facilities are currently planning to map halo streams: the Via Project\footnote{https://via-project.org/} (dual-hemisphere, 6.5\,\unit{m} MMT and Magellan telescopes) and the Mauna Kea Spectroscopic Explorer \citep[MSE,][proposed new 11.25\,\unit{m} facility on Mauna Kea]{mse:2019}.
 The ideal outcome of these projects would be a complete (magnitude limited) census of member stars with precise 6D kinematics and multi-element chemical abundances for all of the Milky Way streams.
 
 
@@ -1565,10 +1563,10 @@ If the detected stream perturbations do require impacts of $10^6\,\unit{\msun}$ 
 
 We thank Rodrigo Ibata for sharing the stream member data for stars in
 \citet{ibata:2023} ahead of its publication.
-We further thank Jake Nibauer for creating numerical models of streams presented in Figure~\ref{fig:stream_formation}.
+We further thank Jake Nibauer for generating numerical models of streams presented in Figure~\ref{fig:stream_formation}.
 We also thank Petra Awad, Eduardo Balbinot, Sergey Koposov, and Kiyan Tavangar for
 sharing data used to recreate figures from their work.
-We additionally thank Charlie Conroy, Cecilia Mateu, and Francois Schweizer
+Finally, we thank Charlie Conroy, Cecilia Mateu, and Francois Schweizer
 for useful discussions and comments on this article.
 
 
