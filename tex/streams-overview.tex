@@ -190,12 +190,13 @@ As for the remainder of this section, the last review dedicated to stellar strea
 \caption{%
 Numerical models of a $10^8\,\unit{\msun}$ dwarf galaxy (top) and a $10^4\,\unit{\msun}$ globular cluster (bottom) tidally dissolving on the same orbit in a Milky Way-like gravitational potential to form stellar streams.
 \textbf{Left column:} Overview of the first billion years of dissolution, with the progenitors initialized at $(X,Z)=(-15,20)\,\unit{kpc}$, their orbital path shown with a colored line, and their tidal debris at three subsequent snapshots shown in black here, and zoomed-in on in the remaining columns.
+The Galactic center is marked with a light-blue cross.
 \textbf{Column I} (300\,\unit{Myr}, past first pericenter): During the initial stage of tidal disruption, satellites develop short leading and trailing tails, while most of the stars are still bound inside the Jacobi radius (red dashed line).
 \textbf{Column II} (600\,\unit{Myr}, approaching second pericenter): Tidal tails are significantly more elongated at pericenter than at apocenter, and also better aligned with the progenitor's orbit.
 Dwarf galaxy tails are significantly longer than globular cluster's at any given time.
 \textbf{Column III} (900\,\unit{Myr}, close to apocenter): Longer tails show significant misalignment from the progenitor's orbit at their second apocenter, and in the case of the globular cluster, have developed a full pair of epicycles.
-\label{fig:stream_formation}
 }
+\label{fig:stream_formation}
 \end{figure*}
 
 Physics driving the formation of stellar streams rests with the tidal forces of a host galaxy acting on its satellites.
@@ -288,8 +289,8 @@ An atlas of stellar streams in the Milky Way.
 Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023, li:2019, vasiliev:2021}.
 Their distances are poorly constrained observationally, so we have instead adopted distance from the best-fitting orbit.
 The color coding is by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
-\label{fig:fos_3d}
 }
+\label{fig:fos_3d}
 \end{figure*}
 
 \section{Stream Discovery and Characterization in the \gaia\ Era}
@@ -427,8 +428,8 @@ kinematic information for stream discovery later in this section.
     For example, in the left panel, stars are shown as selected within the proper motion
     selection box (red outline in the center panel) and the sky track polygon (red
     outline in the right panel).
-    \label{fig:gd1-demo}
     }
+    \label{fig:gd1-demo}
 \end{figure*}
 
 % TODO: Yanny? Others for list of SDSS stream papers?
@@ -511,8 +512,10 @@ kinematic coordinates and the number of stars.
     \includegraphics[width=0.5\textwidth]{msto-rc-mag.pdf}
     \end{center}
     \caption{%
-    The length and mean apparent $r$-band magnitude of the main sequence turn-off (MSTO)
-    for streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
+    The mean apparent $r$-band magnitude of the main sequence turn-off (MSTO)
+    for streams discovered before \gaia\ \dr{2} (blue squares) and since (orange circles).
+%     The length and mean apparent $r$-band magnitude of the main sequence turn-off (MSTO)
+%     for streams discovered before \gaia\ \dr{2} (left panel) and since (right panel).
     The distance moduli were determined by fitting orbits to stream stars associated
     with each of the streams in \citet{ibata:2023} (this procedure is described in
     detail in \ref{apx:stream-fit}).
@@ -523,14 +526,14 @@ kinematic coordinates and the number of stars.
     High-resolution spectroscopic follow-up of MSTO stars in these streams is difficult
     or currently infeasible for many of these streams: The upper gray line shows the
     approximate magnitude limit for observing an FGK star with the MIKE spectrograph
-    \citep{todo} to obtain a signal-to-noise ratio of 50 at $5500~\unit{\angstrom}$ with
+    \citep{bernstein:2003} to obtain a signal-to-noise ratio of 50 at $5500~\unit{\angstrom}$ with
     a spectral resolution $R\sim \num{30000}$ with an exposure time $\lesssim
     1.5~\textrm{hours}$.
     RGB stars in the streams are typically bright enough for this type of follow-up, but
     are far less numerous than MSTO stars (globular cluster streams may only have a few
     to tens of RGB stars).
-    \label{fig:msto-rc-mag}
     }
+    \label{fig:msto-rc-mag}
 \end{figure}
 
 Prior to the \gaia\ Mission, only a handful of the discovered streams were followed up
@@ -636,13 +639,14 @@ determine their intrinsic and orbital parameters (see the last section of
 Table~\ref{tbl:stream-summary}).
 
 \begin{figure}[t!]
-    \begin{center}
-    \includegraphics[width=\columnwidth]{cumulative-num-streams.pdf}
-    \end{center}
-    \caption{%
-    TODO: Smoother rise. New data important, but also people refining methods and using smaller surveys along the way.
-    \label{fig:num-streams}
-    }
+\begin{center}
+\includegraphics[width=\columnwidth]{cumulative-num-streams.pdf}
+\end{center}
+\caption{%
+The number of known streams has been gradually increasing since the discovery of the Sagittarius tidal tails in 1995 and entered exponential growth following \gaia\ \dr{2} in 2018.
+The growth has been fairly smooth because it has been driven both by releases of more comprehensive datasets and by improved methods for finding streams.
+}
+\label{fig:num-streams}
 \end{figure}
 
 The exquisite astrometry provided by \gaia\ has also enabled a new class of methods for
@@ -724,8 +728,8 @@ The footprints are shown as white polygons that approximate the currently-known 
 and mean widths of the streams (the streams are also listed in
 Table~\ref{tbl:stream-summary}).
 The background image is a map of the log-number counts of stars in \gaia\ \dr{3}.
-\label{fig:sky-map}
 }
+\label{fig:sky-map}
 \end{figure*}
 
 
@@ -733,25 +737,30 @@ The background image is a map of the log-number counts of stars in \gaia\ \dr{3}
 \section{Stream kinematics}
 \label{sec:orbits}
 % AB
-In the \gaia\ era, stream kinematics are no longer from a painstaking follow-up of photometrically identified targets, but a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
+In the \gaia\ era, stream kinematics are no longer derived from painstaking follow-up of photometrically identified targets, but are a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2023} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
-\todo{Fill in numbers here.}
-Overall, all reported members of the XX streams in Table~\ref{tbl:stream-summary} have proper motions and at least one radial velocity measurement per stream.
+Overall, 105 streams reported in Table~\ref{tbl:stream-summary} have proper motion measurements from \gaia, while 72 of those streams also have a radial velocity detection from spectroscopic follow-up surveys.
 
 \begin{figure*}
 \begin{center}
 \includegraphics[width=0.95\textwidth]{figures/orbital_phase_space.pdf}
 \end{center}
 \caption{%
-Stream orbital phase space.
-\label{fig:phase_space}
+Orbital phase space of stellar streams reported in \citet{ibata:2023} and fit in \ref{apx:stream-fit} (yellow stars), as well as globular clusters \citep[light blue circles,][]{baumgardt:2019}, and dwarf galaxies \citep[dark blue circles,][]{helmi:2018,simon:2018}.
+\textbf{Left:} Orbital eccentricity as a function of apocenter, with circular orbits on the bottom and radial on top.
+The distribution of stream apocenters peaks at $\approx20\,\unit{kpc}$ (top histogram), while those of globular clusters and dwarf galaxies peak at lower and higher radii, respectively, indicating additional streams may be discovered in those regions of this parameter space.
+The distribution of stream eccentricities shows multiple peaks (right histogram), which likely correspond to streams of a common (accretion) origin.
+\textbf{Right:} Total orbital energy, $E_{tot}$, as a function of the $z$-component of the angular momentum vector, $L_z$ (aligned with the disk angular momentum), with orbits prograde with the disk rotation on the left and retrograde orbits on right.
+Both globular clusters and streams are clustered in this 2D projection of the orbital phase space, with each cluster likely corresponding to objects delivered in distinct accretion events.
 }
+\label{fig:phase_space}
 \end{figure*}
 
 \subsection{Orbits and the Milky Way potential}
 \label{sec:mwpotential}
-The wide availability of kinematics has shifted how streams are described: instead of reporting the empirical velocity gradients along a stream, they are now used to determine the stream's orbit.
-Streams' orbits have been useful in placing them into a broader context within the Milky Way, learning their dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
+The wide availability of kinematics has influenced how streams are described: instead of reporting the empirical velocity gradients along a stream, they are now used to determine the stream's orbit.
+Even in streams with just a handful of radial velocity measurements, the more numerous \gaia\ proper motions are sufficient to constrain an orbit in an assumed Milky Way potential (as described in \ref{apx:stream-fit}).
+Streams' orbits have been useful in placing them into a broader context within the Milky Way, revealing their dynamical histories and processes likely to have produced features discussed in \S\ref{sec:structure}.
 Figure~\ref{fig:phase_space} summarizes orbital properties of stellar streams from the \citet{ibata:2023} catalog (yellow stars).
 The assumed underlying gravitational potential is a static and analytic \texttt{MilkyWayPotential2022} model \citep{price-whelan:2017}, and the orbit fitting procedure is described in \ref{apx:stream-fit}.
 The majority of known Milky Way streams have apocenters between 10\,\unit{\kpc} and 50\,\unit{\kpc}, and thus spend most of the time beyond the Milky Way disk.
@@ -759,7 +768,7 @@ However, their wide range of eccentricities (Figure~\ref{fig:phase_space}, left)
 $\approx60\%$ of the sample are on orbits prograde with the Milky Way's disk, which makes them more susceptible to perturbation from the Milky Way bar, spiral arms and molecular clouds \citep[e.g.,][]{pearson:2017, banik:2019}.
 There is a long tail towards retrograde orbits, but this is likely a detection bias due to retrograde streams being more easily detected in proper motions \citep[e.g.,][]{ibata:2021}.
 
-Quite surprisingly, orbits also revealed that some streams extend longer than previously thought and connect to another stream.
+Quite surprisingly, orbits also revealed that some streams extend farther than previously thought and connect to another stream.
 Analyzing halo RR~Lyrae in \gaia~\dr{2}, \citet{koposov:2019} traced the Orphan stream through the Galactic plane to the southern hemisphere and found it connects to the Chenab stream in sky positions, distance, and proper motions.
 Similarly, \citet{li:2021} found that a single orbit connects the adjacent ATLAS and Aliqa Uma streams in both proper motions and radial velocities.
 In both cases, stream kinematics were key in making these connections.
@@ -767,7 +776,7 @@ In contrast, relying on sky positions alone can be unreliable, e.g., Hermus and 
 As we are completing the stream census, accurately accounting for the total number of accretion events onto the Milky Way is important for testing galaxy formation models \citep{pillepich:2015, shipp:2023, wright:2023, khoperskov:2023}.
 
 Both the Orphan--Chenab and ATLAS--Aliqa Uma complexes were misidentified as separate structures due to the effects of dynamical perturbations.
-A recent passage of the massive LMC shifted the orbital planes of the Orphan and Chenab streams, and misaligned their proper motion vectors with respect to the stream track \citep{erkal:2019}.
+A recent passage of the massive LMC shifted the orbital planes of the Orphan and Chenab streams, and misaligned their proper motion vectors with respect to the stream path in the sky coordinates, i.e. the stream track \citep{erkal:2019}.
 Similar misalignments were detected in multiple streams of the southern hemisphere \citep{shipp:2019}, and used to measure the mass of the LMC \citep[$\gtrsim10^{11}\,\unit{\msun}$;][]{erkal:2019, shipp:2021, koposov:2023}.
 Lower mass satellites can also impact stellar streams if their orbits intersect \citep[e.g.,][]{dillamore:2022}.
 For example, both ATLAS--Aliqa Uma and the Jhelum stream may have been perturbed by the Sagittarius dwarf galaxy \citep[respectively; see also Section~\ref{sec:structure}]{li:2019,woudenberg:2023}.
@@ -796,7 +805,9 @@ In such a potential, it is possible to simplify the equations of motions using t
 where $H$ is the Hamiltonian, $\pmb{\theta}$ are the angle variables (canonical coordinates), $\pmb{J}$ are actions (conjugate momenta and constants of motion), and $\Omega_i$ are the orbital frequencies (also constant).
 The Hamiltonian action-angle formalism has been a popular framework for studying stellar streams because it allows for a quick calculation of orbits and generation of stream models \citep[e.g.,][]{eyre:2011,sanders:2013a,bovy:2014, vasiliev:2019}.
 Orbital frequencies have also provided deeper insights into the evolution of tidal debris: an individual stream has distinct frequencies, whose separation decreases with time, making it possible to estimate the time of accretion \citep{gomez:2010}.
-Furthermore, progenitors on regular, non-resonant orbits form thin and long-lived streams, while those on nearly-resonant and chaotic orbits quickly disperse \citep{price-whelan:2016a, price-whelan:2016b, yavetz:2023}, so that the overall structure of the halo in the frequency space can be used to constrain the gravitational potential \citep{valluri:2012, yavetz:2021}.
+The orbital structure of a stellar halo can be summarized with a 2D ``frequency map'' by plotting ratios of frequencies in each of the three spatial dimensions (e.g., $\Omega_x/\Omega_z$ vs $\Omega_y/\Omega_z$), for every available orbit \citep[][]{valluri:2010,valluri:2012}.
+This space easily visualizes resonances; as orbits with commensurable frequencies, resonances appear as straight lines in a frequency map.
+Stream progenitors on regular, non-resonant orbits form thin and long-lived streams, while those on nearly-resonant and chaotic orbits quickly disperse \citep{price-whelan:2016a, price-whelan:2016b, yavetz:2023}, so the overall structure of the halo in the frequency space can be used to constrain the gravitational potential \citep{valluri:2012, yavetz:2021}.
 \gaia\ data has enabled mapping the frequency space of the Milky Way halo for the first time, and curiously revealed that both the Sagittarius and Helmi streams populate the $\Omega_\phi:\Omega_z=1:1$ resonance \citep{koppelman:2021a, dodd:2022}.
 However, despite the elegance of the action-angle approach, its application for modeling other halo streams with \gaia\ data has been limited by their complex morphologies that indicate significant perturbation by non-equilibrium processes that are difficult to capture within the framework (e.g., the recent infall of the LMC).
 
@@ -807,10 +818,10 @@ More direct evidence for group infall comes from the stream distribution in the 
 Easily calculated for individual stars and conserved in standard Milky Way potentials, energies and angular momenta were mapped for the Solar neighborhood with \gaia~\dr{2} and revealed clumps that correspond to dwarf galaxies accreted onto the Milky Way billions of years ago \citep[e.g.,][]{helmi:2018,belokurov:2018,myeong:2019}.
 \gaia~\dr{3} improved proper motions and orbital constraints of the halo streams to allow placing them on the $E-L_z$ plane (Figure~\ref{fig:phase_space}, right).
 Streams are highly clustered in the $E-L_z$ space (also seen as distinct peaks in orbital eccentricities, Figure~\ref{fig:phase_space} left), and aligned with debris from identified Milky Way progenitors \citep{bonaca:2021,malhan:2022}.
-This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way as a part of a larger galaxy, thus providing additional evidence for the hierarchical nature of galaxy formation.
+This alignment indicates that most stellar streams originate from clusters and galaxies that were brought into the Milky Way by a handful of larger dwarf galaxies, thus providing additional evidence for the hierarchical nature of galaxy formation.
 
-\todo{Move much of this text to the section on stream density structure?}
-Understanding the full dynamical history of a stellar stream back to its progenitor galaxy is crucial for interpreting the observed stream features.
+% \todo{Move much of this text to the section on stream density structure?}
+Understanding the full dynamical history of a stellar stream back to its progenitor galaxy is crucial for interpreting the observed stream features (discussed in more detail in \S\,\ref{sec:structure}).
 N-body simulations of ex-situ globular clusters---clusters formed in dwarf galaxies that were subsequently accreted onto the Milky Way---produce stellar streams surrounded by a range of low density features \citep[e.g., wide envelopes, or cocoons, and/or sub-streams;][]{carlberg:2018,carlberg:2020,malhan:2019a,qian:2022}.
 These structures originate from stars lost before the accretion onto the Milky Way, rather than a perturbation within the Milky Way.
 An example of such a group accretion event is the wide Cetus-Palca stream and the associated globular cluster NGC~5824 \citep{yuan:2019,thomas:2022}.
@@ -824,7 +835,7 @@ Knowledge of these hierarchical relations between different streams can directly
 % Numerical simulations predict that cuspy dwarf galaxies are more compact, and host satellite globular clusters on
 Numerical simulations predict that tidal debris from the dwarf galaxy itself has a lower velocity dispersion if the galaxy is cuspy \citep{errani:2015}, due to its more compact size.
 However, a globular cluster accreted in a cuspy galaxy results in a dynamically hotter stream than one from a cored galaxy of the same mass \citep{malhan:2021}, due to enhanced mass loss on a more compact orbit.
-Observational data for individual streams have so far put weak constraints on the inner slope due to its degeneracy with the subhalo mass \citep{malhan:2022b}.
+Observational data for individual streams have so far put weak constraints on the inner density slope of dark matter due to its degeneracy with the total subhalo mass \citep{malhan:2022b}.
 Systems where streams of both the progenitor and the satellite have been detected provide a new opportunity to build self-consistent models that accurately constrain the inner slope of the accreted dark matter halos.
 
 
@@ -834,16 +845,16 @@ The orbital phase space also discovered the direct progenitors of several stella
 These streams have originally not been connected back to the progenitor in sky coordinates, but instead coincide with an orbit of a Milky Way globular cluster or a dwarf galaxy (light and dark blue circles in Figure~\ref{fig:phase_space}, respectively).
 In some cases, like between the Gj\" ol stream and NGC~3201 globular cluster, the connection is obscured because it passes through the Milky Way disk \citep{riley:2020}.
 In other cases there are no obvious observational challenges to explain gaps spanning up to tens of degrees between the stream and the progenitor, nor the detection of a single tidal tail rather than a symmetric pair \citep[e.g,][]{bonaca:2021, yang:2022b}.
-These peculiarities may simply be due to insufficient depth \citep[e.g., non-detections of the low-mass stars that populate cluster tails in the early phases of dissolution][]{balbinot:2018}, but if they are confirmed as physical, they may indicate an unusual mass-loss history \citep[e.g., due to a population of black holes in the progenitor][]{roberts:2024}, a massive external perturbation \citep[e.g., from the Galactic bar,][]{pearson:2017}, or even modified gravity \citep[causing asymmetric escape into the leading and trailing tails][]{thomas:2018}.
+These peculiarities may simply be due to insufficient depth \citep[e.g., non-detections of the low-mass stars that populate cluster tails in the early phases of dissolution,][]{balbinot:2018}, but if they are confirmed as physical, they may indicate an unusual mass-loss history \citep[e.g., due to a population of black holes in the progenitor,][]{roberts:2024}, a massive external perturbation \citep[e.g., from the Galactic bar,][]{pearson:2017}, or even modified gravity \citep[causing asymmetric escape into the leading and trailing tails,][]{thomas:2018}.
 
-Regardless, the now increased subset of stellar streams with known progenitors (see Table~\ref{table:} for a complete list) are extremely valuable for gravitational potential inference.
+Regardless, the now increased subset of stellar streams with known progenitors (see Table~\ref{tbl:stream-summary} for a complete list) are extremely valuable for gravitational potential inference.
 First, a known progenitor places strong constraints on the stream's orbit \citep{bh:2018}, which reduces the number of free parameters and improves potential reconstruction \citep{palau:2023}.
 Second, globular cluster progenitors produce epicyclic overdensities, which place additional constraints on the global potential when matched to the observed stream density structure \citep{kupper:2015}.
 And finally, a known globular cluster progenitor predicts the exact locations of epicyclic underdensities to conclusively determine whether the observed stream gaps are due to internal evolution or external perturbation \citep[cf.][]{ibata:2020}.
 
 Understanding whether a stream's progenitor was a dwarf galaxy or a globular cluster is important both for dynamical modeling and tracing the Milky Way's formation history.
 Before \gaia, the stream width was a reliable indicator of its origin, with more massive dwarf galaxies producing wider streams \citep[e.g.,][]{belokurov:2006, bonaca:2012}.
-However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{table:}).
+However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{tbl:stream-summary}).
 Alternatively, high-resolution spectroscopy can be used to measure whether stream members have a spread in metallicity \citep[e.g.,][]{ji:2020,chandra:2022}, which has been established as a criterion for identifying dwarf galaxies from globular clusters \citep{willman:2012}.
 Multi-element abundances have also been used to validate the stream's progenitor \citep[e.g., NGC~3201 as the progenitor of the Gj\" ol stream,][]{hansen:2020}.
 Detailed characterization of stellar populations and chemical abundances of streams also revealed that some reported stream candidates are actually not tidal debris of accreted satellites: the Eastern Banded Structure, the Anticenter Stream, and the Monoceros Ring appear to be disk perturbations excited during different Sagittarius passages \citep[cf.][]{deason:2018, laporte:2020}, and part of a more extended population of disk stars kicked out to high latitudes \citep{price-whelan:2015,bergemann:2018,laporte:2018}, while the Nyx stream is consistent with a dynamical substructure within the thick disk \citep[cf.][]{zucker:2021,wang:2023}.
@@ -858,7 +869,7 @@ A couple of streams even show complex chemistry suggesting mixed tidal debris of
 
 Metallicities of globular cluster streams themselves have resolved one of the long-standing puzzles in cluster formation: the apparent metallicity floor of $\feh\approx-2.5$ \citep[e.g.,][]{harris:1996,harris:2010,beasley:2019}.
 Median metallicities of cluster streams are low \citep[$\feh\lesssim-1$,][]{martin:2022b}, with several streams below $\feh\lesssim-3$ \citep{roederer:2019,wan:2020,martin:2022a}, demonstrating that clusters can form below the metallicity floor observed in surviving clusters.
-Dynamical masses of these streams are low (C-11, C-19, C-20, Phoenix, and Sylgr all have masses $\lesssim10^4\,\unit{\msun}$, see Table~\ref{table:}), suggesting that only more massive clusters, which form in more massive, and therefore more metal-rich galaxies \citep[e.g.,][]{maiolino:2019}, survive until today, as theoretically predicted by \citet{kruijssen:2019}.
+Dynamical masses of these streams are low (C-11, C-19, C-20, Phoenix, and Sylgr all have masses $\lesssim10^4\,\unit{\msun}$, see Table~\ref{tbl:stream-summary}), suggesting that only more massive clusters, which form in more massive, and therefore more metal-rich galaxies \citep[e.g.,][]{maiolino:2019}, survive until today, as theoretically predicted by \citet{kruijssen:2019}.
 These low-metallicity, low-mass stellar streams provide unique laboratories for other aspects of cluster formation.
 For example, Phoenix has a large spread in the \ion{Sr}{2} abundance, likely due to pollution from a massive, fast-rotating star before the cluster fully formed \citep{casey:2021}.
 C-19 on the other hand has unexpectedly large width and velocity dispersion for a cluster of its mass, possibly due to having formed in a dark matter halo instead \citep{errani:2022}.
@@ -868,9 +879,19 @@ The interplay of these processes may depend on both the age and the mass of the 
 
 \subsection{Key opportunity: Mapping the entire 6D phase-space of stellar streams}
 \begin{description}
-    \item[Validation and spectroscopic characterization] Of all known streams...Many still need validation -- spectroscopy can be a challenge (see right panel of Fig blah)
-    \item[Astrometry below the \gaia\ faint limit] Rubin, Roman
+\item[Validation and spectroscopic characterization]{
+Kinematic information is vital for validating stellar stream discoveries.
+Of the 133 known streams, 61 lack spectroscopy, and 28 have no kinematic data at all (Table~\ref{tbl:stream-summary}).
+Future \gaia\ data releases will further improve proper motion precision to levels sufficient for validating most reported streams.
+Spectroscopic characterization will remain challenging for distant streams with current instrumentation (see Figure~\ref{fig:msto-rc-mag}), however, targeting based on \gaia\ proper motions vastly increases efficiency in recovering stream members, so a coordinated effort should yield full kinematic data for all streams.
+}
+\item[Astrometry below the \gaia\ faint limit]{
+The most distant known streams, and those expected to be discovered in Rubin/LSST photometric data, may only have a few members observed by \gaia.
+Fortunately, LSST will itself measure proper motions over a 10-year baseline throughout the Milky Way halo at the current \gaia\ precision but 3\,mag deeper, while the space-based Roman Space Telescope has capability of further improving these proper motions by an order of magnitude \citep[][]{sanderson:2019}.
+These data sets will be essential in completing the kinematic map of the Milky Way streams.
+}
 \end{description}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1029,7 +1050,7 @@ This leads to the formation of more ``shell-like'' structures in the stream
 When the eccentricity approaches unity (i.e. a radial orbit), the tidal debris will form
 a shell structure instead of a stream \citep[e.g.,][]{hernquist:1987, sanderson:2013}.
 
-\todo{discuss mass-loss variations, e.g., Balbinot}
+% \todo{discuss mass-loss variations, e.g., Balbinot}
 % https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.2479B/abstract
 
 
@@ -1388,7 +1409,7 @@ reported using a dedicated survey of the extrapolated stream footprint with the 
 Energy Camera \citep{grillmair:2015}.
 The distance track along the northern extent of the stream was measured using RR
 Lyrae-type stars, which found a steep distance gradient: the nearest part of the
-detected northern Orphan stream is $\sim$22~\kpc and the farthest is $\sim$50~\kpc
+detected northern Orphan stream is $\sim$22~\kpc\ and the farthest is $\sim$50~\kpc\
 \citep{sesar:2013, hendel:2018}.
 
 The Chenab stream was discovered in the DES footprint as a short (in angular size),
@@ -1605,8 +1626,8 @@ discovery paper, or was estimated by fitting an orbit to the stream member stars
 taking the mean distance of the fitted orbit over the observed segment of the stream
 (see Appendix~\ref{apx:stream-fit}).
 
-The stellar masses are either taken from source papers (see the reference list), or was
-estimated here (for streams with member data from \citet{ibata:2023}).
+The stellar masses are either taken from source papers (see the reference list), or were
+estimated here (for streams with member data from \citealt{ibata:2023}).
 We estimate the stellar mass of a stream from \citet{ibata:2023} by comparing the
 observed number of stars down to the brightness limit of \gaia\ to the predicted number
 from a single stellar population with a metallicity $\feh = -2$, $\textrm{age} =
@@ -1717,7 +1738,7 @@ $\mu_{\phi_2} \in (-100, 100)~\masyr$, and $v_r \in (-500, 500)~\kms$.
 We start the optimization from six different initial distance values between $1~\kpc$
 and $40~\kpc$ (spaced logarithmically) and take the optimized parameters from the run
 with the highest log-likelihood value.
-This process failed for TODO streams (TODO: stream names).
+This process failed for five streams (New-6, New-18, NGC~6397, NGC~7099, and Orphan), possibly due to them not being well-described by a single orbit in a static gravitational potential because they are close to the orbital apocenter, or in the case of Orphan, because of the active perturbation from the LMC.
 
 \bibliographystyle{model2-names-astronomy}
 \bibliography{refs}
