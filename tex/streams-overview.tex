@@ -285,10 +285,11 @@ Let's see how!
 \includegraphics[width=1\textwidth]{figures/fos_3d.pdf}
 \end{center}
 \caption{%
-An atlas of stellar streams in the Milky Way.
-Views of such detailed substructure in galactic halos have so far been seen only in numerical simulations, but every point here represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023, li:2019, vasiliev:2021}.
-Their distances are poorly constrained observationally, so we have instead adopted distance from the best-fitting orbit.
-The color coding is by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
+An atlas of stellar streams discovered in the Milky Way.
+Every point represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023} using the \texttt{STREAMFINDER} algorithm, whose distance from the Sun has been adopted from the best-fitting orbit (\ref{apx:stream-fit}) to improve on the uncertain distance measurements.
+Streams are shown in Cartesian Galactocentric coordinates, with the left panel providing an overall view of the stream population and the right panel zooming in on the numerous streams discovered in the inner Milky Way.
+A gray grid outlines the radial extent of the Milky Way's disk, while the Sun's position is marked with a yellow star.
+Streams are color-coded by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
 }
 \label{fig:fos_3d}
 \end{figure*}
@@ -328,6 +329,7 @@ highlight new methods that are now possible thanks to the all-sky kinematic data
 available from \gaia.
 We provide a brief census and summary of the streams that have been published up to now,
 but note that this is still an active area for discovery and characterization.
+Figure~\ref{fig:fos_3d} provides a 3D map of the known stellar streams.
 We also discuss the limitations of the \gaia\ data and the need for future astrometric
 surveys to push our understanding of the Milky Way's stellar halo and its dark matter
 content to fainter magnitudes and larger distances.
@@ -1463,7 +1465,7 @@ In this case, the non-monotonic aspect of the subhalo-induced gap is only margin
 
 \begin{figure}[t!]
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/rv_signal.png}
+\includegraphics[width=\columnwidth]{figures/rv_signal.pdf}
 \end{center}
 \caption{%
 Precise radial velocities can distinguish the origins of stream gaps.
