@@ -1,0 +1,112 @@
+SIMPLE  =                    T / conforms to FITS standard                      BITPIX  =                    8 / array data type                                NAXIS   =                    0 / number of array dimensions                     EXTEND  =                    T                                                  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / array data type                                NAXIS   =                    2 / number of array dimensions                     NAXIS1  =                   82 / length of dimension 1                          NAXIS2  =                  125 / length of dimension 2                          PCOUNT  =                    0 / number of group parameters                     GCOUNT  =                    1 / number of groups                               TFIELDS =                   11 / number of table fields                         TTYPE1  = 'Seq     '                                                            TFORM1  = 'I       '                                                            TDISP1  = 'I3      '                                                            TTYPE2  = 'RAdeg   '                                                            TFORM2  = 'D       '                                                            TUNIT2  = 'deg     '                                                            TDISP2  = 'F8.4    '                                                            TTYPE3  = 'DEdeg   '                                                            TFORM3  = 'D       '                                                            TUNIT3  = 'deg     '                                                            TDISP3  = 'F8.4    '                                                            TTYPE4  = 'Gmag    '                                                            TFORM4  = 'D       '                                                            TUNIT4  = 'mag     '                                                            TDISP4  = 'F6.3    '                                                            TTYPE5  = 'Bp-Rp   '                                                            TFORM5  = 'D       '                                                            TUNIT5  = 'mag     '                                                            TDISP5  = 'F5.3    '                                                            TTYPE6  = 'pmRA    '                                                            TFORM6  = 'D       '                                                            TUNIT6  = 'mas yr-1'                                                            TDISP6  = 'F5.3    '                                                            TTYPE7  = 'e_pmRA  '                                                            TFORM7  = 'D       '                                                            TUNIT7  = 'mas yr-1'                                                            TDISP7  = 'F5.3    '                                                            TTYPE8  = 'pmDE    '                                                            TFORM8  = 'D       '                                                            TUNIT8  = 'mas yr-1'                                                            TDISP8  = 'F6.3    '                                                            TTYPE9  = 'e_pmDE  '                                                            TFORM9  = 'D       '                                                            TUNIT9  = 'mas yr-1'                                                            TDISP9  = 'F5.3    '                                                            TTYPE10 = 'Weight  '                                                            TFORM10 = 'D       '                                                            TDISP10 = 'F4.2    '                                                            TTYPE11 = 'source_id'                                                           TFORM11 = 'K       '                                                            TNULL11 =               999999                                                  EPOCH   =               2016.0                                                  EXTNAME = 'table2.dat'                                                          TAMIN1  =                    1                                                  TAMAX1  =                  125                                                  TAMIN2  =                281.2                                                  TAMAX2  =                350.0                                                  TAMIN3  =                -17.0                                                  TAMAX3  =                  3.0                                                  TAMIN4  =                 17.9                                                  TAMAX4  =                 20.3                                                  TAMIN5  =                 0.58                                                  TAMAX5  =                  1.3                                                  TAMIN6  =                 0.16                                                  TAMAX6  =                  8.5                                                  TAMIN7  =                 0.14                                                  TAMAX7  =                  1.2                                                  TAMIN8  =                 -5.0                                                  TAMAX8  =                 -1.2                                                  TAMIN9  =                  0.1                                                  TAMAX9  =                  0.9                                                  TAMIN10 =                 0.07                                                  TAMAX10 =                  1.0                                                           =======================================================================                                 Ep=2016                                                                         ascension ({mu}_{alpha}_*cos{delta})                                            declination ({mu}_{delta}_)                             =======================================================================         =======================================================================                                 Ep=2016                                                                         ascension ({mu}_{alpha}_*cos{delta})                                            declination ({mu}_{delta}_)                             =======================================================================COMMENT --BEGIN-ASTROPY-SERIALIZED-COLUMNS--                                    COMMENT datatype:                                                               COMMENT - {name: Seq, datatype: int16, format: '{:3d}'}                         COMMENT - {name: RAdeg, unit: deg, datatype: float64, format: '{:8.4f}'}        COMMENT - {name: DEdeg, unit: deg, datatype: float64, format: '{:8.4f}'}        COMMENT - {name: Gmag, unit: mag, datatype: float64, format: '{:6.3f}'}         COMMENT - {name: Bp-Rp, unit: mag, datatype: float64, format: '{:5.3f}'}        COMMENT - {name: pmRA, unit: mas / yr, datatype: float64, format: '{:5.3f}'}    COMMENT - {name: e_pmRA, unit: mas / yr, datatype: float64, format: '{:5.3f}'}  COMMENT - {name: pmDE, unit: mas / yr, datatype: float64, format: '{:6.3f}'}    COMMENT - {name: e_pmDE, unit: mas / yr, datatype: float64, format: '{:5.3f}'}  COMMENT - {name: Weight, datatype: float64, format: '{:4.2f}'}                  COMMENT - name: source_id                                                       COMMENT   datatype: int64                                                       COMMENT   description: Unique source identifier (unique within a particular Da\ COMMENT ta Release)                                                             COMMENT   meta: !!omap                                                          COMMENT   - {ucd: meta.id}                                                      COMMENT meta:                                                                   COMMENT   __serialized_columns__: {}                                            COMMENT --END-ASTROPY-SERIALIZED-COLUMNS--                                      END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @q”Ž!–R½À0Í}¿HÌ@1éxÔýó¶?òbMÒñ©ü@ Ü¬1&é?ÂIº^5?¿õp£×
+=q?½²-V?ã×
+=p£×8æH !ú€ @q¨cŠ	À0Y³Ð|…@2Ì‹C•?ôMÒñ©ûç@ H1&éxÕ?ÐõÂ\(ö¿özáG®{?Ï\(õÂ\?Õ¸Që…8ãðàk}  @qÑDg8~À-Æö”Fs‚@233333?ò“t¼j@ÍÒñ©ûç?Ãn—Oß¿ô¬1&é?¿¾vÈ´9X?ë3333338ê_  	´  @qï%®æ1ùÀ,
+dÂø7µ@2-V?ñÂ\(õÃ@“t¼j?Å?|í‘hs¿ö“t¼j~ú?Â-V“?á™™™™™š:@)‚ˆ€ @rÞ Ñ·À+WeýŠÚº@2@A‰7KÇ?î-V“@ixÔýó¶?Ç®záG®¿ø~ùÛ"Ðå?Å¸Që…?Ð£×
+=p¤:è( V€ @ro hÛŒÀ)¾ Ñ·Y@3"Ðå`B?êŸ¾vÈ´9@Z¬1'?Ðƒn—P¿úÙ‡+?Ì¬1&éy?Ì(õÂ\):™1 "?  @r=ÅÖ8†YÀ)3@N¤¨Á@3U$Ý/?í‰7KÆ§ð@È´9Xb?Ù7KÆ§ïž¿ùIº^5?Õ$Ý/?Ð£×
+=p¤:ÕÀ Å  @rTªÍžƒäÀ(?ö”Ft@3›¥ãS÷Ï?ê¸Që…¸@Éº^5?}?Ü¬1&éy¿ÿV“u?×®záG®?ÄzáG®{:á &p  	@rjù	k¹ŒÀ&±ë…¸R@3äÝ/Ÿ¾?ì      @…¸Që…?ã²-V¿û;dZ¬?âIº^5??Áë…¸Qì:1 © ]o€ 
+@r~C,¥zxÀ&“œ¾ß¤@3Çï²-?ët¼j~ùÛ@Oß;d?àIº^5?}¿úA‰7KÆ¨?Ú=p£×
+=?Ã333333:0… ö€ @r„Îp:ûÀ'!½¥œà@2®Ù‡+?ðbMÒñª@t¼j~ú?ÑG®záH¿ÿp£×
+=q?É7KÆ§ïž?ÑG®záH:%ÄÙ '€ @r’Ž!–R½À%|„µÜÆ?@3>¸Që…?ê\(õÂ@/Ÿ¾vÉ?ÕÂ\(õÃ¿ût¼j~ùÛ?Ç
+=p£×
+?´záG®{:'Mù G÷  @r–@N¤©À%O4Ö¡aå@2° Ä›¥ã?ñ²-V@bMÒñ©ü?ÐõÂ\(ö¿ù¶E¡ÊÀƒ?Ã×
+=p£×?Ì(õÂ\):'d± hM  @r˜sê³g¡À$ÿö”Ft@4C•$Ý?ê¸Që…¸@gl‹C•?æÈ´9Xb¿ûS÷ÎÙ‡?ÞÈ´9Xb?±ë…¸Qì:'lÙ ¨â  @r£Y³Ð|…À$²ñ©ûçm@3Ï\(õÂ?ì‹C•%@Ö“t¼?àƒn—P¿ú—Oß;d?Ó¶E¡ÊÀƒ?ÈQë…¸R:'›( Ç€ @r®° Ä›¦À#÷eýŠÛ@4+Iº^?éOß;dZ@ž¸Që…?æE¡ÊÀƒ¿øZ¬1'?Ûçl‹C•?¼(õÂ\):-b  )³€ @rÝêJŒMÀ!&€IR@3—ÎÙ‡+?èÄ›¥ãSø@øÔýó¶F?Ûçl‹C•¿ú¬1&éy?×KÆ§ï²?Ð£×
+=p¤:.¥Ð u€ @r÷g ù	lÀñÄ2ÊW¨@3'ï²-?æ¸Që…¸@W
+=p£×?Ò-V“¿þ›¥ãS÷Ï?ÈõÂ\(ö?æffffff:õ  1o€ @s
+¿±[W?À¾vÈ´9X@3½/Ÿ¾w?æ5?|í‘h@–‡+J?Ú¬1&éÀƒn—P?Ôýó¶E¡Ë?´záG®{:ƒhñ ¾€ @só¶E¡ËÀ°¸ºÇ@2ÁÊÀƒo?çl‹C•@˜“t¼j?ÍÒñ©ûçm¿ÿ+Iº^?Çï²-V?ä(õÂ\):ƒ8  "'€ @s#ð¸»ÀÕ$Ý/@3œ(õÂ\?ç×
+=p£×@šŸ¾vÈ´?à‹C•%¿ù+Iº^?×®záG®?¼(õÂ\):‰-p F  @s'Þ Ñ·À
+ŒL˜_@3œ¬1&é?çï²-V@¢Ðå`A‰?ÚÐå`A‰7À9XbMÓ?ÕÒñ©ûçm?·
+=p£×
+:ˆsh †  @s,=p£×
+ÀQÎ_p@3—ÎÙ‡+?é‡+J@Ÿ¾vÈ´9?Ú-V“À ^5?|í‘?ÖzáG®?±ë…¸Qì:ˆÐ9 € @sA¼£À8l"h	Õ@2Òñ©ûçm?èÌÌÌÌÌÍ@Ïß;dZ?ÍOß;dZ¿þéxÔýó¶?Ç
+=p£×
+?Öffffff:Ši A€ @sA¸ºÇËÀÕfÏAò@2p£×
+=?êV“t¼@ÎÙ‡+?Éº^5?|î¿üƒn—P?Ä“t¼j?âáG®zá_Ýï1 $	€ @sB¡aä÷fÀ.—Oß;@2á‰7KÆ¨?äIº^5?}@bMÒñª?Ñ$Ý/ ¿þvÈ´9X?ÌÌÌÌÌÌÍ?¹™™™™™š:Š%A %×€ @sV/Ÿ¾wÀ…¸Që…@3~vÈ´9X?åG®záH@´9XbN?ÖÈ´9Xb¿ýçl‹C•?ÓÆ§ï²-?ØQë…¸R: P ?€ @saz–¼À³33333@3ú¬1'?æ\(õÂ@“t¼j?ä‹C•%¿õ`A‰7KÇ?ÞùÛ"Ðå`?±ë…¸Qì_õP 
+Ö  @sbœàu÷À•$Ý@3"MÒñ©ü?å7KÆ§ïž@+Iº?Ö“t¼jÀ 1&éxÔþ?Ò¬1&é?×
+=p£×
+_õ° 	Ü€ @sfï²-À—ö+jè@3FéxÔýô?æMÒñ©ûç@På`A‰7?Ö¸Që…¸Àffffff?Ðr° Ä›¦?Û…¸Që…_ô^Ð ¡€ @sjÚQÎÀ¶E¡ÊÀƒ@3X“t¼j?å¡ÊÀƒo@¾vÈ´9?òr° Ä›¦À÷ÎÙ‡+?ë¥ãS÷ÎÙ?¾¸Që…¸_ôeð ò€  @srß;dZÀ³Ð|„¶@2kC•%?ìZ¬1'@·KÆ§ïž?Ì‹C•%¿ÿ¡ÊÀƒo?ÃS÷ÎÙ‡?ð      _õ»a -€ !@s‰¶®}VmÀ–ð¸»@2äZ¬1?æ§ï²-@E¡ÊÀƒ?Î5?|í‘hÀ Ÿ¾vÈ´?Ê¬1&é?Áë…¸Qì_ö-À € "@sŠ#¢œwšÀq&éxÔþ@3.záG®?è9XbMÓ@W
+=p£×?Ô“t¼jÀ õÂ\(ö?Íp£×
+=q?áG®záH_ó[ˆ É€ #@s”ùrGEÀ…ðoiDg@3¦$Ý/ ?ç¶E¡ÊÀƒ@×
+=p£×?å‰7KÆ§ð¿þ—Oß;d?×|í‘hr°?¼(õÂ\)_óØh 	€ $@s–XbMÓÀ‘ë…¸R@3!$Ý/?éãS÷ÎÙ@üí‘hr°?Ñ7KÆ§ïž¿ÿÒñ©ûçm?Éûçl‹C–?É™™™™™š_ó:  £€ %@s›á°‰ 'À
+¦L/ƒ{@3záG®?æŸ¾vÈ´9@#×
+=p¤?Ìí‘hr°!¿ÿ`A‰7KÇ?ÆE¡ÊÀƒ?×®záG®_óì° Ù  &@sžƒ{J#:À±Ä2ÊW¨@3ŒIº^5??ç•$Ý/@`A‰7KÇ?×|í‘hr°¿ý\(õÂ\?ÐA‰7KÆ¨?Ñë…¸Qì_ùR° ì  '@s¢A [ÀÀt¼j~ú@3UÂ\(ö?è“t¼j@ÊÀƒn˜?ÕÂ\(õÃ¿ýº^5?|î?Í/Ÿ¾vÉ?¹™™™™™š_ùI  
+@  (@s£\ú¬ÙèÀ!G®zá@3`A‰7KÇ?ç;dZ¬@\(õÂ?ÓÆ§ï²-À 
+=p£×
+?Ï|í‘hr°?Ù™™™™™š_ùÐ 4€ )@s¦9ÀëíúÀE¼£n/@39™™™™š?æ$Ý/Ÿ¾@›¥ãS÷Ï?Ñhr° ÄœÀ/Ÿ¾vÉ?ÍOß;dZ?ã…¸Që…_ù0 ç  *@s¨ŠqÞi­À
+éá°‰ '@3J=p£×
+?çdZ¬1@ô¼j~ùÛ?Ø Ä›¥ãT¿ÿOß;dZ?ÎÙ‡+?Ù™™™™™š_ùh  +H€ +@s«©*0UÀv+jçÕg@34záG®?ç"Ðå`A‰@° Ä›¥ã?Þ“t¼jÀ^5?|í‘?Ò¬1&é?Ò\(õÂ_ù;` L  ,@s¯ Ä›¥ãÀvý!ÿ.I@3›"Ðå`B?æ^5?|í‘@ž¸Që…?Ût¼j~ùÛÀŸ¾vÈ´?Ó333333?ÑG®záH_ùäø € -@s³1&éxÕÀïÒòä@3†éxÔýô?åÊÀƒn˜@q©ûçl‹?Úñ©ûçl‹À1&éxÔþ?ÓC•$Ý?ÊáG®zá_ù³@ 	€ .@s¾ä÷eý‹ÀVR½<6@3
+=p£×?èbMÒñ©ü@Éº^5?}?ÙG®záH¿þ“t¼j?ÑxÔýó¶F?Ã333333_íÅ0 È€ /@sÀœàu÷À+6z—@3-‘hr°!?çl‹C•@:^5?|î?ÓÆ§ï²-¿ÿ
+=p£×
+?ÎzáG®?ÊáG®zá_úR( æ  0@sÁƒ{J#:À Ä›¥ãT@3¥ãS÷Ï?åó¶E¡ÊÁ@¦éxÔýô?Ò° Ä›¥ãÀí‘hr°!?ÑXbMÒò?ÕÂ\(õÃ_íÍx ¼€ 1@sÊ÷ÎÙ‡ÀœwškP±@2¸“t¼j?é?|í‘hs@5?|í‘h?ÎÙ‡+¿þ5?|í‘h?Çl‹C•?×®záG®_úÄ0 P€ 2@sÍ¶E¡ÊÁÀ,¥zxl"@2Ö“t¼?èÌÌÌÌÌÍ@¥ãS÷ÎÙ?ÔzáG®{À¸Që…?ÑG®záH?Ð      _ú•°   3@sÖ†Â&€À
+£n.±Ä@2{çl‹C–?ê¸Që…¸@‚Iº^5?Æ§ï²-Àº^5?|î?ÃS÷ÎÙ‡?Ð      _ïk¨ ¨€ 4@sÛ	Ô•+Àî—Oß;@3˜“t¼j?çt¼j~ùÛ@      ?âIº^5?¿ÿOß;dZ?ÚáG®zá?Áë…¸Qì_ïäP ,g  5@sæ¼ÓZ…ˆÀb¶®}Vm@3?|í‘hs?åhr° Äœ@9XbMÓ?×ï²-V¿ÿ®záG®?ÑxÔýó¶F?ÜÌÌÌÌÌÍ%E‘ 
+T€ 6@sô^5?|îÀÀN¤¨ÁU@3
+~ùÛ"Ñ?äÌÌÌÌÌÍ@hr° Äœ?Ø£×
+=p¤À²-V?Ùhr° Äœ?Ç
+=p£×
+%Eƒh ›€ 7@söquŽ!–À:û~ÿ—@3²-V?ãÎÙ‡+@“t¼j?ÝOß;dZ¿ýIº^5?Õ/Ÿ¾vÉ?·
+=p£×
+%D×° ÿ  8@sùJŒL˜À¶z–¼@2­Òñ©ûç?çdZ¬1@ñ©ûçl‹?ÍV“uÀ Ä›¥ãT?Çl‹C•?Ð£×
+=p¤%DÞ ©€ 9@sùñA [À¿û±Ä2ÊW¨@3Ý/Ÿ¾?æŸ¾vÈ´9@²-V?Õ¸Që…À¸Që…?Ð´9XbN?×
+=p£×
+%E¸ˆ ñ€ :@sú($xÀÔ,<žìÀ@3ƒn—P?ç;dZ¬@¸Që…¸?Þ¸Që…¸Àå`A‰7L?Ó¥ãS÷ÎÙ?¾¸Që…¸%DÆ  
+¢  ;@sý)Çy¦µÀ öÈ´9X@4 ƒn—?ä9XbMÓ@©ûçl‹D?ã"Ðå`A‰À ¸Që…?Ý`A‰7KÇ?·
+=p£×
+%DòH    <@sÿ3œ¾àÀ åýŠÚ¹õ@3”9XbN?å©ûçl‹D@Òñ©ûçm?àj~ùÛ"ÑÀ¸Që…¸?ØÄ›¥ãSø?¾¸Që…¸%Dí O  =@tZ…‡“ÞÀ­V“@2«Iº^?ç…¸Që…@záG®?ÐõÂ\(öÀ Ä›¥ãT?É7KÆ§ïž?Ã333333%Dè@ ´€ >@t~ùÛ"Ñ¿óè§æšÔ@3þ5?|í‘?æMÒñ©ûç@;dZ¬?íº^5?|îÀA‰7KÆ¨?ßOß;dZ?·
+=p£×
+%G'p  ð€ ?@t
+8†YJõÀ ˜Çâ‚@¸@3æ$Ý/ ?æ=p£×
+=@²-V?Þ¸Që…¸Àffffff?Ù‰7KÆ§ð?¼(õÂ\)%F Ë€ @@t
+žƒä%¯¿ûÒòäŽŠ@4Æ§ï²?æñ©ûçl‹@xÔýó¶F?ò‹C•%À A‰7KÆ¨?àQë…¸R?´záG®{%F` €  A@t8}¿H¿ÿòäŽŠqÞ@2éûçl‹D?å&éxÔýô@Që…¸R?Ñ&éxÔýô¿þ¼j~ùÛ#?Ç
+=p£×
+?Ç
+=p£×
+%Fð   B@t_Ø­«ŸÀ y	k¹Œ~@3m‘hr°!?å²-V@$Ý/?ØõÂ\(öÀ bMÒñª?Ñ7KÆ§ïž?Ì(õÂ\)%Cu  ½  C@tIQ‚©“¿þXbMÒò@2§+Iº?ìZ¬1'@p£×
+=q?Ñ©ûçl‹DÀ Z¬1'?Æ§ï²-?ÈQë…¸R%CÈ€ ë€ D@t}VlôÀÇË)^ž@3z^5?|î?ç×
+=p£×@l‹C•?Õó¶E¡ÊÁÀñ©ûçl‹?Ò\(õÂ?·
+=p£×
+%BK` Ü€ E@t×süPÀÍ5¨Xy>@2ÆéxÔýô?èA‰7KÆ¨@dZ¬1?ÎvÈ´9XÀ \(õÂ?Å¡ÊÀƒo?ç®záG®%Bdp X  F@t Ý—ö+k¿ý@N¤¨Á@3Òñ©ûç?å‘hr° Å@	Z¬1'?Ùë…¸QìÀ‘hr° Å?ÒÐå`A‰7?·
+=p£×
+%CŸ¹ € G@t æšÔ,=À[‹¬q³@3oß;dZ?çÎÙ‡+@^5?|í‘?ØbMÒñªÀë…¸Qì?ÒŸ¾vÈ´9?¹™™™™™š%Bmp A  H@t"Oß;dÀ†YJôðØ@2þvÈ´9X?èÄ›¥ãSø@‡+J?ÑG®záHÀ‡+J?Í‘hr° Å?ÊáG®zá%Bbð ø€ I@t$Z…‡“Þ¿íÎ_oÒ @3ÙÛ"Ðå`?â§ï²-@r° Ä›¦?Ü¼j~ùÛ#ÀMÒñ©ûç?ÖE¡ÊÀƒ?¼(õÂ\)%L
+Y  ²€ J@t%žš¿òIQ‚©“@3Çï²-?ä9XbMÓ@™™™™™š?Û"Ðå`A‰À?|í‘hs?Ö§ï²-?À£×
+=p¤%IXP _  K@t'b¶®}V¿ð[W>«6z@3›¥ãSø?æ—Oß;d@5?|í‘h?ÍÒñ©ûçmÀ Z¬1'?È´9XbN?è      %I[ ~  L@t)cŠ	¿ðØ­«ŸU›@3æ$Ý/ ?æ\(õÂ@“t¼j?Þ§ï²-Àýó¶E¡Ë?Ún—Oß;?ÈQë…¸R%IeA V€ M@tR_oÒó?âT`ªdÂø@38Ôýó¶F?èå`A‰7L@	‹C•%?×Ÿ¾vÈ´À ¬1&é?Ê=p£×
+=?ÊáG®zá%K²€ µ€ N@tRƒ{J#:?â¬Ùè>B[@4záG®?åë…¸Qì@V“u?íxÔýó¶FÀ xÔýó¶F?ÝãS÷ÎÙ?±ë…¸Qì%K²˜ Ë€ O@tR¬1&é?ÃMjOv@2Œ‹C•?ì9XbMÓ@Iº^5??Èr° Ä›¦Àí‘hr°!?Ç®záG®?É™™™™™š%JÜ° ý  P@tUA [À?Î.±Ä2ÊX@2Ó¶E¡ÊÁ?è¼j~ùÛ#@\(õÂ\?ÐõÂ\(öÀ~ùÛ"Ðå?Ï;dZ¬?äzáG®{%Jñ` G€ Q@t€(õÂ\@5ÜÆ?@2àÄ›¥ãT?ëS÷ÎÙ‡@ƒn—P?ÍV“uÀ5?|í‘h?Íó¶E¡ÊÁ?Ù™™™™™š%bØ  Iµ€ R@tŠ·€4mÆ?øëíúCþ]@3)7KÆ§ð?éÛ"Ðå`B@
+“t¼j?ÙÛ"Ðå`B¿þE¡ÊÀƒ?ß®záG®?ÈQë…¸R%7Á  A€ S@t‹›¥ãSø?ùÐ|„µÜÆ@3-V?é‡+J@|í‘hr°?×|í‘hr°À&éxÔýô?ÜÝ/Ÿ¾w?Ç
+=p£×
+%7Á¸  `€ T@tŽM:’£?ö_oÒòå@2âÐå`A‰?í&éxÔýô@ÎÙ‡+?Ó•$Ý/À®záG®?ÖzáG®?ØQë…¸R%7h 	\€ U@t¡çl‹C–?ç€4mÅÖ9@3dZ¬?æ‡+Iº@t¼j~ùÛ?ÕV“u¿þñ©ûçl‹?Óçl‹C•?Û…¸Që…%3Ùø   V@t¨     @ÑN;Í6@3.Ù‡+?êùÛ"Ðå`@ó¶E¡ÊÁ?×ï²-VÀ Â\(õÃ?Ù‡+J?·
+=p£×
+%=†ð 	€ W@t¨ÏªÍž„@ $Ý/ @3$“t¼j?æ\(õÂ@×
+=p£×?Ó•$Ý/ÀIº^5??Òñ©ûçl‹?ÊáG®zá%<cø 	Ö€ X@t«ðoiDg@j~ùÛ"Ñ@3 ƒn—?ëKÆ§ï²@\(õÂ\?Ô›¥ãS÷Ï¿ý…¸Që…?Ó333333?Ì(õÂ\)%<Ýˆ  € Y@tµãS÷ÎÙ¿ÓàÞÒˆÎ@3©xÔýó¶?åxÔýó¶F@	`A‰7KÇ?äÔýó¶E¢Àº^5?|î?ã¶E¡ÊÀƒ?´záG®{%2‹P Ø  Z@t¸ÏAò×¿Îæ1ø .@3ûçl‹C–?é?|í‘hs@XbMÒò?çt¼j~ùÛÀ      ?èIº^5?}?±ë…¸Qì%2  x  [@t¹éxÔýô@
+Ú¹õY´@3@ƒn—?ê^5?|í‘@záG®?àƒn—PÀr° Ä›¦?èr° Ä›¦?Áë…¸Qì%<º1 	?  \@t½¬1'@eýŠÚ¹õ@39‡+?êE¡ÊÀƒ@Àƒn—?Ó¥ãS÷ÎÙÀ£×
+=p¤?Ô¼j~ùÛ#?Ð£×
+=p¤%<«¨ € ]@t¾œàu÷@·éùrG@3U$Ý/?æ—Oß;d@E¡ÊÀƒ?ÙÊÀƒn˜Àr° Ä›¦?ß
+=p£×
+?Áë…¸Qì%>  õ€ ^@tÝg8}¿@i­BÃÉï@3Rñ©ûçm?ê=p£×
+=@¥ãS÷ÎÙ?×ß;dZ¬ÀÄ›¥ãSø?à´9XbN?¾¸Që…¸%:÷¨ ¨€ _@tãˆÎp:û@½p£×
+=@3‹C•?êIº^5?@bMÒñ©ü?ÖV“t¼Àj~ùÛ"Ñ?Ûn—Oß?·
+=p£×
+%S € `@tóoÒòå@ûçl‹C–@3Ðå`A‰7?è(õÂ\)@l‹C•?Ý`A‰7KÇÀ¶E¡ÊÀƒ?àÔýó¶E¢?·
+=p£×
+%…H  Ù€ a@tøëíúCþ?èö”FsØ@3
+Àƒn˜?íV“u@-V“?Õp£×
+=q¿ÿ©ûçl‹D?×;dZ¬?Ð£×
+=p¤%.ˆH  Å  b@u¹Œ~($?ä¢3œ¾à@3œ¬1&é?ç+Iº^@Z¬1'?Ý²-V¿ýÎÙ‡+?áÂ\(õÃ?¾¸Që…¸%€5¹ 
+î€ c@u*Â&€I@ ¿HË’:@3gl‹C•?ë÷ÎÙ‡+@ Ðå`A‰7?Ý²-V¿ÿ™™™™™š?Öffffff?ÅÂ\(õÃ%‚tÈ b  d@uXåÉäÀquŽ!–S@4Iº^5?èÔýó¶E¢?üýó¶E¡Ë?á²-VÀ¾vÈ´9X?á‡+J?´záG®{$Äwè P€ e@u‹E8ï4×ÀVð¸»@3ˆr° Äœ?çt¼j~ùÛ?Ú^5?|í‘?ÙG®záHÀí‘hr°!?Õp£×
+=q?Ì(õÂ\)$‘P` !€ f@u‘0U2a|@Yè>BZî@3C×
+=p¤?êzáG®?óC•$Ý?Ô9XbMÓÀçl‹C•?Ó333333?Ç
+=p£×
+$Û¨Ø Ÿ  g@u“iDg8@Œ²•éá±@3º^5?|î?ç•$Ý/?ù+Iº^?ÚÐå`A‰7¿û²-V?Úñ©ûçl‹?´záG®{$Úü  F€ h@u”Ùè>B[?öÀëíúCþ@3[çl‹C–?æÐå`A‰7?ô Ä›¥ãT?ÖffffffÀ“t¼j?Öffffff?´záG®{$Ïf¸ 	æ€ i@u˜¹#¢œx?õä÷eýŠÛ@30 Ä›¥ã?éûçl‹C–?ùŸ¾vÈ´?Õó¶E¡ÊÁÀ° Ä›¥ã?Ù7KÆ§ïž?Áë…¸Qì$Ï<ø 	n€ j@uš¯O„M?òÖ8†YJõ@3Ù™™™™š?åë…¸Qì?õ¸Që…?ßOß;dZÀ
+=p£×
+?ß¾vÈ´9X?À£×
+=p¤$Ï,p L  k@uœ©*0U@ ñÞi­BÄ@3¿|í‘hs?è1&éxÔþ?ý¾vÈ´9X?ßŸ¾vÈ´ÀÂ\(õÃ?ßß;dZ¬?¼(õÂ\)$Ïö 7  l@uŸí(Œç?þ‘ÑN;Í6@3ñ©ûçl‹?è1&éxÕ?ùÒñ©ûçm?ãï²-V¿ÿ¥ãS÷ÎÙ?ÜÌÌÌÌÌÍ?´záG®{$Ïáà W  m@u£×süP@ Që…¸R@3på`A‰7?é&éxÔýô?ï×
+=p£×?Ù‡+JÀ¥ãS÷ÎÙ?Ør° Ä›¦?¹™™™™™š$Ï¿x í€ n@u¦,<žìÀÀ´¢3œ¿@2ÚŸ¾vÈ´?èí‘hr°!?Ú\(õÂ?ÐA‰7KÆ¨Àn—P?Î—Oß;d?Ð£×
+=p¤$/º0 Ý  o@u§Iº^ÀD2ÊW§‡@3&$Ý/ ?ç¶E¡ÊÀƒ?ã÷ÎÙ‡+?×²-VÀ™™™™™š?Ñ7KÆ§ïž?ÔzáG®{$…  ÿ  p@u§éá°‰ ?ñ9ÀëíúD@3ç+Iº?çÆ§ï²-?ô-V“?ßß;dZ¬¿ýÒñ©ûçm?Ü‹C•%?´záG®{$ÎÈ( Æ  q@uªÉã½À#Âø7´¢4@3äÝ/Ÿ¾?äå`A‰7L?ÕÂ\(õÃ?à1&éxÔþÀ"Ðå`A‰?Üýó¶E¡Ë?·
+=p£×
+$+p   r@u¬€4mÅÖÀ$xÇâ‚@¸@3å`A‰7?ë…¸Që…?àõÂ\(ö?Ð£×
+=p¤À+Iº?Òn—Oß;?Ð£×
+=p¤$*QÐ Ì€ s@u­GE8ï5À$(´9Xb@37KÆ§ïž?é™™™™™š?ÄzáG®{?Õ`A‰7KÇÀD›¥ãSø?Õ‘hr° Å?Ó333333$*W° ü  t@u®‰ 'RT?ó<64ê@3j=p£×
+?èbMÒñ©ü?û¾vÈ´9X?ÝOß;dZÀdZ¬1?Ö‡+Iº?¾¸Që…¸$Î³€ € u@u°($xÀ%>¸Që…@32n—Oß?åhr° Äœ?ÞvÈ´9X?Ö$Ý/Ÿ¾À©ûçl‹D?Ñ™™™™™š?·
+=p£×
+$(¾  ž€ v@u³§æšÔÀ"Sœ¾ß¤@3?¾vÈ´9?æ¸Që…¸?ÒÀƒn—?ÖÈ´9XbÀ¥ãS÷ÎÙ?Ùhr° Äœ?Ì(õÂ\)$+ o  w@u´ŽŠqÞjÀ"_Ø­«ŸV@3ß;dZ?äIº^5?}?àå`A‰7L?ÚIº^5?ÀE¡ÊÀƒ?ÚIº^5??Ã333333$+œ  N  x@u´Ø­«ŸVÀ"ÕÂ\(ö@3{"Ðå`B?èj~ùÛ"Ñ?Í²-V?Ô9XbMÓÀöÈ´9X?ÔIº^5?}?¹™™™™™š$+„ø a  y@u½)Çy¦µ¿æ¯O„M@3®záG®?å$Ý/ ?óÆ§ï²-?Û…¸Që…Àr° Ä›¦?×ß;dZ¬?·
+=p£×
+$Ê#© %€ z@uÌRT`ªe?øêJŒM@4G®zá?è1&éxÕ?ù+Iº^?ân—Oß;ÀzáG®{?Þ5?|í‘h?±ë…¸Qì$áX 
+Ö  {@uÌµsê³h?ö©*0U2a@3¼í‘hr°?éXbMÒò?ú´9XbN?â¬1&éÀ¶E¡ÊÀƒ?ØbMÒñª?±ë…¸Qì$á†˜ 4€ |@uÜl"h	Õ?Ëûµsê³@3«C•%?èQë…¸R?ôzáG®?ÖffffffÀ\(õÂ\?Ó…¸Që…?ÈQë…¸R$µ?0 
+S€ }@uß¸ºÇË?ÚL/ƒ{J#@3‡ï²-?éûçl‹C–?÷™™™™™š?Ûçl‹C•À      ?Òñ©ûçl‹?Ã333333$µ—°  ü€                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
