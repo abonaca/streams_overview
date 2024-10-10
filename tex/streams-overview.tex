@@ -590,6 +590,11 @@ continue to enable new discoveries and detailed follow-up of the known streams.
 \includegraphics[width=1\columnwidth]{figures/comparison_members_sky.pdf}
 \end{center}
 \caption{%
+\changes{
+Sky positions of ten streams (labeled in top left of each panel) with members published in multiple studies (different symbols).
+Dark blue dots, medium blue triangles and light blue circles correspond to members from the most to least numerous catalogs.
+Across the streams, different catalogs contain a number of uniquely identified members, suggesting that stream membership is still incomplete and their extent is not fully mapped.
+}
 }
 \label{fig:members_comparison}
 \end{figure}
@@ -734,7 +739,8 @@ Stream progenitors on regular, non-resonant orbits form thin and long-lived stre
 However, despite the elegance of the action-angle approach, its application for modeling other halo streams with \gaia\ data has been limited by their complex morphologies that indicate significant perturbation by non-equilibrium processes that are difficult to capture within the framework (e.g., the recent infall of the LMC).
 
 On the other hand, when viewed for a population of streams, the orbital phase space has produced valuable insights into the hierarchical assembly of our Galaxy.
-The sky distribution of orbital poles shows that stellar streams, and globular clusters, are distributed isotropically around the Galaxy \citep{riley:2020, vasiliev:2019b}, in contrast to dwarf galaxy satellites which are preferentially distributed in an apparently rotating plane \citep[e.g.,][]{pawlowski:2012, pawlowski:2020, fritz:2018}.
+% The sky distribution of orbital poles shows that stellar streams, and globular clusters, are distributed isotropically around the Galaxy \citep{riley:2020, vasiliev:2019b}, in contrast to dwarf galaxy satellites which are preferentially distributed in an apparently rotating plane \citep[e.g.,][]{pawlowski:2012, pawlowski:2020, fritz:2018}.
+\changes{In contrast to dwarf galaxy satellites which are preferentially distributed in an apparently rotating plane \citep[e.g.,][]{pawlowski:2012, pawlowski:2020, fritz:2018}, the sky distribution of orbital poles shows that stellar streams, and globular clusters, are distributed more isotropically around the Galaxy, albeit with a slight prograde bias \citep{riley:2020, vasiliev:2019b}.}
 The planar configuration being limited to dwarf galaxies, rather than universal for all halo objects, suggests that its origin is not due to modified gravity \citep[e.g.,][]{pawlowski:2018}, but likely a transient occurrence \citep{sawala:2023, xu:2023}, possibly due to group infall \citep{patel:2020} or induced by the LMC \citep{garavito-camargo:2021,garavito-camargo:2024}.
 More direct evidence for group infall comes from the stream distribution in the $E-L_z$ space.
 Easily calculated for individual stars and conserved in standard Milky Way potentials, energies and angular momenta were mapped for the Solar neighborhood with \gaia~\dr{2} and revealed clumps that correspond to dwarf galaxies accreted onto the Milky Way billions of years ago \citep[e.g.,][]{helmi:2018,belokurov:2018,myeong:2019}.
@@ -1590,31 +1596,25 @@ from a single stellar population with a metallicity $\feh = -2$, $\textrm{age} =
 12~\unit{\giga\year}$, and a Kroupa initial mass function \citep{Kroupa:2001} (we use
 the CMD interface to the PARSEC isochrones; \citealt{bressan:2012, chen:2015}).
 
-\clearpage
-\begin{landscape}
-\input{figures/stream-summary-table-1.tex}
-\end{landscape}
-\restoregeometry
+\begin{table*}
+\scriptsize
+\input{tables/stream-summary-0.tex}
+\end{table*}
 
-\clearpage
-\begin{landscape}
-\input{figures/stream-summary-table-2.tex}
-\end{landscape}
-\restoregeometry
+\begin{table*}
+\scriptsize
+\input{tables/stream-summary-1.tex}
+\caption{
+\changes{
+Properties of 131 stellar streams discovered so far in the Milky Way.
+This list includes only cold and coherent streams that originate from unique accretion events.
+Columns include: $l$ on-sky length, $w$ on-sky width, $d_h$ heliocentric distance, $R_{gal}$ Galactocentric distance, $M_\star$ lower limit on the stellar mass of the stream, $R_{peri}$ pericenter, $R_{apo}$ apocenter, $e$ orbital eccentricity, $T_{orb}$ orbital period, $E_{tot}$ total orbital energy, $L_z$ and $L_\perp$ components of the orbital angular momentum perpendicular to and aligned with the Galactic disk, respectively.
+Electronic version of this table available on the project Github repository contains additional columns with the best-fit orbital points, other components of the angular momentum vector, pole and origin of the stream reference frames, and the type of progenitor when known.
+}
+}
+\label{tbl:summary}
+\end{table*}
 
-\clearpage
-\begin{landscape}
-\input{figures/stream-summary-table-3.tex}
-\end{landscape}
-\restoregeometry
-
-\clearpage
-\begin{landscape}
-\input{figures/stream-summary-table-4.tex}
-\end{landscape}
-\restoregeometry
-
-\clearpage
 
 \section{Fitting Orbits to Streams}
 \label{apx:stream-fit}
