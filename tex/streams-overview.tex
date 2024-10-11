@@ -142,7 +142,7 @@ Thanks to facilities optimized for detecting low surface-brightness features, do
 Unfortunately, extragalactic streams provide somewhat limited constraints on the gravitational potential because they have so far been mostly detected in 2D projected sky coordinates \citep[e.g.,][]{pearson:2022,nibauer:2023,walder:2024}, but in the Milky Way we have been able to measure both the 3D positions and 3D velocities \citep[e.g.,][]{koposov:2010}.
 The Milky Way stellar streams are poised to answer one of the major open questions in both physics and astrophysics---the nature of dark matter.
 
-The first stream discovered in the Milky Way---tidal tails of the Sagittarius dwarf galaxy \citep{ibata:1995, ibata:2001a, Newberg:2002, majewski:2003, belokurov:2006}---was also the first one to constrain the shape of the Milky Way's dark matter halo.
+The first stream discovered in the Milky Way---tidal tails of the Sagittarius dwarf galaxy \citep{ibata:1995, ibata:2001a, newberg:2002, majewski:2003, belokurov:2006}---was also the first one to constrain the shape of the Milky Way's dark matter halo.
 \citet{ibata:2001b} immediately observed that Sagittarius stream traces close to a great circle, and concluded that since its orbital plane \changes{has not} been significantly torqued, the Milky Way halo must be nearly spherical.
 However, radial velocities measured along the stream were consistent with models of the Sagittarius stream in a prolate halo, and ruled out oblate and spherical halo shapes \citep{helmi:2004}.
 Yet still, when \citet{johnston:2005} used more numerous M giant stars to measure a small amount of the Sagittarius' orbital precession, they found it strongly disfavors prolate halo shapes and prefers a mildly oblate halo.
@@ -334,7 +334,7 @@ For example, the GD-1 stream --- the first long, thin stream discovered without 
 progenitor --- was initially found by \citet{grillmair:2006-gd1} using a matched filter
 on SDSS photometry with visual inspection of the resulting stellar density maps.
 Matched filters were also critical for many early discoveries of streams with the SDSS
-data \citep[e.g.,][]{Newberg:2002, Yanny:2003, belokurov:2006, grillmair:2006-orphan}.
+data \citep[e.g.,][]{newberg:2002, Yanny:2003, belokurov:2006, grillmair:2006-orphan}.
 This method has since been applied to many large photometric surveys, such as 2MASS,
 Pan-STARRS (PS1; \citealt{chambers:2016}), the Dark Energy Survey (DES;
 \citealt{des:2005, des:2016}), the DECam Legacy Survey  (DECaLS; \citealt{dey:2019}),
@@ -1495,14 +1495,20 @@ If all of the stream perturbations can be explained by more massive subhalos and
 If the detected stream perturbations do require impacts of $10^6\,\unit{\msun}$ subhalos, this would be first observational evidence for pure dark-matter subhalos, put a lower limit on the mass of a dark-matter particle $m_{dm}\gtrsim 25\,\unit{keV}$, and open a new research program for studying the nature of dark matter on otherwise unobservable scales.
 
 
+\section*{Data and code availability}
+\changes{
+All of the code and data used in this review are publicly available on the project Github repository: \url{https://github.com/abonaca/streams_overview}.
+}
+
 \section*{Acknowledgements}
 
+\changes{We thank two anonymous referees whose questions and suggestions improved the content and presentation of this review.}
 We thank Rodrigo Ibata for sharing the stream member data for stars in
 \citet{ibata:2023} ahead of its publication.
 We further thank Jake Nibauer for generating numerical models of streams presented in Figure~\ref{fig:stream_formation}.
 We also thank Petra Awad, Eduardo Balbinot, Sergey Koposov, and Kiyan Tavangar for
 sharing data used to recreate figures from their work.
-Finally, we thank Charlie Conroy, Cecilia Mateu, and Francois Schweizer
+Finally, we thank Charlie Conroy, \changes{Alex Ji, Ting Li}, Cecilia Mateu, Francois Schweizer, and \changes{Eugene Vasiliev}
 for useful discussions and comments on this article.
 
 
@@ -1510,6 +1516,14 @@ for useful discussions and comments on this article.
 
 \section{Stream Members}
 \label{apx:stream-members}
+
+\changes{
+In Table~\ref{tbl:members} we compile information on member stars for 92 of the Milky Way stellar streams previously reported in the following \gaia-based studies: \citet{awad:2024, bonaca:2020b, chandra:2022, ferguson:2022, grillmair:2019, grillmair:2022, huang:2019, ibata:2023, koposov:2023, li:2021, shipp:2019, shipp:2020, yang:2022b, yang:2023, vasiliev:2021}.
+For every star we report the stream it belongs to, papers that identified it as a member, as well as the \gaia~\dr{3} source IDs, sky positions, parallaxes and proper motions, as well as their uncertainties and correlations.
+Where available, we also report stream membership probabilities, distances, radial velocities, $\feh$ and $\afe$ abundances, and their uncertainties (all as reported in the literature tables, i.e. without any rescaling of membership probabilities or velocity / abundance zero-points).
+The table contains $80,162$ unique stars, and a total of $80,686$ entries due to stream members identified in more than one study.
+Table~\ref{tbl:members} shows 30 rows for an abridged set of columns, while the full table is accessible on the project Github repository\footnote{\url{https://github.com/abonaca/streams_overview}}.
+}
 
 \begin{table*}
 \scriptsize
@@ -1521,14 +1535,6 @@ Full table consisting of $80,162$ unique stars, and additional columns with meas
 }
 \label{tbl:members}
 \end{table*}
-
-\changes{
-In Table~\ref{tbl:members} we compile information on member stars for 92 of the Milky Way stellar streams previously reported in the following \gaia-based studies: \citet{awad:2024, bonaca:2020b, chandra:2022, ferguson:2022, grillmair:2019, grillmair:2022, huang:2019, ibata:2023, koposov:2023, li:2021, shipp:2019, shipp:2020, yang:2022b, yang:2023, vasiliev:2021}.
-For every star we report the stream it belongs to, papers that identified it as a member, as well as the \gaia~\dr{3} source IDs, sky positions, parallaxes and proper motions, as well as their uncertainties and correlations.
-Where available, we also report stream membership probabilities, distances, radial velocities, $\feh$ and $\afe$ abundances, and their uncertainties (all as reported in the literature tables, i.e. without any rescaling of membership probabilities or velocity / abundance zero-points).
-The table contains $80,162$ unique stars, and a total of $80,686$ entries due to stream members identified in more than one study.
-Table~\ref{tbl:members} shows 20 rows for an abridged set of columns, while the full table is accessible on the project Github and Zenodo repositories.
-}
 
 \changes{
 The 92 streams in our membership catalog include:
@@ -1546,7 +1552,7 @@ Multiple components of the same stellar stream are also reported under the same 
 
 \begin{figure*}[t!]
 \begin{center}
-\includegraphics[width=1\textwidth]{figures/all_members_sky.pdf}
+\includegraphics[width=0.95\textwidth]{figures/all_members_sky.pdf}
 \end{center}
 \caption{%
 \changes{
@@ -1565,7 +1571,7 @@ Blue lines show progenitors' orbits for streams with a surviving progenitor, and
 We fit orbits to the \changes{70 completely dissolved streams with published member stars (Table\,\ref{tbl:members})} for demonstrative visualizations shown in this article.
 \changes{For the 22 streams with a known globular cluster or dwarf galaxy progenitor, we calculate the progenitor's orbit using their measured 3D positions and velocities \citep{mcconnachie:2020,vasiliev:2020,vasiliev:2021b}.}
 % For a given stream, we first determine a heliocentric, spherical coordinate system that is approximately aligned with the stream track.
-\changes{For each stream, we use} a heliocentric, spherical coordinate system that is approximately aligned with the stream track\changes{, reported in the \package{galstreams} package \citep{mateu:2023} and in the online version of Table~\ref{tbl:summary}}.
+\changes{For each stream, we use} a heliocentric, spherical coordinate system that is aligned with the stream track\changes{, reported in the \package{galstreams} package \citep{mateu:2023} and in the online version of Table~\ref{tbl:summary}}.
 In this coordinate system, the stream longitude is $\phi_1$ and the stream latitude is
 $\phi_2$.
 % We initialize this process by computing the eigenvectors of the covariance matrix of the
@@ -1583,7 +1589,7 @@ potential to the \texttt{MilkyWayPotential2022} in \texttt{gala}
 \citep{price-whelan:2017} and optimize over the orbital initial conditions.
 We specify the orbital initial conditions in heliocentric coordinates in the rotated
 stream coordinate system described above.
-In this coordinate system, we define the orbital initial conditions at $\phi_1=0^\circ$,
+In this coordinate system, we define the orbital initial conditions at \changes{a fixed stream longitude, $\phi_1$, close to the center of the stream (typically at $\phi_1=0$)},
 so that the free parameters are the stream \changes{latitude}, $\phi_2$, the distance, $D$, the
 proper motion components, $(\mu_{\phi_1}, \mu_{\phi_2})$, and the line-of-sight
 velocity, $v_r$.
@@ -1635,43 +1641,47 @@ Interestingly, orbital paths of some surviving stream progenitors are significan
 \section{Stream Summary Data}
 \label{apx:stream-summary}
 
-We compile stream data from the literature and summarize the key properties of each
-stream in Table~\ref{tbl:summary}.
-The table includes the stream name, the sky coordinates of the origin of a stream coordinate frame aligned with the stream, the mean heliocentric distance to the stream $D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, \changes{the stream length in degrees, its width in both degrees and parsecs,} an estimate of \changes{its} stellar mass, and a list of references for the compiled stream properties.
-\changes{For streams in the \citet{ibata:2023} catalog we calculate the stream width as $1.5\times\rm{MAD}$, where MAD is the median absolute deviation of the stream latitudes $\phi_2$, a measure of width robust to outliers.
-Standard deviation of a normal distribution is $\sigma\approx1.5\rm{MAD}$, so for other streams we report one-sigma widths from literature.}
-% The table includes the stream name, the sky coordinates of the origin of a stream
-% coordinate frame aligned with the stream, the mean heliocentric distance to the stream
-% $D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, the angular length
-% and width of the stream in the sky, the width of the stream in length units, a rough
-% estimate of the stellar mass of the stream, and a list of references for the compiled
-% stream properties.
-The table is split into three sections.
-The first section contains streams with reported detections in \gaia\ and with
-spectroscopic follow-up data.
-The next section contains streams that have been detected in \gaia\ but without
-spectroscopic follow-up data.
-The final section contains streams without reported detections in \gaia\ that require
-follow-up investigation.
+\changes{
+In this section and in Table~\ref{tbl:summary} we provide a summary of the Milky Way streams' structural and orbital properties.
+In addition to the 92 streams with published member stars (presented in \ref{apx:stream-members}), this catalog also contains the following 39 streams for a total of 131 objects: 20.0-1, Acheron, Alpheus, Aquarius, C-4, C-5, C-8, Cocytos, Corvus, Eridanus, Gaia-2, Gaia-3, Gaia-4, Gaia-5, Gunnthra, Hermus, Hyllus, Lethe, Molonglo, Murrumbidgee, NGC~5053, NGC~6362, Orinoco, PS1-A, PS1-B, PS1-C, PS1-D, PS1-E, Palomar 15, Parallel, Pegasus, Perpendicular, Ravi, Sangarius, Scamander, Styx, Turbio, Wambelong, Willka Yaku.
+As in \ref{apx:stream-members}, our catalog is based on streams currently in the \package{galstreams} package \citep{mateu:2023}, however, it combines entries pertaining to the same dynamical structure (e.g., Cetus, Cetus-New, Cetus-Palca, and Palca are all combined into a single entry in our catalog: Cetus-Palca).
+Because we focus here on accreted stellar streams, we also exclude structures originally reported as stellar streams that follow-up studies associated with the Milky Way disk: Anticenter Stream, Eastern Banded Structure, Monoceros Ring, and Yangtze \citep{newberg:2002,grillmair:2006-ebs,deason:2018,laporte:2020,yang:2023-yangtze}.
+}
 
-The stream coordinate origins are defined as the sky coordinates of the $\phi_1, \phi_2
-= (0, 0)^\circ$ point in the stream coordinate system.
-For each stream, the stream coordinate system is either taken from the
-\texttt{galstreams} package \citep{mateu:2023}, or is defined in this work by fitting a
-great circle to stream member star sky positions (this was only used for the few newer
-streams in \citet{ibata:2023} that are missing from \texttt{galstreams}).
-The stream distance was again either taken from the \texttt{galstreams} package, the
-discovery paper, or was estimated by fitting an orbit to the stream member stars and
-taking the mean distance of the fitted orbit over the observed segment of the stream
-(see Appendix~\ref{apx:stream-fit}).
+\changes{
+We summarize three sets of stream properties: 
+\begin{itemize}
+\item{
+structural parameters---for all 131 streams we report the on-sky length (defined as the $\phi_1$ extent for streams with published members, otherwise the extent of the \package{galstreams} track), on-sky width (defined as $1.5\times\rm{MAD}$, where MAD is the median absolute deviation of the stream latitudes $\phi_2$ for streams with published members, and one-sigma widths from \package{galstreams} otherwise), heliocentric and Galactocentric distances (median distances of the \package{galstreams} track), the pole and origin of the streams' reference frames (chosen from options available in \package{galstreams});
+}
+\item{
+orbital parameters---for 92 streams with published members we report orbital properties derived in \ref{apx:stream-fit}: orbital control point in the ICRS coordinates (i.e., right ascension, declination, distance, R.A. and Dec proper motions, and heliocentric radial velocity), pericenter, apocenter, orbital period and eccentricity, total energy, total angular momentum, as well as its Cartesian components;
+}
+\item{
+progenitor properties---stellar mass for 86 streams compiled from the literature \citep[extrapolated from the observed number of stars assuming an initial stellar mass function and a magnitude-complete sample, and therefore at least somewhat uncertain due to possible contamination and incompleteness, see \S\,\ref{sec:census}]{ibata:2023,shipp:2018}, and progenitor type for 39 streams with either a surviving progenitor, or a measurement of metallicity dispersion to differentiate between a globular cluster and a dwarf galaxy \citep[e.g.,][]{sesar:2015,ji:2020,bonaca:2020b,martin:2022a}.
+}
+\end{itemize}
+}
+Table~\ref{tbl:summary} contains a subset of these columns for clarity, while the full catalog is available on the project Github repository\footnote{\url{https://github.com/abonaca/streams_overview}}.
 
-% The stellar masses are either taken from source papers (see the reference list), or were
-% estimated here (for streams with member data from \citealt{ibata:2023}).
-% We estimate the stellar mass of a stream from \citet{ibata:2023} by comparing the
-% observed number of stars down to the brightness limit of \gaia\ to the predicted number
-% from a single stellar population with a metallicity $\feh = -2$, $\textrm{age} =
-% 12~\unit{\giga\year}$, and a Kroupa initial mass function \citep{Kroupa:2001} (we use
-% the CMD interface to the PARSEC isochrones; \citealt{bressan:2012, chen:2015}).
+% We compile stream data from the literature and summarize the key properties of each
+% stream in Table~\ref{tbl:summary}.
+% The table includes the stream name, the sky coordinates of the origin of a stream coordinate frame aligned with the stream, the mean heliocentric distance to the stream $D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, \changes{the stream length in degrees, its width in both degrees and parsecs,} an estimate of \changes{its} stellar mass, and a list of references for the compiled stream properties.
+% \changes{For streams in the \citet{ibata:2023} catalog we calculate the stream width as $1.5\times\rm{MAD}$, where MAD is the median absolute deviation of the stream latitudes $\phi_2$, a measure of width robust to outliers.
+% Standard deviation of a normal distribution is $\sigma\approx1.5\rm{MAD}$, so for other streams we report one-sigma widths from literature.}
+% % The table includes the stream name, the sky coordinates of the origin of a stream
+% % coordinate frame aligned with the stream, the mean heliocentric distance to the stream
+% % $D_\textrm{hel}$, the mean Galactocentric radius $r_{\textrm{gal}}$, the angular length
+% % and width of the stream in the sky, the width of the stream in length units, a rough
+% % estimate of the stellar mass of the stream, and a list of references for the compiled
+% % stream properties.
+% The table is split into three sections.
+% The first section contains streams with reported detections in \gaia\ and with
+% spectroscopic follow-up data.
+% The next section contains streams that have been detected in \gaia\ but without
+% spectroscopic follow-up data.
+% The final section contains streams without reported detections in \gaia\ that require
+% follow-up investigation.
 
 \begin{table*}
 \scriptsize
@@ -1685,7 +1695,7 @@ taking the mean distance of the fitted orbit over the observed segment of the st
 \changes{
 Properties of 131 stellar streams discovered so far in the Milky Way.
 This list includes only cold and coherent streams that originate from unique accretion events.
-Columns include: $l$ on-sky length, $w$ on-sky width, $d_h$ heliocentric distance, $R_{gal}$ Galactocentric distance, $M_\star$ lower limit on the stellar mass of the stream, $R_{peri}$ pericenter, $R_{apo}$ apocenter, $e$ orbital eccentricity, $T_{orb}$ orbital period, $E_{tot}$ total orbital energy, $L_z$ and $L_\perp$ components of the orbital angular momentum perpendicular to and aligned with the Galactic disk, respectively.
+Shown here are the following columns: $l$ on-sky length, $w$ on-sky width, $d_h$ heliocentric distance, $R_{gal}$ Galactocentric distance, $M_\star$ lower limit on the stellar mass of the stream, $R_{peri}$ pericenter, $R_{apo}$ apocenter, $e$ orbital eccentricity, $T_{orb}$ orbital period, $E_{tot}$ total orbital energy, $L_z$ and $L_\perp$ components of the orbital angular momentum perpendicular to and aligned with the Galactic disk, respectively.
 Electronic version of this table available on the project Github repository contains additional columns with the best-fit orbital points, other components of the angular momentum vector, pole and origin of the stream reference frames, and the type of progenitor when known.
 }
 }
