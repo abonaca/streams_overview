@@ -190,7 +190,8 @@ Let's see how!
 \end{center}
 \caption{%
 An atlas of stellar streams discovered in the Milky Way.
-Every point represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023} using the \texttt{STREAMFINDER} algorithm, whose distance from the Sun has been adopted from the best-fitting orbit (\ref{apx:stream-fit}) to improve on the uncertain distance measurements.
+\changes{Every point represents a published high-probability stream member (summarized in Table~\ref{tbl:members}), with their heliocentric distance being adopted from the best-fitting orbit (\ref{apx:stream-fit}) to reduce measurement uncertainties.}
+% Every point represents a high-probability member star of a Milky Way stream identified by \citet{ibata:2023} using the \texttt{STREAMFINDER} algorithm, whose distance from the Sun has been adopted from the best-fitting orbit (\ref{apx:stream-fit}) to improve on the uncertain distance measurements.
 Streams are shown in Cartesian Galactocentric coordinates, with the left panel providing an overall view of the stream population and the right panel zooming in on the numerous streams discovered in the inner Milky Way.
 A gray grid outlines the radial extent of the Milky Way's disk, while the Sun's position is marked with a yellow star.
 Streams are color-coded by the fraction of the angular momentum vector residing in the disk plane ($sign(L_z)L_\perp/|L|$), with red for prograde and blue for retrograde streams.
@@ -344,7 +345,7 @@ In all cases, this has led to new stream and halo substructure discoveries.
 For example, from 2MASS \citep{rocha-pinto:2003, rocha-pinto:2004}, PS1
 \citep{bernard:2014, bernard:2016, navarrete:2017}, DES \citep{shipp:2018}, SLAMS
 \citep{jethwa:2018}, PAndAS \citep{martin:2014}, and DECaLS \citep{shipp:2020}.
-Table~\ref{tbl:stream-summary} has a list of all stellar streams that
+Table~\ref{tbl:summary} has a list of all stellar streams that
 have been reported to date.
 
 Many of the systematic searches for streams described above were done without
@@ -522,14 +523,14 @@ reported in the literature as a function of time, as collated in the \texttt{gal
 However, the kinematic data from \gaia\ has enabled a new and important validation step
 for previously discovered streams.
 While many streams have been re-discovered and studied in detail using \gaia\ data (see
-Table~\ref{tbl:stream-summary}), a number of streams that were previously reported in
+Table~\ref{tbl:summary}), a number of streams that were previously reported in
 the literature have not been re-identified with \gaia\ data.
 This is not totally unexpected, as many of the streams discovered in the pre-\gaia\ era
 pushed to fainter magnitudes and larger distances, where the \gaia\ data is noisier
 and/or only RGB stars in the streams may pass the faint limit of \gaia.
 These objects will require additional follow-up observations to confirm they are indeed stellar streams, and to
 determine their intrinsic and orbital parameters (see the last section of
-Table~\ref{tbl:stream-summary}).
+Table~\ref{tbl:summary}).
 
 \begin{figure}[t!]
 \begin{center}
@@ -603,7 +604,7 @@ Across the streams, different catalogs contain a number of uniquely identified m
 \label{sec:census}
 
 The number of known stellar streams around the Milky Way has exploded in the \gaia\ era: over 120 streams have now been reported in the literature (see Figure~\ref{fig:num-streams}), with more discoveries coming every year, especially enabled by new data releases from \gaia\ and new methodological developments.
-Figure~\ref{fig:sky-map} shows the on-sky footprints of all \changes{XX} currently known stellar streams in the Milky Way, as listed in Table~\ref{tbl:stream-summary}.
+Figure~\ref{fig:sky-map} shows the on-sky footprints of all currently known stellar streams in the Milky Way, as listed in Table~\ref{tbl:summary}.
 \changes{Overall, streams have been detected across the entire high-latitude sky.}
 
 \changes{
@@ -653,7 +654,7 @@ A representation of the on-sky footprints of all known stellar streams in the Mi
 shown in Galactic coordinates.
 The footprints are shown as white polygons that approximate the currently-known lengths
 and mean widths of the streams (the streams are also listed in
-Table~\ref{tbl:stream-summary}).
+Table~\ref{tbl:summary}).
 The background image is a map of the log-number counts of stars in \gaia\ \dr{3}.
 }
 \label{fig:sky-map}
@@ -666,7 +667,7 @@ The background image is a map of the log-number counts of stars in \gaia\ \dr{3}
 % AB
 In the \gaia\ era, stream kinematics are no longer derived from painstaking follow-up of photometrically identified targets, but are a part of stream discovery \citep[e.g.,][]{malhan:2018b, malhan:2019, ibata:2018, ibata:2019, ibata:2021, grillmair:2019, grillmair:2022}.
 Stream member stars identified using \gaia\ proper motions provide not only two components of the velocity vector, but also candidates for further selecting radial velocity members by cross-matching large spectroscopic surveys \citep[e.g.,][]{huang:2019, yang:2022, ibata:2023} or by conducting highly efficient spectroscopic follow-up \citep[e.g.,][]{li:2019, bonaca:2020b}.
-Overall, 105 streams reported in Table~\ref{tbl:stream-summary} have proper motion measurements from \gaia, while 72 of those streams also have a radial velocity detection from spectroscopic follow-up surveys.
+Overall, 105 streams reported in Table~\ref{tbl:summary} have proper motion measurements from \gaia, while 72 of those streams also have a radial velocity detection from spectroscopic follow-up surveys.
 
 \begin{figure*}
 \begin{center}
@@ -775,14 +776,14 @@ In some cases, like between the Gj\" ol stream and NGC~3201 globular cluster, th
 In other cases there are no obvious observational challenges to explain gaps spanning up to tens of degrees between the stream and the progenitor, nor the detection of a single tidal tail rather than a symmetric pair \citep[e.g,][]{bonaca:2021, yang:2022b}.
 These peculiarities may simply be due to insufficient depth \citep[e.g., non-detections of the low-mass stars that populate cluster tails in the early phases of dissolution,][]{balbinot:2018}, but if they are confirmed as physical, they may indicate an unusual mass-loss history \citep[e.g., due to a population of black holes in the progenitor,][]{gieles:2021,roberts:2024}, a massive external perturbation \citep[e.g., from the Galactic bar,][]{pearson:2017}, or even modified gravity \citep[causing asymmetric escape into the leading and trailing tails,][]{thomas:2018}.
 
-Regardless, the now increased subset of stellar streams with known progenitors (see Table~\ref{tbl:stream-summary} for a complete list) are extremely valuable for gravitational potential inference.
+Regardless, the now increased subset of stellar streams with known progenitors (see Table~\ref{tbl:summary} for a complete list) are extremely valuable for gravitational potential inference.
 First, a known progenitor places strong constraints on the stream's orbit \citep{bh:2018}, which reduces the number of free parameters and improves potential reconstruction \citep{palau:2023}.
 Second, globular cluster progenitors produce epicyclic overdensities, which place additional constraints on the global potential when matched to the observed stream density structure \citep{kupper:2015}.
 And finally, a known globular cluster progenitor predicts the exact locations of epicyclic underdensities to conclusively determine whether the observed stream gaps are due to internal evolution or external perturbation \citep[cf.][]{ibata:2020}.
 
 Understanding whether a stream's progenitor was a dwarf galaxy or a globular cluster is important both for dynamical modeling and tracing the Milky Way's formation history.
 Before \gaia, the stream width was a reliable indicator of its origin, with more massive dwarf galaxies producing wider streams \citep[e.g.,][]{belokurov:2006, bonaca:2012}.
-However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{tbl:stream-summary}).
+However, \gaia\ revealed a number of wide, but apparently low-mass stellar streams (see Table~\ref{tbl:summary}).
 Alternatively, high-resolution spectroscopy can be used to measure whether stream members have a spread in metallicity \citep[e.g.,][]{ji:2020,chandra:2022}, which has been established as a criterion for \changes{distinguishing} dwarf galaxies from globular clusters \citep{willman:2012}.
 Multi-element abundances have also been used to validate the stream's progenitor \citep[e.g., NGC~3201 as the progenitor of the Gj\" ol stream,][]{hansen:2020}.
 Detailed characterization of stellar populations and chemical abundances of streams also revealed that some reported stream candidates are actually not tidal debris of accreted satellites: the Eastern Banded Structure, the Anticenter Stream, and the Monoceros Ring appear to be disk perturbations excited during different Sagittarius passages \citep[cf.][]{deason:2018, laporte:2020}, and part of a more extended population of disk stars kicked out to high latitudes \citep{price-whelan:2015,bergemann:2018,laporte:2018}, while the Nyx stream is consistent with a dynamical substructure within the thick disk \citep[cf.][]{zucker:2021,wang:2023}.
@@ -797,7 +798,7 @@ A couple of streams even show complex chemistry suggesting mixed tidal debris of
 
 Metallicities of globular cluster streams themselves have resolved one of the long-standing puzzles in cluster formation: the apparent metallicity floor of $\feh\approx-2.5$ \citep[e.g.,][]{harris:1996,harris:2010,beasley:2019}.
 Median metallicities of cluster streams are low \citep[$\feh\lesssim-1$,][]{martin:2022b}, with several streams below $\feh\lesssim-3$ \citep{roederer:2019,wan:2020,martin:2022a}, demonstrating that clusters can form below the metallicity floor observed in surviving clusters.
-Dynamical masses of these streams are low (C-11, C-19, C-20, Phoenix, and Sylgr all have masses $\lesssim10^4\,\unit{\msun}$, see Table~\ref{tbl:stream-summary}), suggesting that only more massive clusters, which form in more massive, and therefore more metal-rich galaxies \citep[e.g.,][]{maiolino:2019}, survive until today, as theoretically predicted by \citet{kruijssen:2019}.
+Dynamical masses of these streams are low (C-11, C-19, C-20, Phoenix, and Sylgr all have masses $\lesssim10^4\,\unit{\msun}$, see Table~\ref{tbl:summary}), suggesting that only more massive clusters, which form in more massive, and therefore more metal-rich galaxies \citep[e.g.,][]{maiolino:2019}, survive until today, as theoretically predicted by \citet{kruijssen:2019}.
 These low-metallicity, low-mass stellar streams provide unique laboratories for several other aspects of cluster formation.
 For example, Phoenix has a large spread in the \ion{Sr}{2} abundance, likely due to pollution from a massive, fast-rotating star before the cluster fully formed \citep{casey:2021}.
 C-19 on the other hand has unexpectedly large width and velocity dispersion for a cluster of its mass, possibly due to having formed in a dark matter halo instead \citep{errani:2022}.
@@ -809,7 +810,8 @@ The interplay of these processes may depend on both the age and the mass of the 
 \begin{description}
 \item[Validation and spectroscopic characterization]{
 Kinematic information is vital for validating stellar stream discoveries.
-Of the 133 known streams, 61 lack spectroscopy, and 28 have no kinematic data at all (Table~\ref{tbl:stream-summary}).
+% Of the \changes{131} known streams, 61 lack spectroscopy, and 28 have no kinematic data at all (Table~\ref{tbl:summary}).
+Of the \changes{131} known streams, \changes{39 have no published kinematic measurements} (Table~\ref{tbl:summary}).
 Future \gaia\ data releases will further improve proper motion precision to levels sufficient for validating most reported streams.
 Spectroscopic characterization will remain challenging for distant streams with current instrumentation (see Figure~\ref{fig:msto-rc-mag}), however, targeting based on \gaia\ proper motions vastly increases efficiency in recovering stream members, so a coordinated effort should yield full kinematic data for all streams.
 }
@@ -1410,11 +1412,11 @@ In this section we describe priorities for transforming streams into an ultimate
 \subsection{Data}
 \label{sec:outlook-data}
 \textbf{Discovering streams in the outer halo.} Despite the already large number of known streams, there is good reason to believe more remain to be discovered.
-\changes{First}, typical mass of stellar streams ($\approx10^4\,\unit{\msun}$, see Table~\ref{tbl:stream-summary}) \changes{is} lower than that of globular clusters \citep[$\approx10^5\,\unit{\msun}$,][]{baumgardt:2018}.
+\changes{First}, typical mass of stellar streams ($\approx10^4\,\unit{\msun}$, see Table~\ref{tbl:summary}) \changes{is} lower than that of globular clusters \citep[$\approx10^5\,\unit{\msun}$,][]{baumgardt:2018}.
 \changes{Second,} observations of young massive clusters \citep[e.g.,][]{portegies-zwart:2010}, as well as recent models reproducing population properties of globular clusters indicate that clusters form with initial masses drawn from a simple power-law distribution \citep[e.g.,][]{choksi:2018,chen:2023}.
 \changes{Starting from an empirical model for globular cluster formation and evolution, \citet{pearson:2024} forecast that $\approx10,000$ star clusters more massive than $\approx10^4\,\unit{\msun}$} should be dissolved in a Milky Way-like galaxy, a fraction of which may be still coherent stellar streams.
 The outer halo is an especially important region to search for new streams because it is dark matter dominated \changes{and interactions with baryonic material are much less likely to confuse the dark matter signal}.
-Currently 76 of the 131 known \changes{stellar} streams reside within the extent of the stellar disk ($\lesssim15\,\unit{kpc}$, Table~\ref{tbl:stream-summary}), where baryons \changes{have a significant contribution to} the gravitational potential \citep[e.g.,][]{mcmillan:2017}.
+Currently 76 of the 131 known \changes{stellar} streams reside within the extent of the stellar disk ($\lesssim15\,\unit{kpc}$, Table~\ref{tbl:summary}), where baryons \changes{have a significant contribution to} the gravitational potential \citep[e.g.,][]{mcmillan:2017}.
 Streams at distances beyond $\gtrsim20\,\unit{kpc}$ have largely eluded our detection techniques so far.
 To illustrate, a GD-1-like, $10^4\,\unit{\msun}$ stream at a distance of 50\,\unit{kpc} would have a parallax of 0.02\,\unit{mas}, proper motions of $\lesssim1\,\unit{\masyr}$, and its main-sequence turn-off would be 5\,\unit{mag} fainter---pushing the stream outside of current detection capabilities.
 However, the upcoming fourth and fifth data releases from the \gaia\ mission (expected in 2025 and 2030) will deliver proper motions with \changes{uncertainties less than} $<0.45\,\unit{\masyr}$ and $<0.16\,\unit{\masyr}$ \changes{for $G\lesssim21$}, respectively.\footnote{\url{https://www.cosmos.esa.int/web/gaia/science-performance}}
